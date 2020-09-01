@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprite/Effect/M484BulletCollection2.png" type="Texture" id=1]
+
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 4.14254
+height = 8.72036
+
+[node name="Bullet" type="RigidBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 427.972, 162.995, 9.13458, 17.937 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 1 )
