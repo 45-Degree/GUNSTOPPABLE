@@ -1,6 +1,8 @@
 extends Node2D
 
 export var bullet_speed  = 200
+export var firerate = 0.1
+var can_fire = true
 onready var gunSprite = $Sprite
 onready var animationTree = $AnimationTree
 onready var bulletPoint = $Bulletpoint
@@ -17,11 +19,17 @@ func _physics_process(delta):
 	var input_vector = Vector2.ZERO
 	
 func shoot():
+	if can_fire:
 		var bullet_instance = bullet.instance()
 		bullet_instance.position = bulletPoint.get_global_position()
-		print(bulletPoint.position)
 		bullet_instance.rotation_degrees = rotation_degrees
 		bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed,0).rotated(rotation))
 		get_tree().get_root().add_child(bullet_instance)
+		can_fire = false
+		yield(get_tree().create_timer(firerate), "timeout")
+		can_fire = true
+		
+			
+
 	
 

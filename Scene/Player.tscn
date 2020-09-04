@@ -5,8 +5,8 @@
 [ext_resource path="res://Sprite/Character/Boy_Spriteshhet.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 5.146
-height = 0.229
+radius = 3.116
+height = 3.225
 
 [sub_resource type="Animation" id=2]
 resource_name = "Idle_down"
@@ -220,7 +220,6 @@ __meta__ = {
 light_mask = 0
 position = Vector2( 0.616557, 3.39125 )
 rotation = 1.5708
-scale = Vector2( 0.419, 0.664 )
 shape = SubResource( 1 )
 
 [node name="Boy" type="Sprite" parent="."]

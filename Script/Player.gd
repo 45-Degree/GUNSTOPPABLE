@@ -4,7 +4,6 @@ var MAX_SPEED = 100
 var ACCELERATION = 500
 var FRICTION = 500
 var state = STOP
-export var bullet_speed  = 500
 
 var velocity = Vector2.ZERO
 var target = Vector2.ZERO
@@ -23,10 +22,12 @@ enum{
 }
 
 func _physics_process(delta):
-
 	match state:
 			SHOOT:
 					$Gun.shoot()
+					if Singleton.Playable == false:
+						state = STOP
+			
 			STOP:
 					pass
 				
@@ -51,7 +52,7 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	velocity = move_and_slide(velocity)
 	
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot") and Singleton.Playable == true:
 		state = SHOOT
 	if Input.is_action_just_pressed("stop"):
 		state = STOP
