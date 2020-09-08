@@ -791,7 +791,7 @@ position = Vector2( 151.959, 88.0251 )
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 
 [node name="Hostage" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( -110.923, 47.8125 )
+position = Vector2( -111.959, 55.9749 )
 
 [node name="Hostage2" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( -110.923, -40.1875 )

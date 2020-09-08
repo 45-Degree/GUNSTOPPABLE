@@ -24,20 +24,23 @@ height = 4.426
 [node name="Hostage" type="StaticBody2D" groups=[
 "Hostage",
 ]]
+position = Vector2( 0.102093, -0.157969 )
 collision_layer = 8
 script = ExtResource( 7 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.153141, -6.17665 )
 frames = SubResource( 1 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 10.912 )
+position = Vector2( 0.153141, 4.73535 )
 rotation = 1.5708
 shape = SubResource( 2 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.153141, -6.17665 )
 collision_layer = 8
 collision_mask = 4
 
