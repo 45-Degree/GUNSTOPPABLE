@@ -153,6 +153,6 @@ region_rect = Rect2( 35.4128, 32.7604, 25.3956, 9.38532 )
 visible = false
 position = Vector2( 17.6113, -2.94921 )
 frames = SubResource( 31 )
-frame = 22
+frame = 17
 playing = true
 flip_h = true

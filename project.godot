@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GUNSTOPPABLE"
-run/main_scene="res://Scene/World.tscn"
+run/main_scene="res://Scene/Levels/Level_1.tscn"
 
 [autoload]
 
@@ -83,3 +83,5 @@ stop={
 2d_physics/layer_3="Bullet"
 2d_physics/layer_4="Hostage"
 2d_physics/layer_5="Terrorist"
+2d_physics/layer_6="Object"
+2d_physics/layer_7="Detector"
