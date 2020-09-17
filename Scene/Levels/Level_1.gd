@@ -19,7 +19,8 @@ func _on_Button_pressed():
 	get_tree().reload_current_scene()
 
 func _on_Button2_pressed():
-	get_tree().quit()
+	Singleton.Playable = true
+	get_tree().change_scene("res://Scene/UI/MainMenu.tscn")
 
 func _on_Hostage_Die():
 	Singleton.Playable = false

@@ -1,15 +1,15 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
-[ext_resource path="res://Scene/Hostage.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/NPC/Hostage.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/detector.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scene/Barrel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Object/Barrel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scene/Table.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/Object/Table.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Sprite/Tilemap/spritesheet (1).png" type="Texture" id=8]
 [ext_resource path="res://Sprite/Tilemap/spritesheet (2).png" type="Texture" id=9]
-[ext_resource path="res://Scene/Terrorist.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scene/NPC/Terrorist.tscn" type="PackedScene" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "spritesheet (1).png 0"
@@ -710,6 +710,10 @@ points = PoolVector2Array( 16, 16, 0, 16, 0, 9, 16, 9 )
 size = 7
 font_data = ExtResource( 7 )
 
+[sub_resource type="ShaderMaterial" id=32]
+
+[sub_resource type="Theme" id=33]
+
 [sub_resource type="DynamicFont" id=29]
 font_data = ExtResource( 7 )
 
@@ -819,16 +823,18 @@ __meta__ = {
 }
 
 [node name="Message" type="Label" parent="Control"]
+material = SubResource( 32 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.58
-margin_left = -85.5
-margin_top = -26.0
-margin_right = 85.5
-margin_bottom = -11.0
+margin_left = -84.7453
+margin_top = -25.6227
+margin_right = 86.2547
+margin_bottom = -10.6227
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource( 33 )
 custom_fonts/font = SubResource( 29 )
 text = "You kill a hostage!"
 align = 1
@@ -858,7 +864,7 @@ margin_top = 93.5
 margin_right = 251.0
 margin_bottom = 114.5
 custom_fonts/font = SubResource( 31 )
-text = "Quit"
+text = "Main Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GUNSTOPPABLE"
-run/main_scene="res://Scene/Levels/Level_1.tscn"
+run/main_scene="res://Scene/UI/MainMenu.tscn"
 
 [autoload]
 

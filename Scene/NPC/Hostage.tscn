@@ -5,7 +5,8 @@
 [ext_resource path="res://Sprite/Character/Wizard/wizzard_f_idle_anim_f2.png" type="Texture" id=3]
 [ext_resource path="res://Sprite/Character/Wizard/wizzard_f_idle_anim_f3.png" type="Texture" id=4]
 [ext_resource path="res://Scene/Hurtbox.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scene/Hostage.gd" type="Script" id=7]
+[ext_resource path="res://Scene/NPC/Hostage.gd" type="Script" id=7]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

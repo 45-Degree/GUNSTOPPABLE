@@ -6,7 +6,8 @@
 [ext_resource path="res://Sprite/Character/Terrorist/big_demon_idle_anim_f0.png" type="Texture" id=4]
 [ext_resource path="res://Scene/NPC.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/Hurtbox.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scene/Terrorist.gd" type="Script" id=7]
+[ext_resource path="res://Scene/NPC/Terrorist.gd" type="Script" id=7]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
