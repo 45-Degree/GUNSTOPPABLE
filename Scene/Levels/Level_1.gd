@@ -13,7 +13,7 @@ func _ready():
 
 func _process(delta):
 	var terrorist = get_tree().get_nodes_in_group("Terrorist").size()
-	if terrorist == 0:
+	if terrorist == 0 and Hostage_dead == false:
 		get_tree().call_group("Detector", "detector_ON")
 		Complete = true
 	if Input.is_action_just_pressed("Pause"):
