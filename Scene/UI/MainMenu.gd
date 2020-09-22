@@ -18,3 +18,7 @@ func _ready():
 
 func _on_Button_button_up():
 	get_tree().change_scene("res://Scene/Levels/Level_1.tscn")
+
+
+func _on_Button4_button_up():
+	get_tree().quit()

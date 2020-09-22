@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hostage (1).png-8f33a2289e45487a986e05408b743877.stex"
+path="res://.import/hostage (1).png-776436faf41f074d22947c5de997c70a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Character/Hostage/hostage (1).png"
-dest_files=[ "res://.import/hostage (1).png-8f33a2289e45487a986e05408b743877.stex" ]
+source_file="res://Sprite/Character/hostage (1).png"
+dest_files=[ "res://.import/hostage (1).png-776436faf41f074d22947c5de997c70a.stex" ]
 
 [params]
 

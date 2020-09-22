@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scene/Hurtbox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprite/Tilemap/full tilemap.png" type="Texture" id=2]
 [ext_resource path="res://Scene/Object/Table.gd" type="Script" id=3]
+[ext_resource path="res://Sprite/des.png" type="Texture" id=4]
 
 [sub_resource type="Shader" id=1]
 
@@ -10,22 +11,22 @@
 shader = SubResource( 1 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 15.9722, 7.12447 )
+extents = Vector2( 12.7634, 6.85911 )
 
 [sub_resource type="Animation" id=4]
 resource_name = "Blink"
 length = 0.4
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/path = NodePath("Sprite2:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 100, 100, 100, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Color( 10, 10, 10, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -33,13 +34,21 @@ resource_name = "Idle"
 length = 0.1
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 14.2879, 6.22431 )
+extents = Vector2( 12.6252, 7.10759 )
 
 [node name="Table" type="StaticBody2D"]
 collision_layer = 8
 script = ExtResource( 3 )
 
+[node name="Sprite2" type="Sprite" parent="."]
+scale = Vector2( 0.07, 0.07 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 578, 100, 373, 204 )
+
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
+modulate = Color( 100, 100, 100, 1 )
 show_behind_parent = true
 material = SubResource( 2 )
 texture = ExtResource( 2 )
@@ -48,7 +57,7 @@ region_rect = Rect2( 0, 16, 32, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2( 0, -0.927 )
+position = Vector2( 0, -0.143819 )
 shape = SubResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -61,7 +70,7 @@ collision_mask = 4
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
 visible = false
-position = Vector2( 0, -1.001 )
+position = Vector2( -0.0921383, -0.17175 )
 shape = SubResource( 6 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
