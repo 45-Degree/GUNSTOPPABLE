@@ -236,6 +236,7 @@ hframes = 16
 frame = 4
 
 [node name="Gun" parent="." instance=ExtResource( 1 )]
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Idle_down = SubResource( 2 )
