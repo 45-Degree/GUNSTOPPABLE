@@ -1,31 +1,20 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Sprite/Character/Wizard/wizzard_f_idle_anim_f0.png" type="Texture" id=1]
-[ext_resource path="res://Sprite/Character/Wizard/wizzard_f_idle_anim_f1.png" type="Texture" id=2]
-[ext_resource path="res://Sprite/Character/Wizard/wizzard_f_idle_anim_f2.png" type="Texture" id=3]
-[ext_resource path="res://Sprite/Character/Wizard/wizzard_f_idle_anim_f3.png" type="Texture" id=4]
 [ext_resource path="res://Sprite/Character/hostage (1).png" type="Texture" id=5]
 [ext_resource path="res://Scene/Hurtbox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/NPC/Hostage.gd" type="Script" id=7]
 
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 2.992
 height = 4.426
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=2]
 
 [node name="Hostage" type="StaticBody2D" groups=[
 "Hostage",
 ]]
 position = Vector2( 0.102093, -0.157969 )
+scale = Vector2( 2.25, 2.25 )
 collision_layer = 8
 script = ExtResource( 7 )
 
@@ -33,17 +22,10 @@ script = ExtResource( 7 )
 scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 5 )
 
-[node name="Sprite" type="AnimatedSprite" parent="."]
-visible = false
-position = Vector2( 0.153141, -6.17665 )
-frames = SubResource( 1 )
-frame = 1
-playing = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.153141, 4.73535 )
 rotation = 1.5708
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 6 )]
 position = Vector2( 0.153141, -6.17665 )
@@ -53,7 +35,7 @@ collision_mask = 4
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 position = Vector2( -0.128, 6.254 )
 scale = Vector2( 0.583, 0.382 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 [connection signal="hostageDie" from="." to="." method="_on_Hostage_hostageDie"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 

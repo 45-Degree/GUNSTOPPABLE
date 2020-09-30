@@ -1,20 +1,15 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scene/Gun.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Script/Player.gd" type="Script" id=2]
-[ext_resource path="res://Sprite/Character/Robot/protagonist.png" type="Texture" id=3]
-[ext_resource path="res://Sprite/Character/Boy_Spriteshhet.png" type="Texture" id=4]
-
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 3.116
-height = 3.225
+[ext_resource path="res://Sprite/Character/Robot/spritesheet (3).png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=2]
 resource_name = "Idle_down"
 length = 0.1
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Boy:frame")
+tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -31,7 +26,7 @@ resource_name = "Idle_left"
 length = 0.1
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Boy:frame")
+tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -40,23 +35,23 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 4 ]
+"values": [ 2 ]
 }
 
 [sub_resource type="Animation" id=4]
 resource_name = "Idle_right"
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Boy:frame")
+tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
+"times": PoolRealArray( 0.1 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 8 ]
+"values": [ 3 ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -64,16 +59,16 @@ resource_name = "Idle_up"
 length = 0.1
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Boy:frame")
+tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
+"times": PoolRealArray( 0.1 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 14 ]
+"values": [ 1 ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -81,72 +76,24 @@ resource_name = "run_down"
 length = 0.8
 loop = true
 step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("Boy:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 2 ]
-}
 
 [sub_resource type="Animation" id=7]
 resource_name = "run_left"
 length = 0.8
 loop = true
 step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("Boy:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 4, 5, 6, 7, 6 ]
-}
 
 [sub_resource type="Animation" id=8]
 resource_name = "run_right"
 length = 0.8
 loop = true
 step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("Boy:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 8, 9, 10, 11, 10 ]
-}
 
 [sub_resource type="Animation" id=9]
 resource_name = "run_up"
 length = 0.8
 loop = true
 step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("Boy:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 12, 13, 14, 15, 14 ]
-}
 
 [sub_resource type="AnimationNodeAnimation" id=10]
 animation = "Idle_down"
@@ -208,32 +155,25 @@ start_node = "Idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=23]
 
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 14.391
+height = 3.225
+
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
 ]]
-position = Vector2( -0.526166, -3.46479 )
+position = Vector2( 5.02924, -3.2455 )
 collision_mask = 66
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-light_mask = 0
-position = Vector2( 0.616557, 3.39125 )
-rotation = 1.5708
-shape = SubResource( 1 )
-
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.05, 0.05 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 3 )
-
-[node name="Boy" type="Sprite" parent="."]
-visible = false
-position = Vector2( 0, -4.72501 )
-texture = ExtResource( 4 )
-hframes = 16
-frame = 4
+hframes = 4
+region_rect = Rect2( 560, 50, 530, 450 )
 
 [node name="Gun" parent="." instance=ExtResource( 1 )]
 visible = false
@@ -251,7 +191,12 @@ anims/run_up = SubResource( 9 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 22 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/playback = SubResource( 23 )
 parameters/Idle/blend_position = Vector2( -0.25897, 0.198276 )
 parameters/Run/blend_position = Vector2( -0.439938, 0.00862074 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 0
+position = Vector2( -0.195104, 7.58478 )
+rotation = 1.5708
+shape = SubResource( 1 )

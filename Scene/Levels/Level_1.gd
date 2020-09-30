@@ -2,7 +2,7 @@ extends Node
 
 onready var control = $Control
 onready var message = $Control/Message
-onready var button = $Control/Button
+onready var button = $Control/VBoxContainer/Button
 onready var level = (int(get_tree().current_scene.name) + 1)
 onready var Complete = false
 export var Hostage_dead = false

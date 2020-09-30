@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-var MAX_SPEED = 100
-var ACCELERATION = 500
-var FRICTION = 500
+var MAX_SPEED = 250
+var ACCELERATION = 10000
+var FRICTION = 10000
 var state = STOP
 
 var velocity = Vector2.ZERO
@@ -40,15 +40,15 @@ func _physics_process(delta):
 	target_sight = target_sight.normalized()
 	
 	if input_vector == Vector2.ZERO:
-#		animationTree.set("parameters/Idle/blend_position", target_sight)
-#		animationTree.set("parameters/Run/blend_position", target_sight)
-#		animationState.travel("Idle")
+		animationTree.set("parameters/Idle/blend_position", target_sight)
+		animationTree.set("parameters/Run/blend_position", target_sight)
+		animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	
 	else:
-#		animationTree.set("parameters/Idle/blend_position", target_sight)
-#		animationTree.set("parameters/Run/blend_position", target_sight)
-#		animationState.travel("Run")
+		animationTree.set("parameters/Idle/blend_position", target_sight)
+		animationTree.set("parameters/Run/blend_position", target_sight)
+		animationState.travel("Run")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	velocity = move_and_slide(velocity)
 	
