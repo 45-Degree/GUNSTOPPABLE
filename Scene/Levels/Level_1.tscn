@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/NPC/Hostage.tscn" type="PackedScene" id=2]
@@ -21,17 +21,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=21]
-points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
-
 [sub_resource type="ConvexPolygonShape2D" id=5]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
-points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -54,7 +51,10 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 [sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
-[sub_resource type="TileSet" id=15]
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="TileSet" id=16]
 14/name = "Tiles (1).png 14"
 14/texture = ExtResource( 4 )
 14/tex_offset = Vector2( 0, 0 )
@@ -149,14 +149,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 18/navigation_offset = Vector2( 0, 0 )
 18/shape_offset = Vector2( 0, 0 )
 18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-18/shape = SubResource( 21 )
+18/shape = SubResource( 5 )
 18/shape_one_way = false
 18/shape_one_way_margin = 1.0
 18/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 21 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 18/z_index = 0
@@ -170,14 +170,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 19/navigation_offset = Vector2( 0, 0 )
 19/shape_offset = Vector2( 0, 0 )
 19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-19/shape = SubResource( 5 )
+19/shape = SubResource( 6 )
 19/shape_one_way = false
 19/shape_one_way_margin = 1.0
 19/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 5 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 19/z_index = 0
@@ -191,14 +191,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 20/navigation_offset = Vector2( 0, 0 )
 20/shape_offset = Vector2( 0, 0 )
 20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-20/shape = SubResource( 6 )
+20/shape = SubResource( 7 )
 20/shape_one_way = false
 20/shape_one_way_margin = 1.0
 20/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 6 ),
+"shape": SubResource( 7 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 20/z_index = 0
@@ -212,14 +212,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 21/navigation_offset = Vector2( 0, 0 )
 21/shape_offset = Vector2( 0, 0 )
 21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-21/shape = SubResource( 7 )
+21/shape = SubResource( 8 )
 21/shape_one_way = false
 21/shape_one_way_margin = 1.0
 21/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 7 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 21/z_index = 0
@@ -233,14 +233,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 22/navigation_offset = Vector2( 0, 0 )
 22/shape_offset = Vector2( 0, 0 )
 22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-22/shape = SubResource( 8 )
+22/shape = SubResource( 9 )
 22/shape_one_way = false
 22/shape_one_way_margin = 1.0
 22/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 8 ),
+"shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 22/z_index = 0
@@ -268,14 +268,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 24/navigation_offset = Vector2( 0, 0 )
 24/shape_offset = Vector2( 0, 0 )
 24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-24/shape = SubResource( 9 )
+24/shape = SubResource( 10 )
 24/shape_one_way = false
 24/shape_one_way_margin = 1.0
 24/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 9 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 24/z_index = 0
@@ -289,14 +289,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 25/navigation_offset = Vector2( 0, 0 )
 25/shape_offset = Vector2( 0, 0 )
 25/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-25/shape = SubResource( 10 )
+25/shape = SubResource( 11 )
 25/shape_one_way = false
 25/shape_one_way_margin = 1.0
 25/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 10 ),
+"shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 25/z_index = 0
@@ -310,14 +310,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 26/navigation_offset = Vector2( 0, 0 )
 26/shape_offset = Vector2( 0, 0 )
 26/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-26/shape = SubResource( 11 )
+26/shape = SubResource( 12 )
 26/shape_one_way = false
 26/shape_one_way_margin = 1.0
 26/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 11 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 26/z_index = 0
@@ -331,14 +331,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 27/navigation_offset = Vector2( 0, 0 )
 27/shape_offset = Vector2( 0, 0 )
 27/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-27/shape = SubResource( 12 )
+27/shape = SubResource( 13 )
 27/shape_one_way = false
 27/shape_one_way_margin = 1.0
 27/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 12 ),
+"shape": SubResource( 13 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 27/z_index = 0
@@ -352,14 +352,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 28/navigation_offset = Vector2( 0, 0 )
 28/shape_offset = Vector2( 0, 0 )
 28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-28/shape = SubResource( 13 )
+28/shape = SubResource( 14 )
 28/shape_one_way = false
 28/shape_one_way_margin = 1.0
 28/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 13 ),
+"shape": SubResource( 14 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 28/z_index = 0
@@ -373,32 +373,61 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 29/navigation_offset = Vector2( 0, 0 )
 29/shape_offset = Vector2( 0, 0 )
 29/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-29/shape = SubResource( 14 )
+29/shape = SubResource( 15 )
 29/shape_one_way = false
 29/shape_one_way_margin = 1.0
 29/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 14 ),
+"shape": SubResource( 15 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 29/z_index = 0
 
-[sub_resource type="DynamicFont" id=19]
+[sub_resource type="DynamicFont" id=17]
 font_data = ExtResource( 7 )
-
-[sub_resource type="DynamicFont" id=20]
-font_data = ExtResource( 7 )
-
-[sub_resource type="ShaderMaterial" id=16]
-
-[sub_resource type="Theme" id=17]
 
 [sub_resource type="DynamicFont" id=18]
+font_data = ExtResource( 7 )
+
+[sub_resource type="ShaderMaterial" id=19]
+
+[sub_resource type="Theme" id=20]
+
+[sub_resource type="DynamicFont" id=21]
 size = 39
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 33
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 27
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=26]
+size = 30
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 42
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 30
 font_data = ExtResource( 7 )
 
 [node name="World" type="Node"]
@@ -409,7 +438,7 @@ script = ExtResource( 1 )
 ]]
 position = Vector2( 151.959, 88.0251 )
 rotation = 8.12934e-06
-tile_set = SubResource( 15 )
+tile_set = SubResource( 16 )
 cell_size = Vector2( 32, 32 )
 collision_layer = 4
 collision_mask = 5
@@ -477,7 +506,7 @@ __meta__ = {
 [node name="Button" type="Button" parent="Control/VBoxContainer"]
 margin_right = 102.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 19 )
+custom_fonts/font = SubResource( 17 )
 text = "Next Level"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -487,14 +516,14 @@ __meta__ = {
 margin_left = 106.0
 margin_right = 199.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 20 )
+custom_fonts/font = SubResource( 18 )
 text = "Main Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Message" type="Label" parent="Control"]
-material = SubResource( 16 )
+material = SubResource( 19 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -505,8 +534,8 @@ margin_right = 225.682
 margin_bottom = -37.6028
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource( 17 )
-custom_fonts/font = SubResource( 18 )
+theme = SubResource( 20 )
+custom_fonts/font = SubResource( 21 )
 text = "You kill a hostage!"
 align = 1
 valign = 1
@@ -522,9 +551,105 @@ color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Control3" type="Control" parent="."]
+pause_mode = 2
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control3"]
+margin_left = 273.048
+margin_top = 87.2915
+margin_right = 387.048
+margin_bottom = 116.291
+custom_fonts/font = SubResource( 24 )
+text = "Option"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckButton2" type="CheckButton" parent="Control3"]
+margin_left = 199.025
+margin_top = 138.27
+margin_right = 471.025
+margin_bottom = 178.27
+custom_fonts/font = SubResource( 25 )
+text = "Sound Effect"
+
+[node name="CheckButton" type="CheckButton" parent="Control3"]
+margin_left = 199.025
+margin_top = 180.0
+margin_right = 470.0
+margin_bottom = 218.773
+custom_fonts/font = SubResource( 25 )
+text = "Music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="Control3"]
+margin_left = 291.903
+margin_top = 238.131
+margin_right = 375.903
+margin_bottom = 271.131
+custom_fonts/font = SubResource( 26 )
+text = "Back"
+
+[node name="Control2" type="Control" parent="."]
+pause_mode = 2
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control2"]
+margin_left = 264.927
+margin_top = 84.0221
+margin_right = 389.927
+margin_bottom = 121.022
+rect_pivot_offset = Vector2( 97.0978, 46.03 )
+custom_fonts/font = SubResource( 22 )
+text = "Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control2"]
+margin_left = 270.071
+margin_top = 139.751
+margin_right = 390.071
+margin_bottom = 172.751
+custom_fonts/font = SubResource( 23 )
+text = "Resume"
+
+[node name="Button2" type="Button" parent="Control2"]
+margin_left = 269.214
+margin_top = 182.619
+margin_right = 389.214
+margin_bottom = 215.619
+custom_fonts/font = SubResource( 23 )
+text = "Option"
+
+[node name="Button3" type="Button" parent="Control2"]
+margin_left = 287.218
+margin_top = 228.06
+margin_right = 371.218
+margin_bottom = 261.06
+custom_fonts/font = SubResource( 23 )
+text = "Exit"
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector8" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector7" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector9" to="." method="_on_Detector_body_entered"]
 [connection signal="pressed" from="Control/VBoxContainer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Control3/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="button_up" from="Control2/Button" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="Control2/Button2" to="." method="_on_Button2_button_up"]
+[connection signal="button_up" from="Control2/Button3" to="." method="_on_Button3_button_up"]
