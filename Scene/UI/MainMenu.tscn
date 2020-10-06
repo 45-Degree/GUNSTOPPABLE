@@ -27,22 +27,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="Control"]
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+size_flags_vertical = 3
+custom_constants/margin_right = 90
+custom_constants/margin_top = 31
+custom_constants/margin_left = 90
+custom_constants/margin_bottom = 47
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer3"]
-margin_right = 640.0
-margin_bottom = 178.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="VBoxContainer3" type="VBoxContainer" parent="Control/MarginContainer"]
+margin_left = 90.0
+margin_top = 31.0
+margin_right = 550.0
+margin_bottom = 313.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Label" type="Label" parent="Control/VBoxContainer3/VBoxContainer"]
-margin_right = 640.0
-margin_bottom = 178.0
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer3"]
+margin_right = 460.0
+margin_bottom = 105.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 custom_fonts/font = SubResource( 1 )
@@ -50,55 +58,43 @@ text = "GUNSTOPPABLE"
 align = 1
 valign = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer3"]
-margin_top = 182.0
-margin_right = 640.0
-margin_bottom = 360.0
-size_flags_vertical = 3
-custom_constants/margin_right = 90
-custom_constants/margin_top = 0
-custom_constants/margin_left = 90
-custom_constants/margin_bottom = 10
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="Control/VBoxContainer3/MarginContainer"]
-margin_left = 90.0
-margin_right = 550.0
-margin_bottom = 81.0
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer3"]
+margin_top = 109.0
+margin_right = 460.0
+margin_bottom = 282.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 2
 custom_constants/separation = 11
 
-[node name="Button" type="Button" parent="Control/VBoxContainer3/MarginContainer/VBoxContainer2"]
+[node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
 margin_right = 460.0
 margin_bottom = 35.0
 custom_fonts/font = SubResource( 2 )
 text = "Start"
 
-[node name="Button2" type="Button" parent="Control/VBoxContainer3/MarginContainer/VBoxContainer2"]
-visible = false
-margin_top = 25.0
-margin_right = 140.0
-margin_bottom = 46.0
-custom_fonts/font = SubResource( 3 )
-text = "Level Select"
-
-[node name="Button3" type="Button" parent="Control/VBoxContainer3/MarginContainer/VBoxContainer2"]
-visible = false
-margin_top = 25.0
-margin_right = 140.0
-margin_bottom = 46.0
-custom_fonts/font = SubResource( 3 )
-text = "Option"
-
-[node name="Button4" type="Button" parent="Control/VBoxContainer3/MarginContainer/VBoxContainer2"]
+[node name="Button2" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
 margin_top = 46.0
 margin_right = 460.0
 margin_bottom = 81.0
 custom_fonts/font = SubResource( 3 )
+text = "Level Select"
+
+[node name="Button3" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
+margin_top = 92.0
+margin_right = 460.0
+margin_bottom = 127.0
+custom_fonts/font = SubResource( 3 )
+text = "Option"
+
+[node name="Button4" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
+margin_top = 138.0
+margin_right = 460.0
+margin_bottom = 173.0
+custom_fonts/font = SubResource( 3 )
 text = "Exit"
-[connection signal="button_up" from="Control/VBoxContainer3/MarginContainer/VBoxContainer2/Button" to="." method="_on_Button_button_up"]
-[connection signal="button_up" from="Control/VBoxContainer3/MarginContainer/VBoxContainer2/Button4" to="." method="_on_Button4_button_up"]
+[connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/Button" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/Button2" to="." method="_on_Button2_button_up"]
+[connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/Button3" to="." method="_on_Button3_button_up"]
+[connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/Button4" to="." method="_on_Button4_button_up"]
