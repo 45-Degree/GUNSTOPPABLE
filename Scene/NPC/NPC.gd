@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var ExCe = preload("res://Scene/Explosion_Celebrate.tscn")
+var ExCe = preload("res://Scene/Effect/Explosion_Celebrate.tscn")
 
 func _on_Hurtbox_area_entered(area):
 	var ExCe_instance = ExCe.instance()

@@ -1,11 +1,10 @@
 extends Node
 
-onready var control = $Control
-onready var pause =$Control2
-onready var option = $Control3
-onready var message = $Control/Message
-onready var button = $Control/VBoxContainer/Button
-onready var level = (int(get_tree().current_scene.name) + 1)
+onready var control = $CanvasLayer/Control
+onready var pause =$CanvasLayer/Control3
+onready var option = $CanvasLayer/Control3
+onready var message = $CanvasLayer/Control/Message
+onready var button = $CanvasLayer/Control/VBoxContainer/Button
 onready var Complete = false
 export var Hostage_dead = false
 
@@ -14,6 +13,7 @@ func _ready():
 	Singleton.connect("Terrorist_Die", self, "_on_Terrorist_Die")
 
 func _process(delta):
+	var level = str(int(get_tree().current_scene.name))
 	var terrorist = get_tree().get_nodes_in_group("Terrorist").size()
 	if terrorist == 0 and Hostage_dead == false:
 		get_tree().call_group("Detector", "detector_ON")
@@ -26,7 +26,8 @@ func _process(delta):
 func _on_Button_pressed():
 	Singleton.Playable = true
 	if Complete == true and Hostage_dead == false:
-		get_tree().change_scene("res://Scene/Levels/Level_" + str(level + 1)+ ".tscn")
+		get_tree().change_scene("res://Scene/Levels/Level_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
+		
 	else:
 		get_tree().reload_current_scene()
 
