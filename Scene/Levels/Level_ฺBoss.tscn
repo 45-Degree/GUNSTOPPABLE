@@ -417,7 +417,7 @@ font_data = ExtResource( 6 )
 size = 30
 font_data = ExtResource( 6 )
 
-[node name="World" type="Node"]
+[node name="Level_6" type="Node"]
 script = ExtResource( 7 )
 
 [node name="Floor" type="TileMap" parent="." groups=[
@@ -523,7 +523,6 @@ region_rect = Rect2( 241.611, 254.461, 111.037, 207.269 )
 
 [node name="Boss_1" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 368.148, 167.489 )
-rotation = 8.12934e-06
 
 [node name="Control" type="Control" parent="."]
 pause_mode = 2

@@ -1,8 +1,8 @@
 extends StaticBody2D
-signal hostageDie
 
 func _on_Hurtbox_area_entered(area):
 	Singleton.emit_signal("Hostage_Die")
+	Singleton.hostagePosition = self.global_position
 	var Blood_instance = load("res://Scene/Effect/Blood.tscn")
 	var blood_instace = Blood_instance.instance()
 	var world = get_tree().current_scene

@@ -5,8 +5,16 @@ onready var pause =$CanvasLayer/Control3
 onready var option = $CanvasLayer/Control3
 onready var message = $CanvasLayer/Control/Message
 onready var button = $CanvasLayer/Control/VBoxContainer/Button
+onready var camera =$Camera2D
+onready var player = $YSort/Player
+onready var tween = $Camera2D/Tween
 onready var Complete = false
 export var Hostage_dead = false
+onready var lerpAmount = 0.001
+var smooth_zoom = 1
+var target_zoom = 0.75
+
+const ZOOM_SPEED = 1
 
 func _ready():
 	Singleton.connect("Hostage_Die", self, "_on_Hostage_Die")
@@ -21,8 +29,14 @@ func _process(delta):
 	if Input.is_action_just_pressed("Pause"):
 		get_tree().paused = true
 		pause.show()
-		
+	if  Hostage_dead == true:
+		$YSort/Player/RemoteTransform2D.remote_path = "Player"
+		camera.position = lerp(player.global_position, Singleton.hostagePosition, 1)
+		smooth_zoom = lerp(smooth_zoom, target_zoom, ZOOM_SPEED * delta)
+		if smooth_zoom != target_zoom:
+			camera.set_zoom(Vector2(smooth_zoom, smooth_zoom))
 
+		
 func _on_Button_pressed():
 	Singleton.Playable = true
 	if Complete == true and Hostage_dead == false:

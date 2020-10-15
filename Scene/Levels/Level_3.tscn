@@ -423,13 +423,9 @@ script = ExtResource( 7 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 11 )]
 position = Vector2( 67.9746, 83.5416 )
-smoothing_enabled = true
-
-[node name="topLeft" parent="Camera2D/Limits" index="0"]
-position = Vector2( 0, 0 )
-
-[node name="bottomRight" parent="Camera2D/Limits" index="1"]
-position = Vector2( 784, 432 )
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_speed = 3.0
 
 [node name="Floor" type="TileMap" parent="." groups=[
 "wall1",
@@ -733,5 +729,3 @@ text = "Exit"
 [connection signal="button_up" from="CanvasLayer/Control2/Button" to="." method="_on_Button_button_up"]
 [connection signal="button_up" from="CanvasLayer/Control2/Button2" to="." method="_on_Button2_button_up"]
 [connection signal="button_up" from="CanvasLayer/Control2/Button3" to="." method="_on_Button3_button_up"]
-
-[editable path="Camera2D"]

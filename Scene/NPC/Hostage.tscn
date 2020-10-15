@@ -36,7 +36,6 @@ collision_mask = 4
 position = Vector2( -0.128, 6.254 )
 scale = Vector2( 0.583, 0.382 )
 shape = SubResource( 2 )
-[connection signal="hostageDie" from="." to="." method="_on_Hostage_hostageDie"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
 [editable path="Hurtbox"]
