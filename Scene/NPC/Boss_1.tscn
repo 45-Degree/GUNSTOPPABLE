@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Sprite/Character/Boss/Boss_Sprite (1).png" type="Texture" id=1]
 [ext_resource path="res://Scene/NPC/Boss_1.gd" type="Script" id=2]
+[ext_resource path="res://Scene/bullet_pattern_1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 117.492
 height = 115.948
 
 [node name="Boss_1" type="KinematicBody2D"]
+position = Vector2( 144.903, 110.941 )
 scale = Vector2( 0.15, 0.15 )
 collision_layer = 16
 collision_mask = 5
@@ -22,5 +25,10 @@ region_rect = Rect2( 22, 20, 347, 546 )
 position = Vector2( 7.79199, 101.296 )
 shape = SubResource( 1 )
 
-[node name="Node2D" type="Sprite" parent="."]
-position = Vector2( -14.4096, 0 )
+[node name="Node2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2.26025, -4.70764 )
+
+[node name="Sprite2" type="Sprite" parent="Node2D"]
+texture = ExtResource( 4 )
+
+[editable path="Node2D"]

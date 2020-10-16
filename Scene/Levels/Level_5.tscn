@@ -423,14 +423,14 @@ script = ExtResource( 1 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 11 )]
 position = Vector2( 96, 56 )
-zoom = Vector2( 1.5, 1.5 )
+limit = false
 
 [node name="topLeft" parent="Camera2D/Limits" index="0"]
-position = Vector2( -30.3443, -6.9976 )
+position = Vector2( -28.9124, -4.13369 )
 scale = Vector2( 1.81619, -2.83597 )
 
 [node name="bottomRight" parent="Camera2D/Limits" index="1"]
-position = Vector2( 664.004, 618.007 )
+position = Vector2( 580.95, 585.072 )
 
 [node name="Floor" type="TileMap" parent="." groups=[
 "wall1",
