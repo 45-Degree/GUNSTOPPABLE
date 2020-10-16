@@ -12,9 +12,9 @@ onready var Complete = false
 export var Hostage_dead = false
 onready var lerpAmount = 0.001
 var smooth_zoom = 1
-var target_zoom = 0.75
+var target_zoom = 0.5
 
-const ZOOM_SPEED = 1
+const ZOOM_SPEED = 3
 
 func _ready():
 	Singleton.connect("Hostage_Die", self, "_on_Hostage_Die")
@@ -30,11 +30,16 @@ func _process(delta):
 		get_tree().paused = true
 		pause.show()
 	if  Hostage_dead == true:
+		camera.limit = false
+		camera.limit_bottom = 1000000000
+		camera.limit_left = -100000000000
+		camera.limit_right = 100000000000
+		camera.limit_top = -10000000000
 		$YSort/Player/RemoteTransform2D.remote_path = "Player"
-		camera.position = lerp(player.global_position, Singleton.hostagePosition, 1)
 		smooth_zoom = lerp(smooth_zoom, target_zoom, ZOOM_SPEED * delta)
 		if smooth_zoom != target_zoom:
 			camera.set_zoom(Vector2(smooth_zoom, smooth_zoom))
+			camera.position = lerp(player.global_position, Singleton.hostagePosition, 1)
 
 		
 func _on_Button_pressed():
