@@ -1,7 +1,7 @@
 extends Node
 
 onready var control = $CanvasLayer/Control
-onready var pause =$CanvasLayer/Control3
+onready var pause =$CanvasLayer/Control2
 onready var option = $CanvasLayer/Control3
 onready var message = $CanvasLayer/Control/Message
 onready var button = $CanvasLayer/Control/VBoxContainer/Button

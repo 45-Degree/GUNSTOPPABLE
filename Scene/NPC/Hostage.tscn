@@ -13,7 +13,6 @@ height = 4.426
 [node name="Hostage" type="StaticBody2D" groups=[
 "Hostage",
 ]]
-position = Vector2( 0.102093, -0.157969 )
 scale = Vector2( 2.25, 2.25 )
 collision_layer = 8
 script = ExtResource( 7 )

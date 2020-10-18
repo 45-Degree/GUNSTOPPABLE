@@ -1,8 +1,9 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Scene/Gun.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Script/Player.gd" type="Script" id=2]
 [ext_resource path="res://Sprite/Character/Robot/spritesheet (3).png" type="Texture" id=3]
+[ext_resource path="res://Scene/Hurtbox.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Idle_down"
@@ -159,11 +160,15 @@ start_node = "Idle"
 radius = 14.391
 height = 3.225
 
+[sub_resource type="CapsuleShape2D" id=24]
+radius = 14.957
+height = 3.804
+
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
 ]]
 position = Vector2( 5.02924, -3.2455 )
-collision_mask = 66
+collision_mask = 194
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -202,3 +207,14 @@ light_mask = 0
 position = Vector2( -0.195104, 7.58478 )
 rotation = 1.5708
 shape = SubResource( 23 )
+
+[node name="Hurtbox" parent="." instance=ExtResource( 4 )]
+collision_mask = 128
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2( -0.135269, 7.57538 )
+rotation = 1.5708
+shape = SubResource( 24 )
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+
+[editable path="Hurtbox"]
