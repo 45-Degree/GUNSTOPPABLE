@@ -34,7 +34,8 @@ func shoot():
 		bullet_instance.position = bulletPoint.get_global_position()
 		bullet_instance.rotation_degrees = rotation_degrees
 		bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed,0).rotated(rotation))
-		get_tree().get_root().get_node("World/YSort").add_child(bullet_instance)
+		get_tree().current_scene.add_child(bullet_instance)
+#		get_tree().get_root().get_node("World/YSort").add_child(bullet_instance)
 #		get_tree().get_root().add_child(bullet_instance)
 		can_fire = false
 		yield(get_tree().create_timer(firerate), "timeout")
