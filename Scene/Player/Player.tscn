@@ -202,7 +202,7 @@ light_mask = 0
 position = Vector2( -0.195104, 7.58478 )
 rotation = 1.5708
 shape = SubResource( 23 )
-<<<<<<< Updated upstream
+
 
 [node name="Hurtbox" parent="." instance=ExtResource( 4 )]
 collision_mask = 128
@@ -214,5 +214,3 @@ shape = SubResource( 24 )
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
 [editable path="Hurtbox"]
-=======
->>>>>>> Stashed changes
