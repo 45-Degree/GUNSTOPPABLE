@@ -1,8 +1,9 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Scene/Gun.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Script/Player.gd" type="Script" id=2]
 [ext_resource path="res://Sprite/Character/Robot/spritesheet (3).png" type="Texture" id=3]
+[ext_resource path="res://Scene/Hurtbox.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Idle_down"
@@ -159,6 +160,10 @@ start_node = "Idle"
 radius = 14.391
 height = 3.225
 
+[sub_resource type="CapsuleShape2D" id=24]
+radius = 14.957
+height = 3.804
+
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
 ]]
@@ -192,7 +197,9 @@ anims/run_up = SubResource( 8 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 21 )
 anim_player = NodePath("../AnimationPlayer")
+<<<<<<< Updated upstream:Scene/Player/Player.tscn
 active = true
+
 parameters/playback = SubResource( 22 )
 parameters/Idle/blend_position = Vector2( -0.25897, 0.198276 )
 parameters/Run/blend_position = Vector2( -0.439938, 0.00862074 )
