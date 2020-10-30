@@ -197,9 +197,7 @@ anims/run_up = SubResource( 8 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 21 )
 anim_player = NodePath("../AnimationPlayer")
-<<<<<<< Updated upstream:Scene/Player/Player.tscn
 active = true
-
 parameters/playback = SubResource( 22 )
 parameters/Idle/blend_position = Vector2( -0.25897, 0.198276 )
 parameters/Run/blend_position = Vector2( -0.439938, 0.00862074 )
@@ -209,7 +207,6 @@ light_mask = 0
 position = Vector2( -0.195104, 7.58478 )
 rotation = 1.5708
 shape = SubResource( 23 )
-
 
 [node name="Hurtbox" parent="." instance=ExtResource( 4 )]
 collision_mask = 128
