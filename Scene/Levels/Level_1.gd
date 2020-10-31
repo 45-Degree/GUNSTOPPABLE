@@ -7,7 +7,6 @@ onready var message = $CanvasLayer/Control/Message
 onready var button = $CanvasLayer/Control/VBoxContainer/Button
 onready var camera =$Camera2D
 onready var player = $YSort/Player
-onready var tween = $Camera2D/Tween
 onready var Complete = false
 export var Hostage_dead = false
 onready var lerpAmount = 0.001

@@ -10,7 +10,6 @@ extents = Vector2( 9.47635, 4.88822 )
 [sub_resource type="Animation" id=2]
 resource_name = "Blink"
 length = 0.4
-loop = true
 step = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite2:modulate")

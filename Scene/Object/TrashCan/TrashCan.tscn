@@ -9,7 +9,6 @@ extents = Vector2( 36.1226, 40.645 )
 extents = Vector2( 3.7301, 4.03657 )
 
 [node name="TableHorizontal" instance=ExtResource( 1 )]
-destroyable = true
 
 [node name="Sprite2" parent="." index="0"]
 region_rect = Rect2( 31.622, 528.638, 79.291, 92.4793 )
