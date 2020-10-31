@@ -50,6 +50,7 @@ func _on_Button_pressed():
 	else:
 		get_tree().reload_current_scene()
 
+
 func _on_Button2_pressed():
 	Singleton.Playable = true
 	get_tree().change_scene("res://Scene/UI/MainMenu.tscn")

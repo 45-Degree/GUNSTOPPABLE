@@ -1,9 +1,10 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scene/NPC/NPC.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scene/Hurtbox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/NPC/Terrorist.gd" type="Script" id=7]
 [ext_resource path="res://Sprite/Character/Terrorist/terrorist.png" type="Texture" id=8]
+
 
 
 [sub_resource type="CapsuleShape2D" id=1]

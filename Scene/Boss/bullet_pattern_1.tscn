@@ -1,9 +1,11 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scene/Hitbox.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scene/Boss01_Bulllet.gd" type="Script" id=2]
+[ext_resource path="res://Scene/UI/Hitbox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/Boss/Boss01_Bulllet.gd" type="Script" id=2]
 [ext_resource path="res://Sprite/Effect/Bossatk.png" type="Texture" id=3]
-[ext_resource path="res://Scene/bullet_pattern_1.gd" type="Script" id=4]
+[ext_resource path="res://Scene/Boss/bullet_pattern_1.gd" type="Script" id=4]
+
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.948

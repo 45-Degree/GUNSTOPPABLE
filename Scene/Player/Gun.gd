@@ -10,7 +10,7 @@ var steering_angle = Vector2.ZERO
 onready var gunSprite = $Sprite
 onready var bulletPoint = $Bulletpoint
 var target = Vector2.ZERO
-var bullet = preload("res://Scene/Bullet.tscn")
+var bullet = preload("res://Scene/Player/Bullet.tscn")
 
 func _physics_process(delta):
 	var dir = get_angle_to(get_global_mouse_position())

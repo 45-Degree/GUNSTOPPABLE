@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprite/Object/Aircon.png" type="Texture" id=1]
+[ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 107.388, 41.5788 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10.6149, 4.0794 )
+
+[node name="AirCon" instance=ExtResource( 2 )]
+destroyable = true
+explodable = true
+
+[node name="Sprite2" parent="." index="0"]
+scale = Vector2( 0.04, 0.04 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 621, 37, 543, 218 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( -0.218826, -0.143819 )
+scale = Vector2( 0.1, 0.1 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" parent="Hurtbox" index="1"]
+shape = SubResource( 2 )

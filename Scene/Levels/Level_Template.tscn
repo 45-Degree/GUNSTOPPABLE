@@ -2,13 +2,13 @@
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/NPC/Hostage.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scene/detector.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/UI/detector.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprite/Tilemap/tile_mix1.png" type="Texture" id=4]
 [ext_resource path="res://Scene/Player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scene/Object/TableHorizontal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Scene/NPC/Terrorist.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scene/Object/TableVertical.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/UI/Camera2D.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]

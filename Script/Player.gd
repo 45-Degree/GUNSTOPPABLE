@@ -12,7 +12,7 @@ var velocity = Vector2.ZERO
 var target = Vector2.ZERO
 var target_sight = Vector2.ZERO
 var input_vector = Vector2.ZERO
-var bullet = preload("res://Scene/Bullet.tscn")
+var bullet = preload("res://Scene/Player/Bullet.tscn")
 var hiteffect = preload("res://Scene/Effect/Explosion.tscn")
 
 onready var gunSprite = $Gun/Sprite
