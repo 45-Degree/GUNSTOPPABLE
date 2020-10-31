@@ -10,7 +10,6 @@ extents = Vector2( 40.6193, 72.7231 )
 extents = Vector2( 4.1723, 7.17664 )
 
 [node name="Server" instance=ExtResource( 2 )]
-destroyable = true
 
 [node name="Sprite2" parent="." index="0"]
 texture = ExtResource( 1 )

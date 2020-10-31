@@ -10,6 +10,8 @@ extents = Vector2( 9.47635, 4.88822 )
 [sub_resource type="Animation" id=2]
 resource_name = "Blink"
 length = 0.4
+loop = true
+step = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite2:modulate")
 tracks/0/interp = 1
@@ -17,15 +19,28 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ Color( 10, 10, 10, 1 ), Color( 1, 1, 1, 1 ) ]
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 100, 100, 100, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=3]
 resource_name = "Idle"
 length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 9.36117, 4.77873 )
@@ -33,6 +48,7 @@ extents = Vector2( 9.36117, 4.77873 )
 [node name="TableHorizontal" type="StaticBody2D"]
 collision_layer = 8
 script = ExtResource( 3 )
+destroyable = true
 
 [node name="Sprite2" type="Sprite" parent="."]
 scale = Vector2( 0.1, 0.1 )

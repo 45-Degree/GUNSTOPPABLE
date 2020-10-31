@@ -1,6 +1,6 @@
 extends StaticBody2D
 onready var animationPlayer = $AnimationPlayer
-export var health = 15
+export var health = 10
 var invincible = false
 export var destroyable = false
 export var explodable = false

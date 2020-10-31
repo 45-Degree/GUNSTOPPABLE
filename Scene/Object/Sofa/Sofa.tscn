@@ -10,9 +10,9 @@ extents = Vector2( 41.6278, 98.1648 )
 extents = Vector2( 3.99659, 9.94775 )
 
 [node name="TableHorizontal" instance=ExtResource( 1 )]
-destroyable = true
 
 [node name="Sprite2" parent="." index="0"]
+modulate = Color( 100, 100, 100, 1 )
 scale = Vector2( 0.03, 0.03 )
 texture = ExtResource( 2 )
 region_rect = Rect2( 728, 35, 277, 675 )
