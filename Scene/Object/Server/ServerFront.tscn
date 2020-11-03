@@ -9,7 +9,7 @@ extents = Vector2( 40.6193, 72.7231 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 4.1723, 7.17664 )
 
-[node name="Server" instance=ExtResource( 2 )]
+[node name="ServerFront" instance=ExtResource( 2 )]
 
 [node name="Sprite2" parent="." index="0"]
 modulate = Color( 100, 100, 100, 1 )

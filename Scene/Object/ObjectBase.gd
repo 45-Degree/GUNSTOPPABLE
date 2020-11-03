@@ -5,9 +5,12 @@ var invincible = false
 export var destroyable = false
 export var explodable = false
 export var pickable = false
+export var unlockable = false
 onready var explodeDamage = preload("res://Scene/Effect/ExplosionDamage.tscn")
 
 func _process(delta):
+	if unlockable == true and Singleton.unlock == true:
+		queue_free()
 	if explodable == true and health == 0:
 		var explodeInstance = explodeDamage.instance()
 		explodeInstance.position = self.get_global_position()

@@ -8,8 +8,7 @@ extents = Vector2( 36.695, 53.6647 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 3.7301, 8.58246 )
 
-[node name="TableHorizontal" instance=ExtResource( 1 )]
-destroyable = true
+[node name="WaterTank" instance=ExtResource( 1 )]
 
 [node name="Sprite2" parent="." index="0"]
 region_rect = Rect2( 33.527, 277.677, 74.3306, 178.452 )

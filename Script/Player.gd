@@ -58,7 +58,7 @@ func _physics_process(delta):
 	else:
 		animationTree.set("parameters/Idle/blend_position", target_sight)
 		animationTree.set("parameters/Run/blend_position", target_sight)
-		animationState.travel("Run")
+		animationState.travel("Idle")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	velocity = move_and_slide(velocity)
 	

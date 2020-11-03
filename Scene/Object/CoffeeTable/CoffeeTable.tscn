@@ -8,7 +8,7 @@ extents = Vector2( 50.1921, 44.7746 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 5.05441, 4.38423 )
 
-[node name="TableHorizontal" instance=ExtResource( 1 )]
+[node name="CoffeTable" instance=ExtResource( 1 )]
 
 [node name="Sprite2" parent="." index="0"]
 scale = Vector2( 0.144028, 0.0463758 )

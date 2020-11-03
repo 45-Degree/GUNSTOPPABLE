@@ -1,32 +1,26 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Sprite/Object/KeyCardonMap.png" type="Texture" id=1]
+[ext_resource path="res://Sprite/Object/sofa.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 38.2097, 54.3969 )
+extents = Vector2( 41.6278, 98.1648 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 3.7301, 5.64882 )
+extents = Vector2( 3.99659, 9.94775 )
 
-[node name="Keycard" instance=ExtResource( 2 )]
-destroyable = false
-pickable = true
+[node name="SofaSide" instance=ExtResource( 2 )]
 
 [node name="Sprite2" parent="." index="0"]
+scale = Vector2( 0.03, 0.03 )
 texture = ExtResource( 1 )
-region_rect = Rect2( 2, 1, 74, 111 )
+region_rect = Rect2( 728, 35, 277, 675 )
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( 0.0182307, -0.143819 )
+position = Vector2( 0, -0.144 )
 scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 1 )
-disabled = true
-
-[node name="Hurtbox" parent="." index="3"]
-collision_layer = 32
-collision_mask = 1
 
 [node name="CollisionShape2D2" parent="Hurtbox" index="1"]
-position = Vector2( 0.0433216, -0.0362891 )
+position = Vector2( 0, 0 )
 shape = SubResource( 2 )

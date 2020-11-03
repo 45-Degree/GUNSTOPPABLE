@@ -460,7 +460,7 @@ position = Vector2( -65.7799, -32.9569 )
 scale = Vector2( 1.81619, -2.83597 )
 
 [node name="bottomRight" parent="Camera2D/Limits" index="1"]
-position = Vector2( 725.2, 671.339 )
+position = Vector2( 722.372, 668.511 )
 
 [node name="Floor" type="TileMap" parent="." groups=[
 "wall1",
@@ -551,11 +551,15 @@ position = Vector2( 445.436, 298.512 )
 position = Vector2( 55.824, 229.475 )
 scale = Vector2( 4.42016, 4.42016 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableHorizontal2" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 55.824, 350.638 )
 scale = Vector2( 4.42016, 4.42016 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableHorizontal10" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 234.949, 524.516 )
@@ -565,51 +569,71 @@ scale = Vector2( 4.42016, 4.42016 )
 position = Vector2( 57.6076, 593.211 )
 scale = Vector2( 4.42016, 4.42016 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableHorizontal11" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 369.742, 608.372 )
 scale = Vector2( 4.42016, 4.42016 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableHorizontal14" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 439.304, 167.816 )
 scale = Vector2( 5.93015, 2.65537 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableHorizontal15" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 441.087, 261.456 )
 scale = Vector2( 5.93015, 2.65537 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableHorizontal16" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 441.979, 355.097 )
 scale = Vector2( 5.93015, 2.65537 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableHorizontal3" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 207.277, 231.257 )
 scale = Vector2( 4.42016, 4.42016 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableHorizontal5" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 208.168, 114.549 )
 scale = Vector2( 4.42016, 4.42016 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableHorizontal4" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 207.277, 352.419 )
 scale = Vector2( 4.42016, 4.42016 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableHorizontal6" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 281.906, 248.691 )
 scale = Vector2( 1, -23 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableHorizontal12" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 440.648, 571.527 )
 scale = Vector2( 1, -9.58624 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableHorizontal7" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 41.8731, 471.393 )
@@ -783,10 +807,6 @@ margin_right = 371.218
 margin_bottom = 261.06
 custom_fonts/font = SubResource( 27 )
 text = "Exit"
-
-[node name="TableHorizontal" parent="." instance=ExtResource( 10 )]
-position = Vector2( 93.3381, -25.4558 )
-script = SubResource( 17 )
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector8" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector10" to="." method="_on_Detector_body_entered"]

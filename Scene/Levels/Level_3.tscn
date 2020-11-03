@@ -458,10 +458,10 @@ drag_margin_v_enabled = true
 smoothing_speed = 3.0
 
 [node name="topLeft" parent="Camera2D/Limits" index="0"]
-position = Vector2( 0, 0 )
+position = Vector2( -56.5686, -185.262 )
 
 [node name="bottomRight" parent="Camera2D/Limits" index="1"]
-position = Vector2( 784, 432 )
+position = Vector2( 755.968, 488.063 )
 
 [node name="Floor" type="TileMap" parent="." groups=[
 "wall1",
@@ -556,56 +556,78 @@ position = Vector2( 554, 138 )
 position = Vector2( 40.3182, 96.002 )
 scale = Vector2( 4, 5.6 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableVertical3" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 195, 90 )
 scale = Vector2( 1.48, 13.04 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableVertical10" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 195, 385 )
 scale = Vector2( 1.48, 8.92 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableVertical4" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 662, 107 )
 scale = Vector2( 4, 4 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableVertical2" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 618, 108 )
 scale = Vector2( 4, 4 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableVertical5" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 663, 189 )
 scale = Vector2( 4, 4 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableVertical6" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 619, 190 )
 scale = Vector2( 4, 4 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableVertical7" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 662, 272 )
 scale = Vector2( 4, 4 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableVertical8" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 618, 273 )
 scale = Vector2( 4, 4 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableVertical9" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 663, 354 )
 scale = Vector2( 4, 4 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableVertical11" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 619, 355 )
 scale = Vector2( 4, 4 )
 script = SubResource( 17 )
+health = 10
+explodable = false
 
 [node name="TableHorizontal" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 316.725, 44.3629 )

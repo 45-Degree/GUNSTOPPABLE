@@ -9,7 +9,7 @@ extents = Vector2( 107.388, 41.5788 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10.6149, 4.0794 )
 
-[node name="AirCon" instance=ExtResource( 2 )]
+[node name="AirConH" instance=ExtResource( 2 )]
 explodable = true
 
 [node name="Sprite2" parent="." index="0"]
