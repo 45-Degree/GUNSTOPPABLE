@@ -10,9 +10,9 @@ extents = Vector2( 40.6193, 72.7231 )
 extents = Vector2( 4.1723, 7.17664 )
 
 [node name="ServerFront" instance=ExtResource( 2 )]
+destroyable = false
 
 [node name="Sprite2" parent="." index="0"]
-modulate = Color( 100, 100, 100, 1 )
 texture = ExtResource( 1 )
 region_rect = Rect2( 24, 60, 81, 146 )
 

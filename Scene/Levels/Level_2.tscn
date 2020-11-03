@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/NPC/Hostage.tscn" type="PackedScene" id=2]
@@ -10,8 +10,9 @@
 [ext_resource path="res://Scene/NPC/Terrorist.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/UI/Camera2D.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Sprite/Object/Obstacle.png" type="Texture" id=11]
-[ext_resource path="res://Sprite/Object/Server.png" type="Texture" id=12]
+[ext_resource path="res://Scene/Object/Chair/ChairRight.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scene/Object/Server/ServerFront.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scene/Object/Server/ServerBack.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -525,120 +526,8 @@ health = 10
 explodable = false
 
 [node name="TableHorizontal" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 568.442, 322.89 )
-scale = Vector2( 6.594, 4 )
-
-[node name="Server" type="Sprite" parent="YSort"]
-position = Vector2( 693.763, 263.699 )
-scale = Vector2( 0.64045, 0.64045 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 247.089, 54.6482, 89.7507, 156.233 )
-
-[node name="Server5" type="Sprite" parent="YSort"]
-position = Vector2( 212, 260.045 )
-scale = Vector2( 0.64045, 0.64045 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 119.665, 54.6482, 108.587, 156.233 )
-
-[node name="Server6" type="Sprite" parent="YSort"]
-position = Vector2( 212, 217.045 )
-scale = Vector2( 0.64045, 0.64045 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 119.665, 54.6482, 108.587, 156.233 )
-
-[node name="Server7" type="Sprite" parent="YSort"]
-position = Vector2( 212, 176.045 )
-scale = Vector2( 0.64045, 0.64045 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 119.665, 54.6482, 108.587, 156.233 )
-
-[node name="Server8" type="Sprite" parent="YSort"]
-position = Vector2( 212, 136.045 )
-scale = Vector2( 0.64045, 0.64045 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 119.665, 54.6482, 108.587, 156.233 )
-
-[node name="Server9" type="Sprite" parent="YSort"]
-position = Vector2( 376.927, 202.136 )
-scale = Vector2( 0.64045, 0.64045 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 17.7258, 54.6482, 93.0748, 156.233 )
-
-[node name="Server10" type="Sprite" parent="YSort"]
-position = Vector2( 375.927, 161.136 )
-scale = Vector2( 0.64045, 0.64045 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 17.7258, 54.6482, 93.0748, 156.233 )
-
-[node name="Server11" type="Sprite" parent="YSort"]
-position = Vector2( 377.927, 124.136 )
-scale = Vector2( 0.64045, 0.64045 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 17.7258, 54.6482, 93.0748, 156.233 )
-
-[node name="Server15" type="Sprite" parent="YSort"]
-position = Vector2( 377.927, 124.136 )
-scale = Vector2( 0.64045, 0.64045 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 17.7258, 54.6482, 93.0748, 156.233 )
-
-[node name="Server12" type="Sprite" parent="YSort"]
-position = Vector2( 558.836, 204.809 )
-scale = Vector2( 0.64045, 0.64045 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 17.7258, 54.6482, 93.0748, 156.233 )
-
-[node name="Server13" type="Sprite" parent="YSort"]
-position = Vector2( 557.836, 163.809 )
-scale = Vector2( 0.64045, 0.64045 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 17.7258, 54.6482, 93.0748, 156.233 )
-
-[node name="Server14" type="Sprite" parent="YSort"]
-position = Vector2( 558.836, 126.809 )
-scale = Vector2( 0.64045, 0.64045 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 17.7258, 54.6482, 93.0748, 156.233 )
-
-[node name="Server2" type="Sprite" parent="YSort"]
-position = Vector2( 693.763, 220.699 )
-scale = Vector2( 0.64045, 0.64045 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 350.136, 53.5402, 93.0748, 160.665 )
-
-[node name="Server3" type="Sprite" parent="YSort"]
-position = Vector2( 692.763, 168.699 )
-scale = Vector2( 0.64045, 0.64045 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 350.136, 53.5402, 93.0748, 160.665 )
-
-[node name="Server4" type="Sprite" parent="YSort"]
-position = Vector2( 693.763, 125.699 )
-scale = Vector2( 0.64045, 0.64045 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 350.136, 53.5402, 93.0748, 160.665 )
-
-[node name="Obstacle" type="Sprite" parent="YSort"]
-position = Vector2( 331.94, 271.334 )
-scale = Vector2( 0.288329, 0.288329 )
-texture = ExtResource( 11 )
-region_enabled = true
-region_rect = Rect2( 239.318, 918.426, 98.219, 126.457 )
+position = Vector2( 584.46, 326.895 )
+scale = Vector2( 8.554, 4 )
 
 [node name="TableHorizontal2" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 286.869, 222.725 )
@@ -655,6 +544,66 @@ scale = Vector2( 3.75239, 4.9524 )
 [node name="TableHorizontal5" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 626.302, 222.725 )
 scale = Vector2( 3.75239, 4.9524 )
+
+[node name="ServerBack" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 214.4, 261.867 )
+scale = Vector2( 6.69085, 6.69085 )
+
+[node name="ServerBack2" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 213.4, 218.367 )
+scale = Vector2( 6.69085, 6.69085 )
+
+[node name="ServerBack3" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 212.4, 179.367 )
+scale = Vector2( 6.69085, 6.69085 )
+
+[node name="ServerBack4" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 214.4, 136.867 )
+scale = Vector2( 6.69085, 6.69085 )
+
+[node name="ServerBack5" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 695.9, 263.367 )
+scale = Vector2( 6.69085, 6.69085 )
+
+[node name="ServerBack6" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 694.9, 219.867 )
+scale = Vector2( 6.69085, 6.69085 )
+
+[node name="ServerBack7" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 693.9, 180.867 )
+scale = Vector2( 6.69085, 6.69085 )
+
+[node name="ServerBack8" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 695.9, 138.367 )
+scale = Vector2( 6.69085, 6.69085 )
+
+[node name="ServerFront" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 378.427, 206.233 )
+scale = Vector2( 5.87597, 5.87597 )
+
+[node name="ServerFront2" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 376.425, 162.85 )
+scale = Vector2( 5.87597, 5.87597 )
+
+[node name="ServerFront3" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 379.762, 124.808 )
+scale = Vector2( 5.87597, 5.87597 )
+
+[node name="ServerFront4" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 559.965, 208.902 )
+scale = Vector2( 5.87597, 5.87597 )
+
+[node name="ServerFront5" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 558.631, 164.853 )
+scale = Vector2( 5.87597, 5.87597 )
+
+[node name="TableHorizontal6" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 337.5, 263.45 )
+scale = Vector2( 3.33377, 3.33377 )
+
+[node name="ServerFront6" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 560.633, 127.477 )
+scale = Vector2( 5.87597, 5.87597 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

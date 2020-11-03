@@ -9,6 +9,7 @@ extents = Vector2( 29.7551, 32.1748 )
 extents = Vector2( 2.8764, 5.53224 )
 
 [node name="Tree" instance=ExtResource( 1 )]
+destroyable = false
 
 [node name="Sprite2" parent="." index="0"]
 modulate = Color( 100, 100, 100, 1 )

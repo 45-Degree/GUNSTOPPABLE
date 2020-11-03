@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/NPC/Hostage.tscn" type="PackedScene" id=2]
@@ -11,7 +11,9 @@
 [ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Sprite/Object/Obstacle.png" type="Texture" id=10]
 [ext_resource path="res://Scene/NPC/Terrorist.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Sprite/Object/sofa.png" type="Texture" id=12]
+[ext_resource path="res://Scene/Object/Tree/Tree.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scene/Object/Sofa/SofaV.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scene/Object/TrashCan/TrashCan.tscn" type="PackedScene" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -591,12 +593,47 @@ texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 356.205, 517.054, 88.8537, 120.587 )
 
+[node name="SofaV" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 260.407, 302.229 )
+scale = Vector2( 3.33478, 3.33478 )
+
+[node name="SofaV2" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 171.692, 301.809 )
+rotation = 3.14159
+scale = Vector2( 3.33478, 3.33478 )
+
+[node name="Tree" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 336.598, 297.801 )
+scale = Vector2( 0.862817, 0.862817 )
+
+[node name="Tree4" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 580.59, 300.397 )
+scale = Vector2( 0.862817, 0.862817 )
+
+[node name="Tree5" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 105.461, 50.1655 )
+scale = Vector2( 0.862817, 0.862817 )
+
+[node name="SofaV3" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 475.414, 300.731 )
+scale = Vector2( 3.33478, 3.33478 )
+
+[node name="SofaV4" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 386.699, 300.31 )
+rotation = 3.14159
+scale = Vector2( 3.33478, 3.33478 )
+
 [node name="TableVertical4" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 434.021, 301.605 )
 scale = Vector2( 4, 4 )
 script = SubResource( 17 )
 health = 10
 explodable = false
+
+[node name="TrashCan" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 583.739, 158.771 )
+scale = Vector2( 1.14149, 1.14149 )
+destroyable = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -758,34 +795,6 @@ margin_right = 371.218
 margin_bottom = 261.06
 custom_fonts/font = SubResource( 27 )
 text = "Exit"
-
-[node name="sofa" type="Sprite" parent="."]
-position = Vector2( 260.866, 302.192 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 698.191, 30.9945, 347.522, 691.049 )
-
-[node name="sofa2" type="Sprite" parent="."]
-position = Vector2( 171.777, 302.192 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 1712.79, 30.9945, 351.516, 699.038 )
-
-[node name="sofa3" type="Sprite" parent="."]
-position = Vector2( 475.573, 301.301 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 698.191, 30.9945, 347.522, 691.049 )
-
-[node name="sofa4" type="Sprite" parent="."]
-position = Vector2( 386.483, 301.301 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 1712.79, 30.9945, 351.516, 699.038 )
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector8" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector7" to="." method="_on_Detector_body_entered"]
