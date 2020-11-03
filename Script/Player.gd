@@ -67,12 +67,12 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("stop"):
 		state = STOP
 
-func _on_Hurtbox_area_entered(area):
-	if invul == false:
-		invul = true
-		health -= 1
-		var hiteffect_instance = hiteffect.instance()
-		get_parent().add_child(hiteffect_instance)
-		hiteffect_instance.global_position = global_position
-		yield(get_tree().create_timer(invulTime), "timeout")
-		invul = false
+#func _on_Hurtbox_area_entered(area):
+#	if invul == false:
+#		invul = true
+#		health -= 1
+#		var hiteffect_instance = hiteffect.instance()
+#		get_parent().add_child(hiteffect_instance)
+#		hiteffect_instance.global_position = global_position
+#		yield(get_tree().create_timer(invulTime), "timeout")
+#		invul = false
