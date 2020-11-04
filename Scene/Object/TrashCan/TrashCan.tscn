@@ -11,7 +11,7 @@ extents = Vector2( 3.7301, 4.03657 )
 [node name="TrashCan" instance=ExtResource( 1 )]
 
 [node name="Sprite2" parent="." index="0"]
-region_rect = Rect2( 31.622, 528.638, 79.291, 92.4793 )
+region_rect = Rect2( 357.623, 520.637, 88.5197, 110.232 )
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2( -0.131721, 0.117498 )
