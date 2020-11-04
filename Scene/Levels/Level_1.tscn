@@ -536,6 +536,7 @@ position = Vector2( 360.904, 79.9975 )
 scale = Vector2( 4, 4 )
 script = SubResource( 17 )
 health = 10
+destroyable = false
 explodable = false
 
 [node name="TableVertical3" parent="YSort" instance=ExtResource( 9 )]
@@ -555,6 +556,7 @@ explodable = false
 [node name="TableHorizontal" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 305.102, 121.432 )
 scale = Vector2( 7.35701, 4 )
+destroyable = false
 
 [node name="Terrorist" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( 162.566, 112.373 )
