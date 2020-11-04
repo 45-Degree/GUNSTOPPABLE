@@ -11,8 +11,8 @@
 [ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Sprite/Object/Obstacle.png" type="Texture" id=10]
 [ext_resource path="res://Scene/UI/Camera2D.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Sprite/Object/SlicingDoorSprite.png" type="Texture" id=12]
-[ext_resource path="res://Sprite/Object/KeyCardonMap.png" type="Texture" id=13]
+[ext_resource path="res://Scene/Object/Door/LockDoorV.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scene/Object/KeyCard/Keycard.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -574,25 +574,6 @@ script = SubResource( 17 )
 health = 10
 explodable = false
 
-[node name="SlicingDoorSprite" type="Sprite" parent="YSort"]
-position = Vector2( 479.779, -60.3684 )
-scale = Vector2( 0.758674, 0.452165 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 216, 179, 68, 185 )
-
-[node name="SlicingDoorSprite2" type="Sprite" parent="YSort"]
-position = Vector2( 479.779, -61.3683 )
-scale = Vector2( 0.758674, 0.452165 )
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( 216, -0.768204, 68, 179.768 )
-
-[node name="KeyCardonMap" type="Sprite" parent="YSort"]
-position = Vector2( 770.782, 75.9523 )
-scale = Vector2( 0.286587, 0.233847 )
-texture = ExtResource( 13 )
-
 [node name="TableVertical8" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 794.583, 22.4207 )
 scale = Vector2( 1.16, 4.64 )
@@ -946,6 +927,14 @@ margin_right = 371.218
 margin_bottom = 261.06
 custom_fonts/font = SubResource( 27 )
 text = "Exit"
+
+[node name="TableHorizontal" parent="." instance=ExtResource( 12 )]
+position = Vector2( 495.784, 129.401 )
+scale = Vector2( 3, 3 )
+
+[node name="Keycard" parent="." instance=ExtResource( 13 )]
+position = Vector2( 762.956, 315.22 )
+scale = Vector2( 3, 3 )
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector8" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector10" to="." method="_on_Detector_body_entered"]

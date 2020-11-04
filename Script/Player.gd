@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var MAX_SPEED = 250
+export var MAX_SPEED = 175
 var ACCELERATION = 10000
 var FRICTION = 10000
 var state = STOP
