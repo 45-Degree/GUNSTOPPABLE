@@ -453,6 +453,7 @@ script = ExtResource( 7 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 11 )]
 position = Vector2( -6.0254, 392.542 )
+zoom = Vector2( 1.25, 1.25 )
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_speed = 3.0
@@ -461,7 +462,7 @@ smoothing_speed = 3.0
 position = Vector2( -56.5686, -185.262 )
 
 [node name="bottomRight" parent="Camera2D/Limits" index="1"]
-position = Vector2( 755.968, 488.063 )
+position = Vector2( 816, 480 )
 
 [node name="Floor" type="TileMap" parent="." groups=[
 "wall1",
