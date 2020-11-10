@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/NPC/Hostage.tscn" type="PackedScene" id=2]
@@ -9,11 +9,15 @@
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Scene/NPC/Terrorist.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Sprite/Object/Obstacle.png" type="Texture" id=10]
+[ext_resource path="res://Scene/Object/WaterTank/WaterTank.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scene/UI/Camera2D.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scene/Object/Door/LockDoorV.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/Object/KeyCard/Keycard.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Sprite/Tilemap/Tiles_Mix_2.png" type="Texture" id=14]
+[ext_resource path="res://Scene/Object/TrashCan/TrashCan.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scene/Object/Chair/ChairUp.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scene/Object/Chair/ChairLeft.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scene/Object/Tree/Tree.tscn" type="PackedScene" id=18]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -728,7 +732,7 @@ health = 10
 explodable = false
 
 [node name="TableVertical9" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 628.473, 140.134 )
+position = Vector2( 645.122, 142.512 )
 scale = Vector2( 23, 5.28 )
 script = SubResource( 23 )
 health = 10
@@ -738,87 +742,17 @@ explodable = false
 position = Vector2( 203.292, -18.638 )
 scale = Vector2( 4.834, 4 )
 
-[node name="Obstacle4" type="Sprite" parent="YSort"]
-position = Vector2( 197.97, -1.31226 )
-scale = Vector2( 0.311765, 0.311765 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 13.4525, 942.657, 114.933, 99.3489 )
-
-[node name="Obstacle8" type="Sprite" parent="YSort"]
-position = Vector2( 171.056, 0.0407715 )
-scale = Vector2( 0.171689, 0.171689 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 254.47, 515.947, 81.3164, 117.191 )
-
 [node name="TableHorizontal2" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 203.292, 57.4478 )
+position = Vector2( 202.032, 57.4478 )
 scale = Vector2( 4.834, 4 )
-
-[node name="Obstacle5" type="Sprite" parent="YSort"]
-position = Vector2( 197.97, 74.7736 )
-scale = Vector2( 0.311765, 0.311765 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 13.4525, 942.657, 114.933, 99.3489 )
-
-[node name="Obstacle9" type="Sprite" parent="YSort"]
-position = Vector2( 171.056, 76.1266 )
-scale = Vector2( 0.171689, 0.171689 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 254.47, 515.947, 81.3164, 117.191 )
 
 [node name="TableHorizontal3" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 203.292, 137.538 )
 scale = Vector2( 4.834, 4 )
 
-[node name="Obstacle6" type="Sprite" parent="YSort"]
-position = Vector2( 197.97, 154.864 )
-scale = Vector2( 0.311765, 0.311765 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 13.4525, 942.657, 114.933, 99.3489 )
-
-[node name="Obstacle10" type="Sprite" parent="YSort"]
-position = Vector2( 171.056, 156.217 )
-scale = Vector2( 0.171689, 0.171689 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 254.47, 515.947, 81.3164, 117.191 )
-
 [node name="TableHorizontal4" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 366.142, -19.9729 )
 scale = Vector2( 4.834, 4 )
-
-[node name="Obstacle7" type="Sprite" parent="YSort"]
-position = Vector2( 360.821, -2.64709 )
-scale = Vector2( 0.311765, 0.311765 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 13.4525, 942.657, 114.933, 99.3489 )
-
-[node name="Obstacle16" type="Sprite" parent="YSort"]
-position = Vector2( 983.778, 68.1435 )
-scale = Vector2( 0.311765, 0.311765 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 342, 923, 92, 122 )
-
-[node name="Obstacle18" type="Sprite" parent="YSort"]
-position = Vector2( 983.778, 172.914 )
-scale = Vector2( 0.311765, 0.311765 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 342, 923, 92, 122 )
-
-[node name="Obstacle11" type="Sprite" parent="YSort"]
-position = Vector2( 333.907, -1.29407 )
-scale = Vector2( 0.171689, 0.171689 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 254.47, 515.947, 81.3164, 117.191 )
 
 [node name="TableHorizontal5" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 366.142, 56.113 )
@@ -828,37 +762,9 @@ scale = Vector2( 4.834, 4 )
 position = Vector2( 366.142, 56.113 )
 scale = Vector2( 4.834, 4 )
 
-[node name="Obstacle12" type="Sprite" parent="YSort"]
-position = Vector2( 360.821, 73.4388 )
-scale = Vector2( 0.311765, 0.311765 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 13.4525, 942.657, 114.933, 99.3489 )
-
-[node name="Obstacle13" type="Sprite" parent="YSort"]
-position = Vector2( 333.907, 74.7918 )
-scale = Vector2( 0.171689, 0.171689 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 254.47, 515.947, 81.3164, 117.191 )
-
 [node name="TableHorizontal6" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 366.142, 136.203 )
 scale = Vector2( 4.834, 4 )
-
-[node name="Obstacle14" type="Sprite" parent="YSort"]
-position = Vector2( 360.821, 153.529 )
-scale = Vector2( 0.311765, 0.311765 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 13.4525, 942.657, 114.933, 99.3489 )
-
-[node name="Obstacle15" type="Sprite" parent="YSort"]
-position = Vector2( 333.907, 154.882 )
-scale = Vector2( 0.171689, 0.171689 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 254.47, 515.947, 81.3164, 117.191 )
 
 [node name="TableHorizontal9" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 967.631, 74.7903 )
@@ -866,6 +772,64 @@ scale = Vector2( 4.3049, 4.3049 )
 script = SubResource( 23 )
 health = 10
 explodable = false
+
+[node name="TableHorizontal7" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 487.721, -41.9 )
+scale = Vector2( 3, 3.76 )
+
+[node name="Keycard" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 746.956, 131.22 )
+scale = Vector2( 3, 3 )
+
+[node name="ChairUp" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 192.979, -9.3219 )
+scale = Vector2( 3.42311, 3.42311 )
+
+[node name="ChairUp2" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 356.741, -8.84996 )
+scale = Vector2( 3.42311, 3.42311 )
+
+[node name="ChairUp3" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 195.338, 69.0197 )
+scale = Vector2( 3.42311, 3.42311 )
+
+[node name="ChairUp4" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 359.1, 69.4916 )
+scale = Vector2( 3.42311, 3.42311 )
+
+[node name="ChairLeft" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 979.063, 72.2148 )
+scale = Vector2( 3.42311, 3.42311 )
+
+[node name="ChairLeft2" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 981.442, 178.054 )
+scale = Vector2( 3.42311, 3.42311 )
+
+[node name="Tree" parent="YSort/ChairLeft2" instance=ExtResource( 18 )]
+position = Vector2( -152.684, -80.5979 )
+
+[node name="Tree3" parent="YSort/ChairLeft2" instance=ExtResource( 18 )]
+position = Vector2( -40.4727, -81.119 )
+
+[node name="Tree2" parent="YSort/ChairLeft2" instance=ExtResource( 18 )]
+position = Vector2( -152.163, -48.463 )
+
+[node name="WaterTank" parent="YSort/ChairLeft2/Tree2" instance=ExtResource( 10 )]
+position = Vector2( -84.4194, 60.101 )
+
+[node name="TrashCan" parent="YSort/ChairLeft2/Tree2/WaterTank" instance=ExtResource( 15 )]
+position = Vector2( 82.5087, 2.60554 )
+
+[node name="TrashCan2" parent="YSort/ChairLeft2/Tree2/WaterTank" instance=ExtResource( 15 )]
+position = Vector2( 251, -69.8284 )
+
+[node name="ChairUp5" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 196.282, 150.665 )
+scale = Vector2( 3.42311, 3.42311 )
+
+[node name="ChairUp6" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 360.044, 151.137 )
+scale = Vector2( 3.42311, 3.42311 )
 
 [node name="TableHorizontal10" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 968.338, 182.978 )
@@ -1034,14 +998,6 @@ margin_right = 371.218
 margin_bottom = 261.06
 custom_fonts/font = SubResource( 33 )
 text = "Exit"
-
-[node name="TableHorizontal" parent="." instance=ExtResource( 12 )]
-position = Vector2( 503.721, 142.1 )
-scale = Vector2( 3, 3.76 )
-
-[node name="Keycard" parent="." instance=ExtResource( 13 )]
-position = Vector2( 762.956, 315.22 )
-scale = Vector2( 3, 3 )
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector8" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector10" to="." method="_on_Detector_body_entered"]
