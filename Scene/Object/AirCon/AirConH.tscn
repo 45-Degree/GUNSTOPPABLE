@@ -10,6 +10,7 @@ extents = Vector2( 107.388, 41.5788 )
 extents = Vector2( 10.6149, 4.0794 )
 
 [node name="AirConH" instance=ExtResource( 2 )]
+health = 1
 explodable = true
 
 [node name="Sprite2" parent="." index="0"]
