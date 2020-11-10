@@ -12,7 +12,7 @@ resource_name = "Blink"
 length = 0.4
 step = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite2:modulate")
+tracks/0/path = NodePath("../TableHorizontal/TableHorizontal4:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -29,7 +29,7 @@ resource_name = "Idle"
 length = 0.1
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite2:modulate")
+tracks/0/path = NodePath("../TableHorizontal/TableHorizontal4:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -53,7 +53,7 @@ destroyable = true
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 25, 733, 186, 108 )
+region_rect = Rect2( 16.0754, 733, 200.845, 108 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -0.143819 )
