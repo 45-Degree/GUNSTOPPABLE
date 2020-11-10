@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/NPC/Hostage.tscn" type="PackedScene" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://Scene/Object/Tree/Tree.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scene/Object/Sofa/SofaV.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scene/Object/TrashCan/TrashCan.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Scene/Object/Sofa/SofaH.tscn" type="PackedScene" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -571,16 +570,8 @@ position = Vector2( 529.206, 274.635 )
 position = Vector2( 176.312, 302.896 )
 scale = Vector2( 3.33478, 3.33478 )
 
-[node name="SofaSide" parent="YSort" instance=ExtResource( 17 )]
-position = Vector2( 262.336, 303.844 )
-scale = Vector2( 3.33478, 3.33478 )
-
 [node name="SofaV2" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 391.582, 299.953 )
-scale = Vector2( 3.33478, 3.33478 )
-
-[node name="SofaSide2" parent="YSort" instance=ExtResource( 17 )]
-position = Vector2( 477.605, 300.901 )
 scale = Vector2( 3.33478, 3.33478 )
 
 [node name="Tree5" parent="YSort" instance=ExtResource( 13 )]

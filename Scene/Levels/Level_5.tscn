@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=2]
@@ -11,8 +11,6 @@
 [ext_resource path="res://Scene/NPC/Hostage.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Sprite/Tilemap/Tiles_Mix_2.png" type="Texture" id=11]
-[ext_resource path="res://Scene/Object/AirCon/AirConH.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scene/Object/AirCon/AirConV.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -775,15 +773,6 @@ scale = Vector2( 4.42016, 4.42016 )
 script = SubResource( 24 )
 health = 10
 explodable = false
-
-[node name="AirCon" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 85.7499, 114.573 )
-scale = Vector2( 1.00103, 1.00103 )
-health = 1
-
-[node name="AirConH" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( 19.8264, 191.359 )
-scale = Vector2( 1.00103, 1.00103 )
 
 [node name="TableHorizontal4" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 207.277, 352.419 )

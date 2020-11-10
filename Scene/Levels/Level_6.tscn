@@ -66,25 +66,25 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 [sub_resource type="ConvexPolygonShape2D" id=15]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=27]
+[sub_resource type="ConvexPolygonShape2D" id=16]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=28]
+[sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=29]
+[sub_resource type="ConvexPolygonShape2D" id=18]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=30]
+[sub_resource type="ConvexPolygonShape2D" id=19]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=31]
+[sub_resource type="ConvexPolygonShape2D" id=20]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=32]
+[sub_resource type="ConvexPolygonShape2D" id=21]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
-[sub_resource type="TileSet" id=16]
+[sub_resource type="TileSet" id=22]
 30/name = "tile_mix1.png 30"
 30/texture = ExtResource( 4 )
 30/tex_offset = Vector2( 0, 0 )
@@ -409,14 +409,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 45/navigation_offset = Vector2( 0, 0 )
 45/shape_offset = Vector2( 0, 0 )
 45/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-45/shape = SubResource( 27 )
+45/shape = SubResource( 16 )
 45/shape_one_way = false
 45/shape_one_way_margin = 1.0
 45/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 27 ),
+"shape": SubResource( 16 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 45/z_index = 0
@@ -430,14 +430,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 46/navigation_offset = Vector2( 0, 0 )
 46/shape_offset = Vector2( 0, 0 )
 46/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-46/shape = SubResource( 28 )
+46/shape = SubResource( 17 )
 46/shape_one_way = false
 46/shape_one_way_margin = 1.0
 46/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 28 ),
+"shape": SubResource( 17 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 46/z_index = 0
@@ -451,14 +451,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 47/navigation_offset = Vector2( 0, 0 )
 47/shape_offset = Vector2( 0, 0 )
 47/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-47/shape = SubResource( 29 )
+47/shape = SubResource( 18 )
 47/shape_one_way = false
 47/shape_one_way_margin = 1.0
 47/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 29 ),
+"shape": SubResource( 18 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 47/z_index = 0
@@ -472,14 +472,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 48/navigation_offset = Vector2( 0, 0 )
 48/shape_offset = Vector2( 0, 0 )
 48/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-48/shape = SubResource( 30 )
+48/shape = SubResource( 19 )
 48/shape_one_way = false
 48/shape_one_way_margin = 1.0
 48/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 30 ),
+"shape": SubResource( 19 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 48/z_index = 0
@@ -493,14 +493,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 49/navigation_offset = Vector2( 0, 0 )
 49/shape_offset = Vector2( 0, 0 )
 49/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-49/shape = SubResource( 31 )
+49/shape = SubResource( 20 )
 49/shape_one_way = false
 49/shape_one_way_margin = 1.0
 49/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 31 ),
+"shape": SubResource( 20 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 49/z_index = 0
@@ -514,60 +514,60 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 50/navigation_offset = Vector2( 0, 0 )
 50/shape_offset = Vector2( 0, 0 )
 50/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-50/shape = SubResource( 32 )
+50/shape = SubResource( 21 )
 50/shape_one_way = false
 50/shape_one_way_margin = 1.0
 50/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 32 ),
+"shape": SubResource( 21 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 50/z_index = 0
 
-[sub_resource type="DynamicFont" id=17]
+[sub_resource type="DynamicFont" id=23]
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=18]
+[sub_resource type="DynamicFont" id=24]
 font_data = ExtResource( 1 )
 
-[sub_resource type="ShaderMaterial" id=19]
+[sub_resource type="ShaderMaterial" id=25]
 
-[sub_resource type="Theme" id=20]
+[sub_resource type="Theme" id=26]
 
-[sub_resource type="DynamicFont" id=21]
+[sub_resource type="DynamicFont" id=27]
 size = 39
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=22]
+[sub_resource type="DynamicFont" id=28]
 size = 33
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=23]
+[sub_resource type="DynamicFont" id=29]
 size = 27
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=24]
+[sub_resource type="DynamicFont" id=30]
 size = 30
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=25]
+[sub_resource type="DynamicFont" id=31]
 size = 42
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=26]
+[sub_resource type="DynamicFont" id=32]
 size = 30
 font_data = ExtResource( 1 )
 
@@ -575,7 +575,7 @@ font_data = ExtResource( 1 )
 script = ExtResource( 3 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 16 )]
-position = Vector2( 53.9625, 391.782 )
+position = Vector2( 53.9625, 391.78 )
 scale = Vector2( 0.99774, 1.00932 )
 
 [node name="topLeft" parent="Camera2D/Limits" index="0"]
@@ -589,7 +589,7 @@ position = Vector2( 875.195, 456.517 )
 ]]
 position = Vector2( 151.959, 88.0251 )
 rotation = 8.12934e-06
-tile_set = SubResource( 16 )
+tile_set = SubResource( 22 )
 cell_size = Vector2( 32, 32 )
 collision_layer = 4
 collision_mask = 5
@@ -801,7 +801,7 @@ __meta__ = {
 [node name="Button" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
 margin_right = 102.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 17 )
+custom_fonts/font = SubResource( 23 )
 text = "Next Level"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -811,14 +811,14 @@ __meta__ = {
 margin_left = 106.0
 margin_right = 199.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 24 )
 text = "Main Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Message" type="Label" parent="CanvasLayer/Control"]
-material = SubResource( 19 )
+material = SubResource( 25 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -829,8 +829,8 @@ margin_right = 225.682
 margin_bottom = -37.6028
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource( 20 )
-custom_fonts/font = SubResource( 21 )
+theme = SubResource( 26 )
+custom_fonts/font = SubResource( 27 )
 text = "You kill a hostage!"
 align = 1
 valign = 1
@@ -861,7 +861,7 @@ margin_left = 273.048
 margin_top = 87.2915
 margin_right = 387.048
 margin_bottom = 116.291
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 28 )
 text = "Option"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -872,7 +872,7 @@ margin_left = 199.025
 margin_top = 138.27
 margin_right = 471.025
 margin_bottom = 178.27
-custom_fonts/font = SubResource( 23 )
+custom_fonts/font = SubResource( 29 )
 text = "Sound Effect"
 
 [node name="CheckButton" type="CheckButton" parent="CanvasLayer/Control3"]
@@ -880,7 +880,7 @@ margin_left = 199.025
 margin_top = 180.0
 margin_right = 470.0
 margin_bottom = 218.773
-custom_fonts/font = SubResource( 23 )
+custom_fonts/font = SubResource( 29 )
 text = "Music"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -891,7 +891,7 @@ margin_left = 291.903
 margin_top = 238.131
 margin_right = 375.903
 margin_bottom = 271.131
-custom_fonts/font = SubResource( 24 )
+custom_fonts/font = SubResource( 30 )
 text = "Back"
 
 [node name="Control2" type="Control" parent="CanvasLayer"]
@@ -909,7 +909,7 @@ margin_top = 84.0221
 margin_right = 389.927
 margin_bottom = 121.022
 rect_pivot_offset = Vector2( 97.0978, 46.03 )
-custom_fonts/font = SubResource( 25 )
+custom_fonts/font = SubResource( 31 )
 text = "Pause"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -920,7 +920,7 @@ margin_left = 270.071
 margin_top = 139.751
 margin_right = 390.071
 margin_bottom = 172.751
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 32 )
 text = "Resume"
 
 [node name="Button2" type="Button" parent="CanvasLayer/Control2"]
@@ -928,7 +928,7 @@ margin_left = 269.214
 margin_top = 182.619
 margin_right = 389.214
 margin_bottom = 215.619
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 32 )
 text = "Option"
 
 [node name="Button3" type="Button" parent="CanvasLayer/Control2"]
@@ -936,7 +936,7 @@ margin_left = 287.218
 margin_top = 228.06
 margin_right = 371.218
 margin_bottom = 261.06
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 32 )
 text = "Exit"
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector8" to="." method="_on_Detector_body_entered"]
