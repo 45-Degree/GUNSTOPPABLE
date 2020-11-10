@@ -48,6 +48,7 @@ func _on_Button_pressed():
 		
 	else:
 		get_tree().reload_current_scene()
+		Singleton.unlock = false
 
 
 func _on_Button2_pressed():

@@ -6,6 +6,9 @@ export var destroyable = false
 export var explodable = false
 export var pickable = false
 export var unlockable = false
+onready var animatedSprite = $AnimatedSprite
+onready var particle = $Particles2D
+onready var timer = $Timer
 onready var explodeDamage = preload("res://Scene/Effect/ExplosionDamage.tscn")
 
 func _process(delta):
@@ -18,21 +21,22 @@ func _process(delta):
 		queue_free()
 	elif health == 0:
 		queue_free()
-
-
+	
 
 func _on_Hurtbox_area_entered(area):
 	if invincible == false and destroyable == true:
-		health -= 1
-		invincible = true
-		yield(get_tree().create_timer(0.1), "timeout")
-		invincible = false
+		animatedSprite.show()
 		animationPlayer.play("Blink")
+		particle.emitting = true
+		health -= 1
+		timer.start()
 	
 	if pickable == true:
 		Singleton.unlock = true
 		queue_free()
 	
-
-
-
+func _on_Timer_timeout():
+	animatedSprite.hide()
+	animationPlayer.play("Idle")
+	particle.emitting = false
+	

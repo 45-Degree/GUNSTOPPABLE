@@ -17,7 +17,11 @@ scale = Vector2( 0.04, 0.04 )
 texture = ExtResource( 1 )
 region_rect = Rect2( 1203.83, 43.0331, 174.468, 531.158 )
 
-[node name="CollisionShape2D" parent="." index="1"]
+[node name="AnimatedSprite" parent="." index="1"]
+position = Vector2( 2.21085, -1.88688 )
+frame = 52
+
+[node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -0.218826, -0.143819 )
 scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 1 )

@@ -13,7 +13,11 @@ extents = Vector2( 2.72923, 2.77536 )
 [node name="Sprite2" parent="." index="0"]
 region_rect = Rect2( 348.111, 925.737, 80.9833, 112.232 )
 
-[node name="CollisionShape2D" parent="." index="1"]
+[node name="AnimatedSprite" parent="." index="1"]
+position = Vector2( 1.33036, -1.52626 )
+frame = 38
+
+[node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -1.12439, 0.801122 )
 scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 1 )

@@ -4,7 +4,6 @@
 [ext_resource path="res://Scene/UI/Hitbox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Player/Bullet.gd" type="Script" id=3]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.23354
 height = 6.33782

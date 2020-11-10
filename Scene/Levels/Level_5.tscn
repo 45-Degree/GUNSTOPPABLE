@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=2]
@@ -540,78 +540,48 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 51/shapes = [  ]
 51/z_index = 0
 
-[sub_resource type="GDScript" id=24]
-script/source = "extends StaticBody2D
-onready var animationPlayer = $AnimationPlayer
-export var health = 15
-var invincible = false
-export var destroyable = true
-export var explodable = true
-onready var explodeDamage = preload(\"res://Scene/Effect/ExplosionDamage.tscn\")
-
-func _process(delta):
-	if explodable == true and health == 0:
-		var explodeInstance = explodeDamage.instance()
-		get_tree().current_scene.add_child(explodeInstance)
-		queue_free()
-	elif health == 0:
-		queue_free()
-
-
-
-func _on_Hurtbox_area_entered(area):
-	if invincible == false and destroyable == true:
-		health -= 1
-		invincible = true
-		yield(get_tree().create_timer(0.1), \"timeout\")
-		invincible = false
-	animationPlayer.play(\"Blink\")
-
-
-"
+[sub_resource type="DynamicFont" id=24]
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=25]
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=26]
-font_data = ExtResource( 1 )
+[sub_resource type="ShaderMaterial" id=26]
 
-[sub_resource type="ShaderMaterial" id=27]
+[sub_resource type="Theme" id=27]
 
-[sub_resource type="Theme" id=28]
-
-[sub_resource type="DynamicFont" id=29]
+[sub_resource type="DynamicFont" id=28]
 size = 39
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=30]
+[sub_resource type="DynamicFont" id=29]
 size = 33
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=31]
+[sub_resource type="DynamicFont" id=30]
 size = 27
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=32]
+[sub_resource type="DynamicFont" id=31]
 size = 30
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=33]
+[sub_resource type="DynamicFont" id=32]
 size = 42
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=34]
+[sub_resource type="DynamicFont" id=33]
 size = 30
 font_data = ExtResource( 1 )
 
@@ -680,6 +650,54 @@ position = Vector2( 12.9561, 216.184 )
 [node name="Hostage7" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 251.07, 328.553 )
 
+[node name="TableHorizontal" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 238.567, 539.874 )
+scale = Vector2( 4, 4 )
+
+[node name="TableHorizontal2" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 238.567, 539.874 )
+scale = Vector2( 4, 4 )
+
+[node name="TableVertical" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 52.9805, 211.186 )
+health = 10
+
+[node name="TableVertical6" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 50.3241, 593.041 )
+health = 10
+
+[node name="TableVertical7" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 378.387, 614.292 )
+health = 10
+
+[node name="TableVertical2" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 208.978, 104.489 )
+health = 10
+
+[node name="TableVertical3" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 208.243, 222.959 )
+health = 10
+
+[node name="TableVertical4" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 208.243, 337.015 )
+health = 10
+
+[node name="TableVertical5" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 50.773, 342.165 )
+health = 10
+
+[node name="TableHorizontal3" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 445.977, 253.342 )
+scale = Vector2( 4, 4 )
+
+[node name="TableHorizontal4" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 445.977, 347.488 )
+scale = Vector2( 4, 4 )
+
+[node name="TableHorizontal5" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 445.977, 172.509 )
+scale = Vector2( 4, 4 )
+
 [node name="Hostage3" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 10.4412, 593.249 )
 
@@ -707,80 +725,6 @@ position = Vector2( 571.831, 118.453 )
 [node name="Terrorist3" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 445.436, 298.512 )
 
-[node name="TableHorizontal" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 55.824, 229.475 )
-scale = Vector2( 4.42016, 4.42016 )
-script = SubResource( 24 )
-health = 10
-explodable = false
-
-[node name="TableHorizontal2" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 55.824, 350.638 )
-scale = Vector2( 4.42016, 4.42016 )
-script = SubResource( 24 )
-health = 10
-explodable = false
-
-[node name="TableHorizontal10" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 234.949, 524.516 )
-scale = Vector2( 4.42016, 4.42016 )
-
-[node name="TableHorizontal9" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 57.6076, 593.211 )
-scale = Vector2( 4.42016, 4.42016 )
-script = SubResource( 24 )
-health = 10
-explodable = false
-
-[node name="TableHorizontal11" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 369.742, 608.372 )
-scale = Vector2( 4.42016, 4.42016 )
-script = SubResource( 24 )
-health = 10
-explodable = false
-
-[node name="TableHorizontal14" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 439.304, 167.816 )
-scale = Vector2( 5.93015, 2.65537 )
-script = SubResource( 24 )
-health = 10
-explodable = false
-
-[node name="TableHorizontal15" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 441.087, 261.456 )
-scale = Vector2( 5.93015, 2.65537 )
-script = SubResource( 24 )
-health = 10
-explodable = false
-
-[node name="TableHorizontal16" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 441.979, 355.097 )
-scale = Vector2( 5.93015, 2.65537 )
-script = SubResource( 24 )
-health = 10
-explodable = false
-
-[node name="TableHorizontal3" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 207.277, 231.257 )
-scale = Vector2( 4.42016, 4.42016 )
-script = SubResource( 24 )
-health = 10
-explodable = false
-
-[node name="TableHorizontal5" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 208.168, 114.549 )
-scale = Vector2( 4.42016, 4.42016 )
-script = SubResource( 24 )
-health = 10
-explodable = false
-
-[node name="TableHorizontal4" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 207.277, 352.419 )
-scale = Vector2( 4.42016, 4.42016 )
-script = SubResource( 24 )
-health = 10
-explodable = false
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
@@ -804,7 +748,7 @@ __meta__ = {
 [node name="Button" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
 margin_right = 102.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 25 )
+custom_fonts/font = SubResource( 24 )
 text = "Next Level"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -814,14 +758,14 @@ __meta__ = {
 margin_left = 106.0
 margin_right = 199.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 25 )
 text = "Main Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Message" type="Label" parent="CanvasLayer/Control"]
-material = SubResource( 27 )
+material = SubResource( 26 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -832,8 +776,8 @@ margin_right = 225.682
 margin_bottom = -37.6028
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource( 28 )
-custom_fonts/font = SubResource( 29 )
+theme = SubResource( 27 )
+custom_fonts/font = SubResource( 28 )
 text = "You kill a hostage!"
 align = 1
 valign = 1
@@ -864,7 +808,7 @@ margin_left = 273.048
 margin_top = 87.2915
 margin_right = 387.048
 margin_bottom = 116.291
-custom_fonts/font = SubResource( 30 )
+custom_fonts/font = SubResource( 29 )
 text = "Option"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -875,7 +819,7 @@ margin_left = 199.025
 margin_top = 138.27
 margin_right = 471.025
 margin_bottom = 178.27
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 30 )
 text = "Sound Effect"
 
 [node name="CheckButton" type="CheckButton" parent="CanvasLayer/Control3"]
@@ -883,7 +827,7 @@ margin_left = 199.025
 margin_top = 180.0
 margin_right = 470.0
 margin_bottom = 218.773
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 30 )
 text = "Music"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -894,7 +838,7 @@ margin_left = 291.903
 margin_top = 238.131
 margin_right = 375.903
 margin_bottom = 271.131
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 31 )
 text = "Back"
 
 [node name="Control2" type="Control" parent="CanvasLayer"]
@@ -912,7 +856,7 @@ margin_top = 84.0221
 margin_right = 389.927
 margin_bottom = 121.022
 rect_pivot_offset = Vector2( 97.0978, 46.03 )
-custom_fonts/font = SubResource( 33 )
+custom_fonts/font = SubResource( 32 )
 text = "Pause"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -923,7 +867,7 @@ margin_left = 270.071
 margin_top = 139.751
 margin_right = 390.071
 margin_bottom = 172.751
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 33 )
 text = "Resume"
 
 [node name="Button2" type="Button" parent="CanvasLayer/Control2"]
@@ -931,7 +875,7 @@ margin_left = 269.214
 margin_top = 182.619
 margin_right = 389.214
 margin_bottom = 215.619
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 33 )
 text = "Option"
 
 [node name="Button3" type="Button" parent="CanvasLayer/Control2"]
@@ -939,7 +883,7 @@ margin_left = 287.218
 margin_top = 228.06
 margin_right = 371.218
 margin_bottom = 261.06
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 33 )
 text = "Exit"
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector10" to="." method="_on_Detector_body_entered"]

@@ -4,7 +4,6 @@
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/NPC/Hostage.gd" type="Script" id=7]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.992
 height = 4.426

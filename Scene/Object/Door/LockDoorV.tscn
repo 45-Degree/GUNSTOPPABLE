@@ -17,7 +17,10 @@ unlockable = true
 texture = ExtResource( 2 )
 region_rect = Rect2( 238, 177, 19, 180 )
 
-[node name="CollisionShape2D" parent="." index="1"]
+[node name="AnimatedSprite" parent="." index="1"]
+frame = 57
+
+[node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( 0.0722163, 0.0224913 )
 scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 1 )
