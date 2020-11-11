@@ -9,13 +9,14 @@ extents = Vector2( 36.1226, 39.3178 )
 extents = Vector2( 3.7301, 4.06134 )
 
 [node name="ChairDown" instance=ExtResource( 1 )]
+health = 5
 
 [node name="Sprite2" parent="." index="0"]
 region_rect = Rect2( 143.696, 928.013, 82.6257, 109.569 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 position = Vector2( 2.25339, -1.35739 )
-frame = 19
+frame = 26
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -0.0613362, 1.23422 )

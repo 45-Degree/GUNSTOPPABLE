@@ -680,144 +680,174 @@ position = Vector2( 106.828, 103.445 )
 
 [node name="TableVertical" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 61.1359, 111.799 )
-scale = Vector2( 4, 4 )
+health = 8
 
 [node name="WaterTank3" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( 505.723, -4.00892 )
 scale = Vector2( 3, 3 )
+health = 8
 
 [node name="WaterTank4" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( -54.589, 122.774 )
 scale = Vector2( 3, 3 )
+health = 8
 
 [node name="WaterTank5" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( -88.2249, 252.272 )
 scale = Vector2( 3, 3 )
+health = 8
 
 [node name="SofaSide" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( -5.16046, 285.602 )
 scale = Vector2( 5, 4 )
+health = 8
 
 [node name="SofaSide3" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( 589.511, 3.95114 )
 scale = Vector2( 4.834, 4 )
+health = 8
 
 [node name="SofaSide2" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( -7.99207, 359.225 )
 scale = Vector2( 4.834, 4 )
+health = 8
 
 [node name="TableHorizontal" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 238.222, 363.958 )
 scale = Vector2( 4.834, 4 )
+health = 8
 
 [node name="TableHorizontal2" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 615.094, 384.088 )
 scale = Vector2( 4.834, 4 )
+health = 8
 
 [node name="ChairUp" parent="YSort" instance=ExtResource( 22 )]
 position = Vector2( 604.327, 270.657 )
 scale = Vector2( 4, 4 )
+health = 8
 
 [node name="ChairUp2" parent="YSort" instance=ExtResource( 22 )]
-position = Vector2( 563.123, 317.747 )
+position = Vector2( 563.123, 308.212 )
 scale = Vector2( 4, 4 )
+health = 8
 
 [node name="TableHorizontal3" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 614.331, 260.331 )
 scale = Vector2( 4.834, 4 )
+health = 8
 
 [node name="ChairLeft" parent="YSort" instance=ExtResource( 18 )]
 position = Vector2( 79.3701, 106.356 )
 scale = Vector2( 2.5, 3 )
+health = 8
 
 [node name="TableVertical2" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 308.806, 111.799 )
-scale = Vector2( 4, 4 )
+health = 8
 
 [node name="TableVertical3" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 541.888, 377.724 )
-scale = Vector2( 4, 2.8 )
+position = Vector2( 541.888, 366.07 )
+health = 8
 
 [node name="ChairLeft2" parent="YSort" instance=ExtResource( 18 )]
 position = Vector2( 327.04, 106.356 )
 scale = Vector2( 2.5, 3 )
+health = 8
 
 [node name="TrashCan" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( 61.8059, 69.374 )
 scale = Vector2( 2, 2 )
+health = 8
 
 [node name="TrashCan4" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( 499.072, 180.372 )
 scale = Vector2( 2, 2 )
+health = 8
 
 [node name="TrashCan2" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -88.6378, 393.57 )
 scale = Vector2( 2, 2 )
+health = 8
 
 [node name="TrashCan3" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( 399.775, 394.629 )
 scale = Vector2( 2, 2 )
+health = 8
 
 [node name="Tree" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 153, 128 )
 scale = Vector2( 3, 3 )
+health = 8
 
 [node name="Tree2" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 211.27, 249.838 )
 scale = Vector2( 3, 3 )
+health = 8
 
 [node name="Tree4" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 652.435, -3.11394 )
 scale = Vector2( 3, 3 )
+health = 8
 
 [node name="Tree3" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 103.205, 248.779 )
 scale = Vector2( 3, 3 )
+health = 8
 
 [node name="AirCon" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 656.102, 183.436 )
 scale = Vector2( 2, 2 )
+health = 8
 
 [node name="ShelfFront" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 462.522, 153.507 )
 scale = Vector2( 4, 4 )
+health = 8
 
 [node name="ShelfSide" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 410.752, 257 )
 rotation = 8.12934e-06
 scale = Vector2( 4, 4 )
+health = 8
 
 [node name="ShelfSide5" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 333.39, 257 )
 rotation = 8.12934e-06
 scale = Vector2( 4, 4 )
+health = 8
 
 [node name="ShelfSide6" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 259.391, 257 )
 rotation = 8.12934e-06
 scale = Vector2( 4, 4 )
+health = 8
 
 [node name="ShelfSide4" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 652.93, 65.3428 )
 rotation = 8.12934e-06
 scale = Vector2( 4, 4 )
+health = 8
 
 [node name="ShelfSide3" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 338.452, 382.18 )
 rotation = 8.12934e-06
 scale = Vector2( 4, 2.76 )
+health = 8
 
 [node name="CoffeTable" parent="YSort" instance=ExtResource( 21 )]
 position = Vector2( 593.673, 59.7036 )
 scale = Vector2( 4, 4 )
+health = 8
 
 [node name="AirConH" parent="YSort" instance=ExtResource( 20 )]
-position = Vector2( 304.844, -24.4346 )
+position = Vector2( 303.655, -9.56952 )
 rotation = 8.12934e-06
 scale = Vector2( 2, 2 )
+health = 10
 
 [node name="AirConH2" parent="YSort" instance=ExtResource( 20 )]
-position = Vector2( 156.911, 233.015 )
+position = Vector2( 157.66, 246.143 )
 rotation = 8.12934e-06
 scale = Vector2( 2, 2 )
 
@@ -825,6 +855,7 @@ scale = Vector2( 2, 2 )
 position = Vector2( 237.151, 0.243164 )
 rotation = 8.12934e-06
 scale = Vector2( 4, 4 )
+health = 8
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

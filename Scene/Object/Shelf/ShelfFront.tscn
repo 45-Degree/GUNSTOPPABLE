@@ -4,12 +4,13 @@
 [ext_resource path="res://Sprite/Object/shelf.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 54.1234, 90.67 )
+extents = Vector2( 52.0849, 86.173 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 5.38264, 8.89358 )
 
 [node name="ShelfFront" instance=ExtResource( 1 )]
+destroyable = false
 
 [node name="Sprite2" parent="." index="0"]
 scale = Vector2( 0.02, 0.02 )
@@ -18,10 +19,11 @@ region_rect = Rect2( 84, 66, 533, 908 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 position = Vector2( 2.13391, -0.539402 )
-frame = 2
+frame = 58
 
 [node name="CollisionShape2D" parent="." index="2"]
-position = Vector2( -0.218826, -0.143819 )
+visible = true
+position = Vector2( -0.070007, 0.00499995 )
 scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 1 )
 

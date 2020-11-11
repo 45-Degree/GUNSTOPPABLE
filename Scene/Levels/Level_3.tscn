@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Scene/NPC/Terrorist.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=7]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Sprite/Tilemap/tile_mix1.png" type="Texture" id=9]
-[ext_resource path="res://Sprite/Object/Obstacle.png" type="Texture" id=10]
 [ext_resource path="res://Scene/UI/Camera2D.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Sprite/Tilemap/Tiles_Mix_2.png" type="Texture" id=12]
 
@@ -568,7 +567,6 @@ script = ExtResource( 7 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 11 )]
 position = Vector2( -6.0254, 392.542 )
-zoom = Vector2( 1.25, 1.25 )
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_speed = 3.0
@@ -671,342 +669,82 @@ position = Vector2( 554, 138 )
 [node name="TableHorizontal" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 316.725, 44.3629 )
 scale = Vector2( 4.834, 4 )
+health = 8
 
 [node name="TableHorizontal2" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 316.725, 105.363 )
 scale = Vector2( 4.834, 4 )
-
-[node name="Obstacle" type="Sprite" parent="YSort"]
-position = Vector2( 53.4136, 84.1867 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 326.225, 908.175, 114.8, 148.283 )
-
-[node name="Obstacle2" type="Sprite" parent="YSort"]
-position = Vector2( 672.414, 103.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 326.225, 908.175, 114.8, 148.283 )
-
-[node name="Obstacle5" type="Sprite" parent="YSort"]
-position = Vector2( 674.413, 186.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 326.225, 908.175, 114.8, 148.283 )
-
-[node name="Obstacle6" type="Sprite" parent="YSort"]
-position = Vector2( 673.413, 265.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 326.225, 908.175, 114.8, 148.283 )
-
-[node name="Obstacle7" type="Sprite" parent="YSort"]
-position = Vector2( 670.413, 348.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 326.225, 908.175, 114.8, 148.283 )
-
-[node name="Obstacle8" type="Sprite" parent="YSort"]
-position = Vector2( 599.413, 344.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 244.985, 915.559, 81.2403, 128.912 )
-
-[node name="Obstacle11" type="Sprite" parent="YSort"]
-position = Vector2( 602.413, 105.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 244.985, 915.559, 81.2403, 128.912 )
-
-[node name="Obstacle9" type="Sprite" parent="YSort"]
-position = Vector2( 301.413, 118.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 19.7286, 928.385, 108.529, 116.086 )
-
-[node name="Obstacle13" type="Sprite" parent="YSort"]
-position = Vector2( 348.413, 121.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 24.2575, 530.454, 97.9771, 93.4551 )
-
-[node name="Obstacle14" type="Sprite" parent="YSort"]
-position = Vector2( 345.413, 58.1867 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 24.2575, 530.454, 97.9771, 93.4551 )
-
-[node name="Obstacle12" type="Sprite" parent="YSort"]
-position = Vector2( 301.413, 56.1867 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 19.7286, 928.385, 108.529, 116.086 )
+health = 8
 
 [node name="TableVertical" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 26.0419, 105.247 )
-health = 10
+health = 8
 
 [node name="TableVertical2" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 637.925, 99.8326 )
-health = 10
+health = 8
 
 [node name="TableVertical3" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 639.73, 191.886 )
-health = 10
+health = 8
 
 [node name="TableVertical4" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 641.535, 278.524 )
-health = 10
+health = 8
 
 [node name="TableVertical5" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 639.73, 369.675 )
-health = 10
+health = 8
 
 [node name="TableHorizontal3" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 317.725, 179.363 )
 scale = Vector2( 4.834, 4 )
+health = 8
 
 [node name="TableHorizontal4" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 317.725, 240.363 )
 scale = Vector2( 4.834, 4 )
-
-[node name="Obstacle15" type="Sprite" parent="YSort"]
-position = Vector2( 302.413, 253.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 19.7286, 928.385, 108.529, 116.086 )
-
-[node name="Obstacle16" type="Sprite" parent="YSort"]
-position = Vector2( 349.413, 256.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 24.2575, 530.454, 97.9771, 93.4551 )
-
-[node name="Obstacle17" type="Sprite" parent="YSort"]
-position = Vector2( 346.413, 193.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 24.2575, 530.454, 97.9771, 93.4551 )
-
-[node name="Obstacle18" type="Sprite" parent="YSort"]
-position = Vector2( 302.413, 191.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 19.7286, 928.385, 108.529, 116.086 )
+health = 8
 
 [node name="TableHorizontal5" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 318.725, 335.363 )
 scale = Vector2( 4.834, 4 )
+health = 8
 
 [node name="TableHorizontal6" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 318.725, 396.363 )
 scale = Vector2( 4.834, 4 )
-
-[node name="Obstacle19" type="Sprite" parent="YSort"]
-position = Vector2( 303.413, 409.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 19.7286, 928.385, 108.529, 116.086 )
-
-[node name="Obstacle20" type="Sprite" parent="YSort"]
-position = Vector2( 350.413, 412.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 24.2575, 530.454, 97.9771, 93.4551 )
-
-[node name="Obstacle21" type="Sprite" parent="YSort"]
-position = Vector2( 347.413, 349.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 24.2575, 530.454, 97.9771, 93.4551 )
-
-[node name="Obstacle22" type="Sprite" parent="YSort"]
-position = Vector2( 303.413, 347.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 19.7286, 928.385, 108.529, 116.086 )
+health = 8
 
 [node name="TableHorizontal7" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 416.725, 43.3629 )
 scale = Vector2( 4.834, 4 )
+health = 8
 
 [node name="TableHorizontal8" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 416.725, 104.363 )
 scale = Vector2( 4.834, 4 )
-
-[node name="Obstacle23" type="Sprite" parent="YSort"]
-position = Vector2( 401.413, 117.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 19.7286, 928.385, 108.529, 116.086 )
-
-[node name="Obstacle24" type="Sprite" parent="YSort"]
-position = Vector2( 448.413, 120.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 24.2575, 530.454, 97.9771, 93.4551 )
-
-[node name="Obstacle25" type="Sprite" parent="YSort"]
-position = Vector2( 445.413, 57.1867 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 24.2575, 530.454, 97.9771, 93.4551 )
-
-[node name="Obstacle26" type="Sprite" parent="YSort"]
-position = Vector2( 401.413, 55.1867 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 19.7286, 928.385, 108.529, 116.086 )
+health = 8
 
 [node name="TableHorizontal9" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 418.725, 178.363 )
 scale = Vector2( 4.834, 4 )
+health = 8
 
 [node name="TableHorizontal10" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 418.725, 239.363 )
 scale = Vector2( 4.834, 4 )
-
-[node name="Obstacle27" type="Sprite" parent="YSort"]
-position = Vector2( 403.413, 252.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 19.7286, 928.385, 108.529, 116.086 )
-
-[node name="Obstacle28" type="Sprite" parent="YSort"]
-position = Vector2( 450.413, 255.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 24.2575, 530.454, 97.9771, 93.4551 )
-
-[node name="Obstacle29" type="Sprite" parent="YSort"]
-position = Vector2( 447.413, 192.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 24.2575, 530.454, 97.9771, 93.4551 )
-
-[node name="Obstacle30" type="Sprite" parent="YSort"]
-position = Vector2( 403.413, 190.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 19.7286, 928.385, 108.529, 116.086 )
+health = 8
 
 [node name="TableHorizontal11" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 420.725, 334.363 )
 scale = Vector2( 4.834, 4 )
+health = 8
 
 [node name="TableHorizontal12" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 420.725, 395.363 )
 scale = Vector2( 4.834, 4 )
-
-[node name="Obstacle31" type="Sprite" parent="YSort"]
-position = Vector2( 405.413, 408.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 19.7286, 928.385, 108.529, 116.086 )
-
-[node name="Obstacle32" type="Sprite" parent="YSort"]
-position = Vector2( 452.413, 411.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 24.2575, 530.454, 97.9771, 93.4551 )
-
-[node name="Obstacle33" type="Sprite" parent="YSort"]
-position = Vector2( 449.413, 348.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 24.2575, 530.454, 97.9771, 93.4551 )
-
-[node name="Obstacle34" type="Sprite" parent="YSort"]
-position = Vector2( 405.413, 346.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 19.7286, 928.385, 108.529, 116.086 )
-
-[node name="Obstacle10" type="Sprite" parent="YSort"]
-position = Vector2( 600.413, 265.187 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 244.985, 915.559, 81.2403, 128.912 )
-
-[node name="Obstacle3" type="Sprite" parent="YSort"]
-position = Vector2( 456, -13 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 15.647, 259.176, 108.254, 206.438 )
-
-[node name="Obstacle4" type="Sprite" parent="YSort"]
-position = Vector2( 70, 136 )
-rotation = 8.12934e-06
-scale = Vector2( 0.262364, 0.262364 )
-texture = ExtResource( 10 )
-region_enabled = true
-region_rect = Rect2( 147.844, 529.668, 88.933, 102.527 )
+health = 8
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

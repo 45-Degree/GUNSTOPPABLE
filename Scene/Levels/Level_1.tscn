@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/NPC/Hostage.tscn" type="PackedScene" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://Scene/Object/Tree/Tree.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scene/Object/Sofa/SofaV.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scene/Object/TrashCan/TrashCan.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Scene/Object/Sofa/SofaH.tscn" type="PackedScene" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -376,48 +375,48 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 44/shapes = [  ]
 44/z_index = 0
 
+[sub_resource type="DynamicFont" id=17]
+font_data = ExtResource( 7 )
+
 [sub_resource type="DynamicFont" id=18]
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=19]
-font_data = ExtResource( 7 )
+[sub_resource type="ShaderMaterial" id=19]
 
-[sub_resource type="ShaderMaterial" id=20]
+[sub_resource type="Theme" id=20]
 
-[sub_resource type="Theme" id=21]
-
-[sub_resource type="DynamicFont" id=22]
+[sub_resource type="DynamicFont" id=21]
 size = 39
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=23]
+[sub_resource type="DynamicFont" id=22]
 size = 33
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=24]
+[sub_resource type="DynamicFont" id=23]
 size = 27
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=25]
+[sub_resource type="DynamicFont" id=24]
 size = 30
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=26]
+[sub_resource type="DynamicFont" id=25]
 size = 42
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=27]
+[sub_resource type="DynamicFont" id=26]
 size = 30
 font_data = ExtResource( 7 )
 
@@ -504,11 +503,11 @@ health = 10
 
 [node name="TableHorizontal3" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 438.027, 300.632 )
-health = 10
+health = 8
 
 [node name="TableHorizontal4" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 391.388, 100.841 )
-health = 10
+health = 8
 destroyable = false
 
 [node name="Hostage3" parent="YSort" instance=ExtResource( 2 )]
@@ -517,6 +516,7 @@ position = Vector2( 321.53, 92.5443 )
 [node name="TableHorizontal" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 305.102, 121.432 )
 scale = Vector2( 7.35701, 4 )
+health = 8
 destroyable = false
 
 [node name="Terrorist" parent="YSort" instance=ExtResource( 11 )]
@@ -531,46 +531,36 @@ position = Vector2( 529.206, 274.635 )
 [node name="SofaV" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 176.312, 302.896 )
 scale = Vector2( 3.33478, 3.33478 )
-health = 10
-
-[node name="SofaSide" parent="YSort" instance=ExtResource( 17 )]
-position = Vector2( 262.336, 303.844 )
-scale = Vector2( 3.33478, 3.33478 )
-health = 10
+health = 8
 
 [node name="SofaV2" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 391.582, 299.953 )
 scale = Vector2( 3.33478, 3.33478 )
-health = 10
-
-[node name="SofaSide2" parent="YSort" instance=ExtResource( 17 )]
-position = Vector2( 477.605, 300.901 )
-scale = Vector2( 3.33478, 3.33478 )
-health = 10
+health = 8
 
 [node name="Tree5" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 110.057, 52.2868 )
 scale = Vector2( 3.33712, 3.33712 )
-health = 10
+health = 8
 
 [node name="Tree6" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 337.647, 313.248 )
 scale = Vector2( 3.33712, 3.33712 )
-health = 10
+health = 8
 
 [node name="Tree7" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 579.253, 311.913 )
 scale = Vector2( 3.33712, 3.33712 )
-health = 10
+health = 8
 
 [node name="TrashCan2" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( 581.907, 152.904 )
 scale = Vector2( 2.44247, 2.44247 )
-health = 10
+health = 8
 
 [node name="TableVertical" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 217.582, 301.412 )
-health = 10
+health = 8
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -595,7 +585,7 @@ __meta__ = {
 [node name="Button" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
 margin_right = 102.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 17 )
 text = "Next Level"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -605,14 +595,14 @@ __meta__ = {
 margin_left = 106.0
 margin_right = 199.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 19 )
+custom_fonts/font = SubResource( 18 )
 text = "Main Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Message" type="Label" parent="CanvasLayer/Control"]
-material = SubResource( 20 )
+material = SubResource( 19 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -623,8 +613,8 @@ margin_right = 225.682
 margin_bottom = -37.6028
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource( 21 )
-custom_fonts/font = SubResource( 22 )
+theme = SubResource( 20 )
+custom_fonts/font = SubResource( 21 )
 text = "You kill a hostage!"
 align = 1
 valign = 1
@@ -655,7 +645,7 @@ margin_left = 273.048
 margin_top = 87.2915
 margin_right = 387.048
 margin_bottom = 116.291
-custom_fonts/font = SubResource( 23 )
+custom_fonts/font = SubResource( 22 )
 text = "Option"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -666,7 +656,7 @@ margin_left = 199.025
 margin_top = 138.27
 margin_right = 471.025
 margin_bottom = 178.27
-custom_fonts/font = SubResource( 24 )
+custom_fonts/font = SubResource( 23 )
 text = "Sound Effect"
 
 [node name="CheckButton" type="CheckButton" parent="CanvasLayer/Control3"]
@@ -674,7 +664,7 @@ margin_left = 199.025
 margin_top = 180.0
 margin_right = 470.0
 margin_bottom = 218.773
-custom_fonts/font = SubResource( 24 )
+custom_fonts/font = SubResource( 23 )
 text = "Music"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -685,7 +675,7 @@ margin_left = 291.903
 margin_top = 238.131
 margin_right = 375.903
 margin_bottom = 271.131
-custom_fonts/font = SubResource( 25 )
+custom_fonts/font = SubResource( 24 )
 text = "Back"
 
 [node name="Control2" type="Control" parent="CanvasLayer"]
@@ -703,7 +693,7 @@ margin_top = 84.0221
 margin_right = 389.927
 margin_bottom = 121.022
 rect_pivot_offset = Vector2( 97.0978, 46.03 )
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 25 )
 text = "Pause"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -714,7 +704,7 @@ margin_left = 270.071
 margin_top = 139.751
 margin_right = 390.071
 margin_bottom = 172.751
-custom_fonts/font = SubResource( 27 )
+custom_fonts/font = SubResource( 26 )
 text = "Resume"
 
 [node name="Button2" type="Button" parent="CanvasLayer/Control2"]
@@ -722,7 +712,7 @@ margin_left = 269.214
 margin_top = 182.619
 margin_right = 389.214
 margin_bottom = 215.619
-custom_fonts/font = SubResource( 27 )
+custom_fonts/font = SubResource( 26 )
 text = "Option"
 
 [node name="Button3" type="Button" parent="CanvasLayer/Control2"]
@@ -730,7 +720,7 @@ margin_left = 287.218
 margin_top = 228.06
 margin_right = 371.218
 margin_bottom = 261.06
-custom_fonts/font = SubResource( 27 )
+custom_fonts/font = SubResource( 26 )
 text = "Exit"
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector8" to="." method="_on_Detector_body_entered"]

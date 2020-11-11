@@ -9,13 +9,14 @@ extents = Vector2( 50.1921, 44.7746 )
 extents = Vector2( 5.05441, 4.38423 )
 
 [node name="CoffeTable" instance=ExtResource( 1 )]
+health = 10
 
 [node name="Sprite2" parent="." index="0"]
 scale = Vector2( 0.144028, 0.0463758 )
 region_rect = Rect2( 491, 689, 71, 201 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 24
+frame = 51
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -0.218826, -0.143819 )

@@ -94,18 +94,10 @@ tracks/1/path = NodePath("AudioStreamPlayer")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/keys = {
-"clips": [ {
-"end_offset": 0.270152,
-"start_offset": 0.0,
-"stream": ExtResource( 5 )
-}, {
-"end_offset": 0.270152,
-"start_offset": 0.0,
-"stream": ExtResource( 5 )
-} ],
-"times": PoolRealArray( 0.1, 0.4 )
+"clips": [  ],
+"times": PoolRealArray(  )
 }
 
 [sub_resource type="Animation" id=6]
@@ -129,18 +121,10 @@ tracks/1/path = NodePath("AudioStreamPlayer")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/keys = {
-"clips": [ {
-"end_offset": 0.27,
-"start_offset": 0.0,
-"stream": ExtResource( 5 )
-}, {
-"end_offset": 0.27,
-"start_offset": 0.0,
-"stream": ExtResource( 5 )
-} ],
-"times": PoolRealArray( 0.1, 0.4 )
+"clips": [  ],
+"times": PoolRealArray(  )
 }
 
 [sub_resource type="Animation" id=7]
@@ -164,18 +148,10 @@ tracks/1/path = NodePath("AudioStreamPlayer")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/keys = {
-"clips": [ {
-"end_offset": 0.27,
-"start_offset": 0.0,
-"stream": ExtResource( 5 )
-}, {
-"end_offset": 0.27,
-"start_offset": 0.0,
-"stream": ExtResource( 5 )
-} ],
-"times": PoolRealArray( 0.1, 0.4 )
+"clips": [  ],
+"times": PoolRealArray(  )
 }
 
 [sub_resource type="Animation" id=8]
@@ -201,16 +177,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"clips": [ {
-"end_offset": 0.27,
-"start_offset": 0.0,
-"stream": ExtResource( 5 )
-}, {
-"end_offset": 0.27,
-"start_offset": 0.0,
-"stream": ExtResource( 5 )
-} ],
-"times": PoolRealArray( 0.1, 0.4 )
+"clips": [  ],
+"times": PoolRealArray(  )
 }
 
 [sub_resource type="AnimationNodeAnimation" id=9]
@@ -273,9 +241,8 @@ start_node = "Idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=22]
 
-[sub_resource type="CapsuleShape2D" id=23]
-radius = 14.391
-height = 3.225
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 12.7959, 12.196 )
 
 [sub_resource type="CapsuleShape2D" id=24]
 radius = 14.957
@@ -322,9 +289,9 @@ parameters/Run/blend_position = Vector2( -0.439938, 0.00862074 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 0
-position = Vector2( -0.195104, 7.58478 )
+position = Vector2( -1.19623, 12.7573 )
 rotation = 1.5708
-shape = SubResource( 23 )
+shape = SubResource( 25 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 4 )]
 collision_mask = 128
@@ -336,7 +303,7 @@ shape = SubResource( 24 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
-pitch_scale = 0.2
+pitch_scale = 1.03
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
 [editable path="Hurtbox"]

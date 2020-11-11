@@ -653,50 +653,55 @@ position = Vector2( 251.07, 328.553 )
 [node name="TableHorizontal" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 238.567, 539.874 )
 scale = Vector2( 4, 4 )
+health = 8
 
 [node name="TableHorizontal2" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 238.567, 539.874 )
 scale = Vector2( 4, 4 )
+health = 8
 
 [node name="TableVertical" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 52.9805, 211.186 )
-health = 10
+health = 8
 
 [node name="TableVertical6" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 50.3241, 593.041 )
-health = 10
+health = 8
 
 [node name="TableVertical7" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 378.387, 614.292 )
-health = 10
+health = 8
 
 [node name="TableVertical2" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 208.978, 104.489 )
-health = 10
+health = 8
 
 [node name="TableVertical3" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 208.243, 222.959 )
-health = 10
+health = 8
 
 [node name="TableVertical4" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 208.243, 337.015 )
-health = 10
+health = 8
 
 [node name="TableVertical5" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 50.773, 342.165 )
-health = 10
+health = 8
 
 [node name="TableHorizontal3" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 445.977, 253.342 )
 scale = Vector2( 4, 4 )
+health = 8
 
 [node name="TableHorizontal4" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 445.977, 347.488 )
 scale = Vector2( 4, 4 )
+health = 8
 
 [node name="TableHorizontal5" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 445.977, 172.509 )
 scale = Vector2( 4, 4 )
+health = 8
 
 [node name="Hostage3" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 10.4412, 593.249 )

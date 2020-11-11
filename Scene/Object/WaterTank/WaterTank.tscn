@@ -3,6 +3,7 @@
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=1]
 
 [node name="Watertank" instance=ExtResource( 1 )]
+health = 10
 
 [node name="Sprite2" parent="." index="0"]
 region_rect = Rect2( 33.0563, 276.323, 74.9566, 179.636 )

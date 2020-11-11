@@ -10,6 +10,7 @@ extents = Vector2( 33.2943, 104.279 )
 extents = Vector2( 3.37812, 10.402 )
 
 [node name="AirCon" instance=ExtResource( 2 )]
+health = 1
 explodable = true
 
 [node name="Sprite2" parent="." index="0"]
@@ -19,7 +20,7 @@ region_rect = Rect2( 1203.83, 43.0331, 174.468, 531.158 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 position = Vector2( 2.21085, -1.88688 )
-frame = 52
+frame = 35
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -0.218826, -0.143819 )
