@@ -7,19 +7,21 @@ onready var message = $CanvasLayer/Control/Message
 onready var button = $CanvasLayer/Control/VBoxContainer/Button
 onready var camera =$Camera2D
 onready var player = $YSort/Player
+onready var animationPlayer = $AnimationPlayer
 onready var Complete = false
 export var Hostage_dead = false
 onready var lerpAmount = 0.001
 var smooth_zoom = 1
 var target_zoom = 0.5
-
 const ZOOM_SPEED = 3
 
 func _ready():
+	animationPlayer.play("Wipe_Out")
 	Singleton.connect("Hostage_Die", self, "_on_Hostage_Die")
 	Singleton.connect("Terrorist_Die", self, "_on_Terrorist_Die")
 
 func _process(delta):
+
 	var level = str(int(get_tree().current_scene.name))
 	var terrorist = get_tree().get_nodes_in_group("Terrorist").size()
 	if terrorist == 0 and Hostage_dead == false:
@@ -40,16 +42,16 @@ func _process(delta):
 			camera.set_zoom(Vector2(smooth_zoom, smooth_zoom))
 			camera.position = lerp(player.global_position, Singleton.hostagePosition, 1)
 
-		
 func _on_Button_pressed():
 	Singleton.Playable = true
 	if Complete == true and Hostage_dead == false:
 		get_tree().change_scene("res://Scene/Levels/Level_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
 		
 	else:
+		animationPlayer.play("Wipe_In")
+		yield(get_tree().create_timer(1), "timeout")
 		get_tree().reload_current_scene()
 		Singleton.unlock = false
-
 
 func _on_Button2_pressed():
 	Singleton.Playable = true

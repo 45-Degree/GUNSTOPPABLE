@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="GUNSTOPPABLE"
 run/main_scene="res://Scene/UI/MainMenu.tscn"
+boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 
 [autoload]
 

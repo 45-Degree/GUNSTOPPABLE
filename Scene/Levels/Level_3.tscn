@@ -18,7 +18,6 @@
 [ext_resource path="res://Scene/Object/Chair/ChairRight.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=17]
 
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
@@ -661,7 +660,7 @@ position = Vector2( 635.924, 169.134 )
 
 [node name="CoffeTable" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 242.918, 310.485 )
-scale = Vector2( 6.27397, 4.19397 )
+scale = Vector2( 0.15, 0.15 )
 
 [node name="TrashCan" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 201.713, 325.555 )
@@ -682,12 +681,12 @@ scale = Vector2( 2.15863, 1.77029 )
 [node name="CoffeTable2" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 432.296, 27.2218 )
 rotation = 1.5708
-scale = Vector2( 8.67397, 2.75397 )
+scale = Vector2( 0.15, 0.15 )
 
 [node name="CoffeTable3" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 594.196, 278.209 )
 rotation = 1.5708
-scale = Vector2( 8.67397, 2.75397 )
+scale = Vector2( 0.15, 0.15 )
 
 [node name="ChairUp" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 385.425, 107.617 )
