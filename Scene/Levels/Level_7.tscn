@@ -20,7 +20,7 @@
 [ext_resource path="res://Scene/Object/Chair/ChairLeft.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scene/Object/WaterTank/WaterTank.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scene/Object/AirCon/AirConH.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Scene/Object/CoffeeTable/CoffeeTable.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scene/Object/CoffeeTable/CoffeeTableH.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scene/Object/Chair/ChairUp.tscn" type="PackedScene" id=22]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -652,7 +652,7 @@ position = Vector2( 525.037, 171.074 )
 position = Vector2( 301.383, -0.992355 )
 
 [node name="Hostage4" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 336.345, 339.095 )
+position = Vector2( 305.81, 351.668 )
 
 [node name="Hostage5" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 617.103, 331.679 )
@@ -698,7 +698,7 @@ scale = Vector2( 3, 3 )
 health = 8
 
 [node name="SofaSide" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( -5.16046, 285.602 )
+position = Vector2( -4.42538, 301.774 )
 scale = Vector2( 5, 4 )
 health = 8
 
@@ -708,7 +708,7 @@ scale = Vector2( 4.834, 4 )
 health = 8
 
 [node name="SofaSide2" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( -7.99207, 359.225 )
+position = Vector2( -7.25699, 375.397 )
 scale = Vector2( 4.834, 4 )
 health = 8
 
@@ -728,7 +728,7 @@ scale = Vector2( 4, 4 )
 health = 8
 
 [node name="ChairUp2" parent="YSort" instance=ExtResource( 22 )]
-position = Vector2( 563.123, 308.212 )
+position = Vector2( 561.653, 308.212 )
 scale = Vector2( 4, 4 )
 health = 8
 
@@ -830,14 +830,14 @@ scale = Vector2( 4, 4 )
 health = 8
 
 [node name="ShelfSide3" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( 338.452, 382.18 )
+position = Vector2( 338.452, 367.81 )
 rotation = 8.12934e-06
-scale = Vector2( 4, 2.76 )
+scale = Vector2( 4, 4 )
 health = 8
 
 [node name="CoffeTable" parent="YSort" instance=ExtResource( 21 )]
 position = Vector2( 593.673, 59.7036 )
-scale = Vector2( 4, 4 )
+scale = Vector2( 0.15, 0.15 )
 health = 8
 
 [node name="AirConH" parent="YSort" instance=ExtResource( 20 )]
@@ -847,7 +847,7 @@ scale = Vector2( 2, 2 )
 health = 10
 
 [node name="AirConH2" parent="YSort" instance=ExtResource( 20 )]
-position = Vector2( 157.66, 246.143 )
+position = Vector2( 157.147, 230.23 )
 rotation = 8.12934e-06
 scale = Vector2( 2, 2 )
 

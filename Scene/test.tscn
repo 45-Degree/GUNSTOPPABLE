@@ -4,9 +4,10 @@
 [ext_resource path="res://Scene/Object/AirCon/AirConH.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Object/Shelf/ShelfFront.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scene/Object/CoffeeTable/CoffeeTable.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Object/CoffeeTable/CoffeeTableH.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/Object/KeyCard/Keycard.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/Object/Door/LockDoorH.tscn" type="PackedScene" id=7]
+
 
 [node name="Node2D" type="Node2D"]
 

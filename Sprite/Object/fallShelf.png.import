@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/des.png-d1b7d487227a3a78a2b858a2a855cf5a.stex"
+path="res://.import/fallShelf.png-eff4ded316a2560653fc10366b3127f9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/des.png"
-dest_files=[ "res://.import/des.png-d1b7d487227a3a78a2b858a2a855cf5a.stex" ]
+source_file="res://Sprite/Object/fallShelf.png"
+dest_files=[ "res://.import/fallShelf.png-eff4ded316a2560653fc10366b3127f9.stex" ]
 
 [params]
 

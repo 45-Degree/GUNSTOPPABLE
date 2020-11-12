@@ -1,13 +1,14 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprite/Object/Heater_sprite.png" type="Texture" id=2]
 
 [node name="TableHorizontal" instance=ExtResource( 1 )]
-health = 10
+explodable = true
 
 [node name="Sprite2" parent="." index="0"]
-region_rect = Rect2( 30.4991, 531.922, 81.6007, 89.5617 )
+texture = ExtResource( 2 )
+region_rect = Rect2( 808.092, 70.7467, 117.325, 492.124 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-position = Vector2( 2.06076, -1.67203 )
-frame = 9
+frame = 8
