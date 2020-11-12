@@ -684,7 +684,7 @@ rotation = 1.5708
 scale = Vector2( 8.67397, 2.75397 )
 
 [node name="CoffeTable3" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 594.196, 254.637 )
+position = Vector2( 594.196, 278.209 )
 rotation = 1.5708
 scale = Vector2( 8.67397, 2.75397 )
 
@@ -702,7 +702,6 @@ scale = Vector2( 3.74042, 3.74042 )
 
 [node name="TableHorizontal4" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( 593.589, 177.26 )
-scale = Vector2( 4.95683, 4.95683 )
 
 [node name="TableHorizontal5" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 560.776, 171.666 )
