@@ -45,17 +45,22 @@ func _process(delta):
 
 func _on_Button_pressed():
 	if Complete == true and Hostage_dead == false:
+		animationPlayer.play("Wipe_In")
+		yield(animationPlayer, "animation_finished")
 		get_tree().change_scene("res://Scene/Levels/Level_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
 		
 	else:
 		animationPlayer.play("Wipe_In")
 		control.hide()
-		yield(get_tree().create_timer(1), "timeout")
+		yield(animationPlayer, "animation_finished")
 		get_tree().reload_current_scene()
 		Singleton.unlock = false
 
 func _on_Button2_pressed():
 	Singleton.Playable = true
+	animationPlayer.play("Wipe_In")
+	control.hide()
+	yield(animationPlayer, "animation_finished")
 	get_tree().change_scene("res://Scene/UI/MainMenu.tscn")
 
 func _on_Hostage_Die():

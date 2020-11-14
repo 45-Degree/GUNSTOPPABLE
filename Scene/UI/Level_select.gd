@@ -1,6 +1,5 @@
 extends Node
 
-
 func _button_pressed(which):
 	print("Button was pressed: ", which.get_name())
 	get_tree().change_scene("res://Scene/Levels/Level_" +str(int(which.name))+ ".tscn")

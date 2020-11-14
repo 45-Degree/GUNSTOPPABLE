@@ -4,6 +4,8 @@ func _ready():
 	$AnimationPlayer.play("Wipe_Out")
 
 func _on_Button_button_up():
+	$AnimationPlayer.play("Wipe_In")
+	yield($AnimationPlayer,"animation_finished")
 	get_tree().change_scene("res://Scene/Levels/Level_1.tscn")
 
 func _on_Button4_button_up():

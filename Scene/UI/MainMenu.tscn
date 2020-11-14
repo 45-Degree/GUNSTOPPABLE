@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scene/UI/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Scene/UI/Transistion.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=4]
-resource_name = "Wipe_Out"
+resource_name = "Wipe_In"
+length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:margin_left")
 tracks/0/interp = 1
@@ -12,10 +14,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
+"times": PoolRealArray( 0, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, -648.994 ]
+"values": [ 650.0, 0.0, 0.0 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("ColorRect:margin_right")
@@ -24,10 +26,38 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
+"times": PoolRealArray( 0, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, -648.994 ]
+"values": [ 650.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Wipe_Out"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:margin_left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -650.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:margin_right")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -650.0 ]
 }
 
 [sub_resource type="DynamicFont" id=1]
@@ -47,8 +77,9 @@ font_data = ExtResource( 1 )
 [node name="Node2D" type="Node"]
 script = ExtResource( 2 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Wipe_Out = SubResource( 4 )
+[node name="AnimationPlayer" parent="." instance=ExtResource( 3 )]
+anims/Wipe_In = SubResource( 4 )
+anims/Wipe_Out = SubResource( 5 )
 
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
@@ -128,6 +159,8 @@ text = "Exit"
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 650.0
+margin_right = 650.0
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false

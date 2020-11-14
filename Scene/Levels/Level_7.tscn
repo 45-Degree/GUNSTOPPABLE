@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/NPC/Hostage.tscn" type="PackedScene" id=2]
@@ -22,6 +22,8 @@
 [ext_resource path="res://Scene/Object/AirCon/AirConH.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scene/Object/CoffeeTable/CoffeeTableH.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scene/Object/Chair/ChairUp.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scene/UI/TransitionMaterial.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scene/UI/Transistion.tscn" type="PackedScene" id=24]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -576,6 +578,8 @@ font_data = ExtResource( 7 )
 [node name="Level_7" type="Node"]
 script = ExtResource( 1 )
 
+[node name="AnimationPlayer" parent="." instance=ExtResource( 24 )]
+
 [node name="Camera2D" parent="." instance=ExtResource( 10 )]
 position = Vector2( -85.8476, 24.9186 )
 
@@ -1017,6 +1021,8 @@ margin_right = 371.218
 margin_bottom = 261.06
 custom_fonts/font = SubResource( 32 )
 text = "Exit"
+
+[node name="ColorRect" parent="CanvasLayer" instance=ExtResource( 23 )]
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector7" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector9" to="." method="_on_Detector_body_entered"]
