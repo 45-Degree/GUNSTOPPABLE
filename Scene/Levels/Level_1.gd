@@ -16,6 +16,7 @@ var target_zoom = 0.5
 const ZOOM_SPEED = 3
 
 func _ready():
+	Singleton.Playable = true
 	animationPlayer.play("Wipe_Out")
 	Singleton.connect("Hostage_Die", self, "_on_Hostage_Die")
 	Singleton.connect("Terrorist_Die", self, "_on_Terrorist_Die")
@@ -43,7 +44,6 @@ func _process(delta):
 			camera.position = lerp(player.global_position, Singleton.hostagePosition, 1)
 
 func _on_Button_pressed():
-	Singleton.Playable = true
 	if Complete == true and Hostage_dead == false:
 		get_tree().change_scene("res://Scene/Levels/Level_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
 		
