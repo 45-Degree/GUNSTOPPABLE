@@ -15,6 +15,5 @@ func _on_Hitbox_area_entered(area):
 	explosion_instance.position = get_global_position()
 	get_tree().current_scene.add_child(explosion_instance)
 #	get_tree().get_root().get_node("World/YSort").add_child(explosion_instance)
-	print("f")
 	queue_free()
 

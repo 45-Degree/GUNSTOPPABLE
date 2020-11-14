@@ -49,6 +49,7 @@ func _on_Button_pressed():
 		
 	else:
 		animationPlayer.play("Wipe_In")
+		control.hide()
 		yield(get_tree().create_timer(1), "timeout")
 		get_tree().reload_current_scene()
 		Singleton.unlock = false

@@ -393,30 +393,30 @@ outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=25]
+[sub_resource type="DynamicFont" id=22]
 size = 42
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=26]
+[sub_resource type="DynamicFont" id=23]
 size = 30
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=22]
+[sub_resource type="DynamicFont" id=24]
 size = 33
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=23]
+[sub_resource type="DynamicFont" id=25]
 size = 27
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=24]
+[sub_resource type="DynamicFont" id=26]
 size = 30
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
@@ -671,7 +671,7 @@ margin_top = 84.0221
 margin_right = 389.927
 margin_bottom = 121.022
 rect_pivot_offset = Vector2( 97.0978, 46.03 )
-custom_fonts/font = SubResource( 25 )
+custom_fonts/font = SubResource( 22 )
 text = "Pause"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -682,7 +682,7 @@ margin_left = 270.071
 margin_top = 139.751
 margin_right = 390.071
 margin_bottom = 172.751
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 23 )
 text = "Resume"
 
 [node name="Button2" type="Button" parent="CanvasLayer/Control2"]
@@ -690,7 +690,7 @@ margin_left = 269.214
 margin_top = 182.619
 margin_right = 389.214
 margin_bottom = 215.619
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 23 )
 text = "Option"
 
 [node name="Button3" type="Button" parent="CanvasLayer/Control2"]
@@ -698,7 +698,7 @@ margin_left = 287.218
 margin_top = 228.06
 margin_right = 371.218
 margin_bottom = 261.06
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 23 )
 text = "Exit"
 
 [node name="Control3" type="Control" parent="CanvasLayer"]
@@ -715,7 +715,7 @@ margin_left = 273.048
 margin_top = 87.2915
 margin_right = 387.048
 margin_bottom = 116.291
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 24 )
 text = "Option"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -726,7 +726,7 @@ margin_left = 199.025
 margin_top = 138.27
 margin_right = 471.025
 margin_bottom = 178.27
-custom_fonts/font = SubResource( 23 )
+custom_fonts/font = SubResource( 25 )
 text = "Sound Effect"
 
 [node name="CheckButton" type="CheckButton" parent="CanvasLayer/Control3"]
@@ -734,7 +734,7 @@ margin_left = 199.025
 margin_top = 180.0
 margin_right = 470.0
 margin_bottom = 218.773
-custom_fonts/font = SubResource( 23 )
+custom_fonts/font = SubResource( 25 )
 text = "Music"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -745,7 +745,7 @@ margin_left = 291.903
 margin_top = 238.131
 margin_right = 375.903
 margin_bottom = 271.131
-custom_fonts/font = SubResource( 24 )
+custom_fonts/font = SubResource( 26 )
 text = "Back"
 
 [node name="ColorRect" parent="CanvasLayer" instance=ExtResource( 15 )]
