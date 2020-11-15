@@ -911,8 +911,6 @@ custom_fonts/font = SubResource( 32 )
 text = "Exit"
 
 [node name="ColorRect" parent="CanvasLayer" instance=ExtResource( 10 )]
-margin_left = 665.148
-margin_right = 665.148
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector8" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector10" to="." method="_on_Detector_body_entered"]
