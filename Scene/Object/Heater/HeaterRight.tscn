@@ -4,6 +4,7 @@
 [ext_resource path="res://Sprite/Object/Heater_sprite.png" type="Texture" id=2]
 
 [node name="TableHorizontal" instance=ExtResource( 1 )]
+health = 1
 explodable = true
 
 [node name="Sprite2" parent="." index="0"]
@@ -11,4 +12,4 @@ texture = ExtResource( 2 )
 region_rect = Rect2( 808.092, 70.7467, 117.325, 492.124 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 8
+frame = 58

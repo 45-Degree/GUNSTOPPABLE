@@ -14,7 +14,6 @@
 [ext_resource path="res://Scene/Object/Shelf/ShelfSide.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/Object/KeyCard/Keycard.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scene/Object/CoffeeTable/CoffeeTableH.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scene/Object/AirCon/AirConH.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scene/Object/Sofa/SofaH.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scene/Object/Tree/Tree.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scene/Object/WaterTank/WaterTank.tscn" type="PackedScene" id=18]
@@ -25,6 +24,7 @@
 [ext_resource path="res://Scene/Object/CoffeeTable/CoffeeTableV.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Scene/Object/Door/LockDoorV.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Scene/Object/Chair/ChairLeft.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Scene/Object/Heater/HeaterFront.tscn" type="PackedScene" id=26]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -642,42 +642,6 @@ position = Vector2( 503.895, 411.163 )
 rotation = 8.12934e-06
 scale = Vector2( 4.5, 3 )
 
-[node name="AirConH" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 87.0632, 87.8614 )
-scale = Vector2( 2.25, 2.25 )
-
-[node name="AirConH2" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 145.417, 87.8614 )
-scale = Vector2( 2.25, 2.25 )
-
-[node name="AirConH3" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 124.722, 446.223 )
-scale = Vector2( 2.25, 2.25 )
-
-[node name="AirConH4" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 361.575, 437.828 )
-scale = Vector2( 2.25, 2.25 )
-
-[node name="AirConH8" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 566.993, 443.214 )
-scale = Vector2( 2.25, 2.25 )
-
-[node name="AirConH9" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 568.776, 547.222 )
-scale = Vector2( 2.25, 2.25 )
-
-[node name="AirConH5" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 422.978, 437.828 )
-scale = Vector2( 2.25, 2.25 )
-
-[node name="AirConH6" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 361.575, 477.873 )
-scale = Vector2( 2.25, 2.25 )
-
-[node name="AirConH7" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 422.978, 477.873 )
-scale = Vector2( 2.25, 2.25 )
-
 [node name="Hostage2" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 244.129, 90.4922 )
 
@@ -955,6 +919,42 @@ scale = Vector2( 4, 3.7 )
 [node name="CoffeTableH2" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 937.389, 154.156 )
 scale = Vector2( 0.717, 0.2 )
+
+[node name="TableHorizontal10" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 89.3543, 85.8924 )
+scale = Vector2( 0.72, 0.72 )
+
+[node name="TableHorizontal12" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 127.409, 438.066 )
+scale = Vector2( 0.72, 0.72 )
+
+[node name="TableHorizontal13" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 353.358, 438.066 )
+scale = Vector2( 0.72, 0.72 )
+
+[node name="TableHorizontal14" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 412.819, 438.066 )
+scale = Vector2( 0.72, 0.72 )
+
+[node name="TableHorizontal15" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 353.358, 490.986 )
+scale = Vector2( 0.72, 0.72 )
+
+[node name="TableHorizontal16" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 414.008, 490.986 )
+scale = Vector2( 0.72, 0.72 )
+
+[node name="TableHorizontal17" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 567.416, 442.229 )
+scale = Vector2( 0.72, 0.72 )
+
+[node name="TableHorizontal18" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 567.415, 537.96 )
+scale = Vector2( 0.72, 0.72 )
+
+[node name="TableHorizontal11" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 148.684, 85.8924 )
+scale = Vector2( 0.72, 0.72 )
 
 [node name="CoffeTableH3" parent="YSort" instance=ExtResource( 23 )]
 position = Vector2( 1029.13, 462.495 )

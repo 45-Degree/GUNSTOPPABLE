@@ -17,7 +17,7 @@
 [ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scene/UI/Camera2D.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scene/Object/WaterTank/WaterTank.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Scene/Object/AirCon/AirConH.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scene/Object/Heater/HeaterFront.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scene/Object/Chair/ChairLeft.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scene/Object/Tree/Tree.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scene/UI/Transistion.tscn" type="PackedScene" id=21]
@@ -678,10 +678,6 @@ position = Vector2( 410.85, 62.052 )
 [node name="Terrorist4" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( 562.646, 57.6387 )
 
-[node name="AirConH" parent="YSort" instance=ExtResource( 18 )]
-position = Vector2( 231.66, 35.938 )
-scale = Vector2( 2, 2 )
-
 [node name="TableVertical" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( 138.017, 238.411 )
 health = 8
@@ -796,6 +792,9 @@ position = Vector2( 137.607, 196.41 )
 rotation = 8.12934e-06
 scale = Vector2( 2, 2 )
 health = 8
+
+[node name="TableHorizontal3" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( 195.73, 52.4281 )
 
 [node name="TrashCan2" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 715.26, 421.041 )

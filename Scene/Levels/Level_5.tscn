@@ -13,8 +13,8 @@
 [ext_resource path="res://Sprite/Tilemap/Tiles_Mix_2.png" type="Texture" id=11]
 [ext_resource path="res://Scene/UI/Transistion.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/UI/TransitionMaterial.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scene/Object/AirCon/AirConV.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scene/Object/AirCon/AirConH.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scene/Object/Heater/HeaterFront.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scene/Object/Heater/HeaterLeft.tscn" type="PackedScene" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -725,37 +725,37 @@ position = Vector2( 572.722, 259.748 )
 position = Vector2( 411.781, 505.208 )
 
 [node name="Terrorist4" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 253.038, 93.1898 )
+position = Vector2( 251.777, 119.675 )
 
 [node name="Terrorist5" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 253.93, 222.503 )
-
-[node name="AirCon" parent="YSort" instance=ExtResource( 14 )]
-position = Vector2( 273.875, 164.654 )
-scale = Vector2( 2, 2 )
-
-[node name="AirCon2" parent="YSort" instance=ExtResource( 14 )]
-position = Vector2( 273.875, 378.43 )
-scale = Vector2( 2, 2 )
+position = Vector2( 250.777, 207.999 )
 
 [node name="Terrorist2" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 571.831, 78.8144 )
 
-[node name="AirConH" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 235.206, 480.211 )
-scale = Vector2( 2.00205, 2.00205 )
+[node name="TableHorizontal8" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 203.925, 496.505 )
+scale = Vector2( 1.00103, 1.00103 )
 
-[node name="AirConH2" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 570.011, 57.6343 )
-scale = Vector2( 2.00205, 2.00205 )
+[node name="TableHorizontal9" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 447.047, 331.643 )
+scale = Vector2( 1.00103, 1.00103 )
 
-[node name="AirConH3" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 435.321, 356.71 )
-scale = Vector2( 2.00205, 2.00205 )
+[node name="TableHorizontal10" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 447.047, 186.247 )
+scale = Vector2( 1.00103, 1.00103 )
 
-[node name="AirConH4" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 435.321, 263.381 )
-scale = Vector2( 2.00205, 2.00205 )
+[node name="TableHorizontal11" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 570.594, 62.6994 )
+scale = Vector2( 1.00103, 1.00103 )
+
+[node name="TableHorizontal6" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 274.979, 160.017 )
+scale = Vector2( 1.00103, 1.00103 )
+
+[node name="TableHorizontal7" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 274.979, 283.533 )
+scale = Vector2( 1.00103, 1.00103 )
 
 [node name="Terrorist3" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 445.436, 298.512 )
