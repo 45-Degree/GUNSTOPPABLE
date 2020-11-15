@@ -590,10 +590,15 @@ font_data = ExtResource( 1 )
 [node name="Level_5" type="Node"]
 script = ExtResource( 3 )
 
+[node name="SpawnPosition" type="Position2D" parent="."]
+position = Vector2( -19.3852, 105.803 )
+
 [node name="AnimationPlayer" parent="." instance=ExtResource( 12 )]
 
+[node name="Tween" type="Tween" parent="."]
+
 [node name="Camera2D" parent="." instance=ExtResource( 8 )]
-position = Vector2( 14.6056, 82.7581 )
+position = Vector2( -643.489, -49.7126 )
 scale = Vector2( 0.998974, 0.998974 )
 process_mode = 0
 
@@ -636,103 +641,102 @@ position = Vector2( 515.874, 489.113 )
 scale = Vector2( 3, 3 )
 
 [node name="YSort" type="YSort" parent="."]
-position = Vector2( 93.3381, -25.4558 )
 scale = Vector2( 0.998974, 0.998974 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( -78.8134, 108.325 )
+position = Vector2( -644.15, -49.7637 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")
 
 [node name="Hostage" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 234.152, 497.155 )
+position = Vector2( 327.702, 473.013 )
 
 [node name="Hostage2" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 12.9561, 216.184 )
+position = Vector2( 106.507, 192.042 )
 
 [node name="Hostage7" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 251.07, 328.553 )
+position = Vector2( 344.62, 304.411 )
 
 [node name="TableHorizontal" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 238.567, 539.874 )
+position = Vector2( 332.117, 515.732 )
 scale = Vector2( 4, 4 )
 health = 8
 
 [node name="TableHorizontal2" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 238.567, 539.874 )
+position = Vector2( 332.117, 515.732 )
 scale = Vector2( 4, 4 )
 health = 8
 
 [node name="TableVertical" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 52.9805, 211.186 )
+position = Vector2( 146.531, 187.044 )
 health = 8
 
 [node name="TableVertical6" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 50.3241, 593.041 )
+position = Vector2( 143.875, 568.899 )
 health = 8
 
 [node name="TableVertical7" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 378.387, 614.292 )
+position = Vector2( 471.937, 590.15 )
 health = 8
 
 [node name="TableVertical2" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 208.978, 104.489 )
+position = Vector2( 302.528, 80.3469 )
 health = 8
 
 [node name="TableVertical3" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 208.243, 222.959 )
+position = Vector2( 301.793, 198.817 )
 health = 8
 
 [node name="TableVertical4" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 208.243, 337.015 )
+position = Vector2( 301.793, 312.873 )
 health = 8
 
 [node name="TableVertical5" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 50.773, 342.165 )
+position = Vector2( 144.323, 318.023 )
 health = 8
 
 [node name="TableHorizontal3" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 445.977, 253.342 )
+position = Vector2( 539.527, 229.2 )
 scale = Vector2( 4, 4 )
 health = 8
 
 [node name="TableHorizontal4" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 445.977, 347.488 )
+position = Vector2( 539.527, 323.346 )
 scale = Vector2( 4, 4 )
 health = 8
 
 [node name="TableHorizontal5" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 445.977, 172.509 )
+position = Vector2( 539.527, 148.367 )
 scale = Vector2( 4, 4 )
 health = 8
 
 [node name="Hostage3" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 10.4412, 593.249 )
+position = Vector2( 103.992, 569.107 )
 
 [node name="Hostage4" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 439.868, 208.813 )
+position = Vector2( 533.418, 184.671 )
 
 [node name="Hostage5" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 415.292, 627.175 )
+position = Vector2( 508.842, 603.033 )
 
 [node name="Hostage6" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 572.722, 259.748 )
+position = Vector2( 666.272, 235.606 )
 
 [node name="Terrorist" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 411.781, 505.208 )
+position = Vector2( 505.331, 481.066 )
 
 [node name="Terrorist4" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 253.038, 93.1898 )
+position = Vector2( 346.588, 69.0477 )
 
 [node name="Terrorist5" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 253.93, 222.503 )
+position = Vector2( 347.48, 198.361 )
 
 [node name="Terrorist2" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 571.831, 118.453 )
+position = Vector2( 665.381, 94.3109 )
 
 [node name="Terrorist3" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 445.436, 298.512 )
+position = Vector2( 538.986, 274.37 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
