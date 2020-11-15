@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://Sprite/Tilemap/Tiles_Mix_2.png" type="Texture" id=11]
 [ext_resource path="res://Scene/UI/Transistion.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/UI/TransitionMaterial.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scene/Object/AirCon/AirConV.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scene/Object/AirCon/AirConH.tscn" type="PackedScene" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -728,8 +730,32 @@ position = Vector2( 253.038, 93.1898 )
 [node name="Terrorist5" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 253.93, 222.503 )
 
+[node name="AirCon" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 273.875, 164.654 )
+scale = Vector2( 2, 2 )
+
+[node name="AirCon2" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 273.875, 378.43 )
+scale = Vector2( 2, 2 )
+
 [node name="Terrorist2" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 571.831, 118.453 )
+position = Vector2( 571.831, 78.8144 )
+
+[node name="AirConH" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 235.206, 480.211 )
+scale = Vector2( 2.00205, 2.00205 )
+
+[node name="AirConH2" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 570.011, 57.6343 )
+scale = Vector2( 2.00205, 2.00205 )
+
+[node name="AirConH3" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 435.321, 356.71 )
+scale = Vector2( 2.00205, 2.00205 )
+
+[node name="AirConH4" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 435.321, 263.381 )
+scale = Vector2( 2.00205, 2.00205 )
 
 [node name="Terrorist3" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 445.436, 298.512 )

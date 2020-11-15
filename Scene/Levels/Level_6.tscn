@@ -686,11 +686,6 @@ scale = Vector2( 2, 2 )
 position = Vector2( 138.017, 238.411 )
 health = 8
 
-[node name="TableVertical7" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 601.343, 85.0958 )
-scale = Vector2( 1, 0.8 )
-health = 8
-
 [node name="TableVertical2" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( 324, 146 )
 health = 8
@@ -742,6 +737,15 @@ position = Vector2( 514.362, 144.671 )
 scale = Vector2( 2.48649, 2.92 )
 health = 8
 
+[node name="TableVertical7" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 600.154, 83.0903 )
+health = 8
+
+[node name="ChairLeft6" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 614.595, 81.7613 )
+scale = Vector2( 2.48649, 2.92 )
+health = 8
+
 [node name="ChairLeft5" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( 338.854, 69.4657 )
 scale = Vector2( 2.48649, 2.92 )
@@ -759,11 +763,6 @@ health = 8
 
 [node name="ShelfFront3" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 707.295, 233.124 )
-scale = Vector2( 4, 4 )
-health = 8
-
-[node name="ShelfFront2" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 561.764, 100.676 )
 scale = Vector2( 4, 4 )
 health = 8
 

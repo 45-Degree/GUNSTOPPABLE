@@ -922,7 +922,6 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 1 )
@@ -1023,6 +1022,8 @@ custom_fonts/font = SubResource( 32 )
 text = "Exit"
 
 [node name="ColorRect" parent="CanvasLayer" instance=ExtResource( 23 )]
+margin_top = 2.0
+margin_bottom = 2.0
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector7" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector9" to="." method="_on_Detector_body_entered"]
