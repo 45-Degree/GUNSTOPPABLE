@@ -5,6 +5,7 @@ var ACCELERATION = 10000
 var FRICTION = 10000
 var state = STOP
 export var health = 4
+#export(int, "Left", "Right", "Top", "Bottom") var spawnHere
 var invul = false
 var invulTime = 1
 
@@ -15,7 +16,6 @@ var input_vector = Vector2.ZERO
 var bullet = preload("res://Scene/Player/Bullet.tscn")
 var hiteffect = preload("res://Scene/Effect/Explosion.tscn")
 
-onready var gunSprite = $Gun/Sprite
 onready var animationTree = $AnimationTree
 onready var bulletPoint = $Gun/Bulletpoint
 onready var animationState = animationTree.get("parameters/playback")
@@ -26,17 +26,11 @@ enum{
 }
 
 func _physics_process(delta):
-	if health <= 0:
-		print("death")
 	match state:
 			SHOOT:
 					$Gun.shoot()
 					if Singleton.Playable == false:
 						state = STOP
-			
-			STOP:
-					pass
-				
 	target_sight = get_local_mouse_position()
 	
 	if Singleton.Playable == true:
@@ -61,17 +55,19 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	velocity = move_and_slide(velocity)
 	
-	if Input.is_action_just_pressed("shoot") and Singleton.Playable == true:
+	if Singleton.Playable == true:
 		state = SHOOT
-	if Input.is_action_just_pressed("stop"):
-		state = STOP
+#	if Input.is_action_just_pressed("stop"):
+#		state = STOP
 
-#func _on_Hurtbox_area_entered(area):
-#	if invul == false:
-#		invul = true
-#		health -= 1
-#		var hiteffect_instance = hiteffect.instance()
-#		get_parent().add_child(hiteffect_instance)
-#		hiteffect_instance.global_position = global_position
-#		yield(get_tree().create_timer(invulTime), "timeout")
-#		invul = false
+#func _spawn():
+#	if spawnHere == 0:
+#		position = position.move_toward(Vector2(x, y), delta * moveSpeed)
+#	if spawnHere == 1:
+#		player.position = finalPosition.get_global_position() - Vector2(100,0)
+#	if spawnHere == 2:
+#		player.position = finalPosition.get_global_position() - Vector2(100,0)
+#	if spawnHere == 3:
+#		player.position = finalPosition.get_global_position() - Vector2(100,0)
+
+

@@ -6,7 +6,6 @@ export var bullet_speed  = 200
 export var firerate = 0.1
 var can_fire = true
 var steering_angle = Vector2.ZERO
-onready var gunSprite = $Sprite
 onready var bulletPoint = $Bulletpoint
 onready var gunSound = $AudioStreamPlayer
 var target = Vector2.ZERO

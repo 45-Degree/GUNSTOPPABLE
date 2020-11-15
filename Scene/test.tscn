@@ -4,15 +4,16 @@
 [ext_resource path="res://Scene/Object/AirCon/AirConH.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Object/Shelf/ShelfFront.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scene/Object/CoffeeTable/CoffeeTableH.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/test.gd" type="Script" id=5]
 [ext_resource path="res://Scene/Object/KeyCard/Keycard.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/Object/Door/LockDoorH.tscn" type="PackedScene" id=7]
 
-
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+spawnFrom = "Bottom"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 97.1843, 168.646 )
+position = Vector2( 0, 0 )
 
 [node name="TableHorizontal" parent="." instance=ExtResource( 3 )]
 position = Vector2( 209.438, 217.845 )
@@ -22,13 +23,12 @@ position = Vector2( 235.348, 70.2047 )
 
 [node name="TableHorizontal2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 174.612, 81.6105 )
-destroyable = false
-
-[node name="TableHorizontal3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 127.408, 235.393 )
 
 [node name="Keycard" parent="." instance=ExtResource( 6 )]
 position = Vector2( 170, 147 )
 
 [node name="LockDoorH" parent="." instance=ExtResource( 7 )]
-position = Vector2( 246, 132 )
+position = Vector2( 381.206, 196.345 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 444.715, 192.221 )

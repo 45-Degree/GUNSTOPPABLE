@@ -424,11 +424,17 @@ font_data = ExtResource( 7 )
 
 [node name="Level_2" type="Node"]
 script = ExtResource( 1 )
+spawnHere = 3
 
 [node name="AnimationPlayer" parent="." instance=ExtResource( 14 )]
 
+[node name="Tween" type="Tween" parent="."]
+
+[node name="SpawnPosition" type="Position2D" parent="."]
+position = Vector2( 584.037, 377.398 )
+
 [node name="Camera2D" parent="." instance=ExtResource( 10 )]
-position = Vector2( 568.558, 374.319 )
+position = Vector2( 1077.14, 534.983 )
 
 [node name="topLeft" parent="Camera2D/Limits" index="0"]
 position = Vector2( 44.3607, -29.2609 )
@@ -469,7 +475,7 @@ scale = Vector2( 2, 2 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 568.558, 374.319 )
+position = Vector2( 1077.14, 534.983 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")
@@ -749,6 +755,8 @@ custom_fonts/font = SubResource( 26 )
 text = "Back"
 
 [node name="ColorRect" parent="CanvasLayer" instance=ExtResource( 15 )]
+margin_left = 665.148
+margin_right = 665.148
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector8" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector7" to="." method="_on_Detector_body_entered"]

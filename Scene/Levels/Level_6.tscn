@@ -576,10 +576,15 @@ font_data = ExtResource( 1 )
 [node name="Level_6" type="Node"]
 script = ExtResource( 3 )
 
+[node name="Tween" type="Tween" parent="."]
+
+[node name="SpawnPosition" type="Position2D" parent="."]
+position = Vector2( 50.3333, 405.387 )
+
 [node name="AnimationPlayer" parent="." instance=ExtResource( 21 )]
 
 [node name="Camera2D" parent="." instance=ExtResource( 16 )]
-position = Vector2( 53.9625, 391.78 )
+position = Vector2( -251.509, 545.731 )
 scale = Vector2( 0.99774, 1.00932 )
 
 [node name="topLeft" parent="Camera2D/Limits" index="0"]
@@ -620,11 +625,10 @@ position = Vector2( 296.397, 66.7856 )
 scale = Vector2( 2, 2 )
 
 [node name="YSort" type="YSort" parent="."]
-position = Vector2( 1.47468, 2.04737 )
 scale = Vector2( 0.99774, 1.00932 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 52.6067, 386.134 )
+position = Vector2( -252.079, 540.692 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")
