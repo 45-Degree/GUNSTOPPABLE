@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Sprite/Tilemap/Tiles_Mix_2.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Object/CoffeeTable/CoffeeTableH.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scene/UI/TransitionMaterial.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scene/UI/Transistion.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scene/Object/CoffeeTable/CoffeeTableV.tscn" type="PackedScene" id=20]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -649,13 +650,13 @@ position = Vector2( 134.55, 267.484 )
 position = Vector2( 390.522, 56.7664 )
 
 [node name="Hostage3" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 631.797, 252.684 )
+position = Vector2( 638.524, 252.684 )
 
 [node name="Terrorist" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 240.94, 266.597 )
 
 [node name="Terrorist4" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 586.008, 434.181 )
+position = Vector2( 620.804, 430.814 )
 
 [node name="Terrorist2" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 386.646, 9.73421 )
@@ -683,18 +684,8 @@ position = Vector2( 458.827, 244.445 )
 scale = Vector2( 2.15863, 1.77029 )
 
 [node name="TrashCan4" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( 638.366, 125.382 )
+position = Vector2( 458.414, 98.4733 )
 scale = Vector2( 2.15863, 1.77029 )
-
-[node name="CoffeTable2" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 432.296, 27.2218 )
-rotation = 1.5708
-scale = Vector2( 0.15, 0.15 )
-
-[node name="CoffeTable3" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 594.196, 278.209 )
-rotation = 1.5708
-scale = Vector2( 0.15, 0.15 )
 
 [node name="ChairUp" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 385.425, 107.617 )
@@ -722,6 +713,14 @@ scale = Vector2( 3.5606, 3.5606 )
 [node name="Tree2" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( 650.749, 85.0447 )
 scale = Vector2( 3.5606, 3.5606 )
+
+[node name="CoffeTableH" parent="YSort" instance=ExtResource( 20 )]
+position = Vector2( 443.729, 27.7759 )
+scale = Vector2( 0.202539, 0.202539 )
+
+[node name="CoffeTableH2" parent="YSort" instance=ExtResource( 20 )]
+position = Vector2( 590.886, 259.022 )
+scale = Vector2( 0.202539, 0.202539 )
 
 [node name="ChairUp2" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 386.174, 255.2 )
