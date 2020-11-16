@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/NPC/Hostage.tscn" type="PackedScene" id=2]
@@ -23,7 +23,6 @@
 [ext_resource path="res://Scene/Object/TrashCan/TrashCan.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scene/Object/Chair/ChairDown.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scene/Object/CoffeeTable/CoffeeTableV.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Scene/Object/Door/LockDoorV.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Scene/Object/Chair/ChairLeft.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Scene/Object/Heater/HeaterFront.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Scene/UI/TransitionMaterial.tscn" type="PackedScene" id=27]
@@ -817,10 +816,6 @@ scale = Vector2( 2, 2 )
 position = Vector2( 368.035, 86.8458 )
 scale = Vector2( 2, 2 )
 
-[node name="Keycard" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 75.3049, 448.99 )
-scale = Vector2( 2, 2 )
-
 [node name="Keycard2" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 1102.35, 539.471 )
 scale = Vector2( 2, 2 )
@@ -918,10 +913,6 @@ position = Vector2( 824.452, 542.92 )
 
 [node name="Hostage13" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 1095.33, 442.756 )
-
-[node name="TableHorizontal9" parent="YSort" instance=ExtResource( 24 )]
-position = Vector2( 679.433, 151.04 )
-scale = Vector2( 4, 3.7 )
 
 [node name="CoffeTableH2" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 937.389, 154.156 )
@@ -1129,7 +1120,6 @@ custom_fonts/font = SubResource( 32 )
 text = "Exit"
 
 [node name="ColorRect" parent="CanvasLayer" instance=ExtResource( 27 )]
-visible = false
 
 [node name="Tween" type="Tween" parent="."]
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]

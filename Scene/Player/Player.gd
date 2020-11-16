@@ -8,7 +8,6 @@ export var health = 4
 #export(int, "Left", "Right", "Top", "Bottom") var spawnHere
 var invul = false
 var invulTime = 1
-
 var velocity = Vector2.ZERO
 var target = Vector2.ZERO
 var target_sight = Vector2.ZERO
@@ -31,7 +30,10 @@ func _physics_process(delta):
 					$Gun.shoot()
 					if Singleton.Playable == false:
 						state = STOP
+			STOP:
+				pass
 	target_sight = get_local_mouse_position()
+	print(input_vector)
 	
 	if Singleton.Playable == true:
 		input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -53,12 +55,15 @@ func _physics_process(delta):
 		animationTree.set("parameters/Run/blend_position", target_sight)
 		animationState.travel("Run")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
+	
+	elif Singleton.Playable == false:
+		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	velocity = move_and_slide(velocity)
 	
 	if Singleton.Playable == true:
 		state = SHOOT
-#	if Input.is_action_just_pressed("stop"):
-#		state = STOP
+
+
 
 #func _spawn():
 #	if spawnHere == 0:
