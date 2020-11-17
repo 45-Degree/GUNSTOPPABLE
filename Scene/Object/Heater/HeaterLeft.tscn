@@ -12,4 +12,4 @@ texture = ExtResource( 2 )
 region_rect = Rect2( 623.385, 74.3069, 115.359, 487.41 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 18
+frame = 29

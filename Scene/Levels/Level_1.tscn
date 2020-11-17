@@ -427,8 +427,13 @@ script = ExtResource( 1 )
 
 [node name="AnimationPlayer" parent="." instance=ExtResource( 12 )]
 
+[node name="Tween" type="Tween" parent="."]
+
+[node name="SpawnPosition" type="Position2D" parent="."]
+position = Vector2( 8.9921, 298.075 )
+
 [node name="Camera2D" parent="." instance=ExtResource( 8 )]
-position = Vector2( -16.9877, 286.656 )
+position = Vector2( -249.995, 287.9 )
 
 [node name="topLeft" parent="Camera2D/Limits" index="0"]
 position = Vector2( -86.2613, -146.651 )
@@ -493,7 +498,7 @@ scale = Vector2( 2, 2 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( -16.9877, 286.656 )
+position = Vector2( -249.995, 287.9 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")

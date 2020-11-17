@@ -8,6 +8,8 @@ onready var button = $CanvasLayer/Control/VBoxContainer/Button
 onready var camera =$Camera2D
 onready var player = $YSort/Player
 onready var animationPlayer = $AnimationPlayer
+onready var finalPosition = $SpawnPosition
+export(int, "Left", "Right", "Top", "Bottom") var spawnHere
 onready var Complete = false
 export var Hostage_dead = false
 onready var lerpAmount = 0.001
@@ -18,11 +20,12 @@ const ZOOM_SPEED = 3
 func _ready():
 	Singleton.Playable = true
 	animationPlayer.play("Wipe_Out")
+	yield(animationPlayer,"animation_finished")
+	_spawn()
 	Singleton.connect("Hostage_Die", self, "_on_Hostage_Die")
 	Singleton.connect("Terrorist_Die", self, "_on_Terrorist_Die")
 
 func _process(delta):
-
 	var level = str(int(get_tree().current_scene.name))
 	var terrorist = get_tree().get_nodes_in_group("Terrorist").size()
 	if terrorist == 0 and Hostage_dead == false:
@@ -94,3 +97,17 @@ func _on_Button4_pressed():
 func _on_Button2_button_up():
 	pause.hide()
 	option.show()
+
+func _spawn():
+	if spawnHere == 0:
+		player.position = finalPosition.get_global_position() - Vector2(100,0)
+	if spawnHere == 1:
+		player.position = finalPosition.get_global_position() - Vector2(-100,0)
+	if spawnHere == 2:
+		player.position = finalPosition.get_global_position() - Vector2(0,100)
+	if spawnHere == 3:
+		player.position = finalPosition.get_global_position() - Vector2(0,-100)
+	$Tween.interpolate_property(player, "position", player.position, finalPosition.position ,0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	$Tween.start()
+	yield($Tween,"tween_completed")
+

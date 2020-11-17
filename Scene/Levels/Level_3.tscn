@@ -574,10 +574,15 @@ font_data = ExtResource( 6 )
 [node name="Level_3" type="Node"]
 script = ExtResource( 7 )
 
+[node name="Tween" type="Tween" parent="."]
+
 [node name="AnimationPlayer" parent="." instance=ExtResource( 19 )]
 
+[node name="SpawnPosition" type="Position2D" parent="."]
+position = Vector2( -37.0019, 406.119 )
+
 [node name="Camera2D" parent="." instance=ExtResource( 11 )]
-position = Vector2( 26.7325, 420.26 )
+position = Vector2( -421.139, 550.889 )
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_speed = 3.0
@@ -625,7 +630,7 @@ scale = Vector2( 2, 2 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 26.7325, 420.26 )
+position = Vector2( -421.139, 550.889 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")
@@ -700,6 +705,7 @@ position = Vector2( 593.589, 177.26 )
 [node name="TableHorizontal5" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 560.776, 171.666 )
 scale = Vector2( 3.92012, 3.92012 )
+health = 10
 
 [node name="Tree" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( 492.629, 444.122 )

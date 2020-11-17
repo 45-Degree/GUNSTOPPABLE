@@ -4,12 +4,13 @@
 [ext_resource path="res://Sprite/Object/CoffeTable.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 50.1921, 44.7746 )
+extents = Vector2( 2091.14, 1508.41 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 5.05441, 4.38423 )
 
 [node name="CoffeTableH" instance=ExtResource( 1 )]
+collision_layer = 32
 health = 10
 
 [node name="Sprite2" parent="." index="0"]
@@ -18,14 +19,16 @@ texture = ExtResource( 2 )
 region_rect = Rect2( 41, 129, 441, 333 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 59
+frame = 19
 
 [node name="CollisionShape2D" parent="." index="2"]
+visible = true
 position = Vector2( -0.218826, -0.143819 )
 scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" parent="Hurtbox" index="1"]
+visible = true
 position = Vector2( 0, 0 )
 shape = SubResource( 2 )
 disabled = true

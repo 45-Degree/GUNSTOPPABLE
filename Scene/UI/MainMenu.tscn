@@ -4,7 +4,7 @@
 [ext_resource path="res://Scene/UI/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://Scene/UI/Transistion.tscn" type="PackedScene" id=3]
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=1]
 resource_name = "Wipe_In"
 length = 0.4
 tracks/0/type = "value"
@@ -32,7 +32,7 @@ tracks/1/keys = {
 "values": [ 650.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=2]
 resource_name = "Wipe_Out"
 length = 0.4
 tracks/0/type = "value"
@@ -60,17 +60,17 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, -650.0 ]
 }
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 size = 51
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
 size = 33
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=5]
 size = 33
 font_data = ExtResource( 1 )
 
@@ -78,8 +78,8 @@ font_data = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="AnimationPlayer" parent="." instance=ExtResource( 3 )]
-anims/Wipe_In = SubResource( 4 )
-anims/Wipe_Out = SubResource( 5 )
+anims/Wipe_In = SubResource( 1 )
+anims/Wipe_Out = SubResource( 2 )
 
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
@@ -114,7 +114,7 @@ margin_right = 460.0
 margin_bottom = 105.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "GUNSTOPPABLE"
 align = 1
 valign = 1
@@ -132,35 +132,33 @@ custom_constants/separation = 11
 [node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
 margin_right = 460.0
 margin_bottom = 35.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Start"
 
 [node name="Button2" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
 margin_top = 46.0
 margin_right = 460.0
 margin_bottom = 81.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "Level Select"
 
 [node name="Button3" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
 margin_top = 92.0
 margin_right = 460.0
 margin_bottom = 127.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "Option"
 
 [node name="Button4" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
 margin_top = 138.0
 margin_right = 460.0
 margin_bottom = 173.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "Exit"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 650.0
-margin_right = 650.0
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
