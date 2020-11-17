@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Gunsound.wav-7604d99cbd71a5713588c6ec0d4672e3.sample"
+
+[deps]
+
+source_file="res://Sound/SFX/Object/Gunsound.wav"
+dest_files=[ "res://.import/Gunsound.wav-7604d99cbd71a5713588c6ec0d4672e3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

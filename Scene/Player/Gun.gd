@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var turn_speed = deg2rad(10)
+var turn_speed = deg2rad(5)
 export var bullet_speed  = 200
 export var firerate = 0.1
 var can_fire = true

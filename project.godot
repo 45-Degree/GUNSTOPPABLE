@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "SoundManagerModule",
+"language": "GDScript",
+"path": "res://addons/sound_manager/module/internal_scripts/SoundManager_config.gd"
+} ]
 _global_script_class_icons={
-
+"SoundManagerModule": ""
 }
 
 [application]
@@ -24,6 +29,7 @@ boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 [autoload]
 
 Singleton="*res://Scene/Singleton.gd"
+SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
 
 [display]
 
@@ -34,6 +40,10 @@ window/size/test_height=720
 mouse_cursor/tooltip_position_offset=Vector2( 0, 0 )
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "sound_manager" )
 
 [input]
 

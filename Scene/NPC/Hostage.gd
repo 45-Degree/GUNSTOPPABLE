@@ -8,6 +8,7 @@ func _on_Hurtbox_area_entered(area):
 	var world = get_tree().current_scene
 	world.add_child(blood_instace)
 	blood_instace.global_position = global_position
+	SoundManager.play_se("res://Sound/SFX/Object/DeadSound.wav")
 	queue_free()
 
 func invincible():

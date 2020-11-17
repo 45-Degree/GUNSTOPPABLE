@@ -754,3 +754,5 @@ text = "Back"
 [connection signal="pressed" from="CanvasLayer/Control3/Button4" to="." method="_on_Button4_pressed"]
 
 [editable path="Camera2D"]
+
+[editable path="YSort/Terrorist2"]

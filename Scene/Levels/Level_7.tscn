@@ -806,37 +806,31 @@ health = 8
 
 [node name="ShelfFront" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 462.522, 153.507 )
-scale = Vector2( 4, 4 )
 health = 8
 
 [node name="ShelfSide" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 410.752, 257 )
 rotation = 8.12934e-06
-scale = Vector2( 4, 4 )
 health = 8
 
 [node name="ShelfSide5" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 333.39, 257 )
 rotation = 8.12934e-06
-scale = Vector2( 4, 4 )
 health = 8
 
 [node name="ShelfSide6" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 259.391, 257 )
 rotation = 8.12934e-06
-scale = Vector2( 4, 4 )
 health = 8
 
 [node name="ShelfSide4" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 652.93, 65.3428 )
 rotation = 8.12934e-06
-scale = Vector2( 4, 4 )
 health = 8
 
 [node name="ShelfSide3" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 338.452, 367.81 )
 rotation = 8.12934e-06
-scale = Vector2( 4, 4 )
 health = 8
 
 [node name="CoffeTable" parent="YSort" instance=ExtResource( 21 )]
@@ -847,7 +841,6 @@ health = 8
 [node name="ShelfSide2" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 237.151, 0.243164 )
 rotation = 8.12934e-06
-scale = Vector2( 4, 4 )
 health = 8
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

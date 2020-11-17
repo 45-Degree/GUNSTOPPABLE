@@ -9,10 +9,12 @@ onready var camera =$Camera2D
 onready var player = $YSort/Player
 onready var animationPlayer = $AnimationPlayer
 onready var finalPosition = $SpawnPosition
+var soundplay = false
 export(int, "Left", "Right", "Top", "Bottom") var spawnHere
 onready var Complete = false
 export var Hostage_dead = false
 onready var lerpAmount = 0.001
+signal level_Completed
 var smooth_zoom = 1
 var target_zoom = 0.5
 const ZOOM_SPEED = 3
@@ -30,6 +32,8 @@ func _process(delta):
 	var terrorist = get_tree().get_nodes_in_group("Terrorist").size()
 	if terrorist == 0 and Hostage_dead == false:
 		get_tree().call_group("Detector", "detector_ON")
+		emit_signal("level_Completed")
+		connect("level_Completed", self, "_on_level_Completed")
 		Complete = true
 	if Input.is_action_just_pressed("Pause"):
 		get_tree().paused = true
@@ -111,3 +115,7 @@ func _spawn():
 	$Tween.start()
 	yield($Tween,"tween_completed")
 
+func _on_level_Completed():
+	if soundplay == false:
+		SoundManager.play_se("res://Sound/SFX/Object/ExitUnlock.wav")
+		soundplay = true

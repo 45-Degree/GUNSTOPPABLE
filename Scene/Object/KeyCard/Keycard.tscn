@@ -18,7 +18,7 @@ texture = ExtResource( 1 )
 region_rect = Rect2( 2, 1, 74, 111 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 58
+frame = 33
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( 0.0182307, -0.143819 )

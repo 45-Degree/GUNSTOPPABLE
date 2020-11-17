@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ExitUnlock.wav-479b91d4e0385d49e65fe70054b6f94b.sample"
+
+[deps]
+
+source_file="res://Sound/SFX/Object/ExitUnlock.wav"
+dest_files=[ "res://.import/ExitUnlock.wav-479b91d4e0385d49e65fe70054b6f94b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

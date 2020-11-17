@@ -750,17 +750,14 @@ health = 8
 
 [node name="ShelfSide" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 231.605, 392.938 )
-scale = Vector2( 4, 4 )
 health = 8
 
 [node name="ShelfFront" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 95.6621, 199.535 )
-scale = Vector2( 4, 4 )
 health = 8
 
 [node name="ShelfFront3" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 707.295, 233.124 )
-scale = Vector2( 4, 4 )
 health = 8
 
 [node name="SofaSide" parent="YSort" instance=ExtResource( 7 )]

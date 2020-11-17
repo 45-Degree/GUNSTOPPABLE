@@ -1,32 +1,52 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Sprite/Object/shelf.png" type="Texture" id=2]
+[ext_resource path="res://Sprite/Object/wooden_shelf.png" type="Texture" id=2]
+[ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 18.0325, 87.9956 )
+extents = Vector2( 30.8441, 87.9956 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 1.99078, 8.89358 )
 
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1.99, 8.89 )
+
 [node name="ShelfSide" instance=ExtResource( 1 )]
+scale = Vector2( 4, 4 )
+collision_mask = 5
 destroyable = false
+fallableSide = true
 
 [node name="Sprite2" parent="." index="0"]
 scale = Vector2( 0.02, 0.02 )
 texture = ExtResource( 2 )
-region_rect = Rect2( 1411.79, 73.0957, 194.558, 902.04 )
+region_rect = Rect2( 602.359, 15.9589, 322.344, 910.747 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 position = Vector2( 2.21085, -1.2319 )
-frame = 37
+frame = 24
 
 [node name="CollisionShape2D" parent="." index="2"]
 visible = true
-position = Vector2( -0.218826, -0.143819 )
-scale = Vector2( 0.1, 0.1 )
+position = Vector2( -0.0525147, -0.143819 )
+scale = Vector2( 0.11, 0.1 )
 shape = SubResource( 1 )
+
+[node name="Hurtbox" parent="." index="4"]
+collision_mask = 5
 
 [node name="CollisionShape2D2" parent="Hurtbox" index="1"]
 visible = true
+position = Vector2( -2.9988, 0.0286094 )
 shape = SubResource( 2 )
+
+[node name="Hurtbox2" parent="." index="5" instance=ExtResource( 3 )]
+collision_layer = 8
+collision_mask = 5
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox2" index="1"]
+position = Vector2( 2.89548, 0 )
+shape = SubResource( 3 )
+[connection signal="area_entered" from="Hurtbox2" to="." method="_on_Hurtbox2_area_entered"]
