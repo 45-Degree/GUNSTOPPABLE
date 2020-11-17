@@ -13,17 +13,17 @@
 [ext_resource path="res://Sprite/Tilemap/Tiles_Mix_2.png" type="Texture" id=11]
 [ext_resource path="res://Scene/Object/Shelf/ShelfSide.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/Object/Tree/Tree.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scene/Object/AirCon/AirConV.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scene/Object/Heater/HeaterLeft.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scene/Object/Sofa/SofaH.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scene/Object/Shelf/ShelfFront.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scene/Object/TrashCan/TrashCan.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scene/Object/Chair/ChairLeft.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scene/Object/WaterTank/WaterTank.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scene/Object/AirCon/AirConH.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scene/Object/CoffeeTable/CoffeeTableH.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scene/Object/Chair/ChairUp.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scene/UI/TransitionMaterial.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Scene/UI/Transistion.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scene/Object/Heater/HeaterFront.tscn" type="PackedScene" id=25]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -804,11 +804,6 @@ position = Vector2( 103.205, 248.779 )
 scale = Vector2( 3, 3 )
 health = 8
 
-[node name="AirCon" parent="YSort" instance=ExtResource( 14 )]
-position = Vector2( 656.102, 183.436 )
-scale = Vector2( 2, 2 )
-health = 8
-
 [node name="ShelfFront" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 462.522, 153.507 )
 scale = Vector2( 4, 4 )
@@ -848,17 +843,6 @@ health = 8
 position = Vector2( 593.673, 59.7036 )
 scale = Vector2( 0.15, 0.15 )
 health = 8
-
-[node name="AirConH" parent="YSort" instance=ExtResource( 20 )]
-position = Vector2( 303.655, -9.56952 )
-rotation = 8.12934e-06
-scale = Vector2( 2, 2 )
-health = 10
-
-[node name="AirConH2" parent="YSort" instance=ExtResource( 20 )]
-position = Vector2( 157.147, 230.23 )
-rotation = 8.12934e-06
-scale = Vector2( 2, 2 )
 
 [node name="ShelfSide2" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 237.151, 0.243164 )
@@ -1028,6 +1012,15 @@ custom_fonts/font = SubResource( 32 )
 text = "Exit"
 
 [node name="ColorRect" parent="CanvasLayer" instance=ExtResource( 23 )]
+
+[node name="TableHorizontal2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 657.144, 182.995 )
+
+[node name="TableHorizontal" parent="." instance=ExtResource( 25 )]
+position = Vector2( 152.202, 248.064 )
+
+[node name="TableHorizontal3" parent="." instance=ExtResource( 25 )]
+position = Vector2( 348.972, -4.20448 )
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector7" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector9" to="." method="_on_Detector_body_entered"]

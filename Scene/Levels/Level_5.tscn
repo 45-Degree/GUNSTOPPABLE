@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Sprite/Tilemap/Tiles_Mix_2.png" type="Texture" id=11]
 [ext_resource path="res://Scene/UI/Transistion.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/UI/TransitionMaterial.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scene/Object/Heater/HeaterLeft.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -727,10 +728,18 @@ position = Vector2( 666.272, 235.606 )
 position = Vector2( 505.331, 481.066 )
 
 [node name="Terrorist4" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 346.588, 69.0477 )
+position = Vector2( 333.081, 94.0749 )
+
+[node name="TableHorizontal6" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 363.503, 134.824 )
+scale = Vector2( 1.125, 1.125 )
+
+[node name="TableHorizontal7" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 361.692, 252.182 )
+scale = Vector2( 1.125, 1.125 )
 
 [node name="Terrorist5" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 347.48, 198.361 )
+position = Vector2( 331.987, 184.06 )
 
 [node name="Terrorist2" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 665.381, 94.3109 )

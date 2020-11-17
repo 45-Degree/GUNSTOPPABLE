@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/NPC/Hostage.tscn" type="PackedScene" id=2]
@@ -14,8 +14,8 @@
 [ext_resource path="res://Scene/Object/KeyCard/Keycard.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/Object/Door/LockDoorH.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scene/Object/CoffeeTable/CoffeeTableH.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scene/Object/AirCon/AirConV.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Scene/Object/AirCon/AirConH.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scene/Object/Heater/HeaterRight.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scene/Object/Heater/HeaterLeft.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scene/Object/WaterTank/WaterTank.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scene/Object/Tree/Tree.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scene/Object/TrashCan/TrashCan.tscn" type="PackedScene" id=19]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Scene/Object/Chair/ChairUp.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scene/UI/TransitionMaterial.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scene/UI/Transistion.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scene/Object/Heater/HeaterFront.tscn" type="PackedScene" id=24]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -650,10 +651,7 @@ position = Vector2( 437.811, -235.201 )
 remote_path = NodePath("../../../Camera2D")
 
 [node name="Hostage" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( -26.1424, 140.467 )
-
-[node name="Hostage2" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( -27.8261, 199.397 )
+position = Vector2( -35.5812, 149.434 )
 
 [node name="Hostage3" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 180.225, 229.121 )
@@ -713,7 +711,7 @@ position = Vector2( -48.7074, 823.849 )
 position = Vector2( 455.967, 301.092 )
 
 [node name="Terrorist2" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( -27.4656, 170.797 )
+position = Vector2( -35.4885, 223.654 )
 
 [node name="TableVertical" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 374.42, 303.413 )
@@ -725,33 +723,13 @@ position = Vector2( 272.078, 303.413 )
 position = Vector2( 338.787, 139.189 )
 scale = Vector2( 0.17, 0.2 )
 
-[node name="AirConH" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( -24.8079, 118 )
-scale = Vector2( 1.91096, 1.91096 )
-
-[node name="AirConH2" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( 33.2141, 118 )
-scale = Vector2( 1.91096, 1.91096 )
-
-[node name="AirConH3" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( 414.93, 383.286 )
-scale = Vector2( 1.91096, 1.91096 )
-
-[node name="AirConH4" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( -45.0499, 761.609 )
-scale = Vector2( 1.91096, 1.91096 )
-
-[node name="AirConH5" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( 300.31, 632.755 )
-scale = Vector2( 1.91096, 1.91096 )
-
-[node name="AirConH6" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( 221.649, 632.755 )
-scale = Vector2( 1.91096, 1.91096 )
-
 [node name="CoffeTableH3" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 292.411, 178.787 )
 scale = Vector2( 0.389998, 0.15 )
+destroyable = false
+
+[node name="AnimatedSprite" parent="YSort/CoffeTableH3" index="1"]
+frame = 56
 
 [node name="Tree" parent="YSort" instance=ExtResource( 18 )]
 position = Vector2( 0.878403, 322.932 )
@@ -780,18 +758,6 @@ scale = Vector2( 4, 3.16576 )
 [node name="Keycard" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 271.139, 136.759 )
 scale = Vector2( 2, 2 )
-
-[node name="Keycard2" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( 234.369, 405.46 )
-scale = Vector2( 2, 2 )
-
-[node name="Keycard3" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( -48.8106, 642.941 )
-scale = Vector2( 2, 2 )
-
-[node name="AirCon" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 497.171, 299.255 )
-scale = Vector2( 1.9, 1.9 )
 
 [node name="ChairLeft" parent="YSort" instance=ExtResource( 20 )]
 position = Vector2( 287.979, 303.033 )
@@ -890,11 +856,6 @@ position = Vector2( -41.4037, 376.43 )
 rotation = 8.12934e-06
 scale = Vector2( 4.5, 3 )
 
-[node name="LockDoorH2" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 472.51, 599.681 )
-rotation = 8.12934e-06
-scale = Vector2( 4.5, 3 )
-
 [node name="ChairUp" parent="YSort" instance=ExtResource( 21 )]
 position = Vector2( 166.47, 728.955 )
 scale = Vector2( 3, 3 )
@@ -941,11 +902,6 @@ scale = Vector2( 4, 3.16576 )
 [node name="ChairUp6" parent="YSort" instance=ExtResource( 21 )]
 position = Vector2( 450.4, 806.867 )
 scale = Vector2( 3, 3 )
-
-[node name="LockDoorH3" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 183.626, 873.014 )
-rotation = 8.12934e-06
-scale = Vector2( 8.88, 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1109,6 +1065,27 @@ custom_fonts/font = SubResource( 32 )
 text = "Exit"
 
 [node name="ColorRect" parent="CanvasLayer" instance=ExtResource( 22 )]
+
+[node name="TableHorizontal" parent="." instance=ExtResource( 24 )]
+position = Vector2( 0.951698, 116.977 )
+
+[node name="TableHorizontal2" parent="." instance=ExtResource( 24 )]
+position = Vector2( 48.9009, 117.397 )
+
+[node name="TableHorizontal3" parent="." instance=ExtResource( 16 )]
+position = Vector2( 496.689, 298.163 )
+
+[node name="TableHorizontal4" parent="." instance=ExtResource( 24 )]
+position = Vector2( 410.821, 406.331 )
+
+[node name="TableHorizontal5" parent="." instance=ExtResource( 24 )]
+position = Vector2( 241.362, 640.047 )
+
+[node name="TableHorizontal6" parent="." instance=ExtResource( 24 )]
+position = Vector2( 296.798, 640.047 )
+
+[node name="TableHorizontal" parent="TableHorizontal6" instance=ExtResource( 15 )]
+position = Vector2( -361.534, 105.46 )
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector7" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector10" to="." method="_on_Detector_body_entered"]
@@ -1125,3 +1102,5 @@ text = "Exit"
 [connection signal="button_up" from="CanvasLayer/Control2/Button3" to="." method="_on_Button3_button_up"]
 
 [editable path="Camera2D"]
+
+[editable path="YSort/CoffeTableH3"]

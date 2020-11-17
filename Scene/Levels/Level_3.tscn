@@ -705,6 +705,7 @@ position = Vector2( 593.589, 177.26 )
 [node name="TableHorizontal5" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 560.776, 171.666 )
 scale = Vector2( 3.92012, 3.92012 )
+health = 10
 
 [node name="Tree" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( 492.629, 444.122 )

@@ -633,11 +633,8 @@ position = Vector2( -252.079, 540.692 )
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")
 
-[node name="Hostage" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( 232.77, 414.002 )
-
 [node name="Hostage2" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( 284.064, 327.389 )
+position = Vector2( 284.064, 352.553 )
 
 [node name="Hostage3" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 100.481, 257.543 )
@@ -668,7 +665,7 @@ position = Vector2( 635.462, 56.1501 )
 position = Vector2( 230.253, 67.2944 )
 
 [node name="Terrorist" parent="YSort" instance=ExtResource( 11 )]
-position = Vector2( 274.913, 372.218 )
+position = Vector2( 274.913, 397.382 )
 
 [node name="Terrorist2" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( 43.7018, 226.456 )
@@ -708,7 +705,7 @@ position = Vector2( 324, 70.795 )
 health = 8
 
 [node name="TableHorizontal" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 272.646, 351.591 )
+position = Vector2( 272.646, 376.755 )
 scale = Vector2( 4, 4 )
 health = 8
 
@@ -752,7 +749,7 @@ scale = Vector2( 2.48649, 2.92 )
 health = 8
 
 [node name="ShelfSide" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 231.605, 367.774 )
+position = Vector2( 231.605, 392.938 )
 scale = Vector2( 4, 4 )
 health = 8
 
