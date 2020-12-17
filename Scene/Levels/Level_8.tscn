@@ -729,7 +729,7 @@ scale = Vector2( 0.389998, 0.15 )
 destroyable = false
 
 [node name="AnimatedSprite" parent="YSort/CoffeTableH3" index="1"]
-frame = 56
+frame = 59
 
 [node name="Tree" parent="YSort" instance=ExtResource( 18 )]
 position = Vector2( 0.878403, 322.932 )
