@@ -26,6 +26,7 @@ func _ready():
 	_spawn()
 	Singleton.connect("Hostage_Die", self, "_on_Hostage_Die")
 	Singleton.connect("Terrorist_Die", self, "_on_Terrorist_Die")
+	connect("level_Completed", self, "_on_level_Completed")
 
 func _process(delta):
 	var level = str(int(get_tree().current_scene.name))
@@ -33,7 +34,6 @@ func _process(delta):
 	if terrorist == 0 and Hostage_dead == false:
 		get_tree().call_group("Detector", "detector_ON")
 		emit_signal("level_Completed")
-		connect("level_Completed", self, "_on_level_Completed")
 		Complete = true
 	if Input.is_action_just_pressed("Pause"):
 		get_tree().paused = true

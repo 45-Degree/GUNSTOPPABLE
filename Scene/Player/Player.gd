@@ -33,7 +33,6 @@ func _physics_process(delta):
 			STOP:
 				pass
 	target_sight = get_local_mouse_position()
-	print(input_vector)
 	
 	if Singleton.Playable == true:
 		input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
