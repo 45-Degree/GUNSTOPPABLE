@@ -58,10 +58,14 @@ func _physics_process(delta):
 	elif Singleton.Playable == false:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	velocity = move_and_slide(velocity)
-	
-	if Singleton.Playable == true:
-		state = SHOOT
+#
+#	if Singleton.Playable == true:
+#		state = SHOOT
 
+	if Input.is_action_pressed("shoot"):
+		state = SHOOT
+	if Input.is_action_pressed("stop"):
+		state = STOP
 
 
 #func _spawn():

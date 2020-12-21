@@ -74,7 +74,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 9.47635, 4.88822 )
+extents = Vector2( 3.25583, 3.28415 )
 
 [sub_resource type="Animation" id=3]
 length = 0.6
@@ -133,7 +133,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 9.36117, 4.77873 )
+extents = Vector2( 3.2235, 3.159 )
 
 [sub_resource type="ParticlesMaterial" id=6]
 flag_disable_z = true
@@ -162,7 +162,7 @@ position = Vector2( 2.21085, -5.38688 )
 rotation = 1.5708
 scale = Vector2( 0.3, 0.4 )
 frames = SubResource( 1 )
-frame = 60
+frame = 58
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -193,6 +193,14 @@ process_material = SubResource( 6 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
+
+[node name="BulletSpawnUp" type="Position2D" parent="."]
+
+[node name="BulletSpawnDown" type="Position2D" parent="."]
+
+[node name="BulletSpawnLeft" type="Position2D" parent="."]
+
+[node name="BulletSpawnRight" type="Position2D" parent="."]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

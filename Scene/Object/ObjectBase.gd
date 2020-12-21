@@ -4,15 +4,18 @@ export var health = 10
 var invincible = false
 export var destroyable = false
 export var explodable = false
+export var Reflectable = false
 export var pickable = false
 export var unlockable = false
 export var fallable = false
 export var fallableSide = false
+export(int, "Left", "Right", "Top", "Bottom") var BulletSpawn
 onready var animatedSprite = $AnimatedSprite
 onready var particle = $Particles2D
 onready var timer = $Timer
 var sound_clip = preload("res://Sound/SFX/Object/Keycard_3.wav")
 onready var shelf = preload("res://Scene/Object/Shelf/ShelfFrontFallen.tscn")
+onready var Bullet = preload("res://Scene/Player/Bullet.tscn")
 onready var shelfSide = preload("res://Scene/Object/Shelf/ShelfSideFallen.tscn")
 onready var explodeDamage = preload("res://Scene/Effect/ExplosionDamage.tscn")
 
@@ -54,7 +57,37 @@ func _on_Hurtbox_area_entered(area):
 		Singleton.unlock = true
 		SoundManager.play_se("res://Sound/SFX/Object/Keycard_3.wav")
 		queue_free()
-	
+	if Reflectable == true:
+		if BulletSpawn == 0:
+			var BulletP_Instance = Bullet.instance()
+			var world = get_tree().current_scene
+			world.call_deferred("add_child", BulletP_Instance)
+			BulletP_Instance.position = $BulletSpawnLeft.get_global_position()
+			BulletP_Instance.direction = Vector2.LEFT.normalized()
+			BulletP_Instance.rotation = BulletP_Instance.direction.angle()
+		if BulletSpawn == 1:
+			var BulletP_Instance = Bullet.instance()
+			var world = get_tree().current_scene
+			world.call_deferred("add_child", BulletP_Instance)
+			BulletP_Instance.position = $BulletSpawnRight.get_global_position()
+			BulletP_Instance.direction = Vector2.RIGHT.normalized()
+			BulletP_Instance.rotation = BulletP_Instance.direction.angle()
+		if BulletSpawn == 2:
+			var BulletP_Instance = Bullet.instance()
+			var world = get_tree().current_scene
+			world.call_deferred("add_child", BulletP_Instance)
+			BulletP_Instance.position = $BulletSpawnUp.get_global_position()
+			BulletP_Instance.direction = Vector2.UP.normalized()
+			BulletP_Instance.rotation = BulletP_Instance.direction.angle()
+		if BulletSpawn == 3:
+			var BulletP_Instance = Bullet.instance()
+			var world = get_tree().current_scene
+			world.call_deferred("add_child", BulletP_Instance)
+			BulletP_Instance.position = $BulletSpawnDown.get_global_position()
+			BulletP_Instance.direction = Vector2.DOWN.normalized()
+			BulletP_Instance.rotation = BulletP_Instance.direction.angle()
+
+		
 func _on_Timer_timeout():
 	animatedSprite.hide()
 	animationPlayer.play("Idle")

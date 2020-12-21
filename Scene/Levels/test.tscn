@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/UI/detector.tscn" type="PackedScene" id=3]
@@ -8,7 +8,6 @@
 [ext_resource path="res://Scene/UI/Camera2D.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/UI/TransitionMaterial.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scene/UI/Transistion.tscn" type="PackedScene" id=12]
-[ext_resource path="res://icon.png" type="Texture" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -416,9 +415,6 @@ outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="RectangleShape2D" id=27]
-extents = Vector2( 32.2779, 31.0887 )
-
 [node name="Level_1" type="Node"]
 script = ExtResource( 1 )
 
@@ -664,34 +660,6 @@ text = "Back"
 [node name="ColorRect" parent="CanvasLayer" instance=ExtResource( 10 )]
 margin_left = 665.148
 margin_right = 665.148
-
-[node name="Bounce" type="StaticBody2D" parent="." groups=[
-"Bounce",
-]]
-position = Vector2( 310.474, 42.9642 )
-scale = Vector2( 8.92, 1 )
-collision_layer = 32
-collision_mask = 5
-
-[node name="Sprite" type="Sprite" parent="Bounce"]
-texture = ExtResource( 16 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounce"]
-shape = SubResource( 27 )
-
-[node name="Bounce2" type="StaticBody2D" parent="." groups=[
-"Bounce",
-]]
-position = Vector2( 316.173, 321.311 )
-scale = Vector2( 8.92, 1 )
-collision_layer = 32
-collision_mask = 5
-
-[node name="Sprite" type="Sprite" parent="Bounce2"]
-texture = ExtResource( 16 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounce2"]
-shape = SubResource( 27 )
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector8" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector7" to="." method="_on_Detector_body_entered"]

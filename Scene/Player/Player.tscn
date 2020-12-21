@@ -321,7 +321,7 @@ scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 3 )
 vframes = 6
 hframes = 8
-frame = 40
+frame = 43
 region_rect = Rect2( 560, 50, 530, 450 )
 
 [node name="Gun" parent="." instance=ExtResource( 1 )]
