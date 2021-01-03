@@ -145,6 +145,7 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 
 [node name="TableHorizontal" type="StaticBody2D"]
+position = Vector2( 141.033, 106.99 )
 collision_layer = 8
 script = ExtResource( 3 )
 health = 15
@@ -162,7 +163,7 @@ position = Vector2( 2.21085, -5.38688 )
 rotation = 1.5708
 scale = Vector2( 0.3, 0.4 )
 frames = SubResource( 1 )
-frame = 58
+frame = 37
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

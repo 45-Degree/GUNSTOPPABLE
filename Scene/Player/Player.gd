@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+export var BULLET = false
+export var LASER = false
 export var MAX_SPEED = 175
 var ACCELERATION = 10000
 var FRICTION = 10000
@@ -14,7 +16,7 @@ var target_sight = Vector2.ZERO
 var input_vector = Vector2.ZERO
 var bullet = preload("res://Scene/Player/Bullet.tscn")
 var hiteffect = preload("res://Scene/Effect/Explosion.tscn")
-
+onready var LaserBeam = $LaserBeam
 onready var animationTree = $AnimationTree
 onready var bulletPoint = $Gun/Bulletpoint
 onready var animationState = animationTree.get("parameters/playback")
@@ -25,6 +27,14 @@ enum{
 }
 
 func _physics_process(delta):
+	if BULLET == true:
+		state = SHOOT
+		LaserBeam.enabled = false
+		LaserBeam.visible = false
+	if LASER == true:
+		state = STOP
+		LaserBeam.enabled = true
+		LaserBeam.visible = true
 	match state:
 			SHOOT:
 					$Gun.shoot()
@@ -66,16 +76,3 @@ func _physics_process(delta):
 		state = SHOOT
 	if Input.is_action_pressed("stop"):
 		state = STOP
-
-
-#func _spawn():
-#	if spawnHere == 0:
-#		position = position.move_toward(Vector2(x, y), delta * moveSpeed)
-#	if spawnHere == 1:
-#		player.position = finalPosition.get_global_position() - Vector2(100,0)
-#	if spawnHere == 2:
-#		player.position = finalPosition.get_global_position() - Vector2(100,0)
-#	if spawnHere == 3:
-#		player.position = finalPosition.get_global_position() - Vector2(100,0)
-
-

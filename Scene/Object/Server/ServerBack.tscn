@@ -18,7 +18,7 @@ region_rect = Rect2( 133.627, 60.6217, 83.5363, 146.21 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 position = Vector2( 2.13391, -2.23217 )
-frame = 41
+frame = 6
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -0.0833642, -0.143819 )

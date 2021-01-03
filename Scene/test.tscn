@@ -73,7 +73,7 @@ scale = Vector2( 10, 10 )
 BulletSpawn = 1
 
 [node name="AnimatedSprite" parent="DIRChanger" index="1"]
-frame = 24
+frame = 30
 
 [node name="DIRChanger2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 538.006, 115.798 )
@@ -81,7 +81,7 @@ scale = Vector2( 10, 10 )
 BulletSpawn = 3
 
 [node name="AnimatedSprite" parent="DIRChanger2" index="1"]
-frame = 24
+frame = 30
 
 [node name="AnimationPlayer" parent="DIRChanger2" index="3"]
 anims/Blink = SubResource( 1 )

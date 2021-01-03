@@ -19,6 +19,7 @@ var smooth_zoom = 1
 var target_zoom = 0.5
 const ZOOM_SPEED = 3
 
+
 func _ready():
 	Singleton.Playable = true
 	animationPlayer.play("Wipe_Out")

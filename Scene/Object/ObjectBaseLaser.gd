@@ -12,9 +12,11 @@ export var fallableSide = false
 export var Laser = false
 export var Emit = false
 export(int, "Left", "Right", "Top", "Bottom") var BulletSpawn
+export(int, "Left", "Right", "Top", "Bottom") var LaserSpawn
 onready var animatedSprite = $AnimatedSprite
 onready var particle = $Particles2D
 onready var timer = $Timer
+onready var LaserBeam = $LaserBeam
 var sound_clip = preload("res://Sound/SFX/Object/Keycard_3.wav")
 onready var shelf = preload("res://Scene/Object/Shelf/ShelfFrontFallen.tscn")
 onready var Bullet = preload("res://Scene/Player/Bullet.tscn")
@@ -22,8 +24,9 @@ onready var shelfSide = preload("res://Scene/Object/Shelf/ShelfSideFallen.tscn")
 onready var explodeDamage = preload("res://Scene/Effect/ExplosionDamage.tscn")
 
 func _ready():
-	pass
-	
+		LaserBeam.cast_to = Vector2.ZERO
+		LaserBeam.visible = false
+
 func _process(delta):
 	if unlockable == true and Singleton.unlock == true:
 		queue_free()
@@ -35,7 +38,13 @@ func _process(delta):
 	elif health == 0:
 		SoundManager.play_se("res://Sound/SFX/Object/66780__kevinkace__crate-break-4 (1).wav")
 		queue_free()
-
+	if Laser == false:
+		LaserBeam.enabled = false
+		LaserBeam.visible = false
+	if Input.is_action_pressed("Laser"):
+		LaserBeam.enabled = true
+		LaserBeam. visible = true
+		
 func _on_Hurtbox_area_entered(area):
 	if invincible == false and destroyable == true:
 		animatedSprite.show()
@@ -78,10 +87,26 @@ func _on_Hurtbox_area_entered(area):
 			BulletP_Instance.position = $BulletSpawnDown.get_global_position()
 			BulletP_Instance.direction = Vector2.DOWN.normalized()
 		BulletP_Instance.rotation = BulletP_Instance.direction.angle()
-		
+	if Laser == true:
+		LaserBeam.enabled = true
+		LaserBeam.visible = true
+		if LaserSpawn == 0:
+			LaserBeam.global_position = $BulletSpawnLeft.get_global_position()
+			LaserBeam.cast_to = Vector2(-2000,0)
+		if LaserSpawn == 1:
+			LaserBeam.global_position = $BulletSpawnRight.get_global_position()
+			LaserBeam.cast_to = Vector2(2000,0)
+		if LaserSpawn == 2:
+			LaserBeam.global_position = $BulletSpawnUp.get_global_position()
+			LaserBeam.cast_to = Vector2(0,-2000)
+		if LaserSpawn == 3:
+			LaserBeam.global_position = $BulletSpawnDown.get_global_position()
+			LaserBeam.cast_to = Vector2(0,2000)
+#
 func _on_Hurtbox_area_exited(area):
 	if Laser == true:
-		Emit = false
+		LaserBeam.visible = false
+		LaserBeam.cast_to = Vector2.ZERO
 
 func _on_Timer_timeout():
 	animatedSprite.hide()
