@@ -17,7 +17,7 @@
 [ext_resource path="res://Scene/UI/Transistion.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scene/Object/Shelf/ShelfFront.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scene/Object/Heater/HeaterLeft.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Scene/Object/Heater/HeaterBack.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scene/Object/Heater/HeaterFront.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scene/Object/Server/ServerFront.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scene/UI/TransitionMaterial.tscn" type="PackedScene" id=27]
 
@@ -649,12 +649,6 @@ position = Vector2( 117.719, 387.969 )
 [node name="Hostage2" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( -13.4606, 160.927 )
 
-[node name="TableHorizontal4" parent="YSort" instance=ExtResource( 18 )]
-position = Vector2( 508.851, 542.804 )
-
-[node name="TableHorizontal7" parent="YSort" instance=ExtResource( 18 )]
-position = Vector2( 508.851, 542.804 )
-
 [node name="TableHorizontal5" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( 657.967, 462.525 )
 
@@ -703,6 +697,9 @@ scale = Vector2( -5, 5.3 )
 
 [node name="ShelfFront" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 253.225, 234.047 )
+
+[node name="TableHorizontal4" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( 506.018, 542.959 )
 
 [node name="CoffeTableH" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( -14.223, 200.138 )
