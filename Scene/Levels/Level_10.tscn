@@ -1241,6 +1241,7 @@ position = Vector2( 359.917, 226.981 )
 
 [node name="TableHorizontal" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 571.211, 232.465 )
+scale = Vector2( 5, 5.5 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
