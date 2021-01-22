@@ -502,12 +502,12 @@ scale = Vector2( 2, 2 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( -249.995, 287.9 )
-LASER = true
+BULLET = true
 
-[node name="Sprite" parent="YSort/Player" index="0"]
-frame = 41
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 0
 
-[node name="AnimationTree" parent="YSort/Player" index="3"]
+[node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 17 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]

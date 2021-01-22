@@ -13,9 +13,10 @@
 [ext_resource path="res://Sprite/Tilemap/Tiles_Mix_2.png" type="Texture" id=11]
 [ext_resource path="res://Sprite/Tilemap/Tile_connectors.png" type="Texture" id=12]
 [ext_resource path="res://Scene/Object/Box/Box_3.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scene/Object/Button/Button_green.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scene/Object/Button/Button.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scene/NPC/Terrorist.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scene/NPC/Hostage.tscn" type="PackedScene" id=16]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )

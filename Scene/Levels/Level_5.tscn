@@ -611,7 +611,7 @@ scale = Vector2( 1.81619, -2.83597 )
 position = Vector2( 722.372, 668.511 )
 
 [node name="Floor" type="TileMap" parent="." groups=[
-"wall1",
+"Wall",
 ]]
 position = Vector2( 245.297, 62.5693 )
 rotation = 8.12934e-06
@@ -646,6 +646,7 @@ scale = Vector2( 0.998974, 0.998974 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( -644.15, -49.7637 )
+BULLET = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/SFX_-_Drum_Machine.wav-928393cfadfc8bac726c52e4a7eccc3b.sample"
+
+[deps]
+
+source_file="res://Sound/SFX/Gunshot/SFX_-_Drum_Machine.wav"
+dest_files=[ "res://.import/SFX_-_Drum_Machine.wav-928393cfadfc8bac726c52e4a7eccc3b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

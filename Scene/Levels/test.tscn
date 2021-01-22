@@ -1,10 +1,10 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Object/Bounce.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/UI/detector.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprite/Tilemap/tile_mix1.png" type="Texture" id=4]
-[ext_resource path="res://Scene/Object/DEchanger.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Object/Button/Button.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Scene/UI/Camera2D.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Player/Player.tscn" type="PackedScene" id=9]
@@ -419,62 +419,6 @@ outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="Animation" id=28]
-length = 0.6
-step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("../TableHorizontal/TableHorizontal4:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = false
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ Color( 100, 100, 100, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ Color( 100, 100, 100, 1 ), Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=29]
-length = 0.1
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("../TableHorizontal/TableHorizontal4:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-
 [node name="Level_1" type="Node"]
 script = ExtResource( 1 )
 
@@ -552,16 +496,19 @@ scale = Vector2( 2, 2 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( -249.995, 287.9 )
-LASER = false
+BULLET = true
 
-[node name="Sprite" parent="YSort/Player" index="0"]
-frame = 42
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 7
 
-[node name="AnimationTree" parent="YSort/Player" index="3"]
+[node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 17 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")
+
+[node name="Button" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 149.911, 279.145 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -735,34 +682,13 @@ collision_mask = 4
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PoolVector2Array( 213.946, 28.8807, 51.9041, 53.7443, 153.931, 111.188, 111.062, 111.188, 81.0545, 160.915, 57.0483, 191.78, 129.924, 217.501, 77.6251, 237.221, 19.3242, 196.067, -81.8449, 255.225, -79.2728, 355.537, 41.6157, 400.12, 106.775, 436.129, 206.23, 376.114, 279.106, 422.411, 397.422, 420.697, 471.156, 358.966, 544.148, 350.93, 648.302, 329.878, 627.25, 203.563, 651.626, 163.675, 530.852, 75.0331, 468.803, 67.2769, 539.716, 11.8759, 627.25, 39.5764, 678.219, 101.626, 687.083, 232.372, 700.379, 350.93, 649.41, 457.3, -73.0194, 460.624, -194.902, 334.31, -173.849, 189.159, -65.2632, 77.2491, -46.4268, -91.1701, 196.23, -117.763, 260.495, -51.2813, 380.161, -61.2535, 397.89, -22.4728, 473.235, -39.0931, 465.479, 3.01169, 420.05, 31.8202, 338.056, 40.6844, 264.927, 22.9561 )
 
-[node name="DEchanger5" parent="." instance=ExtResource( 5 )]
-position = Vector2( 343.908, 224.756 )
-Laser = true
-BulletSpawn = 2
-LaserSpawn = 0
-
-[node name="AnimatedSprite" parent="DEchanger5" index="1"]
-frame = 12
-
-[node name="AnimationPlayer" parent="DEchanger5" index="3"]
-anims/Blink = SubResource( 28 )
-anims/Idle = SubResource( 29 )
-
-[node name="CollisionShape2D2" parent="DEchanger5/Hurtbox" index="1"]
-position = Vector2( -0.200209, -0.17175 )
-
-[node name="LaserBeam" parent="DEchanger5" index="11"]
-cast_to = Vector2( 0, 0 )
-
-[node name="DEchanger6" parent="." instance=ExtResource( 5 )]
-position = Vector2( 222.478, 224.268 )
-Laser = true
-BulletSpawn = 2
-
 [node name="Bounce" parent="." instance=ExtResource( 2 )]
-position = Vector2( 148.931, 302.792 )
+position = Vector2( 240.897, 154.318 )
 rotation = 8.12934e-06
-scale = Vector2( 1, 1 )
+
+[node name="Bounce2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 410.758, 293.49 )
+rotation = 8.12934e-06
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector8" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector7" to="." method="_on_Detector_body_entered"]
@@ -783,5 +709,3 @@ scale = Vector2( 1, 1 )
 [editable path="Camera2D"]
 
 [editable path="YSort/Player"]
-
-[editable path="DEchanger5"]

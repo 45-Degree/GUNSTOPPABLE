@@ -604,7 +604,7 @@ position = Vector2( 1287.64, 480.374 )
 [node name="Tween" type="Tween" parent="Camera2D"]
 
 [node name="Floor" type="TileMap" parent="." groups=[
-"wall1",
+"Wall",
 ]]
 position = Vector2( 168, 272 )
 rotation = 8.12934e-06
@@ -646,6 +646,7 @@ scale = Vector2( 2, 2 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( -227.706, -482.666 )
+BULLET = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")
@@ -726,7 +727,7 @@ position = Vector2( 774.656, 316.26 )
 scale = Vector2( 3, 3 )
 
 [node name="AnimatedSprite" parent="YSort/Keycard" index="1"]
-frame = 49
+frame = 28
 
 [node name="TableVertical" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 666.068, 128.97 )

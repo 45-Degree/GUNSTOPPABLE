@@ -11,6 +11,7 @@ export var fallable = false
 export var fallableSide = false
 export var Laser = false
 export var Emit = false
+export var button = false
 export(int, "Left", "Right", "Top", "Bottom") var BulletSpawn
 onready var animatedSprite = $AnimatedSprite
 onready var particle = $Particles2D
@@ -78,10 +79,13 @@ func _on_Hurtbox_area_entered(area):
 			BulletP_Instance.position = $BulletSpawnDown.get_global_position()
 			BulletP_Instance.direction = Vector2.DOWN.normalized()
 		BulletP_Instance.rotation = BulletP_Instance.direction.angle()
-		
+	if button == true:
+		animatedSprite.play("Green")
 func _on_Hurtbox_area_exited(area):
 	if Laser == true:
 		Emit = false
+	if button == true:
+		animatedSprite.play("Red")
 
 func _on_Timer_timeout():
 	animatedSprite.hide()
