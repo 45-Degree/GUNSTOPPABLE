@@ -431,6 +431,7 @@ position = Vector2( 8.9921, 298.075 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 8 )]
 position = Vector2( -249.995, 287.9 )
+scale = Vector2( 1.22, 1.22 )
 
 [node name="topLeft" parent="Camera2D/Limits" index="0"]
 position = Vector2( -564.587, -455.171 )

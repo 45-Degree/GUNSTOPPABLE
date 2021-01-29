@@ -436,6 +436,7 @@ position = Vector2( 8.9921, 298.075 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 8 )]
 position = Vector2( -249.995, 287.9 )
+scale = Vector2( 1.22, 1.22 )
 
 [node name="topLeft" parent="Camera2D/Limits" index="0"]
 position = Vector2( -86.2613, -146.651 )
@@ -503,9 +504,6 @@ scale = Vector2( 2, 2 )
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( -249.995, 287.9 )
 BULLET = true
-
-[node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 0
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 17 )

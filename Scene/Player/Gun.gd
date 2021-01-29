@@ -26,7 +26,7 @@ func shoot():
 		get_tree().current_scene.add_child(bullet_instance)
 #		get_tree().get_root().get_node("World/YSort").add_child(bullet_instance)
 #		get_tree().get_root().add_child(bullet_instance)
-		SoundManager.play_se("res://Sound/SFX/Gunshot/SFX_-_Drum_Machine.wav")
+		SoundManager.play_se("res://Sound/SFX/Gunshot/GunsoundNew.wav")
 		can_fire = false
 		yield(get_tree().create_timer(firerate), "timeout")
 		can_fire = true
