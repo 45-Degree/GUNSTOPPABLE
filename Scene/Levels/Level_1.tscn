@@ -505,6 +505,9 @@ scale = Vector2( 2, 2 )
 position = Vector2( -249.995, 287.9 )
 BULLET = true
 
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 4
+
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 17 )
 
@@ -515,7 +518,7 @@ remote_path = NodePath("../../../Camera2D")
 position = Vector2( 262.855, 92.6611 )
 
 [node name="Hostage4" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 570.891, 195.709 )
+position = Vector2( 478.822, 318.733 )
 
 [node name="TableHorizontal2" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 438.027, 300.632 )
