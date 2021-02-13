@@ -626,11 +626,8 @@ BULLET = true
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")
 
-[node name="Hostage2" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 377.868, 189.279 )
-
 [node name="Hostage3" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 579.201, 131.713 )
+position = Vector2( 581.201, 150.713 )
 
 [node name="Terrorist" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 140.759, 267.719 )
@@ -642,7 +639,7 @@ position = Vector2( 573.895, 346.214 )
 position = Vector2( 375.866, 13.8219 )
 
 [node name="Terrorist3" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 380.253, 142.658 )
+position = Vector2( 383.253, 160.658 )
 
 [node name="Terrorist5" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 576.378, 62.3688 )

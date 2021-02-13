@@ -13,12 +13,11 @@ extents = Vector2( 5.05441, 4.38423 )
 health = 10
 
 [node name="Sprite2" parent="." index="0"]
-scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 region_rect = Rect2( 634, 85, 296, 419 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 52
+frame = 54
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -0.218826, -0.143819 )
