@@ -1195,6 +1195,7 @@ script = ExtResource( 1 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 10 )]
 position = Vector2( 72.79, 18.9449 )
+scale = Vector2( 1.22, 1.22 )
 
 [node name="topLeft" parent="Camera2D/Limits" index="0"]
 position = Vector2( -0.00137329, -0.000778198 )

@@ -581,6 +581,7 @@ position = Vector2( 20.7904, 741.967 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 10 )]
 position = Vector2( 27.2748, 746.19 )
+scale = Vector2( 1.22, 1.22 )
 
 [node name="topLeft" parent="Camera2D/Limits" index="0"]
 position = Vector2( 11.5802, 13.6549 )
@@ -694,7 +695,12 @@ position = Vector2( 191.619, 572.844 )
 position = Vector2( 104.783, 354.809 )
 
 [node name="Terrorist2" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 443.634, 550.191 )
+position = Vector2( 323.529, 656.101 )
+moving = true
+
+[node name="Sprite2" parent="YSort/Terrorist2" index="0"]
+animation = "WalkLeft"
+frame = 3
 
 [node name="Terrorist4" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 530.276, 261.787 )
@@ -885,3 +891,5 @@ visible = false
 [connection signal="button_up" from="CanvasLayer/Control2/Button3" to="." method="_on_Button3_button_up"]
 
 [editable path="Camera2D"]
+
+[editable path="YSort/Terrorist2"]

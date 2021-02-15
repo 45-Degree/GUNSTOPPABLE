@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Sprite/Effect/M484BulletCollection2.png" type="Texture" id=1]
+[ext_resource path="res://Sprite/Effect/Bullet4.png" type="Texture" id=1]
 [ext_resource path="res://Scene/UI/Hitbox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Player/Bullet.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5.327, 5.346 )
+extents = Vector2( 3.985, 3.742 )
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 5.0
+radius = 6.0
 
 [node name="Bullet" type="KinematicBody2D"]
 collision_layer = 4
@@ -17,10 +17,9 @@ script = ExtResource( 3 )
 speed = 500
 
 [node name="Sprite" type="Sprite" parent="."]
-rotation = 1.5708
-scale = Vector2( 1.5, 1.5 )
+rotation = -1.57079
+scale = Vector2( 0.631602, 0.631602 )
 texture = ExtResource( 1 )
-region_enabled = true
 region_rect = Rect2( 427.972, 162.995, 9.13458, 17.937 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

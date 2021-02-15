@@ -3,12 +3,13 @@ extends Node
 onready var control = $CanvasLayer/Control
 onready var pause =$CanvasLayer/Control2
 onready var option = $CanvasLayer/Control3
-onready var message = $CanvasLayer/Control/Message
-onready var button = $CanvasLayer/Control/VBoxContainer/Button
+onready var message = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2/Message
+onready var button = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/Button
 onready var camera =$Camera2D
 onready var player = $YSort/Player
 onready var animationPlayer = $AnimationPlayer
 onready var finalPosition = $SpawnPosition
+onready var starMessage =$CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2/StarMessage
 var soundplay = false
 export(int, "Left", "Right", "Top", "Bottom") var spawnHere
 onready var Complete = false
@@ -18,7 +19,7 @@ signal level_Completed
 var smooth_zoom = 1
 var target_zoom = 0.5
 const ZOOM_SPEED = 3
-
+var Star_Count = 0
 
 func _ready():
 	Singleton.Playable = true
@@ -30,6 +31,7 @@ func _ready():
 	connect("level_Completed", self, "_on_level_Completed")
 
 func _process(delta):
+	print(Star_Count)
 	var level = str(int(get_tree().current_scene.name))
 	var terrorist = get_tree().get_nodes_in_group("Terrorist").size()
 	if terrorist == 0 and Hostage_dead == false:
@@ -79,10 +81,14 @@ func _on_Hostage_Die():
 	message.set_text("You kill a hostage!")
 	control.show()
 
+func  _on_Star_Pick():
+	Star_Count += 1
+
 func _on_Detector_body_entered(body):
 	if Complete == true:
 		message.set_text("MISSION COMPLETED!")
 		button.set_text("Next Level")
+		starMessage.text = "You collect " + str(Star_Count) + " star"
 		Singleton.Playable = false
 		control.show()
 		get_tree().call_group("Hostage", "invincible")

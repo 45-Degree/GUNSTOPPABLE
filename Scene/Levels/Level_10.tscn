@@ -1194,7 +1194,8 @@ font_data = ExtResource( 7 )
 script = ExtResource( 1 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 10 )]
-position = Vector2( 78.0954, 571.112 )
+position = Vector2( 78.0954, 571.111 )
+scale = Vector2( 1.22, 1.22 )
 
 [node name="topLeft" parent="Camera2D/Limits" index="0"]
 position = Vector2( 7.55814, 73.0746 )

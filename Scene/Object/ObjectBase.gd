@@ -12,6 +12,7 @@ export var fallableSide = false
 export var Laser = false
 export var Emit = false
 export var button = false
+export var Star = false
 export(int, "Left", "Right", "Top", "Bottom") var BulletSpawn
 onready var animatedSprite = $AnimatedSprite
 onready var particle = $Particles2D
@@ -21,6 +22,7 @@ onready var shelf = preload("res://Scene/Object/Shelf/ShelfFrontFallen.tscn")
 onready var Bullet = preload("res://Scene/Player/Bullet.tscn")
 onready var shelfSide = preload("res://Scene/Object/Shelf/ShelfSideFallen.tscn")
 onready var explodeDamage = preload("res://Scene/Effect/ExplosionDamage.tscn")
+signal Star_Pick
 
 func _ready():
 	pass
@@ -60,6 +62,11 @@ func _on_Hurtbox_area_entered(area):
 		queue_free()
 	if pickable == true:
 		Singleton.unlock = true
+		SoundManager.play_se("res://Sound/SFX/Object/Keycard_3.wav")
+		queue_free()
+	if Star == true:
+		connect("Star_Pick", owner,"_on_Star_Pick")
+		emit_signal("Star_Pick")
 		SoundManager.play_se("res://Sound/SFX/Object/Keycard_3.wav")
 		queue_free()
 	if Reflectable == true:

@@ -1,0 +1,242 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Font/PIXEL.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scene/UI/TransitionMaterial.tscn" type="PackedScene" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+[sub_resource type="Theme" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 39
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 42
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 33
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 27
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 30
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 600.0
+margin_bottom = 320.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/MarginContainer"]
+margin_right = 560.0
+margin_bottom = 280.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/CenterContainer"]
+margin_left = 61.0
+margin_top = 70.0
+margin_right = 498.0
+margin_bottom = 209.0
+custom_constants/separation = 24
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/MarginContainer/CenterContainer/VBoxContainer"]
+margin_right = 437.0
+margin_bottom = 87.0
+custom_constants/separation = 22
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Message" type="Label" parent="Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2"]
+material = SubResource( 1 )
+margin_right = 437.0
+margin_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+text = "You kill a hostage!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StarMessage" type="Label" parent="Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2"]
+margin_top = 57.0
+margin_right = 437.0
+margin_bottom = 87.0
+custom_fonts/font = ExtResource( 1 )
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/CenterContainer/VBoxContainer"]
+margin_top = 111.0
+margin_right = 437.0
+margin_bottom = 139.0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_constants/separation = 49
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 39.0
+margin_right = 201.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 4 )
+text = "Next Level"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 250.0
+margin_right = 397.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 5 )
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control2" type="Control" parent="."]
+pause_mode = 2
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control2"]
+margin_left = 264.927
+margin_top = 84.0221
+margin_right = 389.927
+margin_bottom = 121.022
+rect_pivot_offset = Vector2( 97.0978, 46.03 )
+custom_fonts/font = SubResource( 6 )
+text = "Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control2"]
+margin_left = 270.071
+margin_top = 139.751
+margin_right = 390.071
+margin_bottom = 172.751
+custom_fonts/font = SubResource( 7 )
+text = "Resume"
+
+[node name="Button2" type="Button" parent="Control2"]
+margin_left = 269.214
+margin_top = 182.619
+margin_right = 389.214
+margin_bottom = 215.619
+custom_fonts/font = SubResource( 7 )
+text = "Option"
+
+[node name="Button3" type="Button" parent="Control2"]
+margin_left = 287.218
+margin_top = 228.06
+margin_right = 371.218
+margin_bottom = 261.06
+custom_fonts/font = SubResource( 7 )
+text = "Exit"
+
+[node name="Control3" type="Control" parent="."]
+pause_mode = 2
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control3"]
+margin_left = 273.048
+margin_top = 87.2915
+margin_right = 387.048
+margin_bottom = 116.291
+custom_fonts/font = SubResource( 8 )
+text = "Option"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckButton2" type="CheckButton" parent="Control3"]
+margin_left = 199.025
+margin_top = 138.27
+margin_right = 471.025
+margin_bottom = 178.27
+custom_fonts/font = SubResource( 9 )
+text = "Sound Effect"
+
+[node name="CheckButton" type="CheckButton" parent="Control3"]
+margin_left = 199.025
+margin_top = 180.0
+margin_right = 470.0
+margin_bottom = 218.773
+custom_fonts/font = SubResource( 9 )
+text = "Music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="Control3"]
+margin_left = 291.903
+margin_top = 238.131
+margin_right = 375.903
+margin_bottom = 271.131
+custom_fonts/font = SubResource( 10 )
+text = "Back"
+
+[node name="ColorRect" parent="." instance=ExtResource( 3 )]
+visible = false
+margin_left = 665.148
+margin_right = 665.148

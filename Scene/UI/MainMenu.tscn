@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scene/UI/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://Scene/UI/Transistion.tscn" type="PackedScene" id=3]
+[ext_resource path="res://karma future.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Wipe_In"
@@ -61,10 +62,9 @@ tracks/1/keys = {
 }
 
 [sub_resource type="DynamicFont" id=3]
-size = 51
-outline_size = 4
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
+size = 50
+outline_size = 3
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 33
@@ -91,79 +91,92 @@ __meta__ = {
 [node name="MarginContainer" type="MarginContainer" parent="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = 20.0
+margin_right = -40.0
+margin_bottom = -20.0
 size_flags_vertical = 3
-custom_constants/margin_right = 90
-custom_constants/margin_top = 31
-custom_constants/margin_left = 90
-custom_constants/margin_bottom = 47
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="Control/MarginContainer"]
-margin_left = 90.0
-margin_top = 31.0
-margin_right = 550.0
-margin_bottom = 313.0
+margin_right = 566.0
+margin_bottom = 320.0
+custom_constants/separation = -14
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer3"]
-margin_right = 460.0
-margin_bottom = 105.0
+margin_right = 566.0
+margin_bottom = 167.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "GUNSTOPPABLE"
 align = 1
 valign = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer3"]
-margin_top = 109.0
-margin_right = 460.0
-margin_bottom = 282.0
+margin_top = 153.0
+margin_right = 566.0
+margin_bottom = 320.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-size_flags_vertical = 2
-custom_constants/separation = 11
+size_flags_vertical = 3
+custom_constants/separation = 43
+alignment = 1
 
-[node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
-margin_right = 460.0
+[node name="CenterContainer" type="CenterContainer" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
+margin_top = 8.0
+margin_right = 566.0
+margin_bottom = 95.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2/CenterContainer"]
+margin_left = 220.0
+margin_right = 346.0
+margin_bottom = 87.0
+custom_constants/separation = 17
+alignment = 1
+
+[node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2/CenterContainer/VBoxContainer"]
+margin_right = 126.0
 margin_bottom = 35.0
 custom_fonts/font = SubResource( 4 )
 text = "Start"
 
-[node name="Button2" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
-margin_top = 46.0
-margin_right = 460.0
-margin_bottom = 81.0
-custom_fonts/font = SubResource( 5 )
-text = "Level Select"
-
-[node name="Button3" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
-margin_top = 92.0
-margin_right = 460.0
-margin_bottom = 127.0
+[node name="Button3" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2/CenterContainer/VBoxContainer"]
+margin_top = 52.0
+margin_right = 126.0
+margin_bottom = 87.0
 custom_fonts/font = SubResource( 5 )
 text = "Option"
 
-[node name="Button4" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
 margin_top = 138.0
-margin_right = 460.0
-margin_bottom = 173.0
-custom_fonts/font = SubResource( 5 )
-text = "Exit"
+margin_right = 566.0
+margin_bottom = 158.0
+custom_constants/separation = 542
+
+[node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2/HBoxContainer"]
+margin_right = 12.0
+margin_bottom = 20.0
+
+[node name="Button2" type="Button" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2/HBoxContainer"]
+margin_left = 554.0
+margin_right = 566.0
+margin_bottom = 20.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/Button" to="." method="_on_Button_button_up"]
-[connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/Button2" to="." method="_on_Button2_button_up"]
-[connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/Button3" to="." method="_on_Button3_button_up"]
-[connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/Button4" to="." method="_on_Button4_button_up"]
+[connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/CenterContainer/VBoxContainer/Button" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/CenterContainer/VBoxContainer/Button3" to="." method="_on_Button3_button_up"]

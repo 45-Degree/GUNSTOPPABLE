@@ -1,10 +1,11 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Object/Bounce.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/UI/detector.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprite/Tilemap/tile_mix1.png" type="Texture" id=4]
 [ext_resource path="res://Scene/Object/Button/Button.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Object/Shelf/ShelfFront.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Scene/UI/Camera2D.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Player/Player.tscn" type="PackedScene" id=9]
@@ -497,10 +498,10 @@ scale = Vector2( 2, 2 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( -249.995, 287.9 )
-BULLET = true
+LASER = true
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 7
+frame = 0
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 17 )
@@ -676,7 +677,9 @@ text = "Back"
 margin_left = 665.148
 margin_right = 665.148
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=[
+"Wall",
+]]
 collision_layer = 2
 collision_mask = 4
 
@@ -690,6 +693,9 @@ rotation = 8.12934e-06
 [node name="Bounce2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 410.758, 293.49 )
 rotation = 8.12934e-06
+
+[node name="ShelfFront" parent="." instance=ExtResource( 6 )]
+position = Vector2( 95.5461, 308.765 )
 [connection signal="body_entered" from="Node2D/Detector6" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector8" to="." method="_on_Detector_body_entered"]
 [connection signal="body_entered" from="Node2D/Detector7" to="." method="_on_Detector_body_entered"]

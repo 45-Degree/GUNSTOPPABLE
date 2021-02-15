@@ -1,7 +1,6 @@
-[gd_scene load_steps=74 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
-[ext_resource path="res://Scene/Object/Button/Button_red.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/UI/detector.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprite/Tilemap/tile_mix1.png" type="Texture" id=4]
 [ext_resource path="res://Scene/Player/Player.tscn" type="PackedScene" id=5]
@@ -15,7 +14,6 @@
 [ext_resource path="res://Scene/Object/Box/Box_3.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scene/Object/Button/Button.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scene/NPC/Terrorist.tscn" type="PackedScene" id=15]
-
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -1196,6 +1194,7 @@ script = ExtResource( 1 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 10 )]
 position = Vector2( -19.312, 233.307 )
+scale = Vector2( 1.22, 1.22 )
 
 [node name="topLeft" parent="Camera2D/Limits" index="0"]
 position = Vector2( -0.00137329, -0.000778198 )
@@ -1237,16 +1236,15 @@ remote_path = NodePath("../../../Camera2D")
 position = Vector2( 194.972, 197.499 )
 
 [node name="Button_green" parent="YSort" instance=ExtResource( 14 )]
-visible = false
 position = Vector2( 358.503, 227.688 )
 
-[node name="Fake_Button_red" parent="YSort" instance=ExtResource( 2 )]
+[node name="Fake_Button_red" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 365.91, 247.957 )
 
-[node name="Button_red3" parent="YSort" instance=ExtResource( 2 )]
+[node name="Button_red3" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 489.521, 107.866 )
 
-[node name="Fake_Button_red2" parent="YSort" instance=ExtResource( 2 )]
+[node name="Fake_Button_red2" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 389.883, 367.072 )
 
 [node name="TableHorizontal" parent="YSort" instance=ExtResource( 9 )]

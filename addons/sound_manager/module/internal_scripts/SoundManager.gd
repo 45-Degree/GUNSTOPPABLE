@@ -14,7 +14,7 @@ extends SoundManagerModule
 
 # Constants
 
-const DEBUG = true
+const DEBUG = false
 
 ###########
 
