@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=2]
+
+[sub_resource type="CanvasItemMaterial" id=48]
+blend_mode = 1
+
+[sub_resource type="Gradient" id=49]
+offsets = PoolRealArray( 0, 0.832753, 1 )
+colors = PoolColorArray( 0.870588, 1, 1, 1, 0.978356, 1, 1, 0.167247, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=50]
+gradient = SubResource( 49 )
+
+[sub_resource type="Curve" id=51]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.616129, 0.396591 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=52]
+curve = SubResource( 51 )
+
+[sub_resource type="ParticlesMaterial" id=53]
+flag_disable_z = true
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 120.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale_curve = SubResource( 52 )
+color_ramp = SubResource( 50 )
+
+[sub_resource type="CircleShape2D" id=54]
+
+[sub_resource type="ParticlesMaterial" id=55]
+flag_disable_z = true
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 250.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale_curve = SubResource( 52 )
+color_ramp = SubResource( 50 )
+
+[node name="LaserBeam" type="RayCast2D"]
+enabled = true
+cast_to = Vector2( 2000, 0 )
+collision_mask = 58
+collide_with_areas = true
+script = null
+is_Player = true
+
+[node name="Beam" type="Sprite" parent="."]
+modulate = Color( 0.00784314, 0.784314, 0.784314, 1 )
+show_behind_parent = true
+material = SubResource( 48 )
+texture = null
+centered = false
+offset = Vector2( 0, -12 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 10, 24 )
+
+[node name="End" type="Position2D" parent="."]
+
+[node name="CastingParticle2" type="Particles2D" parent="End"]
+lifetime = 0.3
+process_material = SubResource( 53 )
+texture = null
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 58
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 54 )
+
+[node name="CastingParticle" type="Particles2D" parent="."]
+lifetime = 0.3
+process_material = SubResource( 53 )
+texture = null
+
+[node name="CollisionParticle" type="Particles2D" parent="."]
+lifetime = 0.3
+process_material = SubResource( 55 )
+texture = null

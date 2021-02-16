@@ -2,6 +2,7 @@ extends Node
 
 func _ready():
 	$AnimationPlayer.play("Wipe_Out")
+	randomize()
 
 func _on_Button_button_up():
 	$AnimationPlayer.play("Wipe_In")

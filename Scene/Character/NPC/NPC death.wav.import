@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/NPC death.wav-fe80b7f613a6a03a9d21b69be18b8d89.sample"
+
+[deps]
+
+source_file="res://Scene/Character/NPC/NPC death.wav"
+dest_files=[ "res://.import/NPC death.wav-fe80b7f613a6a03a9d21b69be18b8d89.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

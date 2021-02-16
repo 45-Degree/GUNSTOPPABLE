@@ -26,13 +26,9 @@ func _ready():
 	animationPlayer.play("Wipe_Out")
 	yield(animationPlayer,"animation_finished")
 	_spawn()
-	Singleton.connect("Hostage_Die", self, "_on_Hostage_Die")
-	Singleton.connect("Terrorist_Die", self, "_on_Terrorist_Die")
 	connect("level_Completed", self, "_on_level_Completed")
 
 func _process(delta):
-	print(Star_Count)
-	var level = str(int(get_tree().current_scene.name))
 	var terrorist = get_tree().get_nodes_in_group("Terrorist").size()
 	if terrorist == 0 and Hostage_dead == false:
 		get_tree().call_group("Detector", "detector_ON")
@@ -78,6 +74,7 @@ func _on_Hostage_Die():
 	Complete = false
 	Hostage_dead = true
 	button.set_text("Restart")
+	starMessage.hide()
 	message.set_text("You kill a hostage!")
 	control.show()
 
