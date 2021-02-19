@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scene/UI/Floor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/UI/MainMenu/MainMenu.gd" type="Script" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Scene/UI/button/ExitSprite/ExitPush.png" type="Texture" id=11]
 [ext_resource path="res://Scene/UI/button/CreditSprite/CreditHover.png" type="Texture" id=12]
 [ext_resource path="res://Scene/UI/button/ExitSprite/ExitNormal.png" type="Texture" id=13]
+[ext_resource path="res://Scene/UI/Transition.tscn" type="PackedScene" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -21,8 +22,6 @@ font_data = ExtResource( 4 )
 
 [node name="Node2D" type="Node"]
 script = ExtResource( 2 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="Floor" parent="." instance=ExtResource( 1 )]
 position = Vector2( 128.021, 39.8046 )
@@ -48,7 +47,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 40.0
-margin_top = 20.0
+margin_top = -2.0
 margin_right = -40.0
 margin_bottom = -20.0
 size_flags_vertical = 3
@@ -58,7 +57,7 @@ __meta__ = {
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="Control/MarginContainer"]
 margin_right = 577.0
-margin_bottom = 320.0
+margin_bottom = 342.0
 custom_constants/separation = -92
 __meta__ = {
 "_edit_use_anchors_": false
@@ -66,7 +65,7 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer3"]
 margin_right = 577.0
-margin_bottom = 206.0
+margin_bottom = 217.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
@@ -76,9 +75,9 @@ align = 1
 valign = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer3"]
-margin_top = 114.0
+margin_top = 125.0
 margin_right = 577.0
-margin_bottom = 320.0
+margin_bottom = 342.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -88,15 +87,15 @@ alignment = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
 margin_right = 577.0
-margin_bottom = 205.0
+margin_bottom = 216.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2/CenterContainer"]
 margin_left = 188.0
-margin_top = 44.0
+margin_top = 49.0
 margin_right = 388.0
-margin_bottom = 161.0
+margin_bottom = 166.0
 custom_constants/separation = 17
 alignment = 1
 
@@ -122,9 +121,9 @@ expand = true
 stretch_mode = 6
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2"]
-margin_top = 166.0
+margin_top = 177.0
 margin_right = 577.0
-margin_bottom = 206.0
+margin_bottom = 217.0
 custom_constants/separation = 497
 
 [node name="Button" type="TextureButton" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2/HBoxContainer"]
@@ -146,13 +145,12 @@ texture_pressed = ExtResource( 11 )
 expand = true
 stretch_mode = 6
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Transition" parent="." instance=ExtResource( 14 )]
+
+[node name="ColorRect" parent="Transition" index="1"]
+margin_left = 0.0
+margin_right = 0.0
 [connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/CenterContainer/VBoxContainer/Button" to="." method="_on_Button_button_up"]
 [connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/CenterContainer/VBoxContainer/Button3" to="." method="_on_Button3_button_up"]
+
+[editable path="Transition"]
