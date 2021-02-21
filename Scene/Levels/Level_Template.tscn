@@ -125,7 +125,7 @@ anims/Wipe_Out = SubResource( 2 )
 position = Vector2( 8.9921, 298.075 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( -249.995, 287.9 )
+position = Vector2( -160, 288 )
 scale = Vector2( 1.22, 1.22 )
 current = true
 limit_smoothed = true
@@ -147,10 +147,13 @@ position = Vector2( 640.028, 360.286 )
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( -160, 288 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 1
+[node name="RemoteTransform2D" parent="YSort/Player" index="0"]
+remote_path = NodePath("../../../Camera2D")
 
-[node name="AnimationTree" parent="YSort/Player" index="4"]
+[node name="AnimatedSprite" parent="YSort/Player" index="2"]
+frame = 7
+
+[node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 3 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -178,14 +181,14 @@ margin_right = 560.0
 margin_bottom = 280.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/CenterContainer"]
-margin_left = 61.0
+margin_left = 55.0
 margin_top = 70.0
-margin_right = 498.0
+margin_right = 504.0
 margin_bottom = 209.0
 custom_constants/separation = 24
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer"]
-margin_right = 437.0
+margin_right = 449.0
 margin_bottom = 87.0
 custom_constants/separation = 22
 __meta__ = {
@@ -194,7 +197,7 @@ __meta__ = {
 
 [node name="Message" type="Label" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2"]
 material = SubResource( 4 )
-margin_right = 437.0
+margin_right = 449.0
 margin_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -209,14 +212,14 @@ __meta__ = {
 
 [node name="StarMessage" type="Label" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2"]
 margin_top = 57.0
-margin_right = 437.0
+margin_right = 449.0
 margin_bottom = 87.0
 custom_fonts/font = ExtResource( 4 )
 align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer"]
 margin_top = 111.0
-margin_right = 437.0
+margin_right = 449.0
 margin_bottom = 139.0
 size_flags_horizontal = 7
 size_flags_vertical = 3
@@ -226,22 +229,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
-margin_left = 39.0
-margin_right = 201.0
+[node name="LevelButton" type="Button" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_right = 102.0
 margin_bottom = 28.0
 custom_fonts/font = SubResource( 7 )
-text = "Next Level"
+text = "Levels"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button2" type="Button" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
-margin_left = 250.0
-margin_right = 397.0
+[node name="RetryButton" type="Button" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 151.0
+margin_right = 238.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 7 )
+text = "Retry"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextLevelButton" type="Button" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 287.0
+margin_right = 449.0
 margin_bottom = 28.0
 custom_fonts/font = SubResource( 8 )
-text = "Main Menu"
+text = "Next Level"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -396,8 +408,9 @@ color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/LevelButton" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton" to="." method="_on_Button_pressed"]
 [connection signal="button_up" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer/Button" to="." method="_on_Button_button_up"]
 [connection signal="button_up" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer/Button2" to="." method="_on_Button2_button_up"]
 [connection signal="button_up" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer/Button3" to="." method="_on_Button3_button_up"]

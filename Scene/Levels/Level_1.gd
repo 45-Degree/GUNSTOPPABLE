@@ -50,31 +50,23 @@ func _process(delta):
 			camera.position = lerp(player.global_position, Singleton.hostagePosition, 1)
 
 func _on_Button_pressed():
-	if Complete == true and Hostage_dead == false:
 		animationPlayer.play("Wipe_In")
 		yield(animationPlayer, "animation_finished")
 		get_tree().change_scene("res://Scene/Levels/Level_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
-		
-	else:
-		animationPlayer.play("Wipe_In")
-		control.hide()
-		yield(animationPlayer, "animation_finished")
-		get_tree().reload_current_scene()
-		Singleton.unlock = false
 
 func _on_Button2_pressed():
 	Singleton.Playable = true
 	animationPlayer.play("Wipe_In")
 	control.hide()
 	yield(animationPlayer, "animation_finished")
-	get_tree().change_scene("res://Scene/UI/MainMenu.tscn")
+	get_tree().reload_current_scene()
 
 func _on_Hostage_Die():
 	Singleton.Playable = false
 	Complete = false
 	Hostage_dead = true
-	button.set_text("Restart")
-	starMessage.hide()
+	starMessage.text = "You collect " + str(Star_Count) + " star"
+	$CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton.hide()
 	message.set_text("You kill a hostage!")
 	control.show()
 
@@ -123,3 +115,9 @@ func _on_level_Completed():
 	if soundplay == false:
 		SoundManager.play_se("res://Sound/SFX/Object/ExitUnlock.wav")
 		soundplay = true
+
+
+func _on_Button3_pressed():
+		animationPlayer.play("Wipe_In")
+		yield(animationPlayer, "animation_finished")
+		get_tree().change_scene("res://Scene/UI/LevelSelect/Level_select.tscn")
