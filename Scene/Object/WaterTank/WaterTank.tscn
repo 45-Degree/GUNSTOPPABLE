@@ -6,8 +6,9 @@
 health = 10
 
 [node name="Sprite2" parent="." index="0"]
+scale = Vector2( 0.3, 0.3 )
 region_rect = Rect2( 33.0563, 276.323, 74.9566, 179.636 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 position = Vector2( 2.00296, -0.106534 )
-frame = 45
+frame = 43

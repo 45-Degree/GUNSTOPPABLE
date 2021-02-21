@@ -14,11 +14,12 @@ position = Vector2( 0, 0 )
 health = 10
 
 [node name="Sprite2" parent="." index="0"]
+position = Vector2( 2.67572, -2.3784 )
 texture = ExtResource( 2 )
-region_rect = Rect2( 1859.45, 60.7555, 295.593, 770.941 )
+region_rect = Rect2( 787.473, 62.7058, 292.202, 771.019 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 58
+frame = 29
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( 0, -0.144 )
