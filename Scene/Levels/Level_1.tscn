@@ -16,7 +16,7 @@
 [node name="Level_1" instance=ExtResource( 1 )]
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 2
+frame = 6
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
