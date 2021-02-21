@@ -19,9 +19,8 @@ onready var particle = $Particles2D
 onready var timer = $Timer
 var sound_clip = preload("res://Sound/SFX/Object/Keycard_3.wav")
 onready var shelf = preload("res://Scene/Object/Shelf/ShelfFrontFallen.tscn")
-onready var Bullet = preload("res://Scene/Player/Bullet.tscn")
 onready var shelfSide = preload("res://Scene/Object/Shelf/ShelfSideFallen.tscn")
-onready var explodeDamage = preload("res://Scene/Effect/ExplosionDamage.tscn")
+onready var explodeDamage = preload("res://Scene/Object/Heater/ExplosionDamage.tscn")
 signal Star_Pick
 
 func _ready():
@@ -69,24 +68,24 @@ func _on_Hurtbox_area_entered(area):
 		emit_signal("Star_Pick")
 		SoundManager.play_se("res://Sound/SFX/Object/Keycard_3.wav")
 		queue_free()
-	if Reflectable == true:
-		var BulletP_Instance = Bullet.instance()
-		var world = get_tree().current_scene
-		world.call_deferred("add_child", BulletP_Instance)
-		if BulletSpawn == 0:
-			BulletP_Instance.position = $BulletSpawnLeft.get_global_position()
-			BulletP_Instance.direction = Vector2.LEFT.normalized()
-		if BulletSpawn == 1:
-			BulletP_Instance.position = $BulletSpawnRight.get_global_position()
-			BulletP_Instance.direction = Vector2.RIGHT.normalized()
-		if BulletSpawn == 2:
-			BulletP_Instance.position = $BulletSpawnUp.get_global_position()
-			BulletP_Instance.direction = Vector2.UP.normalized()
-		if BulletSpawn == 3:
-			BulletP_Instance.position = $BulletSpawnDown.get_global_position()
-			BulletP_Instance.direction = Vector2.DOWN.normalized()
-		BulletP_Instance.rotation = BulletP_Instance.direction.angle()
-	if button == true:
+#	if Reflectable == true:
+#		var BulletP_Instance = Bullet.instance()
+#		var world = get_tree().current_scene
+#		world.call_deferred("add_child", BulletP_Instance)
+#		if BulletSpawn == 0:
+#			BulletP_Instance.position = $BulletSpawnLeft.get_global_position()
+#			BulletP_Instance.direction = Vector2.LEFT.normalized()
+#		if BulletSpawn == 1:
+#			BulletP_Instance.position = $BulletSpawnRight.get_global_position()
+#			BulletP_Instance.direction = Vector2.RIGHT.normalized()
+#		if BulletSpawn == 2:
+#			BulletP_Instance.position = $BulletSpawnUp.get_global_position()
+#			BulletP_Instance.direction = Vector2.UP.normalized()
+#		if BulletSpawn == 3:
+#			BulletP_Instance.position = $BulletSpawnDown.get_global_position()
+#			BulletP_Instance.direction = Vector2.DOWN.normalized()
+#		BulletP_Instance.rotation = BulletP_Instance.direction.angle()
+#	if button == true:
 		animatedSprite.play("Green")
 func _on_Hurtbox_area_exited(area):
 	if Laser == true:
