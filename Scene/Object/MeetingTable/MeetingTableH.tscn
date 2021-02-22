@@ -4,10 +4,10 @@
 [ext_resource path="res://Scene/Object/MeetingTable/MeetingTable.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 53.3364, 25.0923 )
+extents = Vector2( 212.822, 125.348 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 52.9876, 30.9579 )
+extents = Vector2( 218.344, 124.295 )
 
 [node name="MeetingTableH" instance=ExtResource( 1 )]
 
@@ -16,11 +16,13 @@ texture = ExtResource( 2 )
 region_rect = Rect2( 79.8139, 75.2327, 1081.44, 640.444 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 57
+frame = 45
 
 [node name="CollisionShape2D" parent="." index="2"]
+visible = false
 position = Vector2( 0.0565643, 5.29341 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" parent="Hurtbox" index="1"]
+visible = true
 shape = SubResource( 2 )
