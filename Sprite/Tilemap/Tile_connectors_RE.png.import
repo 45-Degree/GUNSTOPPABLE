@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tiles_Mix_2.png-bd6d90c344b6ba1a6b9793c29b9f1600.stex"
+path="res://.import/Tile_connectors_RE.png-260a8c0d6d2b6cc069c00e3903fffc70.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Tilemap/Tiles_Mix_2.png"
-dest_files=[ "res://.import/Tiles_Mix_2.png-bd6d90c344b6ba1a6b9793c29b9f1600.stex" ]
+source_file="res://Sprite/Tilemap/Tile_connectors_RE.png"
+dest_files=[ "res://.import/Tile_connectors_RE.png-260a8c0d6d2b6cc069c00e3903fffc70.stex" ]
 
 [params]
 
