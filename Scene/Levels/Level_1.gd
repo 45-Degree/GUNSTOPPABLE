@@ -4,7 +4,7 @@ onready var control = $CanvasLayer/Control
 onready var pause =$CanvasLayer/Control2
 onready var option = $CanvasLayer/Control3
 onready var message = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2/Message
-onready var button = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/Button
+onready var button = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton
 onready var camera =$Camera2D
 onready var player = $YSort/Player
 onready var animationPlayer = $AnimationPlayer
@@ -73,10 +73,9 @@ func _on_Hostage_Die():
 func  _on_Star_Pick():
 	Star_Count += 1
 
-func _on_Detector_body_entered(body):
+func _on_Passable():
 	if Complete == true:
 		message.set_text("MISSION COMPLETED!")
-		button.set_text("Next Level")
 		starMessage.text = "You collect " + str(Star_Count) + " star"
 		Singleton.Playable = false
 		control.show()

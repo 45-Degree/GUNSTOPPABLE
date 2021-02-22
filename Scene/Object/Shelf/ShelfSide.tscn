@@ -4,7 +4,6 @@
 [ext_resource path="res://Scene/Object/Shelf/wooden_shelf.png" type="Texture" id=2]
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=3]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.8441, 87.9956 )
 
@@ -15,7 +14,7 @@ extents = Vector2( 1.99078, 8.89358 )
 extents = Vector2( 3.40218, 8.89 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 3.40218, 9.06096 )
+extents = Vector2( 3.40218, 8.38646 )
 
 [node name="ShelfSide" instance=ExtResource( 1 )]
 position = Vector2( 0, 0 )
@@ -31,10 +30,9 @@ region_rect = Rect2( 602.359, 15.9589, 322.344, 910.747 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 position = Vector2( 2.21085, -1.2319 )
-frame = 15
+frame = 23
 
 [node name="CollisionShape2D" parent="." index="2"]
-visible = true
 position = Vector2( -0.0525147, -0.143819 )
 scale = Vector2( 0.11, 0.1 )
 shape = SubResource( 1 )
@@ -43,7 +41,6 @@ shape = SubResource( 1 )
 collision_mask = 5
 
 [node name="CollisionShape2D2" parent="Hurtbox" index="1"]
-visible = true
 position = Vector2( -2.9988, 0.0286094 )
 shape = SubResource( 2 )
 

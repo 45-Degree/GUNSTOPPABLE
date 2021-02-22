@@ -3,7 +3,6 @@
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Door/SlicingDoorSprite.png" type="Texture" id=2]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.23825, 89.9152 )
 
@@ -20,7 +19,7 @@ texture = ExtResource( 2 )
 region_rect = Rect2( 238, 177, 19, 180 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 39
+frame = 35
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( 0.0722163, 0.0224913 )

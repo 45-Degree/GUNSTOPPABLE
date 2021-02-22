@@ -28,21 +28,20 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 6.86805, 6.95957 )
+extents = Vector2( 7.03408, 6.99899 )
 
-[node name="Detector" type="Area2D" groups=[
+[node name="Detector" type="Node2D" groups=[
 "Detector",
 ]]
-collision_layer = 64
 script = ExtResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-position = Vector2( -0.156819, 0.104581 )
 scale = Vector2( 0.02, 0.02 )
 frames = SubResource( 3 )
-animation = "Clear"
+animation = "NotClear"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( -0.222977, 0.0743256 )
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 4 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
