@@ -12,7 +12,7 @@ outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 30
 font_data = ExtResource( 1 )
 
@@ -195,6 +195,7 @@ margin_top = 106.0
 margin_right = 198.0
 margin_bottom = 130.0
 custom_fonts/font = ExtResource( 4 )
+disabled = true
 text = "14"
 
 [node name="Button15" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/CenterContainer/GridContainer"]
@@ -203,6 +204,7 @@ margin_top = 106.0
 margin_right = 252.0
 margin_bottom = 130.0
 custom_fonts/font = ExtResource( 4 )
+disabled = true
 text = "15"
 
 [node name="Button16" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/CenterContainer/GridContainer"]
@@ -210,6 +212,7 @@ margin_top = 159.0
 margin_right = 36.0
 margin_bottom = 183.0
 custom_fonts/font = ExtResource( 4 )
+disabled = true
 text = "16"
 
 [node name="Button17" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/CenterContainer/GridContainer"]
@@ -218,6 +221,7 @@ margin_top = 159.0
 margin_right = 90.0
 margin_bottom = 183.0
 custom_fonts/font = ExtResource( 4 )
+disabled = true
 text = "17"
 
 [node name="Button18" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/CenterContainer/GridContainer"]
@@ -226,6 +230,7 @@ margin_top = 159.0
 margin_right = 144.0
 margin_bottom = 183.0
 custom_fonts/font = ExtResource( 4 )
+disabled = true
 text = "18"
 
 [node name="Button19" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/CenterContainer/GridContainer"]
@@ -234,6 +239,7 @@ margin_top = 159.0
 margin_right = 198.0
 margin_bottom = 183.0
 custom_fonts/font = ExtResource( 4 )
+disabled = true
 text = "19"
 
 [node name="Button20" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/CenterContainer/GridContainer"]
@@ -242,13 +248,14 @@ margin_top = 159.0
 margin_right = 252.0
 margin_bottom = 183.0
 custom_fonts/font = ExtResource( 4 )
+disabled = true
 text = "20"
 
 [node name="ExitButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
 margin_top = 293.0
 margin_right = 498.0
 margin_bottom = 326.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "Back"
 __meta__ = {
 "_edit_use_anchors_": false
