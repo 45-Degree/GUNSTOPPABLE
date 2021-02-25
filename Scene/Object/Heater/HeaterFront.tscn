@@ -9,7 +9,7 @@ extents = Vector2( 11.5873, 25.1109 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 11.1237, 23.5813 )
 
-[node name="TableHorizontal" instance=ExtResource( 1 )]
+[node name="HeaterFront" instance=ExtResource( 1 )]
 health = 1
 explodable = true
 
@@ -19,7 +19,7 @@ texture = ExtResource( 2 )
 region_rect = Rect2( 68.8835, 71.0523, 208.585, 493.815 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 29
+frame = 42
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( 0.198959, 1.57235 )

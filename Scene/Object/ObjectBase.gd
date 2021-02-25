@@ -116,5 +116,3 @@ func _on_Hurtbox2_area_entered(area):
 
 
 
-
-

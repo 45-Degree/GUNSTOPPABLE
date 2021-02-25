@@ -18,7 +18,6 @@ extents = Vector2( 11.8788, 44.516 )
 
 [node name="ShelfSide" instance=ExtResource( 1 )]
 position = Vector2( 0, 0 )
-scale = Vector2( 4, 4 )
 collision_mask = 5
 destroyable = false
 fallableSide = true
@@ -30,7 +29,7 @@ region_rect = Rect2( 602.359, 15.9589, 322.344, 910.747 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 position = Vector2( 2.21085, -1.2319 )
-frame = 28
+frame = 24
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -0.0525147, -0.143819 )

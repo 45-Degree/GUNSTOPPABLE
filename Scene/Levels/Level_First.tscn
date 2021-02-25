@@ -15,6 +15,8 @@
 [ext_resource path="res://Scene/Object/Sofa/SofaV2.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scene/Object/WaterTank/WaterTank.tscn" type="PackedScene" id=14]
 
+
+
 [sub_resource type="Animation" id=1]
 resource_name = "Wipe_In"
 length = 0.4

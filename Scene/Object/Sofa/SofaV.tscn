@@ -4,21 +4,23 @@
 [ext_resource path="res://Scene/Object/Sofa/Sofa_Sprite.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 532.248, 1530.07 )
+extents = Vector2( 132.209, 325.157 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 13.387, 37.8083 )
 
 [node name="SofaV" instance=ExtResource( 1 )]
 position = Vector2( 0, 0 )
+scale = Vector2( 1.2, 1.2 )
 health = 10
 
 [node name="Sprite2" parent="." index="0"]
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 region_rect = Rect2( 1859.45, 60.7555, 295.593, 770.941 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 2
+frame = 22
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( 0, 5.00452 )

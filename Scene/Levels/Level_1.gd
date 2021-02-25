@@ -86,7 +86,7 @@ func _on_Button_button_up():
 	pause.hide()
 
 func _on_Button3_button_up():
-	get_tree().change_scene("res://Scene/UI/MainMenu.tscn")
+	get_tree().change_scene("res://Scene/UI/MainMenu/MainMenu.tscn")
 	get_tree().paused = false
 
 func _on_Button4_pressed():

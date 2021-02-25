@@ -26,6 +26,9 @@ enum{
 	STOP
 }
 
+func _ready():
+	state = SHOOT
+
 func _physics_process(delta):
 	if BULLET == true:
 		state = SHOOT
@@ -82,7 +85,7 @@ func _physics_process(delta):
 #	if Singleton.Playable == true:
 #		state = SHOOT
 
-	if Input.is_action_pressed("shoot"):
-		state = SHOOT
-	if Input.is_action_pressed("stop"):
-		state = STOP
+#	if Input.is_action_pressed("shoot"):
+#		state = SHOOT
+#	if Input.is_action_pressed("stop"):
+#		state = STOP

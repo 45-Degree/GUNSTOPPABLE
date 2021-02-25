@@ -9,4 +9,4 @@ func _ready():
 	yield($AnimationPlayer, "animation_finished")
 	$AnimationPlayer.play("Wipe_Color")
 	yield($AnimationPlayer, "animation_finished")
-	get_tree().change_scene("res://Scene/UI/MainMenu.tscn")
+	get_tree().change_scene("res://Scene/UI/MainMenu/MainMenu.tscn")
