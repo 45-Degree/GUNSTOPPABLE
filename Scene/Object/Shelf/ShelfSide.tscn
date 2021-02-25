@@ -5,16 +5,16 @@
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 30.8441, 87.9956 )
+extents = Vector2( 135.245, 440.761 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 1.99078, 8.89358 )
+extents = Vector2( 2.36356, 44.3972 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 3.40218, 8.89 )
+extents = Vector2( 3.27717, 44.6659 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 3.40218, 8.38646 )
+extents = Vector2( 11.8788, 44.516 )
 
 [node name="ShelfSide" instance=ExtResource( 1 )]
 position = Vector2( 0, 0 )
@@ -24,13 +24,13 @@ destroyable = false
 fallableSide = true
 
 [node name="Sprite2" parent="." index="0"]
-scale = Vector2( 0.02, 0.02 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 region_rect = Rect2( 602.359, 15.9589, 322.344, 910.747 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 position = Vector2( 2.21085, -1.2319 )
-frame = 23
+frame = 28
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -0.0525147, -0.143819 )
@@ -41,7 +41,7 @@ shape = SubResource( 1 )
 collision_mask = 5
 
 [node name="CollisionShape2D2" parent="Hurtbox" index="1"]
-position = Vector2( -2.9988, 0.0286094 )
+position = Vector2( -13.1071, -0.565995 )
 shape = SubResource( 2 )
 
 [node name="Hurtbox2" parent="." index="5" instance=ExtResource( 3 )]
@@ -49,7 +49,7 @@ collision_layer = 8
 collision_mask = 5
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox2" index="1"]
-position = Vector2( 2.03362, 0 )
+position = Vector2( 11.8446, 0.445953 )
 shape = SubResource( 3 )
 
 [node name="Hurtbox3" parent="." index="6" instance=ExtResource( 3 )]

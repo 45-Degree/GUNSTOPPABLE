@@ -73,8 +73,8 @@ animations = [ {
 "speed": 30.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 9.12943, 4.13037 )
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 36.5866, 19.1014 )
 
 [sub_resource type="Animation" id=3]
 length = 0.6
@@ -132,8 +132,8 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 9.13353, 4.98071 )
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 36.7213, 18.1377 )
 
 [sub_resource type="ParticlesMaterial" id=6]
 flag_disable_z = true
@@ -152,7 +152,7 @@ health = 15
 destroyable = true
 
 [node name="Sprite2" type="Sprite" parent="."]
-scale = Vector2( 0.1, 0.1 )
+scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 16.0754, 733, 200.845, 108 )
@@ -163,12 +163,12 @@ position = Vector2( 2.21085, -5.38688 )
 rotation = 1.5708
 scale = Vector2( 0.3, 0.4 )
 frames = SubResource( 1 )
-frame = 21
+frame = 39
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.102646, 0.73891 )
-shape = SubResource( 7 )
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Blink = SubResource( 3 )
@@ -179,8 +179,9 @@ collision_layer = 8
 collision_mask = 4
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
+visible = false
 position = Vector2( 0.190668, -0.0020799 )
-shape = SubResource( 8 )
+shape = SubResource( 5 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( -0.112572, -1.98876 )

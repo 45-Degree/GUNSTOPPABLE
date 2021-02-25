@@ -4,26 +4,28 @@
 [ext_resource path="res://Scene/Object/Heater/Heater_sprite.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 9.52812, 21.5269 )
+extents = Vector2( 11.5873, 25.1109 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 10.2484, 24.2243 )
+extents = Vector2( 11.1237, 23.5813 )
 
 [node name="TableHorizontal" instance=ExtResource( 1 )]
 health = 1
 explodable = true
 
 [node name="Sprite2" parent="." index="0"]
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 region_rect = Rect2( 68.8835, 71.0523, 208.585, 493.815 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 9
+frame = 29
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( 0.198959, 1.57235 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" parent="Hurtbox" index="1"]
+visible = true
 position = Vector2( 0.190668, -0.429265 )
 shape = SubResource( 2 )
