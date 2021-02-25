@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wooden_shelf.png-42df0dd64f86dd0f641927921208df02.stex"
+path="res://.import/tile_connector.png-9065e98a2ddd2b7eec69b2f41452efc0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Object/Shelf/wooden_shelf.png"
-dest_files=[ "res://.import/wooden_shelf.png-42df0dd64f86dd0f641927921208df02.stex" ]
+source_file="res://Sprite/Tilemap/tile_connector.png"
+dest_files=[ "res://.import/tile_connector.png-9065e98a2ddd2b7eec69b2f41452efc0.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

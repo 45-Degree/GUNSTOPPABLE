@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tile_connectors_RE.png-260a8c0d6d2b6cc069c00e3903fffc70.stex"
+path="res://.import/tile_oneway.png-95e7754b6e8c8dfd9629bb4cb2f100e0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Tilemap/Tile_connectors_RE.png"
-dest_files=[ "res://.import/Tile_connectors_RE.png-260a8c0d6d2b6cc069c00e3903fffc70.stex" ]
+source_file="res://Sprite/Tilemap/tile_oneway.png"
+dest_files=[ "res://.import/tile_oneway.png-95e7754b6e8c8dfd9629bb4cb2f100e0.stex" ]
 
 [params]
 

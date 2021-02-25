@@ -9,6 +9,8 @@
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Object/Detector/detector.tscn" type="PackedScene" id=8]
 
+
+
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="Level_3" instance=ExtResource( 1 )]

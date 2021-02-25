@@ -3,6 +3,8 @@
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/MeetingTable/MeetingTable.png" type="Texture" id=2]
 
+
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 212.822, 125.348 )
 

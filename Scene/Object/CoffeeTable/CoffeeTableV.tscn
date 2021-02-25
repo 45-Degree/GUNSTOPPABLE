@@ -11,7 +11,6 @@ extents = Vector2( 15.8132, 21.0509 )
 
 [node name="CoffeTableH" instance=ExtResource( 1 )]
 position = Vector2( 0, 0 )
-scale = Vector2( 0.1, 0.1 )
 health = 10
 
 [node name="Sprite2" parent="." index="0"]
@@ -20,7 +19,7 @@ texture = ExtResource( 2 )
 region_rect = Rect2( 634, 85, 296, 419 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 33
+frame = 27
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -0.218826, -1.03645 )

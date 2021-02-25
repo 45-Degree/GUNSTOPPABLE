@@ -4,6 +4,8 @@
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=2]
 
 
+
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 33.2943, 104.279 )
 

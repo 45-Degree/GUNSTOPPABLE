@@ -4,10 +4,10 @@
 [ext_resource path="res://Scene/Object/Door/SlicingDoorSprite.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8.23825, 89.9152 )
+extents = Vector2( 24.6608, 354.013 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 0.92919, 9.20631 )
+extents = Vector2( 2.45772, 34.8854 )
 
 [node name="TableHorizontal" instance=ExtResource( 1 )]
 health = 10
@@ -19,7 +19,7 @@ texture = ExtResource( 2 )
 region_rect = Rect2( 238, 177, 19, 180 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 35
+frame = 13
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( 0.0722163, 0.0224913 )
@@ -27,5 +27,6 @@ scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" parent="Hurtbox" index="1"]
+visible = true
 position = Vector2( -0.0921383, 0.119293 )
 shape = SubResource( 2 )

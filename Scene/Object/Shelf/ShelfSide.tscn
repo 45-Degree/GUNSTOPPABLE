@@ -1,8 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scene/Object/Shelf/wooden_shelf.png" type="Texture" id=2]
+[ext_resource path="res://Scene/Object/Door/wooden_shelf.png" type="Texture" id=2]
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=3]
+
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 135.245, 440.761 )
