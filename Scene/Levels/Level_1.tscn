@@ -46,7 +46,7 @@ rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 4
+frame = 0
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -73,19 +73,19 @@ position = Vector2( 282.289, 87.3974 )
 position = Vector2( 226.559, 302.097 )
 
 [node name="SofaV" parent="YSort" index="8" instance=ExtResource( 4 )]
-position = Vector2( 273.506, 306.47 )
+position = Vector2( 273.506, 298.47 )
 
 [node name="SofaV2" parent="YSort" index="9" instance=ExtResource( 9 )]
-position = Vector2( 178.747, 303.939 )
+position = Vector2( 181.247, 296.939 )
 
-[node name="TableVertical2" parent="YSort" index="10" instance=ExtResource( 8 )]
+[node name="SofaV3" parent="YSort" index="10" instance=ExtResource( 4 )]
+position = Vector2( 452.506, 298.47 )
+
+[node name="SofaV4" parent="YSort" index="11" instance=ExtResource( 9 )]
+position = Vector2( 360.247, 296.939 )
+
+[node name="TableVertical2" parent="YSort" index="12" instance=ExtResource( 8 )]
 position = Vector2( 410.102, 302.097 )
-
-[node name="SofaV3" parent="YSort" index="11" instance=ExtResource( 4 )]
-position = Vector2( 457.049, 306.47 )
-
-[node name="SofaV4" parent="YSort" index="12" instance=ExtResource( 9 )]
-position = Vector2( 362.29, 303.939 )
 
 [node name="Tree" parent="YSort" index="13" instance=ExtResource( 7 )]
 position = Vector2( 114.809, 58.4565 )

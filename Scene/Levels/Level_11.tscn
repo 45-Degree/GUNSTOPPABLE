@@ -10,6 +10,8 @@
 [ext_resource path="res://Scene/Object/Sofa/SofaH2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Object/Sofa/SofaV2.tscn" type="PackedScene" id=9]
 
+
+
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="Level_11" instance=ExtResource( 1 )]
