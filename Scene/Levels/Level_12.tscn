@@ -14,7 +14,10 @@
 [ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/Object/Detector/detector.tscn" type="PackedScene" id=13]
 
+
+
 [sub_resource type="Animation" id=1]
+resource_name = "Wipe_In"
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/ColorRect:margin_left")
@@ -159,7 +162,7 @@ position = Vector2( 540.906, -468.677 )
 remote_path = NodePath("../../../Camera2D")
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 0
+frame = 6
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 3 )

@@ -10,7 +10,6 @@ onready var player = $YSort/Player
 onready var animationPlayer = $AnimationPlayer
 onready var finalPosition = $SpawnPosition
 onready var starMessage =$CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2/StarMessage
-onready var LevelLabel = $CanvasLayer/LevelLabel
 var soundplay = false
 export(int, "Left", "Right", "Top", "Bottom") var spawnHere
 onready var Complete = false
@@ -23,7 +22,6 @@ const ZOOM_SPEED = 3
 var Star_Count = 0
 
 func _ready():
-	LevelLabel.text = "Level-" + str(int(get_tree().current_scene.name))
 	Singleton.Playable = true
 	animationPlayer.play("Wipe_Out")
 	yield(animationPlayer,"animation_finished")
