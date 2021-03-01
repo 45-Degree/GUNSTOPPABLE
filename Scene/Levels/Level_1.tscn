@@ -18,7 +18,7 @@
 [node name="SpawnPosition" parent="." index="2"]
 position = Vector2( -27.0079, 294.075 )
 
-[node name="Node2D" type="Node2D" parent="." index="5"]
+[node name="Node2D" type="Node2D" parent="." index="4"]
 
 [node name="Detector3" parent="Node2D" index="0" instance=ExtResource( 10 )]
 position = Vector2( 391.798, -87.9286 )
@@ -46,7 +46,7 @@ rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 0
+frame = 5
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -93,7 +93,7 @@ position = Vector2( 114.809, 58.4565 )
 [node name="Watertank" parent="YSort" index="14" instance=ExtResource( 6 )]
 position = Vector2( 572.542, 159.592 )
 
-[node name="Tree" parent="." index="8" instance=ExtResource( 7 )]
+[node name="Tree" parent="." index="7" instance=ExtResource( 7 )]
 position = Vector2( 323.077, 304.767 )
 
 [editable path="YSort/Player"]
