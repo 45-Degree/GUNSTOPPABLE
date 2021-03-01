@@ -36,10 +36,13 @@ tile_data = PoolIntArray( 65525, 81, 0, 65526, 81, 0, 65527, 81, 0, 65528, 81, 0
 position = Vector2( -251.966, 300.188 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 5
+frame = 1
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
+
+[node name="LaserBeam" parent="YSort/Player" index="9"]
+visible = false
 
 [node name="Counter_side" parent="YSort" index="1" instance=ExtResource( 7 )]
 position = Vector2( 102.725, 296.799 )

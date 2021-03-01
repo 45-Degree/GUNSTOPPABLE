@@ -16,3 +16,7 @@ func _on_Button4_button_up():
 func _on_Button3_button_up():
 	get_tree().change_scene("res://Scene/UI/Option.tscn")
 
+
+
+func _on_Button2_pressed():
+	get_tree().quit()

@@ -148,9 +148,11 @@ stretch_mode = 6
 [node name="Transition" parent="." instance=ExtResource( 14 )]
 
 [node name="ColorRect" parent="Transition" index="1"]
+visible = false
 margin_left = 0.0
 margin_right = 0.0
 [connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/CenterContainer/VBoxContainer/Button" to="." method="_on_Button_button_up"]
 [connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/CenterContainer/VBoxContainer/Button3" to="." method="_on_Button3_button_up"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/HBoxContainer/Button2" to="." method="_on_Button2_pressed"]
 
 [editable path="Transition"]
