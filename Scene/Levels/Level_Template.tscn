@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/UI/Camera2D.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Font/PIXEL.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Scene/Character/Player/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Font/PIXEL_10.tres" type="DynamicFont" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Wipe_In"
@@ -406,6 +407,18 @@ anchor_bottom = 1.0
 margin_left = 665.148
 margin_right = 665.148
 color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelLabel" type="Label" parent="CanvasLayer"]
+margin_left = 6.64816
+margin_top = 343.227
+margin_right = 114.648
+margin_bottom = 378.227
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Level - 1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
