@@ -1,13 +1,15 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scene/Object/CoffeeTable/cofTableNew.png" type="Texture" id=2]
+[ext_resource path="res://Scene/Object/CoffeeTable/CoffeTable.png" type="Texture" id=2]
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 215.793, 219.332 )
+extents = Vector2( 215.793, 162.993 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 21.5196, 22.74 )
+extents = Vector2( 21.5196, 16.597 )
 
 [node name="CoffeTableH" instance=ExtResource( 1 )]
 collision_layer = 32
@@ -16,17 +18,18 @@ health = 10
 [node name="Sprite2" parent="." index="0"]
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
-region_rect = Rect2( -3.37636, -1.67017, 437.382, 461.875 )
+region_rect = Rect2( 41, 129, 441, 333 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 5
+frame = 1
 
 [node name="CollisionShape2D" parent="." index="2"]
-position = Vector2( 0.661255, -0.306763 )
+position = Vector2( 0.411255, -1.05676 )
 scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" parent="Hurtbox" index="1"]
+visible = true
 position = Vector2( 0, 0 )
 shape = SubResource( 2 )
 disabled = true

@@ -12,6 +12,8 @@
 [ext_resource path="res://Scene/Object/WaterTank/WaterTank.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scene/Object/Detector/detector.tscn" type="PackedScene" id=11]
 
+
+
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="Level_6" instance=ExtResource( 1 )]
@@ -36,7 +38,7 @@ tile_data = PoolIntArray( -524272, 78, 0, -458736, 78, 0, -327690, 81, 0, -32768
 position = Vector2( 5.44617, -205.344 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 1
+frame = 7
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )

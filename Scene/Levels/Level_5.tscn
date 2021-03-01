@@ -9,6 +9,8 @@
 [ext_resource path="res://Scene/Character/NPC/Hostage/Hostage.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Object/Detector/detector.tscn" type="PackedScene" id=8]
 
+
+
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="Level_5" instance=ExtResource( 1 )]
@@ -50,7 +52,7 @@ scale = Vector2( 2.3, 2.3 )
 position = Vector2( -192.96, 95.365 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 6
+frame = 5
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -134,9 +136,7 @@ position = Vector2( 380.162, 102.97 )
 position = Vector2( 379.102, 184.549 )
 
 [node name="ColorRect" parent="CanvasLayer" index="3"]
-margin_left = 903.379
 margin_top = 4.48987
-margin_right = 903.379
 margin_bottom = 4.48987
 
 [editable path="YSort/Player"]

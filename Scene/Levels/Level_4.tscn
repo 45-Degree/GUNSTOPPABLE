@@ -10,6 +10,8 @@
 [ext_resource path="res://Scene/Character/NPC/Hostage/Hostage.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Character/NPC/Terrorist/Terrorist.tscn" type="PackedScene" id=9]
 
+
+
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="Level_4" instance=ExtResource( 1 )]
@@ -32,25 +34,22 @@ tile_data = PoolIntArray( -458762, 81, 0, -458761, 81, 0, -458760, 81, 0, -45875
 [node name="Node2D" type="Node2D" parent="." index="5"]
 
 [node name="Detector" parent="Node2D" index="0" instance=ExtResource( 7 )]
-position = Vector2( 936.252, 8.20513 )
+position = Vector2( 936.533, 7.92451 )
 rotation = 4.71239
 scale = Vector2( 2.3, 2.3 )
 
 [node name="Detector2" parent="Node2D" index="1" instance=ExtResource( 7 )]
-position = Vector2( 936.252, 40.0441 )
+position = Vector2( 936.533, 39.7635 )
 rotation = 4.71239
 scale = Vector2( 2.3, 2.3 )
 
 [node name="Detector3" parent="Node2D" index="2" instance=ExtResource( 7 )]
-position = Vector2( 936.252, 72.2577 )
+position = Vector2( 936.533, 71.9771 )
 rotation = 4.71239
 scale = Vector2( 2.3, 2.3 )
 
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( -217.64, 42.1957 )
-
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 6
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
