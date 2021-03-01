@@ -22,7 +22,6 @@ const ZOOM_SPEED = 3
 var Star_Count = 0
 
 func _ready():
-	$CanvasLayer/LevelLabel.text = "Level-" + str(int(get_tree().current_scene.name))
 	Singleton.Playable = true
 	animationPlayer.play("Wipe_Out")
 	yield(animationPlayer,"animation_finished")
