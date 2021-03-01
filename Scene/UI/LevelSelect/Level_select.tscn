@@ -179,7 +179,6 @@ margin_top = 106.0
 margin_right = 90.0
 margin_bottom = 130.0
 custom_fonts/font = ExtResource( 4 )
-disabled = true
 text = "12"
 
 [node name="Button13" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/CenterContainer/GridContainer"]
@@ -188,7 +187,6 @@ margin_top = 106.0
 margin_right = 144.0
 margin_bottom = 130.0
 custom_fonts/font = ExtResource( 4 )
-disabled = true
 text = "13"
 
 [node name="Button14" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/CenterContainer/GridContainer"]
@@ -197,7 +195,6 @@ margin_top = 106.0
 margin_right = 198.0
 margin_bottom = 130.0
 custom_fonts/font = ExtResource( 4 )
-disabled = true
 text = "14"
 
 [node name="Button15" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/CenterContainer/GridContainer"]
@@ -206,7 +203,6 @@ margin_top = 106.0
 margin_right = 252.0
 margin_bottom = 130.0
 custom_fonts/font = ExtResource( 4 )
-disabled = true
 text = "15"
 
 [node name="Button16" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/CenterContainer/GridContainer"]
@@ -264,4 +260,10 @@ __meta__ = {
 }
 
 [node name="Transition" parent="." instance=ExtResource( 5 )]
+
+[node name="ColorRect" parent="Transition" index="1"]
+margin_left = 646.168
+margin_right = 646.168
 [connection signal="button_up" from="Control/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_buttonQuite_button_up"]
+
+[editable path="Transition"]
