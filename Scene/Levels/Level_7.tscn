@@ -10,10 +10,6 @@
 [ext_resource path="res://Scene/Object/Door/LockDoorV.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Object/Detector/detector.tscn" type="PackedScene" id=9]
 
-
-
-
-
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="Level_7" instance=ExtResource( 1 )]
@@ -68,7 +64,7 @@ scale = Vector2( 2, 2 )
 position = Vector2( 186.979, 470.812 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 4
+frame = 5
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )

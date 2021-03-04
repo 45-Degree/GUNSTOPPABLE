@@ -13,10 +13,6 @@
 [ext_resource path="res://Scene/Object/KeyCard/Keycard.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scene/Object/Detector/detector.tscn" type="PackedScene" id=12]
 
-
-
-
-
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="Level_9" instance=ExtResource( 1 )]
@@ -72,9 +68,6 @@ position = Vector2( 568.395, 221.725 )
 
 [node name="Player" parent="YSort" index="1"]
 position = Vector2( 278.63, 432.703 )
-
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 4
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )

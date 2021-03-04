@@ -10,10 +10,6 @@
 [ext_resource path="res://Scene/Object/Sofa/SofaV.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Object/Detector/detector.tscn" type="PackedScene" id=9]
 
-
-
-
-
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="Level_10" instance=ExtResource( 1 )]
@@ -56,9 +52,6 @@ scale = Vector2( 2, 2 )
 
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( -27.3549, 515.607 )
-
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 0
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
