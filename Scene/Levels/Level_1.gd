@@ -16,18 +16,29 @@ onready var Complete = false
 export var Hostage_dead = false
 onready var lerpAmount = 0.001
 signal level_Completed
+signal mouse_click
 var smooth_zoom = 1
 var target_zoom = 0.5
 const ZOOM_SPEED = 3
 var Star_Count = 0
 
+func _input(event):
+		if(event is InputEventMouseButton and event.is_pressed() and !event.is_echo()):
+			emit_signal("mouse_click")
+
 func _ready():
+	Singleton.Playable = false
+	$CanvasLayer/Control4.show()
+	connect("level_Completed", self, "_on_level_Completed")
 	$CanvasLayer/LevelLabel.text = "Level-" + str(int(get_tree().current_scene.name))
-	Singleton.Playable = true
 	animationPlayer.play("Wipe_Out")
 	yield(animationPlayer,"animation_finished")
 	_spawn()
-	connect("level_Completed", self, "_on_level_Completed")
+	yield(self,"mouse_click")
+	Singleton.Playable = true
+	$CanvasLayer/Control4.hide()
+	player.BULLET = true
+
 
 func _process(delta):
 	var terrorist = get_tree().get_nodes_in_group("Terrorist").size()

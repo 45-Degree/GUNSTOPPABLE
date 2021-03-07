@@ -133,7 +133,7 @@ position = Vector2( 134.166, 138.042 )
 [node name="Terrorist2" parent="YSort" index="25" instance=ExtResource( 9 )]
 position = Vector2( 578.159, 315.471 )
 
-[node name="ColorRect" parent="CanvasLayer" index="3"]
+[node name="ColorRect" parent="CanvasLayer" index="4"]
 visible = false
 margin_left = 923.314
 margin_right = 923.314

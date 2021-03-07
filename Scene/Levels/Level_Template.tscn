@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/UI/Camera2D.gd" type="Script" id=2]
@@ -114,6 +114,12 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=14]
+size = 30
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=15]
 size = 14
 outline_size = 1
 font_data = ExtResource( 7 )
@@ -156,6 +162,9 @@ position = Vector2( -160, 288 )
 
 [node name="RemoteTransform2D" parent="YSort/Player" index="0"]
 remote_path = NodePath("../../../Camera2D")
+
+[node name="AnimatedSprite" parent="YSort/Player" index="2"]
+frame = 1
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 3 )
@@ -403,6 +412,29 @@ size_flags_vertical = 0
 custom_fonts/font = SubResource( 13 )
 text = "Back"
 
+[node name="Control4" type="Control" parent="CanvasLayer"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Control4/CenterContainer"]
+margin_left = 131.0
+margin_top = 166.0
+margin_right = 509.0
+margin_bottom = 193.0
+custom_fonts/font = SubResource( 14 )
+text = "Click to start Guning"
+
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -418,7 +450,7 @@ margin_left = 6.64816
 margin_top = 331.621
 margin_right = 114.648
 margin_bottom = 366.621
-custom_fonts/font = SubResource( 14 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level - 1"
 __meta__ = {

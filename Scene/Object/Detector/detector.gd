@@ -4,7 +4,7 @@ signal passable
 
 func _ready():
 	connect("passable", owner,"_on_Passable")
-	animatedSprite.play("notClear")
+	animatedSprite.play("NotClear")
 
 func detector_ON():
 	animatedSprite.play("Clear")

@@ -27,7 +27,7 @@ enum{
 }
 
 func _ready():
-	state = SHOOT
+	state = STOP
 
 func _physics_process(delta):
 	if BULLET == true:
@@ -46,7 +46,6 @@ func _physics_process(delta):
 			STOP:
 				pass
 	target_sight = get_local_mouse_position()
-	
 	if Singleton.Playable == true:
 		input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 		input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
