@@ -517,12 +517,14 @@ parameters/Idle/blend_position = Vector2( 0.18091, 0.508621 )
 parameters/Run/blend_position = Vector2( 0.987358, -0.981873 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 light_mask = 0
 position = Vector2( -1.19623, 12.7573 )
 rotation = 1.5708
 shape = SubResource( 46 )
 
 [node name="Hurtbox" type="Area2D" parent="."]
+visible = false
 collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
@@ -558,7 +560,6 @@ collision_mask = 58
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LaserBeam/Area2D"]
 shape = SubResource( 54 )
-disabled = true
 
 [node name="CastingParticle" type="Particles2D" parent="LaserBeam"]
 lifetime = 0.3
