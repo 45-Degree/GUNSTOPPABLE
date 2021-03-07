@@ -3,10 +3,8 @@
 [ext_resource path="res://Scene/Object/Sofa/Sofa_Sprite.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=2]
 
-
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 323.647, 110.065 )
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 323.647, 162.005 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32.2545, 15.0068 )
@@ -16,18 +14,21 @@ position = Vector2( 0, 0 )
 health = 10
 
 [node name="Sprite2" parent="." index="0"]
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 1 )
-region_rect = Rect2( 66.8977, 67.9087, 660.098, 308.525 )
+region_rect = Rect2( 1141.77, 64.1659, 661.041, 330.52 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 position = Vector2( 2.21085, -2.0408 )
-frame = 28
+frame = 21
 
 [node name="CollisionShape2D" parent="." index="2"]
-position = Vector2( 0, 3.82257 )
+visible = false
+position = Vector2( -0.8909, -0.631928 )
 scale = Vector2( 0.1, 0.1 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" parent="Hurtbox" index="1"]
+visible = true
 position = Vector2( 0, 0 )
 shape = SubResource( 2 )

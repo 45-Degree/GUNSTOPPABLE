@@ -134,7 +134,9 @@ position = Vector2( 380.162, 102.97 )
 position = Vector2( 379.102, 184.549 )
 
 [node name="ColorRect" parent="CanvasLayer" index="3"]
+margin_left = 903.379
 margin_top = 4.48987
+margin_right = 903.379
 margin_bottom = 4.48987
 
 [editable path="YSort/Player"]
