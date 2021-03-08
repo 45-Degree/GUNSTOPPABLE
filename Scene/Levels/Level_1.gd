@@ -46,7 +46,7 @@ func _process(delta):
 		get_tree().call_group("Detector", "detector_ON")
 		emit_signal("level_Completed")
 		Complete = true
-	if Input.is_action_just_pressed("Pause"):
+	if Input.is_action_just_pressed("Pause") and Singleton.Playable == true:
 		get_tree().paused = true
 		pause.show()
 	if  Hostage_dead == true:
