@@ -44,7 +44,7 @@ scale = Vector2( 2.3, 2.3 )
 position = Vector2( -27.3549, 515.607 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 3
+frame = 5
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -139,7 +139,7 @@ position = Vector2( 10.4256, 105.534 )
 [node name="ShelfSide3" parent="YSort" index="30" instance=ExtResource( 7 )]
 position = Vector2( 486.425, 295.934 )
 
-[node name="ColorRect" parent="CanvasLayer" index="3"]
+[node name="ColorRect" parent="CanvasLayer" index="4"]
 visible = false
 
 [editable path="YSort/Player"]

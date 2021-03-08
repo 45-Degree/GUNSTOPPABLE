@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OfficeTheme.ogg-710a5ca525e6a2d69ab51624958e8db5.oggstr"
+
+[deps]
+
+source_file="res://Sound/Music/OfficeTheme.ogg"
+dest_files=[ "res://.import/OfficeTheme.ogg-710a5ca525e6a2d69ab51624958e8db5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

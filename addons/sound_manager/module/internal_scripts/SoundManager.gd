@@ -575,6 +575,9 @@ func is_preinstantiate_nodes_enabled() -> bool:
 #############################
 #	INTERNAL METHODS		#
 #############################
+func _physics_process(delta):
+	if !is_playing("res://Sound/Music/OfficeTheme.ogg"):
+		play_bgm("res://Sound/Music/OfficeTheme.ogg")
 
 # Called when the node enters the scene for the first time
 func _ready() -> void:
