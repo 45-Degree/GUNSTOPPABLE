@@ -1,8 +1,5 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Scene/Character/NPC/Hostage/Hostage.gd" type="Script" id=1]
-[ext_resource path="res://Scene/Character/NPC/Terrorist/Terrorist.gd" type="Script" id=2]
-[ext_resource path="res://Scene/Object/ObjectBase.gd" type="Script" id=3]
 [ext_resource path="res://Scene/Levels/Level_Template.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Object/Sofa/SofaH2.tscn" type="PackedScene" id=8]
@@ -14,9 +11,13 @@
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="Level_Template" instance=ExtResource( 4 )]
+spawnHere = 2
+
+[node name="SpawnPosition" parent="." index="2"]
+position = Vector2( 565.541, -276.312 )
 
 [node name="Camera2D" parent="." index="3"]
-position = Vector2( -120.315, 291.175 )
+position = Vector2( 570.614, -397.376 )
 
 [node name="topLeft" parent="Camera2D/Limits" index="0"]
 position = Vector2( -44.9889, -353.013 )
@@ -30,301 +31,133 @@ tile_data = PoolIntArray( -983048, 81, 0, -983047, 81, 0, -983046, 81, 0, -98304
 [node name="YSort" parent="." index="5"]
 position = Vector2( 39.6851, 3.1748 )
 
+[node name="Player" parent="YSort" index="0"]
+position = Vector2( 530.929, -400.551 )
+
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 7
+frame = 4
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
 
-[node name="TableHorizontal" type="StaticBody2D" parent="YSort" index="1" instance=ExtResource( 7 )]
+[node name="TableHorizontal" parent="YSort" index="1" instance=ExtResource( 7 )]
 position = Vector2( 129.023, 496.909 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableHorizontal2" type="StaticBody2D" parent="YSort" index="2" instance=ExtResource( 7 )]
+[node name="TableHorizontal2" parent="YSort" index="2" instance=ExtResource( 7 )]
 position = Vector2( 272.918, 496.909 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableHorizontal3" type="StaticBody2D" parent="YSort" index="3" instance=ExtResource( 7 )]
+[node name="TableHorizontal3" parent="YSort" index="3" instance=ExtResource( 7 )]
 position = Vector2( 412.569, 496.909 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableHorizontal4" type="StaticBody2D" parent="YSort" index="4" instance=ExtResource( 7 )]
+[node name="TableHorizontal4" parent="YSort" index="4" instance=ExtResource( 7 )]
 position = Vector2( 547.57, 496.909 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableHorizontal8" type="StaticBody2D" parent="YSort" index="5" instance=ExtResource( 7 )]
+[node name="TableHorizontal8" parent="YSort" index="5" instance=ExtResource( 7 )]
 position = Vector2( 129.023, 582.227 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableHorizontal7" type="StaticBody2D" parent="YSort" index="6" instance=ExtResource( 7 )]
+[node name="TableHorizontal7" parent="YSort" index="6" instance=ExtResource( 7 )]
 position = Vector2( 272.918, 582.227 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableHorizontal6" type="StaticBody2D" parent="YSort" index="7" instance=ExtResource( 7 )]
+[node name="TableHorizontal6" parent="YSort" index="7" instance=ExtResource( 7 )]
 position = Vector2( 412.569, 582.227 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableHorizontal5" type="StaticBody2D" parent="YSort" index="8" instance=ExtResource( 7 )]
+[node name="TableHorizontal5" parent="YSort" index="8" instance=ExtResource( 7 )]
 position = Vector2( 547.57, 582.227 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableVertical" type="StaticBody2D" parent="YSort" index="9" instance=ExtResource( 12 )]
+[node name="TableVertical" parent="YSort" index="9" instance=ExtResource( 12 )]
 position = Vector2( 476.13, -16.6 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableVertical2" type="StaticBody2D" parent="YSort" index="10" instance=ExtResource( 12 )]
+[node name="TableVertical2" parent="YSort" index="10" instance=ExtResource( 12 )]
 position = Vector2( 385.605, -16.6 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableVertical3" type="StaticBody2D" parent="YSort" index="11" instance=ExtResource( 12 )]
+[node name="TableVertical3" parent="YSort" index="11" instance=ExtResource( 12 )]
 position = Vector2( 300.342, -16.6 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableVertical4" type="StaticBody2D" parent="YSort" index="12" instance=ExtResource( 12 )]
+[node name="TableVertical4" parent="YSort" index="12" instance=ExtResource( 12 )]
 position = Vector2( 208.097, -16.6 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableVertical8" type="StaticBody2D" parent="YSort" index="13" instance=ExtResource( 12 )]
+[node name="TableVertical8" parent="YSort" index="13" instance=ExtResource( 12 )]
 position = Vector2( 420.341, 122.346 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableVertical7" type="StaticBody2D" parent="YSort" index="14" instance=ExtResource( 12 )]
+[node name="TableVertical7" parent="YSort" index="14" instance=ExtResource( 12 )]
 position = Vector2( 329.816, 122.346 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableVertical6" type="StaticBody2D" parent="YSort" index="15" instance=ExtResource( 12 )]
+[node name="TableVertical6" parent="YSort" index="15" instance=ExtResource( 12 )]
 position = Vector2( 244.553, 122.346 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableVertical5" type="StaticBody2D" parent="YSort" index="16" instance=ExtResource( 12 )]
+[node name="TableVertical5" parent="YSort" index="16" instance=ExtResource( 12 )]
 position = Vector2( 152.308, 122.346 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableVertical12" type="StaticBody2D" parent="YSort" index="17" instance=ExtResource( 12 )]
+[node name="TableVertical12" parent="YSort" index="17" instance=ExtResource( 12 )]
 position = Vector2( 420.341, 271.257 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableVertical11" type="StaticBody2D" parent="YSort" index="18" instance=ExtResource( 12 )]
+[node name="TableVertical11" parent="YSort" index="18" instance=ExtResource( 12 )]
 position = Vector2( 329.816, 271.257 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableVertical10" type="StaticBody2D" parent="YSort" index="19" instance=ExtResource( 12 )]
+[node name="TableVertical10" parent="YSort" index="19" instance=ExtResource( 12 )]
 position = Vector2( 244.553, 271.257 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="TableVertical9" type="StaticBody2D" parent="YSort" index="20" instance=ExtResource( 12 )]
+[node name="TableVertical9" parent="YSort" index="20" instance=ExtResource( 12 )]
 position = Vector2( 152.308, 271.257 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
-destroyable = true
 
-[node name="SofaSide" type="StaticBody2D" parent="YSort" index="21" instance=ExtResource( 8 )]
+[node name="SofaSide" parent="YSort" index="21" instance=ExtResource( 8 )]
 position = Vector2( 119.48, -178.872 )
-scale = Vector2( 1.2, 1.2 )
-collision_layer = 8
-script = ExtResource( 3 )
-destroyable = true
 
-[node name="SofaSide3" type="StaticBody2D" parent="YSort" index="22" instance=ExtResource( 8 )]
+[node name="SofaSide3" parent="YSort" index="22" instance=ExtResource( 8 )]
 position = Vector2( 54.8628, 397.512 )
-scale = Vector2( 1.2, 1.2 )
-collision_layer = 8
-script = ExtResource( 3 )
-destroyable = true
 
-[node name="SofaSide4" type="StaticBody2D" parent="YSort" index="23" instance=ExtResource( 8 )]
+[node name="SofaSide4" parent="YSort" index="23" instance=ExtResource( 8 )]
 position = Vector2( 147.911, 397.512 )
-scale = Vector2( 1.2, 1.2 )
-collision_layer = 8
-script = ExtResource( 3 )
-destroyable = true
 
-[node name="SofaSide5" type="StaticBody2D" parent="YSort" index="24" instance=ExtResource( 8 )]
+[node name="SofaSide5" parent="YSort" index="24" instance=ExtResource( 8 )]
 position = Vector2( 242.252, 397.512 )
-scale = Vector2( 1.2, 1.2 )
-collision_layer = 8
-script = ExtResource( 3 )
-destroyable = true
 
-[node name="SofaSide6" type="StaticBody2D" parent="YSort" index="25" instance=ExtResource( 8 )]
+[node name="SofaSide6" parent="YSort" index="25" instance=ExtResource( 8 )]
 position = Vector2( 335.301, 397.512 )
-scale = Vector2( 1.2, 1.2 )
-collision_layer = 8
-script = ExtResource( 3 )
-destroyable = true
 
-[node name="SofaSide7" type="StaticBody2D" parent="YSort" index="26" instance=ExtResource( 8 )]
+[node name="SofaSide7" parent="YSort" index="26" instance=ExtResource( 8 )]
 position = Vector2( 428.35, 397.512 )
-scale = Vector2( 1.2, 1.2 )
-collision_layer = 8
-script = ExtResource( 3 )
-destroyable = true
 
-[node name="SofaSide2" type="StaticBody2D" parent="YSort" index="27" instance=ExtResource( 8 )]
+[node name="SofaSide2" parent="YSort" index="27" instance=ExtResource( 8 )]
 position = Vector2( 218.619, -178.872 )
-scale = Vector2( 1.2, 1.2 )
-collision_layer = 8
-script = ExtResource( 3 )
-destroyable = true
 
-[node name="Hostage" type="StaticBody2D" parent="YSort" index="28" groups=[
-"Hostage",
-] instance=ExtResource( 10 )]
+[node name="Hostage" parent="YSort" index="28" instance=ExtResource( 10 )]
 position = Vector2( 15.1856, -185.776 )
-scale = Vector2( 2.25, 2.25 )
-collision_layer = 8
-script = ExtResource( 1 )
 
-[node name="Hostage2" type="StaticBody2D" parent="YSort" index="29" groups=[
-"Hostage",
-] instance=ExtResource( 10 )]
+[node name="Hostage2" parent="YSort" index="29" instance=ExtResource( 10 )]
 position = Vector2( 377.163, 118.895 )
-scale = Vector2( 2.25, 2.25 )
-collision_layer = 8
-script = ExtResource( 1 )
 
-[node name="Hostage3" type="StaticBody2D" parent="YSort" index="30" groups=[
-"Hostage",
-] instance=ExtResource( 10 )]
+[node name="Hostage3" parent="YSort" index="30" instance=ExtResource( 10 )]
 position = Vector2( 194.165, 270.894 )
-scale = Vector2( 2.25, 2.25 )
-collision_layer = 8
-script = ExtResource( 1 )
 
-[node name="Hostage4" type="StaticBody2D" parent="YSort" index="31" groups=[
-"Hostage",
-] instance=ExtResource( 10 )]
+[node name="Hostage4" parent="YSort" index="31" instance=ExtResource( 10 )]
 position = Vector2( 26.5771, 538.915 )
-scale = Vector2( 2.25, 2.25 )
-collision_layer = 8
-script = ExtResource( 1 )
 
-[node name="Terrorist" type="KinematicBody2D" parent="YSort" index="32" groups=[
-"Terrorist",
-] instance=ExtResource( 11 )]
+[node name="Terrorist" parent="YSort" index="32" instance=ExtResource( 11 )]
 position = Vector2( 192.64, 117.113 )
-scale = Vector2( 2.25, 2.25 )
-collision_layer = 16
-script = ExtResource( 2 )
 
-[node name="Terrorist3" type="KinematicBody2D" parent="YSort" index="33" groups=[
-"Terrorist",
-] instance=ExtResource( 11 )]
+[node name="Terrorist3" parent="YSort" index="33" instance=ExtResource( 11 )]
 position = Vector2( 36.6412, 268.111 )
-scale = Vector2( 2.25, 2.25 )
-collision_layer = 16
-script = ExtResource( 2 )
 
-[node name="Terrorist4" type="KinematicBody2D" parent="YSort" index="34" groups=[
-"Terrorist",
-] instance=ExtResource( 11 )]
+[node name="Terrorist4" parent="YSort" index="34" instance=ExtResource( 11 )]
 position = Vector2( 537.636, 120.113 )
-scale = Vector2( 2.25, 2.25 )
-collision_layer = 16
-script = ExtResource( 2 )
 
-[node name="Terrorist5" type="KinematicBody2D" parent="YSort" index="35" groups=[
-"Terrorist",
-] instance=ExtResource( 11 )]
+[node name="Terrorist5" parent="YSort" index="35" instance=ExtResource( 11 )]
 position = Vector2( 237.639, 533.109 )
-scale = Vector2( 2.25, 2.25 )
-collision_layer = 16
-script = ExtResource( 2 )
 
-[node name="Terrorist6" type="KinematicBody2D" parent="YSort" index="36" groups=[
-"Terrorist",
-] instance=ExtResource( 11 )]
+[node name="Terrorist6" parent="YSort" index="36" instance=ExtResource( 11 )]
 position = Vector2( 547.636, 533.109 )
-scale = Vector2( 2.25, 2.25 )
-collision_layer = 16
-script = ExtResource( 2 )
 
-[node name="Terrorist7" type="KinematicBody2D" parent="YSort" index="37" groups=[
-"Terrorist",
-] instance=ExtResource( 11 )]
+[node name="Terrorist7" parent="YSort" index="37" instance=ExtResource( 11 )]
 position = Vector2( 28.052, 604.132 )
-scale = Vector2( 2.25, 2.25 )
-collision_layer = 16
-script = ExtResource( 2 )
 
-[node name="Terrorist2" type="KinematicBody2D" parent="YSort" index="38" groups=[
-"Terrorist",
-] instance=ExtResource( 11 )]
+[node name="Terrorist2" parent="YSort" index="38" instance=ExtResource( 11 )]
 position = Vector2( 20.6343, -86.5769 )
-scale = Vector2( 2.25, 2.25 )
-collision_layer = 16
-script = ExtResource( 2 )
 
-[node name="Terrorist8" type="KinematicBody2D" parent="YSort" index="39" groups=[
-"Terrorist",
-] instance=ExtResource( 11 )]
+[node name="Terrorist8" parent="YSort" index="39" instance=ExtResource( 11 )]
 position = Vector2( 411.001, -192.723 )
-scale = Vector2( 2.25, 2.25 )
-collision_layer = 16
-script = ExtResource( 2 )
 
-[node name="Counter2" type="StaticBody2D" parent="YSort" index="40" instance=ExtResource( 9 )]
+[node name="Counter2" parent="YSort" index="40" instance=ExtResource( 9 )]
 position = Vector2( 419.26, -166.724 )
-collision_layer = 8
-script = ExtResource( 3 )
-health = 15
 
 [editable path="YSort/Player"]
