@@ -50,7 +50,7 @@ position = Vector2( 568.395, 221.725 )
 position = Vector2( 278.63, 432.703 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 1
+frame = 2
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -131,7 +131,7 @@ position = Vector2( 20.0347, -157.006 )
 [node name="ShelfFront" parent="YSort" index="21" instance=ExtResource( 5 )]
 position = Vector2( 241.285, -131.974 )
 
-[node name="ColorRect" parent="CanvasLayer" index="3"]
+[node name="ColorRect" parent="CanvasLayer" index="4"]
 margin_left = 825.467
 margin_top = -10.4882
 margin_right = 825.467
