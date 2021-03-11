@@ -1,28 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Scene/UI/Option/Option.gd" type="Script" id=2]
+[ext_resource path="res://Scene/UI/Credit/Credit.gd" type="Script" id=2]
 [ext_resource path="res://Scene/UI/Mouse_cursor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/UI/Floor.tscn" type="PackedScene" id=4]
-
-[sub_resource type="DynamicFont" id=1]
-size = 33
-outline_size = 4
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 30
-outline_size = 3
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 30
-outline_size = 3
-outline_color = Color( 0, 0, 0, 1 )
-use_mipmaps = true
-font_data = ExtResource( 1 )
+[ext_resource path="res://Font/PIXEL_30.tres" type="DynamicFont" id=5]
 
 [sub_resource type="DynamicFont" id=4]
 size = 29
@@ -51,71 +33,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="MarginContainer" parent="Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 9.0
-custom_constants/margin_right = 46
-custom_constants/margin_top = 21
-custom_constants/margin_left = 46
-custom_constants/margin_bottom = 29
+custom_constants/separation = -4
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
-margin_left = 46.0
-margin_top = 21.0
-margin_right = 594.0
-margin_bottom = 322.0
-custom_constants/separation = -4
-
-[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer"]
-margin_right = 548.0
-margin_bottom = 115.0
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
+margin_right = 640.0
+margin_bottom = 360.0
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 1 )
-text = "Option"
+custom_fonts/font = ExtResource( 5 )
+text = "CREDIT"
 align = 1
 valign = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer"]
-margin_top = 111.0
-margin_right = 548.0
-margin_bottom = 301.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/margin_left = 126
-custom_constants/margin_bottom = 105
-
-[node name="HBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/MarginContainer"]
-margin_left = 126.0
-margin_right = 422.0
-margin_bottom = 85.0
-size_flags_horizontal = 0
-size_flags_vertical = 3
-custom_constants/separation = 5
-
-[node name="CheckButton" type="CheckButton" parent="Control/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
-margin_right = 296.0
-margin_bottom = 40.0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-custom_fonts/font = SubResource( 2 )
-text = "Sound Effect"
-
-[node name="CheckButton2" type="CheckButton" parent="Control/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
-margin_top = 45.0
-margin_right = 294.0
-margin_bottom = 85.0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-size_flags_stretch_ratio = 126.25
-custom_fonts/font = SubResource( 3 )
-custom_constants/check_vadjust = 0
-custom_constants/hseparation = 128
-text = "Music"
-expand_icon = true
 
 [node name="Button" type="Button" parent="Control"]
 margin_left = 262.425
