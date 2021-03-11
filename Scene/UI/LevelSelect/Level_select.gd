@@ -7,8 +7,10 @@ func _button_pressed(which):
 
 func _ready():
 	$Transition/AnimationPlayer.play("Wipe_Out")
-	for b in get_node("Control/MarginContainer/VBoxContainer/HBoxContainer/CenterContainer/GridContainer").get_children():
+	for b in get_node("Control/MarginContainer/VBoxContainer/HBoxContainer/GridContainer").get_children():
 		b.connect("pressed", self, "_button_pressed",[b])
+		for w in b.get_children():
+			w.text = str(int(b.name))
 
 func _on_buttonQuite_button_up():
 	$Transition/AnimationPlayer.play("Wipe_In")
