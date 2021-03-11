@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scene/UI/Credit/Credit.gd" type="Script" id=2]
 [ext_resource path="res://Scene/UI/Mouse_cursor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/UI/Floor.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Font/PIXEL_30.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Font/Karma_30.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Font/Karma_15.tres" type="DynamicFont" id=6]
 
 [sub_resource type="DynamicFont" id=4]
 size = 29
@@ -17,7 +18,14 @@ script = ExtResource( 2 )
 position = Vector2( 173.385, 166.686 )
 tile_data = PoolIntArray( -327686, 81, 0, -327685, 81, 0, -327684, 81, 0, -327683, 81, 0, -327682, 81, 0, -327681, 81, 0, -393216, 81, 0, -393215, 81, 0, -393214, 81, 0, -393213, 81, 0, -393212, 81, 0, -393211, 81, 0, -393210, 81, 0, -393209, 81, 0, -393208, 81, 0, -393207, 81, 0, -393206, 81, 0, -393205, 81, 0, -393204, 81, 0, -393203, 81, 0, -393202, 81, 0, -262153, 78, 0, -262150, 71, 0, -262149, 71, 0, -262148, 71, 0, -262147, 71, 0, -262146, 71, 0, -262145, 71, 0, -327680, 71, 0, -327679, 71, 0, -327678, 71, 0, -327677, 71, 0, -327676, 71, 0, -327675, 71, 0, -327674, 71, 0, -327673, 71, 0, -327672, 71, 0, -327671, 71, 0, -327670, 71, 0, -327669, 71, 0, -327668, 71, 0, -327667, 71, 0, -327666, 71, 0, -196617, 78, 0, -196614, 85, 0, -196613, 85, 0, -196612, 85, 0, -196611, 85, 0, -196610, 85, 0, -196609, 85, 0, -262144, 85, 0, -262143, 85, 0, -262142, 85, 0, -262141, 85, 0, -262140, 85, 0, -262139, 85, 0, -262138, 85, 0, -262137, 85, 0, -262136, 85, 0, -262135, 85, 0, -262134, 85, 0, -262133, 85, 0, -262132, 85, 0, -262131, 85, 0, -262130, 85, 0, -131081, 78, 0, -131078, 73, 0, -131077, 73, 0, -131076, 73, 0, -131075, 73, 0, -131074, 73, 0, -131073, 73, 0, -196608, 73, 0, -196607, 73, 0, -196606, 73, 0, -196605, 73, 0, -196604, 73, 0, -196603, 73, 0, -196602, 73, 0, -196601, 73, 0, -196600, 73, 0, -196599, 73, 0, -196598, 73, 0, -196597, 73, 0, -196596, 73, 0, -196595, 73, 0, -196594, 73, 0, -65545, 78, 0, -65542, 73, 0, -65541, 73, 0, -65540, 73, 0, -65539, 73, 0, -65538, 73, 0, -65537, 73, 0, -131072, 73, 0, -131071, 73, 0, -131070, 73, 0, -131069, 73, 0, -131068, 73, 0, -131067, 73, 0, -131066, 73, 0, -131065, 73, 0, -131064, 73, 0, -131063, 73, 0, -131062, 73, 0, -131061, 73, 0, -131060, 73, 0, -131059, 73, 0, -131058, 73, 0, -131056, 78, 0, -9, 78, 0, -6, 73, 0, -5, 73, 0, -4, 73, 0, -3, 73, 0, -2, 73, 0, -1, 73, 0, -65536, 73, 0, -65535, 73, 0, -65534, 73, 0, -65533, 73, 0, -65532, 73, 0, -65531, 73, 0, -65530, 73, 0, -65529, 73, 0, -65528, 73, 0, -65527, 73, 0, -65526, 73, 0, -65525, 73, 0, -65524, 73, 0, -65523, 73, 0, -65522, 73, 0, -65520, 78, 0, 65527, 78, 0, 65530, 73, 0, 65531, 73, 0, 65532, 73, 0, 65533, 73, 0, 65534, 73, 0, 65535, 73, 0, 0, 73, 0, 1, 73, 0, 2, 73, 0, 3, 73, 0, 4, 73, 0, 5, 73, 0, 6, 73, 0, 7, 73, 0, 8, 73, 0, 9, 73, 0, 10, 73, 0, 11, 73, 0, 12, 73, 0, 13, 73, 0, 14, 73, 0, 16, 78, 0, 131063, 78, 0, 131066, 73, 0, 131067, 73, 0, 131068, 73, 0, 131069, 73, 0, 131070, 73, 0, 131071, 73, 0, 65536, 73, 0, 65537, 73, 0, 65538, 73, 0, 65539, 73, 0, 65540, 73, 0, 65541, 73, 0, 65542, 73, 0, 65543, 73, 0, 65544, 73, 0, 65545, 73, 0, 65546, 73, 0, 65547, 73, 0, 65548, 73, 0, 65549, 73, 0, 65550, 73, 0, 65552, 78, 0, 196599, 78, 0, 196602, 73, 0, 196603, 73, 0, 196604, 73, 0, 196605, 73, 0, 196606, 73, 0, 196607, 73, 0, 131072, 73, 0, 131073, 73, 0, 131074, 73, 0, 131075, 73, 0, 131076, 73, 0, 131077, 73, 0, 131078, 73, 0, 131079, 73, 0, 131080, 73, 0, 131081, 73, 0, 131082, 73, 0, 131083, 73, 0, 131084, 73, 0, 131085, 73, 0, 131086, 73, 0, 131088, 78, 0, 262135, 78, 0, 262138, 73, 0, 262139, 73, 0, 262140, 73, 0, 262141, 73, 0, 262142, 73, 0, 262143, 73, 0, 196608, 73, 0, 196609, 73, 0, 196610, 73, 0, 196611, 73, 0, 196612, 73, 0, 196613, 73, 0, 196614, 73, 0, 196615, 73, 0, 196616, 73, 0, 196617, 73, 0, 196618, 73, 0, 196619, 73, 0, 196620, 73, 0, 196621, 73, 0, 196622, 73, 0, 196624, 78, 0, 327671, 78, 0, 327674, 73, 0, 327675, 73, 0, 327676, 73, 0, 327677, 73, 0, 327678, 73, 0, 327679, 73, 0, 262144, 73, 0, 262145, 73, 0, 262146, 73, 0, 262147, 73, 0, 262148, 73, 0, 262149, 73, 0, 262150, 73, 0, 262151, 73, 0, 262152, 73, 0, 262153, 73, 0, 262154, 73, 0, 262155, 73, 0, 262156, 73, 0, 262157, 73, 0, 262158, 73, 0, 262160, 78, 0, 393207, 78, 0, 393210, 65, 0, 393211, 65, 0, 393212, 65, 0, 393213, 65, 0, 393214, 65, 0, 393215, 65, 0, 327680, 65, 0, 327681, 65, 0, 327682, 65, 0, 327683, 65, 0, 327684, 65, 0, 327685, 65, 0, 327686, 65, 0, 327687, 65, 0, 327688, 65, 0, 327689, 65, 0, 327690, 65, 0, 327691, 65, 0, 327692, 65, 0, 327693, 65, 0, 327694, 65, 0, 327696, 78, 0, 458743, 78, 0, 393232, 78, 0, 524279, 78, 0, 589815, 78, 0, 655351, 78, 0, 589841, 43, 0, 720887, 78, 0, 720890, 78, 0, 720891, 78, 0, 720892, 78, 0, 720893, 78, 0, 720894, 78, 0, 720895, 78, 0, 655360, 78, 0, 655361, 78, 0, 655362, 78, 0, 655363, 78, 0, 655364, 78, 0, 655371, 78, 0, 655372, 78, 0, 655373, 78, 0, 655374, 78, 0, 655375, 78, 0, 655376, 78, 0, 786423, 43, 0, 786424, 43, 0, 786425, 43, 0, 786426, 43, 0, 786427, 43, 0, 786428, 43, 0, 786429, 43, 0, 786430, 43, 0, 786431, 43, 0, 720896, 43, 0, 720897, 43, 0, 720898, 43, 0, 720899, 43, 0, 720900, 43, 0, 720901, 43, 0, 720902, 43, 0, 720903, 43, 0, 720904, 43, 0, 720905, 43, 0, 720906, 43, 0, 720907, 43, 0, 720908, 43, 0, 720909, 43, 0, 720910, 43, 0, 851959, 43, 0 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 48.1202, -51.3206 )
@@ -26,35 +34,51 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control" type="Control" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+margin_right = 600.0
+margin_bottom = 320.0
 custom_constants/separation = -4
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Control/VBoxContainer"]
-margin_right = 640.0
-margin_bottom = 360.0
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 148.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "CREDIT"
-align = 1
-valign = 1
 
-[node name="Button" type="Button" parent="Control"]
-margin_left = 262.425
-margin_top = 259.485
-margin_right = 381.425
-margin_bottom = 311.485
+[node name="Label2" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+margin_top = 144.0
+margin_right = 600.0
+margin_bottom = 292.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Programmer - Apiwat Ruchirapaiboon
+Sub-programmer - Piyaboot Prayong
+Level Design - "
+
+[node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+margin_top = 288.0
+margin_right = 80.0
+margin_bottom = 320.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 custom_fonts/font = SubResource( 4 )
 text = "Back"
 __meta__ = {
@@ -62,4 +86,4 @@ __meta__ = {
 }
 
 [node name="Mouse_cursor" parent="." instance=ExtResource( 3 )]
-[connection signal="button_up" from="Control/Button" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="Control/MarginContainer/VBoxContainer/Button" to="." method="_on_Button_button_up"]
