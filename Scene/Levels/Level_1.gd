@@ -88,9 +88,11 @@ func  _on_Star_Pick():
 func _on_Passable():
 	if Complete == true:
 		Save.data["Level"+ str(int(get_tree().current_scene.name))] = true
-		if Save.data["Star" + str(int(get_tree().current_scene.name))] == null:
+		if !Save.data.has("Star" + str(int(get_tree().current_scene.name))):
 			Save.data["Star"+ str(int(get_tree().current_scene.name))] = Star_Count
-		elif Save.data["Star" + str(int(get_tree().current_scene.name))] >= Star_Count:
+		elif Save.data["Star" + str(int(get_tree().current_scene.name))] <= Star_Count:
+			Save.data["Star" + str(int(get_tree().current_scene.name))] = Star_Count
+		else:
 			pass
 		Save._on_Save()
 		message.set_text("MISSION COMPLETED!")

@@ -24,7 +24,7 @@ onready var explodeDamage = preload("res://Scene/Object/Heater/ExplosionDamage.t
 signal Star_Pick
 
 func _ready():
-	pass
+	$AnimationPlayer.play("Idle")
 	
 func _process(delta):
 	if unlockable == true and Singleton.unlock == true:
