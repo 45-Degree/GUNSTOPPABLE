@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LevelHover.png-8ccce21062c831fdfe8ef347643d1a8a.stex"
+path="res://.import/LevelHover2.png-32043ce2ed2a858c37680323e6dd9a4b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/UI/button/LevelSelectSprite/LevelHover.png"
-dest_files=[ "res://.import/LevelHover.png-8ccce21062c831fdfe8ef347643d1a8a.stex" ]
+source_file="res://Scene/UI/button/LevelSelectSprite/LevelHover2.png"
+dest_files=[ "res://.import/LevelHover2.png-32043ce2ed2a858c37680323e6dd9a4b.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

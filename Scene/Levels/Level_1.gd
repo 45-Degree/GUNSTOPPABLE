@@ -20,7 +20,7 @@ signal mouse_click
 var smooth_zoom = 1
 var target_zoom = 0.5
 const ZOOM_SPEED = 3
-var Star_Count = 0
+export var Star_Count = 0
 
 func _input(event):
 		if(event is InputEventMouseButton and event.is_pressed() and !event.is_echo()):

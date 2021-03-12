@@ -6,9 +6,9 @@
 [ext_resource path="res://Font/PIXEL_20.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Scene/UI/Transition.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/UI/Mouse_cursor.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scene/UI/button/LevelSelectSprite/LevelNormal.png" type="Texture" id=7]
-[ext_resource path="res://Scene/UI/button/LevelSelectSprite/LevelPush.png" type="Texture" id=8]
-[ext_resource path="res://Scene/UI/button/LevelSelectSprite/LevelHover.png" type="Texture" id=9]
+[ext_resource path="res://Scene/UI/button/LevelSelectSprite/LevelNormal0.png" type="Texture" id=7]
+[ext_resource path="res://Scene/UI/button/LevelSelectSprite/LevelPush0.png" type="Texture" id=8]
+[ext_resource path="res://Scene/UI/button/LevelSelectSprite/LevelHover0.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 33
