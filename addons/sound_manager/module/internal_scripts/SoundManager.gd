@@ -35,7 +35,7 @@ export (Dictionary) var Default_Sounds_Properties = {
 
 export (bool) var preload_resources = false
 export (bool) var preinstantiate_nodes = false
-export (bool) var debug = true
+export (bool) var debug = false
 
 onready var Audiostreams : Array = self.get_children()
 onready var soundmgr_dir_rel_path = self.get_script().get_path().get_base_dir()
