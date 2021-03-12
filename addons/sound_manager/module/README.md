@@ -1,6 +1,6 @@
 ## SOUND MANAGER MODULE FOR GODOT 3.2
-## Version 4.1
-## © Xecestel 2020
+## Version 4.2
+## © Xecestel 2021
 ## Licensed Under MPL 2.0 (see below)
 
 The Sound Manager gives the users a better control over the audio of their games. Using this plugin, it is possible to play every sound of the game using just simple method calls. No more long AudioStreamPlayer lists inside your scenes nor long methods to handle the audio inside every script.  
@@ -205,7 +205,7 @@ I'd like to thank Simón Olivo (@sarturo) for the help and support he's providin
 
 # Licenses
 Sound Manager Module
-Copyright (C) 2020  Celeste Privitera
+Copyright (C) 2019-2021  Celeste Privitera
 
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -331,3 +331,9 @@ You can find more informations in the LICENSE.txt file.
 
 ## Version 4.1.2
 - Bug fix
+
+## Version 4.1.3
+- Fixed a bug that occurred when stopping a sound and playing a new one on the same frame
+
+## Version 4.2
+- Now the `debug` option has been set as a variable that can be set from the plugin dock

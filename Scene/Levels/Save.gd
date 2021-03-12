@@ -5,7 +5,7 @@ var SAVE_DIR = OS.get_executable_path().get_base_dir().plus_file("SaveFile")
 var save_path = SAVE_DIR +"/"+ "save.json"
 
 var data_default = {
-
+	"Level1" : false,
 	}
 
 var data = {}
