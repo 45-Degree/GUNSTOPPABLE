@@ -87,6 +87,12 @@ func  _on_Star_Pick():
 
 func _on_Passable():
 	if Complete == true:
+		Save.data["Level"+ str(int(get_tree().current_scene.name))] = true
+		if Save.data["Star" + str(int(get_tree().current_scene.name))] == null:
+			Save.data["Star"+ str(int(get_tree().current_scene.name))] = Star_Count
+		elif Save.data["Star" + str(int(get_tree().current_scene.name))] >= Star_Count:
+			pass
+		Save._on_Save()
 		message.set_text("MISSION COMPLETED!")
 		starMessage.text = "You collect " + str(Star_Count) + " star"
 		Singleton.Playable = false
