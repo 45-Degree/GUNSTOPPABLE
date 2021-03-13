@@ -33,8 +33,10 @@ func AnimationLoop():
 			animation_direction = "Down"
 		if move_direction >= 120 and move_direction <= 181 :
 			animation_direction = "Left"
-		$Sprite2.play("Walk" + str(animation_direction))
-		print(move_direction)
+		if animation_direction != null:
+			$Sprite2.play("Walk" + str(animation_direction))
+		else:
+			pass
 
 func _on_Hurtbox_area_entered(area):
 	alive = false
