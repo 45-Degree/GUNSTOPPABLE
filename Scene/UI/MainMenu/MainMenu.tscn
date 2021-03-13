@@ -10,9 +10,9 @@
 [ext_resource path="res://Scene/UI/button/OptionSprite/OptionPush.png" type="Texture" id=8]
 [ext_resource path="res://Scene/UI/button/OptionSprite/OptionNormal.png" type="Texture" id=9]
 [ext_resource path="res://Scene/UI/button/CreditSprite/CreditNormal.png" type="Texture" id=10]
-[ext_resource path="res://Scene/UI/button/ExitSprite/ExitPush.png" type="Texture" id=11]
+[ext_resource path="res://Scene/UI/button/ExitSprite/QuitPush.png" type="Texture" id=11]
 [ext_resource path="res://Scene/UI/button/CreditSprite/CreditHover.png" type="Texture" id=12]
-[ext_resource path="res://Scene/UI/button/ExitSprite/ExitNormal.png" type="Texture" id=13]
+[ext_resource path="res://Scene/UI/button/ExitSprite/QuitNormal.png" type="Texture" id=13]
 [ext_resource path="res://Scene/UI/Transition.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scene/UI/Mouse_cursor.tscn" type="PackedScene" id=15]
 
@@ -93,17 +93,17 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2/CenterContainer"]
-margin_left = 188.0
+margin_left = 163.0
 margin_top = 49.0
-margin_right = 388.0
+margin_right = 413.0
 margin_bottom = 166.0
 custom_constants/separation = 17
 alignment = 1
 
 [node name="Button" type="TextureButton" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2/CenterContainer/VBoxContainer"]
-margin_right = 200.0
+margin_right = 250.0
 margin_bottom = 50.0
-rect_min_size = Vector2( 200, 50 )
+rect_min_size = Vector2( 250, 50 )
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
 texture_hover = ExtResource( 7 )
@@ -112,7 +112,7 @@ stretch_mode = 6
 
 [node name="Button3" type="TextureButton" parent="Control/MarginContainer/VBoxContainer3/VBoxContainer2/CenterContainer/VBoxContainer"]
 margin_top = 67.0
-margin_right = 200.0
+margin_right = 250.0
 margin_bottom = 117.0
 rect_min_size = Vector2( 200, 50 )
 texture_normal = ExtResource( 9 )

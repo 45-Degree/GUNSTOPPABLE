@@ -6,8 +6,10 @@ export var audio_bus_name := "BGM"
 onready var _bus := AudioServer.get_bus_index(audio_bus_name)
 
 func _ready() -> void:
-	AudioServer.set_bus_volume_db(_bus, -6)
-	value = db2linear(AudioServer.get_bus_volume_db(_bus))
+	pass
+#	value = AudioServer.get_bus_volume_db(db2linear(_bus))
+##	AudioServer.set_bus_volume_db(_bus, -6)
+##	value = db2linear(AudioServer.get_bus_volume_db(_bus))
 
 func _on_HSlider_mouse_exited():
 	release_focus()
