@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BODY.png-0a5fbd5962ade6dcf321400ccffd3063.stex"
+path="res://.import/ExitHover.png-ef84d41e195a014f23a36d102dbde69b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/UI/button/Slider/BODY.png"
-dest_files=[ "res://.import/BODY.png-0a5fbd5962ade6dcf321400ccffd3063.stex" ]
+source_file="res://Scene/UI/button/ExitSprite/ExitHover.png"
+dest_files=[ "res://.import/ExitHover.png-ef84d41e195a014f23a36d102dbde69b.stex" ]
 
 [params]
 
