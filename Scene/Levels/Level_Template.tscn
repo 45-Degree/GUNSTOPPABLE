@@ -413,6 +413,7 @@ margin_top = 4.0
 margin_right = 272.0
 margin_bottom = 22.0
 split_offset = 40
+dragger_visibility = 1
 
 [node name="Label" type="Label" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer"]
 margin_right = 76.0
@@ -420,7 +421,7 @@ margin_bottom = 18.0
 custom_fonts/font = ExtResource( 30 )
 text = "BGM"
 
-[node name="CheckButton2" type="HSlider" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer"]
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer"]
 margin_left = 88.0
 margin_right = 272.0
 margin_bottom = 18.0
@@ -435,6 +436,7 @@ margin_top = 26.0
 margin_right = 272.0
 margin_bottom = 44.0
 split_offset = 40
+dragger_visibility = 1
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer2"]
 margin_right = 76.0
@@ -442,7 +444,7 @@ margin_bottom = 18.0
 custom_fonts/font = ExtResource( 30 )
 text = "SFX"
 
-[node name="CheckButton" type="HSlider" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer2"]
+[node name="HSlider2" type="HSlider" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer2"]
 margin_left = 88.0
 margin_right = 272.0
 margin_bottom = 18.0
@@ -520,6 +522,10 @@ __meta__ = {
 [connection signal="button_up" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer/Button" to="." method="_on_Button_button_up"]
 [connection signal="button_up" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer/Button2" to="." method="_on_Button2_button_up"]
 [connection signal="button_up" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer/Button3" to="." method="_on_Button3_button_up"]
+[connection signal="mouse_exited" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer/HSlider" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer/HSlider" method="_on_HSlider_mouse_exited"]
+[connection signal="value_changed" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer/HSlider" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer/HSlider" method="_on_HSlider_value_changed"]
+[connection signal="mouse_exited" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer2/HSlider2" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer/HSlider" method="_on_HSlider2_mouse_exited"]
+[connection signal="value_changed" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer2/HSlider2" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer2/HSlider2" method="_on_HSlider2_value_changed"]
 [connection signal="pressed" from="CanvasLayer/Control3/VBoxContainer/Button4" to="." method="_on_Button4_pressed"]
 
 [editable path="YSort/Player"]
