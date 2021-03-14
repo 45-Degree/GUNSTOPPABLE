@@ -46,7 +46,11 @@ scale = Vector2( 2.3, 2.3 )
 position = Vector2( -19.8825, -272.47 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
+<<<<<<< HEAD
 frame = 5
+=======
+frame = 4
+>>>>>>> parent of 6e4c9cd (Update Level and Star)
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )

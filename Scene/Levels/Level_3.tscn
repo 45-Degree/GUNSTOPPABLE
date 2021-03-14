@@ -45,7 +45,11 @@ rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
+<<<<<<< HEAD
 frame = 3
+=======
+frame = 0
+>>>>>>> parent of 6e4c9cd (Update Level and Star)
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )

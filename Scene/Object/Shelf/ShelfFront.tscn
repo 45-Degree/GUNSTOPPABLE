@@ -1,19 +1,19 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scene/Object/Shelf/Shelf_Fall_sprite1.png" type="Texture" id=2]
+[ext_resource path="res://Scene/Object/Door/wooden_shelf.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 67.4165, 107.305 )
+extents = Vector2( 52.4279, 89.8056 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 20.6933, 42.9019 )
+extents = Vector2( 21.305, 35.5976 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 6.57145, 2.25418 )
+extents = Vector2( 4.63802, 3.71932 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 6.50612, 1.94861 )
+extents = Vector2( 4.63794, 3.71625 )
 
 [node name="ShelfFront" instance=ExtResource( 1 )]
 position = Vector2( 0, 0 )
@@ -23,13 +23,13 @@ destroyable = false
 fallable = true
 
 [node name="Sprite2" parent="." index="0"]
-scale = Vector2( 0.015, 0.015 )
+scale = Vector2( 0.02, 0.02 )
 texture = ExtResource( 2 )
-region_rect = Rect2( 67.4046, 280.007, 932.812, 1529.07 )
+region_rect = Rect2( 0.463257, 11.4805, 538.087, 912.072 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 position = Vector2( 2.13391, -0.539402 )
-frame = 22
+frame = 31
 
 [node name="CollisionShape2D" parent="." index="2"]
 visible = false
@@ -44,21 +44,20 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 visible = false
-position = Vector2( 0, -0.374573 )
 shape = SubResource( 2 )
 
 [node name="Hurtbox" parent="." index="5"]
 collision_mask = 1
 
 [node name="CollisionShape2D2" parent="Hurtbox" index="1"]
-visible = true
-position = Vector2( -0.0871019, -8.56493 )
+position = Vector2( -0.0871019, -7.16027 )
 shape = SubResource( 3 )
 
 [node name="Hurtbox2" type="Area2D" parent="." index="6"]
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox2" index="0"]
-position = Vector2( 0.0718724, 8.54732 )
+visible = false
+position = Vector2( -0.115414, 6.95537 )
 shape = SubResource( 4 )
 [connection signal="area_entered" from="Hurtbox2" to="." method="_on_Hurtbox2_area_entered"]

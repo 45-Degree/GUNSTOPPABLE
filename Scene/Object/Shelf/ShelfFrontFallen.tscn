@@ -1,6 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Scene/Object/Shelf/Shelf_Fall_sprite1.png" type="Texture" id=1]
+[ext_resource path="res://Scene/Object/Shelf/fallWoodenShelf.png" type="Texture" id=2]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5.33823, 9.02659 )
@@ -16,10 +17,10 @@ collision_layer = 8
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.015, 0.015 )
-texture = ExtResource( 1 )
+scale = Vector2( 0.02, 0.02 )
+texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 1045.76, 46.5025, 950.691, 1777.55 )
+region_rect = Rect2( -2, -3, 540, 916 )
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 8
