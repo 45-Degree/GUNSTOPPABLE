@@ -14,6 +14,9 @@ func _ready() -> void:
 func _on_HSlider_mouse_exited():
 	release_focus()
 
+func _on_HSlider2_mouse_exited():
+	release_focus()
+
 func _on_HSlider_value_changed(value):
 	AudioServer.set_bus_volume_db(_bus, linear2db(value))
 
@@ -21,3 +24,5 @@ func _on_HSlider2_value_changed(value):
 	AudioServer.set_bus_volume_db(_bus, linear2db(value))
 	if has_focus():
 		SoundManager.play_se("res://Scene/Character/Player/Gun/GunSound/GunsoundNew.wav")
+
+

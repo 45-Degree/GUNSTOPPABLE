@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scene/UI/Option/Option.gd" type="Script" id=2]
@@ -6,8 +6,12 @@
 [ext_resource path="res://Scene/UI/Floor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scene/UI/Option/HSlider.gd" type="Script" id=5]
 [ext_resource path="res://Font/Karma_25.tres" type="DynamicFont" id=6]
-[ext_resource path="res://Scene/UI/button/Slider/SMALLBODY.png" type="Texture" id=8]
+[ext_resource path="res://Scene/UI/button/Slider/greybody.png" type="Texture" id=7]
+[ext_resource path="res://Scene/UI/button/Slider/bluebody.png" type="Texture" id=8]
 [ext_resource path="res://Scene/UI/button/Slider/Smallslide.png" type="Texture" id=9]
+[ext_resource path="res://Scene/UI/button/BackSprite/BackNormal.png" type="Texture" id=10]
+[ext_resource path="res://Scene/UI/button/BackSprite/BackHover.png" type="Texture" id=11]
+[ext_resource path="res://Scene/UI/button/BackSprite/BackPush.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 33
@@ -15,23 +19,17 @@ outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxTexture" id=12]
-texture = ExtResource( 8 )
-region_rect = Rect2( 0, 0, 180, 30 )
-
-[sub_resource type="StyleBoxEmpty" id=13]
-
-[sub_resource type="StyleBoxEmpty" id=14]
-
 [sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 180, 24 )
+
+[sub_resource type="StyleBoxTexture" id=13]
 texture = ExtResource( 8 )
-region_rect = Rect2( 0, 0, 180, 30 )
+region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="StyleBoxEmpty" id=15]
-
-[sub_resource type="DynamicFont" id=8]
-size = 29
-font_data = ExtResource( 1 )
+[sub_resource type="StyleBoxTexture" id=14]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 180, 24 )
 
 [node name="Node2D" type="Node"]
 script = ExtResource( 2 )
@@ -74,13 +72,12 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
 margin_left = 46.0
 margin_top = 21.0
-margin_right = 543.0
+margin_right = 514.0
 margin_bottom = 283.0
-custom_constants/separation = -29
 
 [node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer"]
-margin_right = 497.0
-margin_bottom = 169.0
+margin_right = 468.0
+margin_bottom = 129.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
 text = "Option"
@@ -88,31 +85,25 @@ align = 1
 valign = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer"]
-margin_top = 140.0
-margin_right = 497.0
-margin_bottom = 262.0
-custom_constants/margin_right = 123
-custom_constants/margin_top = -15
-custom_constants/margin_left = 129
-custom_constants/margin_bottom = 65
+margin_left = 113.0
+margin_top = 108.0
+margin_right = 369.0
+margin_bottom = 202.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/MarginContainer"]
-margin_left = 129.0
-margin_top = -15.0
-margin_right = 374.0
-margin_bottom = 57.0
+margin_right = 256.0
+margin_bottom = 94.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 5
 
 [node name="VBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
-margin_right = 245.0
+margin_right = 256.0
 margin_bottom = 35.0
-custom_constants/separation = 21
 alignment = 1
 
 [node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer"]
-margin_right = 44.0
+margin_right = 72.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
@@ -121,16 +112,15 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "BGM"
 valign = 1
 
-[node name="HSlider" type="HSlider" parent="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer"]
-margin_left = 65.0
-margin_right = 245.0
+[node name="HSlider3" type="HSlider" parent="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+margin_left = 76.0
+margin_right = 256.0
 margin_bottom = 35.0
 rect_min_size = Vector2( 180, 35 )
-size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_vertical = 1
 custom_icons/grabber_highlight = ExtResource( 9 )
 custom_icons/grabber = ExtResource( 9 )
-custom_styles/slider = SubResource( 12 )
+custom_styles/slider = SubResource( 9 )
 custom_styles/grabber_area_highlight = SubResource( 13 )
 custom_styles/grabber_area = SubResource( 14 )
 max_value = 1.0
@@ -140,12 +130,13 @@ script = ExtResource( 5 )
 
 [node name="VBoxContainer2" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 margin_top = 40.0
-margin_right = 245.0
-margin_bottom = 72.0
+margin_right = 256.0
+margin_bottom = 75.0
 
 [node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer2"]
-margin_right = 61.0
-margin_bottom = 31.0
+margin_top = 2.0
+margin_right = 72.0
+margin_bottom = 33.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -153,34 +144,36 @@ text = "SFX"
 valign = 1
 
 [node name="HSlider2" type="HSlider" parent="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer2"]
-margin_left = 65.0
-margin_right = 245.0
-margin_bottom = 32.0
+margin_left = 76.0
+margin_right = 256.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 180, 35 )
 size_flags_vertical = 1
 custom_icons/grabber_highlight = ExtResource( 9 )
 custom_icons/grabber = ExtResource( 9 )
 custom_styles/slider = SubResource( 9 )
-custom_styles/grabber_area = SubResource( 15 )
+custom_styles/grabber_area_highlight = SubResource( 13 )
+custom_styles/grabber_area = SubResource( 14 )
 max_value = 1.0
 step = 0.05
 value = 0.5
 script = ExtResource( 5 )
 audio_bus_name = "SE"
 
-[node name="Button" type="Button" parent="Control"]
-margin_left = 262.425
-margin_top = 259.485
-margin_right = 381.425
-margin_bottom = 311.485
-custom_fonts/font = SubResource( 8 )
-text = "Back"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Button" type="TextureButton" parent="Control/MarginContainer/VBoxContainer"]
+margin_top = 212.0
+margin_right = 468.0
+margin_bottom = 262.0
+rect_min_size = Vector2( 50, 50 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 11 )
+expand = true
+stretch_mode = 5
 
 [node name="Mouse_cursor" parent="." instance=ExtResource( 3 )]
-[connection signal="mouse_exited" from="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/HSlider" to="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/HSlider" method="_on_HSlider_mouse_exited"]
-[connection signal="value_changed" from="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/HSlider" to="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/HSlider" method="_on_HSlider_value_changed"]
+[connection signal="mouse_exited" from="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/HSlider3" to="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/HSlider3" method="_on_HSlider_mouse_exited"]
+[connection signal="value_changed" from="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/HSlider3" to="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/HSlider3" method="_on_HSlider2_value_changed"]
 [connection signal="mouse_exited" from="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer2/HSlider2" to="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer2/HSlider2" method="_on_HSlider_mouse_exited"]
 [connection signal="value_changed" from="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer2/HSlider2" to="Control/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/VBoxContainer2/HSlider2" method="_on_HSlider2_value_changed"]
-[connection signal="button_up" from="Control/Button" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="Control/MarginContainer/VBoxContainer/Button" to="." method="_on_Button_button_up"]

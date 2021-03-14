@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/UI/Camera2D.gd" type="Script" id=2]
@@ -13,10 +13,10 @@
 [ext_resource path="res://Scene/UI/button/OptionSprite/OptionPauseHover.png" type="Texture" id=11]
 [ext_resource path="res://Scene/UI/button/ResumeSprite/ResumePush.png" type="Texture" id=12]
 [ext_resource path="res://Scene/UI/button/OptionSprite/OptionPausePush.png" type="Texture" id=13]
-[ext_resource path="res://Scene/UI/button/ExitButtonSprite/ExitNormal.png" type="Texture" id=14]
+[ext_resource path="res://Scene/UI/button/ExitSprite/ExitNormal.png" type="Texture" id=14]
 [ext_resource path="res://Scene/UI/button/ResumeSprite/ResumeHover.png" type="Texture" id=15]
-[ext_resource path="res://Scene/UI/button/ExitButtonSprite/ExitPush.png" type="Texture" id=16]
-[ext_resource path="res://Scene/UI/button/ExitButtonSprite/ExitHover.png" type="Texture" id=17]
+[ext_resource path="res://Scene/UI/button/ExitSprite/ExitPush.png" type="Texture" id=16]
+[ext_resource path="res://Scene/UI/button/ExitSprite/ExitHover.png" type="Texture" id=17]
 [ext_resource path="res://Scene/UI/button/NextLevelSprite/NextLevelPush.png" type="Texture" id=18]
 [ext_resource path="res://Scene/UI/button/NextLevelSprite/NextLevelHover.png" type="Texture" id=19]
 [ext_resource path="res://Scene/UI/button/NextLevelSprite/NextLevelNormal.png" type="Texture" id=20]
@@ -31,6 +31,9 @@
 [ext_resource path="res://Scene/UI/button/BackSprite/BackNormal.png" type="Texture" id=29]
 [ext_resource path="res://Font/PIXEL_20.tres" type="DynamicFont" id=30]
 [ext_resource path="res://Scene/UI/Option/HSlider.gd" type="Script" id=31]
+[ext_resource path="res://Scene/UI/button/Slider/Smallslide.png" type="Texture" id=32]
+[ext_resource path="res://Scene/UI/button/Slider/greybody.png" type="Texture" id=33]
+[ext_resource path="res://Scene/UI/button/Slider/bluebody.png" type="Texture" id=34]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Wipe_In"
@@ -100,26 +103,38 @@ outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=7]
 size = 42
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=8]
 size = 33
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=13]
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 33 )
+region_rect = Rect2( 0, 0, 180, 24 )
+
+[sub_resource type="StyleBoxTexture" id=13]
+texture = ExtResource( 34 )
+region_rect = Rect2( 0, 0, 180, 24 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 34 )
+region_rect = Rect2( 0, 0, 180, 24 )
+
+[sub_resource type="DynamicFont" id=9]
 size = 30
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=14]
+[sub_resource type="DynamicFont" id=10]
 size = 14
 outline_size = 1
 font_data = ExtResource( 7 )
@@ -164,7 +179,7 @@ position = Vector2( -160, 288 )
 remote_path = NodePath("../../../Camera2D")
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 4
+frame = 0
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 3 )
@@ -282,6 +297,7 @@ stretch_mode = 5
 
 [node name="Control2" type="Control" parent="CanvasLayer"]
 pause_mode = 2
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
@@ -313,7 +329,7 @@ __meta__ = {
 margin_right = 125.0
 margin_bottom = 37.0
 rect_pivot_offset = Vector2( 97.0978, 46.03 )
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 7 )
 text = "Pause"
 align = 1
 __meta__ = {
@@ -377,6 +393,7 @@ margin_left = 184.0
 margin_top = 92.0
 margin_right = 456.0
 margin_bottom = 268.0
+custom_constants/separation = 14
 alignment = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -384,10 +401,10 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="CanvasLayer/Control3/VBoxContainer"]
 margin_right = 272.0
-margin_bottom = 63.0
+margin_bottom = 38.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 8 )
 text = "Option"
 align = 1
 valign = 1
@@ -396,9 +413,9 @@ __meta__ = {
 }
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control3/VBoxContainer"]
-margin_top = 67.0
+margin_top = 52.0
 margin_right = 272.0
-margin_bottom = 130.0
+margin_bottom = 120.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -407,24 +424,29 @@ __meta__ = {
 }
 
 [node name="HSplitContainer" type="HSplitContainer" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2"]
-margin_top = 11.0
 margin_right = 272.0
-margin_bottom = 29.0
+margin_bottom = 32.0
 split_offset = 40
 dragger_visibility = 1
 
 [node name="Label" type="Label" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer"]
+margin_top = 7.0
 margin_right = 76.0
-margin_bottom = 18.0
+margin_bottom = 25.0
 custom_fonts/font = ExtResource( 30 )
 text = "BGM"
 
 [node name="HSlider" type="HSlider" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer"]
 margin_left = 88.0
 margin_right = 272.0
-margin_bottom = 18.0
+margin_bottom = 32.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_icons/grabber_highlight = ExtResource( 32 )
+custom_icons/grabber = ExtResource( 32 )
+custom_styles/slider = SubResource( 11 )
+custom_styles/grabber_area_highlight = SubResource( 13 )
+custom_styles/grabber_area = SubResource( 12 )
 max_value = 1.0
 step = 0.05
 script = ExtResource( 31 )
@@ -433,24 +455,29 @@ __meta__ = {
 }
 
 [node name="HSplitContainer2" type="HSplitContainer" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2"]
-margin_top = 33.0
+margin_top = 36.0
 margin_right = 272.0
-margin_bottom = 51.0
+margin_bottom = 68.0
 split_offset = 40
 dragger_visibility = 1
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer2"]
+margin_top = 7.0
 margin_right = 76.0
-margin_bottom = 18.0
+margin_bottom = 25.0
 custom_fonts/font = ExtResource( 30 )
 text = "SFX"
 
 [node name="HSlider2" type="HSlider" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer2"]
 margin_left = 88.0
 margin_right = 272.0
-margin_bottom = 18.0
+margin_bottom = 32.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_icons/grabber_highlight = ExtResource( 32 )
+custom_icons/grabber = ExtResource( 32 )
+custom_styles/slider = SubResource( 11 )
+custom_styles/grabber_area = SubResource( 12 )
 max_value = 1.0
 step = 0.05
 script = ExtResource( 31 )
@@ -472,7 +499,6 @@ __meta__ = {
 
 [node name="Control4" type="Control" parent="CanvasLayer"]
 pause_mode = 2
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -491,7 +517,7 @@ margin_left = 131.0
 margin_top = 166.0
 margin_right = 509.0
 margin_bottom = 193.0
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 9 )
 text = "Click to start Guning"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
@@ -509,7 +535,7 @@ margin_left = 6.64816
 margin_top = 331.621
 margin_right = 114.648
 margin_bottom = 366.621
-custom_fonts/font = SubResource( 14 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level - 1"
 __meta__ = {
@@ -525,7 +551,7 @@ __meta__ = {
 [connection signal="button_up" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer/Button3" to="." method="_on_Button3_button_up"]
 [connection signal="mouse_exited" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer/HSlider" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer/HSlider" method="_on_HSlider_mouse_exited"]
 [connection signal="value_changed" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer/HSlider" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer/HSlider" method="_on_HSlider_value_changed"]
-[connection signal="mouse_exited" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer2/HSlider2" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer/HSlider" method="_on_HSlider2_mouse_exited"]
+[connection signal="mouse_exited" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer2/HSlider2" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer2/HSlider2" method="_on_HSlider2_mouse_exited"]
 [connection signal="value_changed" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer2/HSlider2" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/HSplitContainer2/HSlider2" method="_on_HSlider2_value_changed"]
 [connection signal="pressed" from="CanvasLayer/Control3/VBoxContainer/Button4" to="." method="_on_Button4_pressed"]
 
