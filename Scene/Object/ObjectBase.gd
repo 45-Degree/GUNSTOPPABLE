@@ -63,11 +63,6 @@ func _on_Hurtbox_area_entered(area):
 		Singleton.unlock = true
 		SoundManager.play_se("res://Sound/SFX/Object/Keycard_3.wav")
 		queue_free()
-	if Star == true:
-		connect("Star_Pick", owner,"_on_Star_Pick")
-		emit_signal("Star_Pick")
-		SoundManager.play_se("res://Sound/SFX/Object/Keycard_3.wav")
-		queue_free()
 #	if Reflectable == true:
 #		var BulletP_Instance = Bullet.instance()
 #		var world = get_tree().current_scene

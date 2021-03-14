@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scene/Object/Star/star-icon.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Object/Star/Star.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 38.2097, 54.3969 )
@@ -12,8 +13,7 @@ extents = Vector2( 3.331, 3.273 )
 [node name="Star" instance=ExtResource( 2 )]
 position = Vector2( 0, 0 )
 scale = Vector2( 2, 2 )
-destroyable = false
-Star = true
+script = ExtResource( 3 )
 
 [node name="Sprite2" parent="." index="0"]
 scale = Vector2( 0.01, 0.01 )
@@ -22,7 +22,7 @@ region_enabled = false
 region_rect = Rect2( 2, 1, 74, 111 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 19
+frame = 54
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( 0.0182307, -0.143819 )
@@ -38,3 +38,4 @@ collision_mask = 1
 visible = true
 position = Vector2( 0.0433216, -0.0362891 )
 shape = SubResource( 2 )
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_Hurtbox_body_entered"]

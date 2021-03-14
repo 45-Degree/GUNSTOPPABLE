@@ -34,6 +34,9 @@ tile_data = PoolIntArray( -983048, 81, 0, -983047, 81, 0, -983046, 81, 0, -98304
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 530.929, -400.551 )
 
+[node name="AnimatedSprite" parent="YSort/Player" index="2"]
+frame = 7
+
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
 
@@ -181,9 +184,6 @@ position = Vector2( 51.3238, 435.815 )
 
 [node name="Star3" parent="YSort" index="47" instance=ExtResource( 9 )]
 position = Vector2( 255.867, -22.0293 )
-
-[node name="Control2" parent="CanvasLayer" index="1"]
-visible = false
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "Level - 3"
