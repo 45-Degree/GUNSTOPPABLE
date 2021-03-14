@@ -46,7 +46,7 @@ rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 1
+frame = 2
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -98,12 +98,6 @@ position = Vector2( 441.446, 135.747 )
 
 [node name="Star3" parent="YSort" index="16" instance=ExtResource( 9 )]
 position = Vector2( 445.357, -10.837 )
-
-[node name="Control2" parent="CanvasLayer" index="1"]
-visible = false
-
-[node name="Control4" parent="CanvasLayer" index="3"]
-visible = true
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "Level - 3"
