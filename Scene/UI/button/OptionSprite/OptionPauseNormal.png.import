@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Untitled-1.png-d05f85bb4573b17710d75b9157833d25.stex"
+path="res://.import/OptionPauseNormal.png-9a8bd6f0aee2cabe1265842d9ab61172.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/UI/LevelSelect/Untitled-1.png"
-dest_files=[ "res://.import/Untitled-1.png-d05f85bb4573b17710d75b9157833d25.stex" ]
+source_file="res://Scene/UI/button/OptionSprite/OptionPauseNormal.png"
+dest_files=[ "res://.import/OptionPauseNormal.png-9a8bd6f0aee2cabe1265842d9ab61172.stex" ]
 
 [params]
 

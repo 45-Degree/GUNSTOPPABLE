@@ -8,11 +8,11 @@
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://karma future.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Scene/UI/Mouse_cursor.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scene/UI/button/OptionSprite/OptionPush.png" type="Texture" id=9]
+[ext_resource path="res://Scene/UI/button/OptionSprite/OptionPauseNormal.png" type="Texture" id=9]
 [ext_resource path="res://Scene/UI/button/ResumeSprite/ResumeNormal.png" type="Texture" id=10]
-[ext_resource path="res://Scene/UI/button/OptionSprite/OptionNormal.png" type="Texture" id=11]
+[ext_resource path="res://Scene/UI/button/OptionSprite/OptionPauseHover.png" type="Texture" id=11]
 [ext_resource path="res://Scene/UI/button/ResumeSprite/ResumePush.png" type="Texture" id=12]
-[ext_resource path="res://Scene/UI/button/OptionSprite/OptionHover.png" type="Texture" id=13]
+[ext_resource path="res://Scene/UI/button/OptionSprite/OptionPausePush.png" type="Texture" id=13]
 [ext_resource path="res://Scene/UI/button/ExitButtonSprite/ExitNormal.png" type="Texture" id=14]
 [ext_resource path="res://Scene/UI/button/ResumeSprite/ResumeHover.png" type="Texture" id=15]
 [ext_resource path="res://Scene/UI/button/ExitButtonSprite/ExitPush.png" type="Texture" id=16]
@@ -164,7 +164,7 @@ position = Vector2( -160, 288 )
 remote_path = NodePath("../../../Camera2D")
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 5
+frame = 2
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 3 )
@@ -282,7 +282,6 @@ stretch_mode = 5
 
 [node name="Control2" type="Control" parent="CanvasLayer"]
 pause_mode = 2
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
@@ -301,17 +300,17 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control2/CenterContainer"]
-margin_left = 220.0
-margin_top = 55.0
-margin_right = 420.0
-margin_bottom = 305.0
-custom_constants/separation = 21
+margin_left = 257.0
+margin_top = 64.0
+margin_right = 382.0
+margin_bottom = 296.0
+custom_constants/separation = -1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer"]
-margin_right = 200.0
+margin_right = 125.0
 margin_bottom = 37.0
 rect_pivot_offset = Vector2( 97.0978, 46.03 )
 custom_fonts/font = SubResource( 9 )
@@ -322,18 +321,18 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 200.0
-margin_bottom = 250.0
-custom_constants/separation = -24
+margin_top = 36.0
+margin_right = 125.0
+margin_bottom = 232.0
+custom_constants/separation = -22
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button" type="TextureButton" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer"]
-margin_right = 200.0
+margin_right = 125.0
 margin_bottom = 80.0
-rect_min_size = Vector2( 200, 80 )
+rect_min_size = Vector2( 120, 80 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource( 10 )
@@ -343,20 +342,20 @@ expand = true
 stretch_mode = 5
 
 [node name="Button2" type="TextureButton" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer"]
-margin_top = 56.0
-margin_right = 200.0
-margin_bottom = 136.0
+margin_top = 58.0
+margin_right = 125.0
+margin_bottom = 138.0
 rect_min_size = Vector2( 80, 80 )
-texture_normal = ExtResource( 11 )
-texture_pressed = ExtResource( 9 )
-texture_hover = ExtResource( 13 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 11 )
 expand = true
 stretch_mode = 5
 
 [node name="Button3" type="TextureButton" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer"]
-margin_top = 112.0
-margin_right = 200.0
-margin_bottom = 192.0
+margin_top = 116.0
+margin_right = 125.0
+margin_bottom = 196.0
 rect_min_size = Vector2( 80, 80 )
 texture_normal = ExtResource( 14 )
 texture_pressed = ExtResource( 16 )
@@ -378,7 +377,6 @@ margin_left = 184.0
 margin_top = 92.0
 margin_right = 456.0
 margin_bottom = 268.0
-custom_constants/separation = 19
 alignment = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -386,7 +384,7 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="CanvasLayer/Control3/VBoxContainer"]
 margin_right = 272.0
-margin_bottom = 48.0
+margin_bottom = 63.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 10 )
@@ -400,7 +398,7 @@ __meta__ = {
 [node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control3/VBoxContainer"]
 margin_top = 67.0
 margin_right = 272.0
-margin_bottom = 115.0
+margin_bottom = 130.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -409,9 +407,9 @@ __meta__ = {
 }
 
 [node name="HSplitContainer" type="HSplitContainer" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2"]
-margin_top = 4.0
+margin_top = 11.0
 margin_right = 272.0
-margin_bottom = 22.0
+margin_bottom = 29.0
 split_offset = 40
 dragger_visibility = 1
 
@@ -430,11 +428,14 @@ size_flags_vertical = 3
 max_value = 1.0
 step = 0.05
 script = ExtResource( 31 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HSplitContainer2" type="HSplitContainer" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2"]
-margin_top = 26.0
+margin_top = 33.0
 margin_right = 272.0
-margin_bottom = 44.0
+margin_bottom = 51.0
 split_offset = 40
 dragger_visibility = 1
 
