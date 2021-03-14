@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Scene/Object/CoffeeTable/CoffeeTableH.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scene/Object/KeyCard/Keycard.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scene/Object/Detector/detector.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scene/Object/Star/Star.tscn" type="PackedScene" id=13]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -50,7 +51,7 @@ position = Vector2( 568.395, 221.725 )
 position = Vector2( 278.63, 432.703 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 2
+frame = 0
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -130,6 +131,21 @@ position = Vector2( 20.0347, -157.006 )
 
 [node name="ShelfFront" parent="YSort" index="21" instance=ExtResource( 5 )]
 position = Vector2( 241.285, -131.974 )
+
+[node name="Star" parent="YSort" index="22" instance=ExtResource( 13 )]
+position = Vector2( 63.5679, 224.834 )
+
+[node name="Star2" parent="YSort" index="23" instance=ExtResource( 13 )]
+position = Vector2( 578.507, 37.7458 )
+
+[node name="Star3" parent="YSort" index="24" instance=ExtResource( 13 )]
+position = Vector2( 240.857, -178.743 )
+
+[node name="Control2" parent="CanvasLayer" index="1"]
+visible = false
+
+[node name="Control4" parent="CanvasLayer" index="3"]
+visible = true
 
 [node name="ColorRect" parent="CanvasLayer" index="4"]
 margin_left = 825.467
