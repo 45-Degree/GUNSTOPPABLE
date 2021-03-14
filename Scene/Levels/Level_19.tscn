@@ -35,9 +35,6 @@ tile_data = PoolIntArray( -458761, 81, 0, -458760, 81, 0, -458759, 81, 0, -45875
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( -53.1094, -59.9456 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 1
-
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
 
