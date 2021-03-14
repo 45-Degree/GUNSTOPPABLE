@@ -53,7 +53,7 @@ rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 7
+frame = 3
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -124,6 +124,9 @@ margin_right = 357.0
 
 [node name="RetryButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" index="2"]
 margin_left = 405.0
+
+[node name="Control2" parent="CanvasLayer" index="1"]
+visible = false
 
 [node name="Button3" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer" index="2"]
 size_flags_horizontal = 3
