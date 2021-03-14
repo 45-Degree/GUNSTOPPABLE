@@ -50,7 +50,7 @@ rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 2
+frame = 4
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -108,9 +108,6 @@ position = Vector2( 514.006, 267.103 )
 
 [node name="Tree2" parent="YSort" index="18" instance=ExtResource( 7 )]
 position = Vector2( 323.077, 304.767 )
-
-[node name="Control" parent="CanvasLayer" index="0"]
-visible = true
 
 [node name="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2" index="2"]
 custom_constants/separation = 48
