@@ -1,7 +1,6 @@
 extends Node
 
 func _ready():
-	Save._on_Load()
 	$AnimationPlayer.play("Wipe_Godot")
 	yield($AnimationPlayer, "animation_finished")
 	$AnimationPlayer.play("Wipe_CopyRight")

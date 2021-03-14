@@ -15,10 +15,6 @@
 [ext_resource path="res://Scene/Object/Sofa/SofaV2.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scene/Object/WaterTank/WaterTank.tscn" type="PackedScene" id=14]
 
-
-
-
-
 [sub_resource type="Animation" id=1]
 resource_name = "Wipe_In"
 length = 0.4
@@ -160,7 +156,7 @@ position = Vector2( 640.028, 360.286 )
 position = Vector2( -160, 288 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 6
+frame = 2
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 3 )
