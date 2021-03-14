@@ -50,7 +50,7 @@ rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 3
+frame = 1
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -106,8 +106,20 @@ position = Vector2( 454.16, -54.8066 )
 [node name="Star3" parent="YSort" index="17" instance=ExtResource( 11 )]
 position = Vector2( 514.006, 267.103 )
 
-[node name="Tree2" parent="YSort" index="18" instance=ExtResource( 7 )]
+[node name="Tree" parent="." index="7" instance=ExtResource( 7 )]
 position = Vector2( 323.077, 304.767 )
+
+[node name="NextLevelButton" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer" index="0"]
+margin_left = 287.0
+margin_right = 449.0
+
+[node name="RetryButton" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 0.0
+margin_right = 87.0
+
+[node name="LevelButton" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 136.0
+margin_right = 238.0
 
 [node name="Control2" parent="CanvasLayer" index="1"]
 visible = false
