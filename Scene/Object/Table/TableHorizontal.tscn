@@ -80,24 +80,12 @@ extents = Vector2( 36.5866, 19.1014 )
 length = 0.6
 step = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("../TableHorizontal/TableHorizontal4:modulate")
+tracks/0/path = NodePath("Sprite2:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ Color( 100, 100, 100, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
 "times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
@@ -108,24 +96,12 @@ tracks/1/keys = {
 length = 0.1
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("../TableHorizontal/TableHorizontal4:modulate")
+tracks/0/path = NodePath("Sprite2:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
@@ -163,7 +139,7 @@ position = Vector2( 2.21085, -5.38688 )
 rotation = 1.5708
 scale = Vector2( 0.3, 0.4 )
 frames = SubResource( 1 )
-frame = 59
+frame = 36
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -201,6 +177,5 @@ wait_time = 0.2
 [node name="BulletSpawnLeft" type="Position2D" parent="."]
 
 [node name="BulletSpawnRight" type="Position2D" parent="."]
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

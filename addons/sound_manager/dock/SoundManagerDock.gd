@@ -51,12 +51,15 @@ onready var bgs_bus_field = get_node("VBoxContainer/BGSBusPanel/NameField")
 onready var se_bus_field = get_node("VBoxContainer/SEBusPanel/NameField")
 onready var me_bus_field = get_node("VBoxContainer/MEBusPanel/NameField")
 
+# Audio File Panel Toggles
+onready var audio_files_panel = get_node("VBoxContainer/AudioFilesPanel")
+onready var toggle_audio_files_button = get_node("VBoxContainer/ToggleFilesPanelButton")
+
 # File list section
-onready var file_list = get_node("VBoxContainer/ScrollContainer/Files")
+onready var file_list = get_node("VBoxContainer/AudioFilesPanel/ScrollContainer/Files")
 
 # Dictionary section
 onready var dictionary_panel = get_node("VBoxContainer/DictionaryContainer/DictionaryPanel")
-onready var add_entry_button = get_node("VBoxContainer/AddEntryButton")
 
 # Advanced options section
 onready var advanced_panel = get_node("VBoxContainer/AdvancedOptions/AdvancedPanel")
@@ -65,6 +68,8 @@ onready var preload_panel = get_node("VBoxContainer/AdvancedOptions/PreloadPanel
 onready var preload_button = get_node("VBoxContainer/AdvancedOptions/PreloadPanel/PreloadButton")
 onready var preinstantiate_panel = get_node("VBoxContainer/AdvancedOptions/PreinstantiatePanel")
 onready var preinstantiate_button = get_node("VBoxContainer/AdvancedOptions/PreinstantiatePanel/PreinstantiateButton")
+onready var debug_panel = get_node("VBoxContainer/AdvancedOptions/DebugPanel")
+onready var debug_button = get_node("VBoxContainer/AdvancedOptions/DebugPanel/DebugButton")
 
 # Internal variables
 var TITLE : String = "SoundManager"
@@ -93,8 +98,9 @@ var Audio_Busses : Dictionary = {
 	"SE" : "",
 	"ME" : "",
 }
-var PRELOAD_RES			: bool		= false
-var PREINSTANTIATE_NODES	: bool		= false
+var PRELOAD_RES : bool = false
+var PREINSTANTIATE_NODES : bool = false
+var DEBUG : bool = false
 var Audio_Files_Dictionary : Dictionary = {}
 var file : File = File.new()
 var data_settings : Dictionary
@@ -110,7 +116,7 @@ signal check_file_names_requested()
 # Methods
 
 func _ready() -> void:
-	self.rect_size.x = get_node("VBoxContainer/ScrollContainer").rect_size.x + 25
+	#self.rect_size.x = get_node("VBoxContainer/ScrollContainer").rect_size.x + 25
 	var json_exists = read_sound_manager_settings()
 	if json_exists:
 		update_sound_manager_settings()
@@ -154,13 +160,14 @@ func connect_signals() -> void:
 	se_bus_field.connect("text_entered", self, "_on_se_bus_entered")
 	me_bus_field.connect("text_entered", self, "_on_me_bus_entered")
 	
-	# Dictionary 
-	add_entry_button.connect("pressed", self, "_on_add_entry_button_pressed")
-	
+	# Audio files Panel
+	toggle_audio_files_button.connect("pressed", self, "_on_toggle_audio_files_pressed" )
+
 	# Advanced
 	advanced_button.connect("toggled", self, "_on_advanced_button_toggled");
 	preload_button.connect("toggled", self, "_on_preload_button_toggled");
 	preinstantiate_button.connect("toggled", self, "_on_preinstantiate_button_toggled");
+	debug_button.connect("toggled", self, "_on_debug_button_toggled")
 
 
 func parse_json_string(json_file: String) -> Dictionary:
@@ -189,6 +196,7 @@ func read_sound_manager_settings() -> bool:
 	advanced_button.set_pressed(PRELOAD_RES or PREINSTANTIATE_NODES)
 	preload_button.set_pressed(PRELOAD_RES)
 	preinstantiate_button.set_pressed(PREINSTANTIATE_NODES)
+	debug_button.set_pressed(DEBUG)
 	self._on_advanced_button_toggled(PRELOAD_RES or PREINSTANTIATE_NODES)
 	self._on_preload_button_toggled(PRELOAD_RES)
 	self._on_preinstantiate_button_toggled(PREINSTANTIATE_NODES)
@@ -202,6 +210,7 @@ func update_sound_manager_settings() -> void:
 	data_settings["Audio_Files_Dictionary"] = Audio_Files_Dictionary
 	data_settings["PRELOAD_RES"] = PRELOAD_RES
 	data_settings["PREINSTANTIATE_NODES"] = PREINSTANTIATE_NODES
+	data_settings["DEBUG"] = DEBUG
 	file.open("res://addons/sound_manager/SoundManager.json", File.WRITE)
 	file.store_string(JSON.print(data_settings, "", true))
 	file.close()
@@ -273,9 +282,9 @@ func populate_files_list(file_names : PoolStringArray)->void:
 			file_name_container.set_alignment(BoxContainer.ALIGN_CENTER)
 			dir_line.set_custom_minimum_size(Vector2(60, 0))
 			file_line.set_custom_minimum_size(Vector2(80, 0))
-			dir_line.set_text(file_names[i].get_base_dir() + "/")
-			if dir_line.get_text() == "":
-				dir_line.set_text("res://")
+			dir_line.set_text(file_names[i].get_base_dir())
+			if dir_line.get_text() != "res://":
+				dir_line.text = dir_line.text + "/"
 			file_line.set_name("File_" + str(i))
 			file_line.set_text(file_names[i].get_file())
 			dir_line.set("custom_colors/font_color", Color(1, 1, 1))
@@ -314,15 +323,12 @@ func insert_new_entry(key: String = "", value: String = ""):
 	entry_container.set_name("Entry_" + str((dictionary_panel.get_child_count() + 1)))
 	
 	# Key UI
-	if key == "":
-		key_input.set_text("Sound_" + str((dictionary_panel.get_child_count() + 1)))
-	else:
-		key_input.set_text(key)
+	key_input.set_text(key)
 	key_input.set_placeholder("Sound name")
 	key_input.set_custom_minimum_size(Vector2(120,0))
 	key_input.set_max_length(280)
 	key_input.set_tooltip("Insert here a key for this sound file")
-	
+#	
 	# Value UI
 	value_input.set_text(value)
 	value_input.set_placeholder("sound_file_name.extension")
@@ -368,7 +374,6 @@ func add_entry(key : String, value : String) -> void:
 		var index = Audio_Files_Dictionary.values().find(value)
 		if index >= 0:
 			var old_key = Audio_Files_Dictionary.keys()[index]
-			print_debug(old_key)
 			Audio_Files_Dictionary.erase(old_key)
 		Audio_Files_Dictionary[key] = value
 		update_sound_manager_settings()
@@ -516,7 +521,12 @@ func set_bus(bus : String, sound_type : String) -> void:
 
 # Insert a new entry from the dictionary section
 func _on_add_entry_button_pressed(file_path : String = "")->void:
-	add_entry("Sound_", file_path)
+	var key = "Sound_" + str(Audio_Files_Dictionary.keys().size())
+	add_entry(key, file_path)
+
+# Toggles the hidden panel for managing audio files
+func _on_toggle_audio_files_pressed() -> void:
+	audio_files_panel.visible = !audio_files_panel.visible
 
 
 func _on_save_entry_button_pressed(index : int) -> void:
@@ -547,16 +557,22 @@ func _on_value_input_entered(new_value : String, new_key : String) -> void:
 func _on_advanced_button_toggled(toggled : bool) -> void:
 	preload_panel.set_visible(toggled)
 	preinstantiate_panel.set_visible(toggled)
+	debug_panel.set_visible(toggled)
 
 
 func _on_preload_button_toggled(toggled : bool) -> void:
-	PRELOAD_RES = toggled;
-	update_sound_manager_settings();
+	PRELOAD_RES = toggled
+	update_sound_manager_settings()
 
 
 func _on_preinstantiate_button_toggled(toggled : bool) -> void:
-	PREINSTANTIATE_NODES = toggled;
-	update_sound_manager_settings();
+	PREINSTANTIATE_NODES = toggled
+	update_sound_manager_settings()
+
+
+func _on_debug_button_toggled(toggled : bool) -> void:
+	DEBUG = toggled
+	update_sound_manager_settings()
 
 
 #################################

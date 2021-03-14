@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Object/Sofa/SofaH2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Object/Sofa/SofaV2.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scene/Object/Star/Star.tscn" type="PackedScene" id=10]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -47,7 +46,7 @@ scale = Vector2( 2.3, 2.3 )
 position = Vector2( -19.8825, -272.47 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 3
+frame = 5
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -110,7 +109,7 @@ position = Vector2( 242.587, 183.95 )
 position = Vector2( 418.335, 316.007 )
 
 [node name="Terrorist6" parent="YSort" index="20" instance=ExtResource( 4 )]
-position = Vector2( -8.1609, 172.55 )
+position = Vector2( -28.1609, 172.55 )
 
 [node name="Terrorist2" parent="YSort" index="21" instance=ExtResource( 4 )]
 position = Vector2( 108.385, 11.3273 )
@@ -120,29 +119,5 @@ position = Vector2( 250.009, -81.489 )
 
 [node name="Hostage2" parent="YSort" index="23" instance=ExtResource( 5 )]
 position = Vector2( 223.409, 312.767 )
-
-[node name="Hostage3" parent="YSort" index="24" instance=ExtResource( 5 )]
-position = Vector2( 468.409, 253.767 )
-
-[node name="Hostage4" parent="YSort" index="25" instance=ExtResource( 5 )]
-position = Vector2( 368.409, 99.767 )
-
-[node name="Hostage5" parent="YSort" index="26" instance=ExtResource( 5 )]
-position = Vector2( -49.591, 173.767 )
-
-[node name="Star" parent="YSort" index="27" instance=ExtResource( 10 )]
-position = Vector2( 212, -77 )
-
-[node name="Star2" parent="YSort" index="28" instance=ExtResource( 10 )]
-position = Vector2( 150, 183 )
-
-[node name="Star3" parent="YSort" index="29" instance=ExtResource( 10 )]
-position = Vector2( 509, 253 )
-
-[node name="LevelLabel" parent="CanvasLayer" index="5"]
-text = "Level - 11"
-
-[node name="Mouse_cursor" parent="CanvasLayer" index="6"]
-position = Vector2( -110.126, -26.2204 )
 
 [editable path="YSort/Player"]

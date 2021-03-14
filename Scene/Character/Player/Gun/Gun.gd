@@ -27,6 +27,7 @@ func shoot():
 #		get_tree().get_root().get_node("World/YSort").add_child(bullet_instance)
 #		get_tree().get_root().add_child(bullet_instance)
 		SoundManager.play_se("res://Scene/Character/Player/Gun/GunSound/GunsoundNew.wav")
+		SoundManager.set_pitch_scale(1,"res://Scene/Character/Player/Gun/GunSound/GunsoundNew.wav")
 		can_fire = false
 		yield(get_tree().create_timer(firerate), "timeout")
 		can_fire = true

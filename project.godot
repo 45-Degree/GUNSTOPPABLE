@@ -30,6 +30,7 @@ boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 
 Singleton="*res://Scene/Levels/Singleton.gd"
 SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
+Save="*res://Scene/Levels/Save.gd"
 
 [display]
 

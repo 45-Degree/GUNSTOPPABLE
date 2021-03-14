@@ -20,7 +20,7 @@ signal mouse_click
 var smooth_zoom = 1
 var target_zoom = 0.5
 const ZOOM_SPEED = 3
-var Star_Count = 0
+export var Star_Count = 0
 
 func _input(event):
 		if(event is InputEventMouseButton and event.is_pressed() and !event.is_echo()):
@@ -46,7 +46,7 @@ func _process(delta):
 		get_tree().call_group("Detector", "detector_ON")
 		emit_signal("level_Completed")
 		Complete = true
-	if Input.is_action_just_pressed("Pause"):
+	if Input.is_action_just_pressed("Pause") and Singleton.Playable == true:
 		get_tree().paused = true
 		pause.show()
 	if  Hostage_dead == true:
@@ -87,6 +87,14 @@ func  _on_Star_Pick():
 
 func _on_Passable():
 	if Complete == true:
+		Save.data["Level"+ str(int(get_tree().current_scene.name)+1)] = true
+		if !Save.data.has("Star" + str(int(get_tree().current_scene.name))):
+			Save.data["Star"+ str(int(get_tree().current_scene.name))] = Star_Count
+		elif Save.data["Star" + str(int(get_tree().current_scene.name))] <= Star_Count:
+			Save.data["Star" + str(int(get_tree().current_scene.name))] = Star_Count
+		else:
+			pass
+		Save._on_Save()
 		message.set_text("MISSION COMPLETED!")
 		starMessage.text = "You collect " + str(Star_Count) + " star"
 		Singleton.Playable = false
