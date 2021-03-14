@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Object/Sofa/SofaH2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Object/Sofa/SofaV2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/Object/Star/Star.tscn" type="PackedScene" id=10]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -109,7 +110,7 @@ position = Vector2( 242.587, 183.95 )
 position = Vector2( 418.335, 316.007 )
 
 [node name="Terrorist6" parent="YSort" index="20" instance=ExtResource( 4 )]
-position = Vector2( -28.1609, 172.55 )
+position = Vector2( -10.1609, 172.55 )
 
 [node name="Terrorist2" parent="YSort" index="21" instance=ExtResource( 4 )]
 position = Vector2( 108.385, 11.3273 )
@@ -117,7 +118,31 @@ position = Vector2( 108.385, 11.3273 )
 [node name="Hostage" parent="YSort" index="22" instance=ExtResource( 5 )]
 position = Vector2( 250.009, -81.489 )
 
-[node name="Hostage2" parent="YSort" index="23" instance=ExtResource( 5 )]
+[node name="Hostage3" parent="YSort" index="23" instance=ExtResource( 5 )]
+position = Vector2( 364.009, 102.511 )
+
+[node name="Hostage4" parent="YSort" index="24" instance=ExtResource( 5 )]
+position = Vector2( 470.009, 251.511 )
+
+[node name="Hostage5" parent="YSort" index="25" instance=ExtResource( 5 )]
+position = Vector2( -50.991, 175.511 )
+
+[node name="Hostage2" parent="YSort" index="26" instance=ExtResource( 5 )]
 position = Vector2( 223.409, 312.767 )
+
+[node name="Star" parent="YSort" index="27" instance=ExtResource( 10 )]
+position = Vector2( 212, -79 )
+
+[node name="Star2" parent="YSort" index="28" instance=ExtResource( 10 )]
+position = Vector2( 520, 260 )
+
+[node name="Star3" parent="YSort" index="29" instance=ExtResource( 10 )]
+position = Vector2( 142, 186 )
+
+[node name="Control2" parent="CanvasLayer" index="1"]
+visible = false
+
+[node name="Control4" parent="CanvasLayer" index="3"]
+visible = true
 
 [editable path="YSort/Player"]

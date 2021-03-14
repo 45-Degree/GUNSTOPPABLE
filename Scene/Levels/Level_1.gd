@@ -3,13 +3,13 @@ extends Node
 onready var control = $CanvasLayer/Control
 onready var pause =$CanvasLayer/Control2
 onready var option = $CanvasLayer/Control3
-onready var message = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/Message
-onready var button = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer/NextLevelButton
+onready var message = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2/Message
+onready var button = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton
 onready var camera =$Camera2D
 onready var player = $YSort/Player
 onready var animationPlayer = $AnimationPlayer
 onready var finalPosition = $SpawnPosition
-onready var starMessage =$CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/StarMessage
+onready var starMessage =$CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2/StarMessage
 var soundplay = false
 export(int, "Left", "Right", "Top", "Bottom") var spawnHere
 onready var Complete = false
@@ -78,7 +78,7 @@ func _on_Hostage_Die():
 	Complete = false
 	Hostage_dead = true
 	starMessage.text = "You collect " + str(Star_Count) + " star"
-	button.hide()
+	$CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton.hide()
 	message.set_text("You kill a hostage!")
 	control.show()
 
