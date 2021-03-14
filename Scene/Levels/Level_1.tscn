@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Character/NPC/Hostage/Hostage.tscn" type="PackedScene" id=2]
@@ -11,9 +11,6 @@
 [ext_resource path="res://Scene/Object/Sofa/SofaV.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/Object/Detector/detector.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scene/Object/Star/Star.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scene/UI/button/ExitSprite/ExitNormal.png" type="Texture" id=12]
-[ext_resource path="res://Scene/UI/button/ExitSprite/ExitPush.png" type="Texture" id=13]
-[ext_resource path="res://Scene/UI/button/ExitSprite/ExitHover.png" type="Texture" id=14]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -53,7 +50,7 @@ rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 3
+frame = 1
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -109,30 +106,22 @@ position = Vector2( 454.16, -54.8066 )
 [node name="Star3" parent="YSort" index="17" instance=ExtResource( 11 )]
 position = Vector2( 514.006, 267.103 )
 
-[node name="Tree2" parent="YSort" index="18" instance=ExtResource( 7 )]
+[node name="Tree" parent="." index="7" instance=ExtResource( 7 )]
 position = Vector2( 323.077, 304.767 )
 
-[node name="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2" index="2"]
-custom_constants/separation = 48
+[node name="NextLevelButton" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer" index="0"]
+margin_left = 287.0
+margin_right = 449.0
 
-[node name="NextLevelButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" index="0"]
-margin_right = 154.0
+[node name="RetryButton" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 0.0
+margin_right = 87.0
 
-[node name="LevelButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" index="1"]
-margin_left = 202.0
-margin_right = 357.0
-
-[node name="RetryButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" index="2"]
-margin_left = 405.0
+[node name="LevelButton" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 136.0
+margin_right = 238.0
 
 [node name="Control2" parent="CanvasLayer" index="1"]
 visible = false
-
-[node name="Button3" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer" index="2"]
-size_flags_horizontal = 3
-size_flags_vertical = 0
-texture_normal = ExtResource( 12 )
-texture_pressed = ExtResource( 13 )
-texture_hover = ExtResource( 14 )
 
 [editable path="YSort/Player"]
