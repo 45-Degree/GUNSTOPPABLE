@@ -85,8 +85,6 @@ func _on_Hurtbox_area_entered(area):
 #			BulletP_Instance.position = $BulletSpawnDown.get_global_position()
 #			BulletP_Instance.direction = Vector2.DOWN.normalized()
 #		BulletP_Instance.rotation = BulletP_Instance.direction.angle()
-#	if button == true:
-		animatedSprite.play("Green")
 func _on_Hurtbox_area_exited(area):
 	if Laser == true:
 		Emit = false
