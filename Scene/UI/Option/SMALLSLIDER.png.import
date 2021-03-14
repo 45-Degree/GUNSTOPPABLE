@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BODY.png-0a5fbd5962ade6dcf321400ccffd3063.stex"
+path="res://.import/SMALLSLIDER.png-55f2532fc2e11e0c75d28b58ba8b664a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/UI/button/Slider/BODY.png"
-dest_files=[ "res://.import/BODY.png-0a5fbd5962ade6dcf321400ccffd3063.stex" ]
+source_file="res://Scene/UI/Option/SMALLSLIDER.png"
+dest_files=[ "res://.import/SMALLSLIDER.png-55f2532fc2e11e0c75d28b58ba8b664a.stex" ]
 
 [params]
 
