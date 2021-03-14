@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_Template.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/Object/Star/Star.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Character/NPC/Terrorist/Terrorist.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Character/NPC/Hostage/Hostage.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/Object/Sofa/SofaH.tscn" type="PackedScene" id=10]
@@ -37,7 +38,7 @@ tile_data = PoolIntArray( -262153, 78, 0, -196617, 78, 0, -131081, 78, 0, -65545
 position = Vector2( -9.90512, 50.3565 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 0
+frame = 3
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -70,7 +71,7 @@ position = Vector2( 251.078, 451.387 )
 position = Vector2( 336.798, 414.877 )
 
 [node name="Hostage10" parent="YSort" index="10" instance=ExtResource( 9 )]
-position = Vector2( 420.93, 319.633 )
+position = Vector2( 420.93, 360.112 )
 
 [node name="Terrorist" parent="YSort" index="11" instance=ExtResource( 8 )]
 position = Vector2( 247.049, 336.315 )
@@ -186,5 +187,14 @@ scale = Vector2( 2.3, 2.3 )
 [node name="Detector3" parent="YSort" index="47" instance=ExtResource( 18 )]
 position = Vector2( 775.877, 712.372 )
 scale = Vector2( 2.3, 2.3 )
+
+[node name="Star" parent="YSort" index="48" instance=ExtResource( 2 )]
+position = Vector2( 251.809, 414.701 )
+
+[node name="Star2" parent="YSort" index="49" instance=ExtResource( 2 )]
+position = Vector2( 420.867, 323.426 )
+
+[node name="Star3" parent="YSort" index="50" instance=ExtResource( 2 )]
+position = Vector2( 757.396, 340.093 )
 
 [editable path="YSort/Player"]
