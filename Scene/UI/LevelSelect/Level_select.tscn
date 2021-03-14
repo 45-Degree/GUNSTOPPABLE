@@ -211,7 +211,6 @@ margin_top = 159.0
 margin_right = 36.0
 margin_bottom = 183.0
 custom_fonts/font = ExtResource( 4 )
-disabled = true
 text = "16"
 
 [node name="Button17" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/CenterContainer/GridContainer"]
@@ -220,7 +219,6 @@ margin_top = 159.0
 margin_right = 90.0
 margin_bottom = 183.0
 custom_fonts/font = ExtResource( 4 )
-disabled = true
 text = "17"
 
 [node name="Button18" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/CenterContainer/GridContainer"]
@@ -229,7 +227,6 @@ margin_top = 159.0
 margin_right = 144.0
 margin_bottom = 183.0
 custom_fonts/font = ExtResource( 4 )
-disabled = true
 text = "18"
 
 [node name="Button19" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/CenterContainer/GridContainer"]

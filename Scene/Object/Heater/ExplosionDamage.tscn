@@ -68,14 +68,14 @@ animations = [ {
 radius = 19.7839
 
 [node name="Node2D" type="Node2D"]
-scale = Vector2( 2, 2 )
+scale = Vector2( 3, 3 )
 script = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 5.61922, 6.81118 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 10 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]

@@ -17,21 +17,13 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 424, 144, 0, 0, 0, 0, 424, 248, 0, 0, 0, 0, 304, 248, 0, 0, 0, 0, 424, 248, 0, 0, 0, 0, 424, 144 )
 }
 
-<<<<<<< HEAD
 [sub_resource type="Curve2D" id=2]
-=======
-[sub_resource type="Curve2D" id=3]
->>>>>>> parent of 6e4c9cd (Update Level and Star)
 bake_interval = 10.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 416, 144, 0, 0, 0, 0, 416, 248, 0, 0, 0, 0, 640, 248, 0, 0, 0, 0, 416, 248, 0, 0, 0, 0, 416, 144 )
 }
 
-<<<<<<< HEAD
 [sub_resource type="AnimationNodeStateMachinePlayback" id=3]
-=======
-[sub_resource type="AnimationNodeStateMachinePlayback" id=2]
->>>>>>> parent of 6e4c9cd (Update Level and Star)
 
 [node name="Level_8" instance=ExtResource( 1 )]
 
@@ -78,11 +70,7 @@ position = Vector2( 184.998, 145.996 )
 curve = SubResource( 1 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="YSort/Path2D" index="0"]
-<<<<<<< HEAD
 position = Vector2( 424, 144 )
-=======
-position = Vector2( 448, 152 )
->>>>>>> parent of 6e4c9cd (Update Level and Star)
 rotate = false
 lookahead = 44.139
 
@@ -93,17 +81,10 @@ speed = 1
 
 [node name="Path2D2" type="Path2D" parent="YSort" index="9"]
 position = Vector2( -144, -312 )
-<<<<<<< HEAD
 curve = SubResource( 2 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="YSort/Path2D2" index="0"]
 position = Vector2( 416, 144 )
-=======
-curve = SubResource( 3 )
-
-[node name="PathFollow2D" type="PathFollow2D" parent="YSort/Path2D2" index="0"]
-position = Vector2( 424, 144 )
->>>>>>> parent of 6e4c9cd (Update Level and Star)
 rotate = false
 lookahead = 44.139
 
@@ -134,17 +115,10 @@ scale = Vector2( 1.124, 1 )
 position = Vector2( -152.246, 309.97 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-<<<<<<< HEAD
 frame = 7
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 3 )
-=======
-frame = 6
-
-[node name="AnimationTree" parent="YSort/Player" index="5"]
-parameters/playback = SubResource( 2 )
->>>>>>> parent of 6e4c9cd (Update Level and Star)
 
 [node name="LockDoorH" parent="YSort" index="15" instance=ExtResource( 2 )]
 position = Vector2( 504.408, 88.3632 )

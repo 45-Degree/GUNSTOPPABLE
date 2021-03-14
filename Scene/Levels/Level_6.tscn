@@ -36,11 +36,7 @@ tile_data = PoolIntArray( -524272, 78, 0, -458736, 78, 0, -327690, 81, 0, -32768
 position = Vector2( 5.44617, -205.344 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-<<<<<<< HEAD
 frame = 7
-=======
-frame = 5
->>>>>>> parent of 6e4c9cd (Update Level and Star)
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -116,7 +112,6 @@ position = Vector2( 560.838, 53.1996 )
 position = Vector2( 776.251, 583.97 )
 rotation = 4.71239
 scale = Vector2( 2.3, 2.3 )
-<<<<<<< HEAD
 
 [node name="Detector2" parent="YSort" index="24" instance=ExtResource( 11 )]
 position = Vector2( 776.154, 552.115 )
@@ -124,15 +119,6 @@ rotation = 4.71239
 scale = Vector2( 2.3, 2.3 )
 
 [node name="ColorRect" parent="CanvasLayer" index="4"]
-=======
-
-[node name="Detector2" parent="YSort" index="24" instance=ExtResource( 11 )]
-position = Vector2( 776.154, 552.115 )
-rotation = 4.71239
-scale = Vector2( 2.3, 2.3 )
-
-[node name="ColorRect" parent="CanvasLayer" index="3"]
->>>>>>> parent of 6e4c9cd (Update Level and Star)
 visible = false
 
 [editable path="YSort/Player"]

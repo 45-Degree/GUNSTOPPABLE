@@ -3,9 +3,6 @@
 [ext_resource path="res://Scene/Object/Star/star-icon.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=2]
 
-
-
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 38.2097, 54.3969 )
 
@@ -19,13 +16,13 @@ destroyable = false
 Star = true
 
 [node name="Sprite2" parent="." index="0"]
-scale = Vector2( 0.007, 0.007 )
+scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 1 )
 region_enabled = false
 region_rect = Rect2( 2, 1, 74, 111 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 51
+frame = 19
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( 0.0182307, -0.143819 )
