@@ -9,7 +9,6 @@ onready var camera =$Camera2D
 onready var player = $YSort/Player
 onready var animationPlayer = $AnimationPlayer
 onready var finalPosition = $SpawnPosition
-onready var starMessage =$CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2/StarMessage
 var soundplay = false
 export(int, "Left", "Right", "Top", "Bottom") var spawnHere
 onready var Complete = false
@@ -77,7 +76,6 @@ func _on_Hostage_Die():
 	Singleton.Playable = false
 	Complete = false
 	Hostage_dead = true
-	starMessage.text = "You collect " + str(Star_Count) + " star"
 	$CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton.hide()
 	message.set_text("You kill a hostage!")
 	control.show()
@@ -96,7 +94,6 @@ func _on_Passable():
 			pass
 		Save._on_Save()
 		message.set_text("MISSION COMPLETED!")
-		starMessage.text = "You collect " + str(Star_Count) + " star"
 		Singleton.Playable = false
 		control.show()
 		get_tree().call_group("Hostage", "invincible")
