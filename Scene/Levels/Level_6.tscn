@@ -140,9 +140,6 @@ position = Vector2( 689.234, 203.452 )
 [node name="Star3" parent="YSort" index="29" instance=ExtResource( 12 )]
 position = Vector2( 563.158, 620.881 )
 
-[node name="Control2" parent="CanvasLayer" index="1"]
-visible = false
-
 [node name="Control4" parent="CanvasLayer" index="3"]
 visible = true
 

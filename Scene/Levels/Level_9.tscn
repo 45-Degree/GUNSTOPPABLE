@@ -45,7 +45,7 @@ scale = Vector2( 2.3, 2.3 )
 position = Vector2( -27.3549, 515.607 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 1
+frame = 3
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -148,9 +148,6 @@ position = Vector2( 351.19, 317.179 )
 
 [node name="Star3" parent="YSort" index="33" instance=ExtResource( 13 )]
 position = Vector2( 11.4859, 59.2263 )
-
-[node name="Control2" parent="CanvasLayer" index="1"]
-visible = false
 
 [node name="Control4" parent="CanvasLayer" index="3"]
 visible = true
