@@ -49,6 +49,9 @@ position = Vector2( 519.463, -87.9286 )
 rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
+[node name="AnimatedSprite" parent="YSort/Player" index="2"]
+frame = 0
+
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
 
@@ -98,7 +101,7 @@ position = Vector2( 572.542, 159.592 )
 position = Vector2( 121.54, 214.187 )
 
 [node name="AnimatedSprite" parent="YSort/Star" index="1"]
-frame = 48
+frame = 31
 
 [node name="Star2" parent="YSort" index="16" instance=ExtResource( 11 )]
 position = Vector2( 454.16, -54.8066 )
@@ -109,25 +112,25 @@ position = Vector2( 514.006, 267.103 )
 [node name="Tree2" parent="YSort" index="18" instance=ExtResource( 7 )]
 position = Vector2( 323.077, 304.767 )
 
+[node name="Control" parent="CanvasLayer" index="0"]
+visible = true
+
 [node name="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2" index="2"]
 custom_constants/separation = 48
 
 [node name="NextLevelButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" index="0"]
-margin_right = 154.0
+margin_right = 141.0
 
-[node name="LevelButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" index="1"]
-margin_left = 202.0
-margin_right = 357.0
+[node name="RetryButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" index="1"]
+margin_left = 189.0
+margin_right = 330.0
 
-[node name="RetryButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" index="2"]
-margin_left = 405.0
+[node name="LevelButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" index="2"]
+margin_left = 378.0
 
 [node name="Button3" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer" index="2"]
 size_flags_horizontal = 3
 size_flags_vertical = 0
-
-[node name="Control4" parent="CanvasLayer" index="3"]
-visible = false
 
 [node name="CenterContainer" parent="CanvasLayer/Control4" index="0"]
 mouse_filter = 2
