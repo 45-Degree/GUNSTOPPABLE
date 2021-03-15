@@ -38,7 +38,7 @@ tile_data = PoolIntArray( -524298, 81, 0, -524297, 81, 0, -524296, 81, 0, -52429
 position = Vector2( -343.692, 288.009 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 3
+frame = 1
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -76,7 +76,6 @@ position = Vector2( 408.478, 279.051 )
 
 [node name="Keycard" parent="YSort" index="11" instance=ExtResource( 8 )]
 position = Vector2( -83.908, 445.756 )
-node_path = NodePath("../TableHorizontal2")
 
 [node name="TableHorizontal2" parent="YSort" index="12" instance=ExtResource( 16 )]
 position = Vector2( 169.616, 553.011 )
@@ -144,5 +143,11 @@ position = Vector2( 506.919, 694.526 )
 
 [node name="Star3" parent="YSort" index="31" instance=ExtResource( 2 )]
 position = Vector2( 363.449, 439.68 )
+
+[node name="Control2" parent="CanvasLayer" index="1"]
+visible = false
+
+[node name="LevelLabel" parent="CanvasLayer" index="5"]
+visible = false
 
 [editable path="YSort/Player"]

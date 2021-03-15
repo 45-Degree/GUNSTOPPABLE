@@ -3,16 +3,13 @@ extends Node
 onready var control = $CanvasLayer/Control
 onready var pause =$CanvasLayer/Control2
 onready var option = $CanvasLayer/Control3
-onready var message = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/Message
-onready var button = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer/NextLevelButton
-onready var star1 = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/TextureRect
-onready var star2 = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/TextureRect2
-onready var star3 = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/TextureRect3
-onready var starCrack = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/HBoxContainer
+onready var message = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2/Message
+onready var button = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton
 onready var camera =$Camera2D
 onready var player = $YSort/Player
 onready var animationPlayer = $AnimationPlayer
 onready var finalPosition = $SpawnPosition
+onready var starMessage =$CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2/StarMessage
 var soundplay = false
 export(int, "Left", "Right", "Top", "Bottom") var spawnHere
 onready var Complete = false
@@ -30,9 +27,6 @@ func _input(event):
 			emit_signal("mouse_click")
 
 func _ready():
-	star1.texture = load("res://Scene/UI/Star/Star.png")
-	star2.texture = load("res://Scene/UI/Star/Star.png")
-	star3.texture = load("res://Scene/UI/Star/Star.png")
 	Singleton.Playable = false
 	$CanvasLayer/Control4.show()
 	connect("level_Completed", self, "_on_level_Completed")
@@ -47,7 +41,6 @@ func _ready():
 
 
 func _process(delta):
-	print(Star_Count)
 	var terrorist = get_tree().get_nodes_in_group("Terrorist").size()
 	if terrorist == 0 and Hostage_dead == false:
 		get_tree().call_group("Detector", "detector_ON")
@@ -81,15 +74,11 @@ func _on_Button2_pressed():
 	get_tree().reload_current_scene()
 
 func _on_Hostage_Die():
-	star1.hide()
-	star2.hide()
-	star3.hide()
-	starCrack.show()
-	SoundManager.play_bgm("res://Sound/Music/Mission_Fail.wav")
 	Singleton.Playable = false
 	Complete = false
 	Hostage_dead = true
-	button.hide()
+	starMessage.text = "You collect " + str(Star_Count) + " star"
+	$CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton.hide()
 	message.set_text("You kill a hostage!")
 	control.show()
 
@@ -98,7 +87,6 @@ func  _on_Star_Pick():
 
 func _on_Passable():
 	if Complete == true:
-		SoundManager.play_bgm("res://Sound/Music/Mission_Success.wav")
 		Save.data["Level"+ str(int(get_tree().current_scene.name)+1)] = true
 		if !Save.data.has("Star" + str(int(get_tree().current_scene.name))):
 			Save.data["Star"+ str(int(get_tree().current_scene.name))] = Star_Count
@@ -108,19 +96,9 @@ func _on_Passable():
 			pass
 		Save._on_Save()
 		message.set_text("MISSION COMPLETED!")
+		starMessage.text = "You collect " + str(Star_Count) + " star"
 		Singleton.Playable = false
 		control.show()
-		if Star_Count == 0:
-			pass
-		if Star_Count == 1:
-			star1.texture = load("res://Scene/UI/Star/tile005.png")
-		elif Star_Count ==2:
-			star1.texture = load("res://Scene/UI/Star/tile005.png")
-			star2.texture = load("res://Scene/UI/Star/tile005.png")
-		elif Star_Count ==3:
-			star1.texture = load("res://Scene/UI/Star/tile005.png")
-			star2.texture = load("res://Scene/UI/Star/tile005.png")
-			star3.texture = load("res://Scene/UI/Star/tile005.png")
 		get_tree().call_group("Hostage", "invincible")
 
 func _on_Button_button_up():
