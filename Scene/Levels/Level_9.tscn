@@ -47,7 +47,7 @@ scale = Vector2( 2.3, 2.3 )
 position = Vector2( -27.3549, 515.607 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 0
+frame = 6
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -157,15 +157,11 @@ position = Vector2( -24.7825, 376.35 )
 [node name="Toilet" parent="YSort" index="35" instance=ExtResource( 10 )]
 position = Vector2( 630.242, -28.2094 )
 
-[node name="Control2" parent="CanvasLayer" index="1"]
-visible = false
-
 [node name="ColorRect" parent="CanvasLayer" index="4"]
 margin_left = 740.063
 margin_right = 740.063
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
-visible = false
 text = "Level - 9"
 
 [node name="Mouse_cursor" parent="CanvasLayer" index="6"]

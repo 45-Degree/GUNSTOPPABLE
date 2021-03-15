@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scene/UI/Floor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/UI/MainMenu/MainMenu.gd" type="Script" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://Scene/UI/button/ExitSprite/QuitPush.png" type="Texture" id=11]
 [ext_resource path="res://Scene/UI/button/CreditSprite/CreditHover.png" type="Texture" id=12]
 [ext_resource path="res://Scene/UI/button/ExitSprite/QuitNormal.png" type="Texture" id=13]
-[ext_resource path="res://Scene/UI/Transition.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scene/UI/Mouse_cursor.tscn" type="PackedScene" id=15]
 
 [sub_resource type="DynamicFont" id=1]
@@ -146,17 +145,8 @@ texture_pressed = ExtResource( 11 )
 expand = true
 stretch_mode = 6
 
-[node name="Transition" parent="." instance=ExtResource( 14 )]
-
-[node name="ColorRect" parent="Transition" index="1"]
-visible = false
-margin_left = 0.0
-margin_right = 0.0
-
 [node name="Mouse_cursor" parent="." instance=ExtResource( 15 )]
 [connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/CenterContainer/VBoxContainer/Button" to="." method="_on_Button_button_up"]
 [connection signal="button_up" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/CenterContainer/VBoxContainer/Button3" to="." method="_on_Button3_button_up"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/HBoxContainer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer3/VBoxContainer2/HBoxContainer/Button2" to="." method="_on_Button2_pressed"]
-
-[editable path="Transition"]

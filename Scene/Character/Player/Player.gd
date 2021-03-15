@@ -34,10 +34,14 @@ func _physics_process(delta):
 		state = SHOOT
 		LaserBeam.enabled = false
 		LaserBeam.visible = false
-	if LASER == true:
+	elif LASER == true:
 		state = STOP
 		LaserBeam.enabled = true
 		LaserBeam.visible = true
+	else:
+		state = STOP
+		LaserBeam.enabled = false
+		LaserBeam.visible = false
 	match state:
 			SHOOT:
 					$Gun.shoot()
@@ -46,6 +50,11 @@ func _physics_process(delta):
 			STOP:
 				pass
 	target_sight = get_local_mouse_position()
+	
+	if Input.is_action_just_pressed("shoot") and Singleton.Playable == true:
+		BULLET = true
+	if Input.is_action_just_pressed("StopFire"):
+		BULLET = false
 	if Singleton.Playable == true:
 		input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 		input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")

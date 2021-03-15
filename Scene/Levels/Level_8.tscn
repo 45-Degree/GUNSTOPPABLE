@@ -1,19 +1,16 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Door/LockDoorH.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Character/NPC/Hostage/Hostage.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scene/Character/NPC/Terrorist/Terrorist.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scene/Object/Heater/HeaterLeft.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Object/Heater/HeaterFront.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Object/KeyCard/Keycard.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/Object/Detector/detector.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scene/Object/Star/Star.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scene/Object/Heater/HeaterRight.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scene/Object/Heater/HeaterR.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scene/Object/Decoration/Carpet.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scene/Object/Decoration/toilet.tscn" type="PackedScene" id=15]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
@@ -40,7 +37,7 @@ tile_data = PoolIntArray( -1048586, 81, 0, -1048585, 81, 0, -1048584, 81, 0, -10
 position = Vector2( -8.80946, 449.27 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 4
+frame = 1
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -66,62 +63,63 @@ position = Vector2( 466.035, -327.529 )
 [node name="HeaterFront2" parent="YSort" index="5" instance=ExtResource( 8 )]
 position = Vector2( 278.165, 156.542 )
 
-[node name="HeaterLeft" parent="YSort" index="6" instance=ExtResource( 6 )]
-position = Vector2( 711.231, -132.324 )
+[node name="HeaterFront4" parent="YSort" index="6" instance=ExtResource( 8 )]
+position = Vector2( 48, -256 )
 
-[node name="HeaterRight" parent="YSort" index="7" instance=ExtResource( 12 )]
+[node name="HeaterFront5" parent="YSort" index="7" instance=ExtResource( 8 )]
+position = Vector2( 704, -112 )
+
+[node name="HeaterRight" parent="YSort" index="8" instance=ExtResource( 12 )]
 position = Vector2( 812.937, -188.122 )
 
-[node name="TableHorizontal2" parent="YSort" index="8" instance=ExtResource( 3 )]
+[node name="TableHorizontal2" parent="YSort" index="9" instance=ExtResource( 3 )]
 position = Vector2( 495.195, -34.1592 )
 
-[node name="TableHorizontal4" parent="YSort" index="9" instance=ExtResource( 3 )]
+[node name="TableHorizontal4" parent="YSort" index="10" instance=ExtResource( 3 )]
 position = Vector2( 613.5, 67.0262 )
 
-[node name="TableVertical" parent="YSort" index="10" instance=ExtResource( 7 )]
+[node name="TableVertical" parent="YSort" index="11" instance=ExtResource( 7 )]
 position = Vector2( 139.586, -282.108 )
 
-[node name="TableVertical2" parent="YSort" index="11" instance=ExtResource( 7 )]
+[node name="TableVertical2" parent="YSort" index="12" instance=ExtResource( 7 )]
 position = Vector2( 208.551, 140.934 )
 
-[node name="TableVertical3" parent="YSort" index="12" instance=ExtResource( 7 )]
+[node name="TableVertical3" parent="YSort" index="13" instance=ExtResource( 7 )]
 position = Vector2( 673.174, -151.147 )
 
-[node name="TableVertical4" parent="YSort" index="13" instance=ExtResource( 7 )]
+[node name="TableVertical4" parent="YSort" index="14" instance=ExtResource( 7 )]
 position = Vector2( 552.174, -242.147 )
 
-[node name="Hostage" parent="YSort" index="14" instance=ExtResource( 4 )]
+[node name="Hostage" parent="YSort" index="15" instance=ExtResource( 4 )]
 position = Vector2( 44.6796, -320.152 )
 
-[node name="Hostage3" parent="YSort" index="15" instance=ExtResource( 4 )]
+[node name="Hostage3" parent="YSort" index="16" instance=ExtResource( 4 )]
 position = Vector2( 246.506, 141.571 )
 
-[node name="Hostage4" parent="YSort" index="16" instance=ExtResource( 4 )]
+[node name="Hostage4" parent="YSort" index="17" instance=ExtResource( 4 )]
 position = Vector2( 493.338, -70.1166 )
 
-[node name="Hostage6" parent="YSort" index="17" instance=ExtResource( 4 )]
+[node name="Hostage6" parent="YSort" index="18" instance=ExtResource( 4 )]
 position = Vector2( 708.606, -178.26 )
 
-[node name="Hostage5" parent="YSort" index="18" instance=ExtResource( 4 )]
+[node name="Hostage5" parent="YSort" index="19" instance=ExtResource( 4 )]
 position = Vector2( 511.739, -327.364 )
 
-[node name="Terrorist5" parent="YSort" index="19" instance=ExtResource( 5 )]
+[node name="Terrorist5" parent="YSort" index="20" instance=ExtResource( 5 )]
 position = Vector2( 437.133, -71.6608 )
 
-[node name="Terrorist6" parent="YSort" index="20" instance=ExtResource( 5 )]
+[node name="Terrorist6" parent="YSort" index="21" instance=ExtResource( 5 )]
 position = Vector2( 614.83, 32.0511 )
 
-[node name="Terrorist3" parent="YSort" index="21" instance=ExtResource( 5 )]
+[node name="Terrorist3" parent="YSort" index="22" instance=ExtResource( 5 )]
 position = Vector2( 288.545, -104.651 )
 
-[node name="Terrorist2" parent="YSort" index="22" instance=ExtResource( 5 )]
+[node name="Terrorist2" parent="YSort" index="23" instance=ExtResource( 5 )]
 position = Vector2( 184.257, -291.176 )
 
-[node name="Keycard" parent="YSort" index="23" instance=ExtResource( 9 )]
+[node name="Keycard" parent="YSort" index="24" instance=ExtResource( 9 )]
 position = Vector2( 704.355, -239.851 )
-
-[node name="HeaterR" parent="YSort" index="24" instance=ExtResource( 13 )]
-position = Vector2( 38.5737, -268.415 )
+node_path = NodePath("../LockDoorH")
 
 [node name="Star" parent="YSort" index="25" instance=ExtResource( 11 )]
 position = Vector2( 603.919, -234.335 )
@@ -136,14 +134,8 @@ position = Vector2( 362.589, 164.139 )
 position = Vector2( 104.224, -29.0959 )
 scale = Vector2( 1.65, 1 )
 
-[node name="Carpet" parent="YSort" index="29" instance=ExtResource( 14 )]
-position = Vector2( -11.0578, 282.26 )
-
-[node name="Toilet" parent="YSort" index="30" instance=ExtResource( 15 )]
+[node name="Toilet" parent="YSort" index="29" instance=ExtResource( 15 )]
 position = Vector2( 726.11, 122.745 )
-
-[node name="Control2" parent="CanvasLayer" index="1"]
-visible = false
 
 [node name="ColorRect" parent="CanvasLayer" index="4"]
 margin_left = 803.898

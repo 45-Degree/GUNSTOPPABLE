@@ -45,7 +45,7 @@ scale = Vector2( 2.3, 2.3 )
 position = Vector2( 186.979, 470.812 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 5
+frame = 6
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -55,11 +55,11 @@ position = Vector2( 44.2123, -27.4166 )
 rotation = 8.12934e-06
 
 [node name="Hostage2" parent="YSort" index="2" instance=ExtResource( 2 )]
-position = Vector2( 316.194, 334.071 )
+position = Vector2( 344.893, 306.039 )
 rotation = 8.12934e-06
 
 [node name="Hostage3" parent="YSort" index="3" instance=ExtResource( 2 )]
-position = Vector2( 456.596, 231.159 )
+position = Vector2( 435.239, 239.168 )
 rotation = 8.12934e-06
 
 [node name="Hostage4" parent="YSort" index="4" instance=ExtResource( 2 )]
@@ -71,7 +71,7 @@ position = Vector2( 46.2659, 220.436 )
 rotation = 8.12934e-06
 
 [node name="Terrorist4" parent="YSort" index="6" instance=ExtResource( 3 )]
-position = Vector2( 457.12, 338.011 )
+position = Vector2( 437.765, 304.947 )
 rotation = 8.12934e-06
 
 [node name="Terrorist5" parent="YSort" index="7" instance=ExtResource( 3 )]
@@ -151,7 +151,7 @@ position = Vector2( 392.551, 338.065 )
 position = Vector2( 334.874, -53.1675 )
 
 [node name="Control4" parent="CanvasLayer" index="3"]
-visible = true
+visible = false
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "Level - 7"

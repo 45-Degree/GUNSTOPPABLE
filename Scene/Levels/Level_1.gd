@@ -20,6 +20,7 @@ onready var Complete = false
 export var Hostage_dead = false
 onready var lerpAmount = 0.001
 signal level_Completed
+signal cheat
 signal mouse_click
 var smooth_zoom = 1
 var target_zoom = 0.5
@@ -31,9 +32,11 @@ func _input(event):
 			emit_signal("mouse_click")
 
 func _ready():
+	Transition.wipeIn()
 	Singleton.Playable = false
 	$CanvasLayer/Control4.show()
 	connect("level_Completed", self, "_on_level_Completed")
+	connect("cheat", self, "_on_level_Completed")
 	$CanvasLayer/LevelLabel.text = "Level-" + str(int(get_tree().current_scene.name))
 	animationPlayer.play("Wipe_Out")
 	yield(animationPlayer,"animation_finished")
@@ -42,7 +45,6 @@ func _ready():
 	Singleton.Playable = true
 	$CanvasLayer/Control4.hide()
 	player.BULLET = true
-
 
 func _process(delta):
 	var terrorist = get_tree().get_nodes_in_group("Terrorist").size()
@@ -53,6 +55,9 @@ func _process(delta):
 	if Input.is_action_just_pressed("Pause") and Singleton.Playable == true:
 		get_tree().paused = true
 		pause.show()
+	if Input.is_action_just_pressed("k") and Singleton.Playable == true:
+		emit_signal("cheat")
+		Complete = true
 	if  Hostage_dead == true:
 		camera.limit = false
 		camera.limit_bottom = 1000000000
@@ -66,18 +71,19 @@ func _process(delta):
 			camera.position = lerp(player.global_position, Singleton.hostagePosition, 1)
 
 func _on_Button_pressed():
-		animationPlayer.play("Wipe_In")
-		yield(animationPlayer, "animation_finished")
+		Transition.wipeOut()
+		yield(get_tree().create_timer(0.5),"timeout")
 		get_tree().change_scene("res://Scene/Levels/Level_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
 
 func _on_Button2_pressed():
-	Singleton.Playable = true
-	animationPlayer.play("Wipe_In")
+	Transition.wipeOut()
 	control.hide()
-	yield(animationPlayer, "animation_finished")
+	yield(get_tree().create_timer(0.5),"timeout")
+	Singleton.Playable = true
 	get_tree().reload_current_scene()
 
 func _on_Hostage_Die():
+	player.BULLET = false
 	starCrack.show()
 	starAll.hide()
 	SoundManager.play_bgm("res://Sound/Music/Mission_Fail.wav")
@@ -101,6 +107,7 @@ func _on_Passable():
 		else:
 			pass
 		Save._on_Save()
+		player.BULLET = false
 		SoundManager.play_bgm("res://Sound/Music/Mission_Success.wav")
 		if Star_Count == 0:
 			pass
@@ -123,8 +130,11 @@ func _on_Button_button_up():
 	pause.hide()
 
 func _on_Button3_button_up():
-	get_tree().change_scene("res://Scene/UI/MainMenu/MainMenu.tscn")
 	get_tree().paused = false
+	Transition.wipeOut()
+	yield(get_tree().create_timer(0.5),"timeout")
+	get_tree().change_scene("res://Scene/UI/MainMenu/MainMenu.tscn")
+
 
 func _on_Button4_pressed():
 	option.hide()
@@ -154,6 +164,6 @@ func _on_level_Completed():
 
 
 func _on_Button3_pressed():
-		animationPlayer.play("Wipe_In")
-		yield(animationPlayer, "animation_finished")
+		Transition.wipeOut()
+		yield(get_tree().create_timer(0.5),"timeout")
 		get_tree().change_scene("res://Scene/UI/LevelSelect/Level_select.tscn")

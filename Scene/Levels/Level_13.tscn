@@ -112,7 +112,7 @@ scale = Vector2( 1.124, 1 )
 position = Vector2( -152.246, 309.97 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 4
+frame = 6
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 3 )
@@ -133,6 +133,7 @@ position = Vector2( 362.39, 135.371 )
 
 [node name="Keycard" parent="YSort" index="17" instance=ExtResource( 14 )]
 position = Vector2( 516.168, 321.52 )
+node_path = NodePath("../LockDoorH")
 
 [node name="Detector" parent="YSort" index="18" instance=ExtResource( 16 )]
 position = Vector2( 168.132, -279.847 )
@@ -181,11 +182,7 @@ position = Vector2( 90.0953, 196.985 )
 position = Vector2( 59.9696, 310.767 )
 rotation = 1.5708
 
-[node name="Control2" parent="CanvasLayer" index="1"]
-visible = false
-
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
-visible = false
 text = "Level - 13"
 
 [editable path="YSort/Player"]
