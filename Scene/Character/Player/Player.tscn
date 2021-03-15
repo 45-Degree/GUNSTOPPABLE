@@ -427,8 +427,8 @@ graph_offset = Vector2( 39, -10 )
 extents = Vector2( 12.7959, 12.196 )
 
 [sub_resource type="CapsuleShape2D" id=47]
-radius = 14.957
-height = 3.804
+radius = 16.4771
+height = 10.6336
 
 [sub_resource type="CanvasItemMaterial" id=48]
 blend_mode = 1
@@ -491,7 +491,7 @@ region_rect = Rect2( 560, 50, 530, 450 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 23 )
 animation = "Idle"
-frame = 1
+frame = 2
 
 [node name="Gun" type="Node2D" parent="."]
 position = Vector2( 28.9436, -7.55989 )
@@ -517,18 +517,16 @@ parameters/Idle/blend_position = Vector2( 0.18091, 0.508621 )
 parameters/Run/blend_position = Vector2( 0.987358, -0.981873 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 light_mask = 0
 position = Vector2( -1.19623, 12.7573 )
 rotation = 1.5708
 shape = SubResource( 46 )
 
 [node name="Hurtbox" type="Area2D" parent="."]
-visible = false
 collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2( -0.135269, 7.57538 )
+position = Vector2( -1.77463, 13.3131 )
 rotation = 1.5708
 shape = SubResource( 47 )
 

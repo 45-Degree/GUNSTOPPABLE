@@ -128,6 +128,7 @@ position = Vector2( 362.39, 135.371 )
 
 [node name="Keycard" parent="YSort" index="17" instance=ExtResource( 14 )]
 position = Vector2( 516.168, 321.52 )
+node_path = NodePath("../LockDoorH")
 
 [node name="Detector" parent="YSort" index="18" instance=ExtResource( 16 )]
 position = Vector2( 168.132, -279.847 )
@@ -168,9 +169,6 @@ position = Vector2( 177.601, -20 )
 
 [node name="CoffeTableH2" parent="YSort" index="27" instance=ExtResource( 4 )]
 position = Vector2( 301.96, 181.522 )
-
-[node name="Control2" parent="CanvasLayer" index="1"]
-visible = false
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "Level - 13"
