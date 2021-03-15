@@ -46,7 +46,7 @@ scale = Vector2( 2.3, 2.3 )
 position = Vector2( 489.181, 574.202 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 2
+frame = 5
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )

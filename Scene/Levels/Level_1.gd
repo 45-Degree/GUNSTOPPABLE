@@ -3,8 +3,13 @@ extends Node
 onready var control = $CanvasLayer/Control
 onready var pause =$CanvasLayer/Control2
 onready var option = $CanvasLayer/Control3
-onready var message = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2/Message
+onready var message = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/Message
 onready var button = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton
+onready var star1 = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer2/TextureRect
+onready var star2 = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer2/TextureRect2
+onready var star3 = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer2/TextureRect3
+onready var starAll = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer2
+onready var starCrack = $CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer3
 onready var camera =$Camera2D
 onready var player = $YSort/Player
 onready var animationPlayer = $AnimationPlayer
@@ -73,6 +78,9 @@ func _on_Button2_pressed():
 	get_tree().reload_current_scene()
 
 func _on_Hostage_Die():
+	starCrack.show()
+	starAll.hide()
+	SoundManager.play_bgm("res://Sound/Music/Mission_Fail.wav")
 	Singleton.Playable = false
 	Complete = false
 	Hostage_dead = true
@@ -93,6 +101,18 @@ func _on_Passable():
 		else:
 			pass
 		Save._on_Save()
+		SoundManager.play_bgm("res://Sound/Music/Mission_Success.wav")
+		if Star_Count == 0:
+			pass
+		if Star_Count == 1:
+			star1.texture = load("res://Scene/UI/Star/tile005.png")
+		if Star_Count == 2:
+			star1.texture = load("res://Scene/UI/Star/tile005.png")
+			star2.texture = load("res://Scene/UI/Star/tile005.png")
+		if Star_Count == 3:
+			star1.texture = load("res://Scene/UI/Star/tile005.png")
+			star2.texture = load("res://Scene/UI/Star/tile005.png")
+			star3.texture = load("res://Scene/UI/Star/tile005.png")
 		message.set_text("MISSION COMPLETED!")
 		Singleton.Playable = false
 		control.show()
