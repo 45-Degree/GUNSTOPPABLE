@@ -17,6 +17,9 @@ scale = Vector2( 4.88, 4.88 )
 position = Vector2( 141.269, 92.7706 )
 BULLET = true
 
+[node name="AnimatedSprite" parent="Player" index="2"]
+frame = 0
+
 [node name="AnimationTree" parent="Player" index="5"]
 parameters/playback = SubResource( 1 )
 

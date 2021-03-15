@@ -18,6 +18,11 @@ func _ready():
 		for w in b.get_children():
 			w.text = str(int(b.name))
 
+func _physics_process(delta):
+	if Input.is_action_just_pressed("k"):
+		for b in get_node("Control/MarginContainer/VBoxContainer/HBoxContainer/GridContainer").get_children():
+			b.disabled = false
+
 func _button_pressed(which):
 	$Transition/AnimationPlayer.play("Wipe_In")
 	yield($Transition/AnimationPlayer,"animation_finished")
