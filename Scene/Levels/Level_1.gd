@@ -8,9 +8,7 @@ onready var button = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxCont
 onready var star1 = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/TextureRect
 onready var star2 = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/TextureRect2
 onready var star3 = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/TextureRect3
-onready var star4 = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/TextureRect4
-onready var star5 = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/TextureRect5
-onready var star6 = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/TextureRect6
+onready var starCrack = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/HBoxContainer
 onready var camera =$Camera2D
 onready var player = $YSort/Player
 onready var animationPlayer = $AnimationPlayer
@@ -32,6 +30,9 @@ func _input(event):
 			emit_signal("mouse_click")
 
 func _ready():
+	star1.texture = load("res://Scene/UI/Star/Star.png")
+	star2.texture = load("res://Scene/UI/Star/Star.png")
+	star3.texture = load("res://Scene/UI/Star/Star.png")
 	Singleton.Playable = false
 	$CanvasLayer/Control4.show()
 	connect("level_Completed", self, "_on_level_Completed")
@@ -83,9 +84,8 @@ func _on_Hostage_Die():
 	star1.hide()
 	star2.hide()
 	star3.hide()
-	star4.show()
-	star5.show()
-	star6.show()
+	starCrack.show()
+	SoundManager.play_bgm("res://Sound/Music/Mission_Fail.wav")
 	Singleton.Playable = false
 	Complete = false
 	Hostage_dead = true
@@ -98,6 +98,7 @@ func  _on_Star_Pick():
 
 func _on_Passable():
 	if Complete == true:
+		SoundManager.play_bgm("res://Sound/Music/Mission_Success.wav")
 		Save.data["Level"+ str(int(get_tree().current_scene.name)+1)] = true
 		if !Save.data.has("Star" + str(int(get_tree().current_scene.name))):
 			Save.data["Star"+ str(int(get_tree().current_scene.name))] = Star_Count
@@ -112,14 +113,14 @@ func _on_Passable():
 		if Star_Count == 0:
 			pass
 		if Star_Count == 1:
-			star1.texture.pause = false
+			star1.texture = load("res://Scene/UI/Star/tile005.png")
 		elif Star_Count ==2:
-			star1.texture.pause = false
-			star2.texture.pause = false
+			star1.texture = load("res://Scene/UI/Star/tile005.png")
+			star2.texture = load("res://Scene/UI/Star/tile005.png")
 		elif Star_Count ==3:
-			star1.texture.pause = false
-			star2.texture.pause = false
-			star3.texture.pause = false
+			star1.texture = load("res://Scene/UI/Star/tile005.png")
+			star2.texture = load("res://Scene/UI/Star/tile005.png")
+			star3.texture = load("res://Scene/UI/Star/tile005.png")
 		get_tree().call_group("Hostage", "invincible")
 
 func _on_Button_button_up():

@@ -1,4 +1,6 @@
 extends StaticBody2D
+
+export(NodePath) var node_path
 onready var animationPlayer = $AnimationPlayer
 export var health = 10
 var invincible = false
@@ -60,7 +62,8 @@ func _on_Hurtbox_area_entered(area):
 		SoundManager.play_se("res://Sound/SFX/Object/Shelf_3.wav")
 		queue_free()
 	if pickable == true:
-		Singleton.unlock = true
+		var door = get_node(node_path)
+		door.queue_free()
 		SoundManager.play_se("res://Sound/SFX/Object/Keycard_3.wav")
 		queue_free()
 #	if Reflectable == true:

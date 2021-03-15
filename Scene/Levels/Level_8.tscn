@@ -38,7 +38,7 @@ tile_data = PoolIntArray( -1048586, 81, 0, -1048585, 81, 0, -1048584, 81, 0, -10
 position = Vector2( -8.80946, 449.27 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 0
+frame = 3
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -117,6 +117,7 @@ position = Vector2( 184.257, -291.176 )
 
 [node name="Keycard" parent="YSort" index="23" instance=ExtResource( 9 )]
 position = Vector2( 704.355, -239.851 )
+node_path = NodePath("../LockDoorH")
 
 [node name="HeaterR" parent="YSort" index="24" instance=ExtResource( 13 )]
 position = Vector2( 32.033, -269.01 )
@@ -133,9 +134,6 @@ position = Vector2( 362.589, 164.139 )
 [node name="LockDoorH" parent="YSort" index="28" instance=ExtResource( 2 )]
 position = Vector2( 104.224, -29.0959 )
 scale = Vector2( 1.65, 1 )
-
-[node name="Control2" parent="CanvasLayer" index="1"]
-visible = false
 
 [node name="Control4" parent="CanvasLayer" index="3"]
 visible = true

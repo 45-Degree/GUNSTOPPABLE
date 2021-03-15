@@ -47,9 +47,13 @@ scale = Vector2( 2.3, 2.3 )
 
 [node name="Keycard" parent="YSort" index="0" instance=ExtResource( 14 )]
 position = Vector2( 283.717, -66.6991 )
+node_path = NodePath("../TableHorizontal2")
 
 [node name="Player" parent="YSort" index="1"]
 position = Vector2( 278.63, 432.703 )
+
+[node name="AnimatedSprite" parent="YSort/Player" index="2"]
+frame = 3
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -142,9 +146,6 @@ position = Vector2( 240.857, -178.743 )
 [node name="LockDoorH" parent="YSort" index="25" instance=ExtResource( 13 )]
 position = Vector2( 488.068, -6.82394 )
 scale = Vector2( 1.65, 1 )
-
-[node name="Control2" parent="CanvasLayer" index="1"]
-visible = false
 
 [node name="Control4" parent="CanvasLayer" index="3"]
 visible = true

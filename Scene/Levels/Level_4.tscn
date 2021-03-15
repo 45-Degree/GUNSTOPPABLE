@@ -51,7 +51,7 @@ scale = Vector2( 2.3, 2.3 )
 position = Vector2( -217.64, 42.1957 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 0
+frame = 3
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -89,11 +89,12 @@ position = Vector2( 788.594, 157.832 )
 position = Vector2( 788.594, 272.323 )
 
 [node name="TableHorizontal7" parent="YSort" index="11" instance=ExtResource( 5 )]
-position = Vector2( 375.063, 40.1623 )
+position = Vector2( 375.063, 39.1028 )
 scale = Vector2( 1.3, 1.3 )
 
 [node name="Keycard" parent="YSort" index="12" instance=ExtResource( 6 )]
-position = Vector2( 585.849, 230.492 )
+position = Vector2( 583.73, 230.492 )
+node_path = NodePath("../TableHorizontal7")
 
 [node name="Hostage" parent="YSort" index="13" instance=ExtResource( 8 )]
 position = Vector2( 524.943, 221.887 )
@@ -142,9 +143,6 @@ position = Vector2( 263.615, 299.502 )
 
 [node name="Star3" parent="YSort" index="28" instance=ExtResource( 10 )]
 position = Vector2( 471.316, 6.0296 )
-
-[node name="Control2" parent="CanvasLayer" index="1"]
-visible = false
 
 [node name="Control4" parent="CanvasLayer" index="3"]
 visible = true

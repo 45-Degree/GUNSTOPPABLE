@@ -16,7 +16,7 @@ func _on_Hurtbox_area_entered(area):
 	world.add_child(blood_instace)
 	blood_instace.global_position = global_position
 	emit_signal("Hostage_Die")
-	SoundManager.play_se("res://Sound/SFX/Object/DeadSound.wav")
+	SoundManager.play_se("res://Scene/Character/NPC/NPC death.wav")
 	queue_free()
 
 func invincible():

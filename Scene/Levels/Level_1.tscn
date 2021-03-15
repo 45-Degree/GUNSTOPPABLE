@@ -50,7 +50,7 @@ rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 0
+frame = 3
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -101,7 +101,7 @@ position = Vector2( 572.542, 159.592 )
 position = Vector2( 121.54, 214.187 )
 
 [node name="AnimatedSprite" parent="YSort/Star" index="1"]
-frame = 31
+frame = 56
 
 [node name="Star2" parent="YSort" index="16" instance=ExtResource( 11 )]
 position = Vector2( 454.16, -54.8066 )
@@ -112,21 +112,60 @@ position = Vector2( 514.006, 267.103 )
 [node name="Tree2" parent="YSort" index="18" instance=ExtResource( 7 )]
 position = Vector2( 323.077, 304.767 )
 
-[node name="Control" parent="CanvasLayer" index="0"]
-visible = true
+[node name="VBoxContainer" parent="CanvasLayer/Control/MarginContainer" index="0"]
+margin_right = 546.0
+
+[node name="VBoxContainer2" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" index="0"]
+margin_right = 546.0
+
+[node name="Message" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2" index="0"]
+margin_right = 546.0
+
+[node name="HBoxContainer2" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2" index="1"]
+margin_right = 546.0
+
+[node name="TextureRect" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2" index="0"]
+margin_right = 338.0
+
+[node name="TextureRect2" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2" index="1"]
+margin_left = 104.0
+margin_right = 442.0
+
+[node name="TextureRect3" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2" index="2"]
+margin_left = 208.0
+margin_right = 546.0
+
+[node name="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2" index="3"]
+margin_left = 538.0
+margin_right = 546.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="TextureRect4" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/HBoxContainer" index="0"]
+margin_right = 0.0
+rect_min_size = Vector2( 0, 0 )
+
+[node name="TextureRect5" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/HBoxContainer" index="1"]
+margin_left = 4.0
+margin_right = 4.0
+rect_min_size = Vector2( 0, 0 )
+
+[node name="TextureRect6" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/HBoxContainer" index="2"]
+margin_left = 8.0
+margin_right = 8.0
+rect_min_size = Vector2( 0, 0 )
 
 [node name="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2" index="2"]
+margin_right = 546.0
 custom_constants/separation = 48
 
-[node name="NextLevelButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" index="0"]
-margin_right = 141.0
-
 [node name="RetryButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" index="1"]
-margin_left = 189.0
-margin_right = 330.0
+margin_left = 198.0
+margin_right = 348.0
 
 [node name="LevelButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" index="2"]
-margin_left = 378.0
+margin_left = 396.0
+margin_right = 546.0
 
 [node name="Button3" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer" index="2"]
 size_flags_horizontal = 3

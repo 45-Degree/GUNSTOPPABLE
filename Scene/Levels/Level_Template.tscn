@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/UI/Camera2D.gd" type="Script" id=2]
@@ -34,12 +34,7 @@
 [ext_resource path="res://Scene/UI/button/Slider/SMALLSLIDER.png" type="Texture" id=32]
 [ext_resource path="res://Scene/UI/button/Slider/greybody.png" type="Texture" id=33]
 [ext_resource path="res://Scene/UI/button/Slider/bluebody.png" type="Texture" id=34]
-[ext_resource path="res://Scene/UI/Star/tile000.png" type="Texture" id=35]
-[ext_resource path="res://Scene/UI/Star/tile001.png" type="Texture" id=36]
-[ext_resource path="res://Scene/UI/Star/tile004.png" type="Texture" id=37]
-[ext_resource path="res://Scene/UI/Star/tile003.png" type="Texture" id=38]
 [ext_resource path="res://Scene/UI/Star/tile005.png" type="Texture" id=39]
-[ext_resource path="res://Scene/UI/Star/tile002.png" type="Texture" id=40]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Wipe_In"
@@ -108,60 +103,6 @@ size = 39
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
-
-[sub_resource type="AnimatedTexture" id=15]
-flags = 4
-frames = 6
-pause = true
-oneshot = true
-fps = 7.7
-frame_0/texture = ExtResource( 35 )
-frame_1/texture = ExtResource( 36 )
-frame_1/delay_sec = 0.0
-frame_2/texture = ExtResource( 40 )
-frame_2/delay_sec = 0.0
-frame_3/texture = ExtResource( 38 )
-frame_3/delay_sec = 0.0
-frame_4/texture = ExtResource( 37 )
-frame_4/delay_sec = 0.0
-frame_5/texture = ExtResource( 39 )
-frame_5/delay_sec = 0.0
-
-[sub_resource type="AnimatedTexture" id=16]
-flags = 4
-frames = 6
-pause = true
-oneshot = true
-fps = 7.7
-frame_0/texture = ExtResource( 35 )
-frame_1/texture = ExtResource( 36 )
-frame_1/delay_sec = 0.0
-frame_2/texture = ExtResource( 40 )
-frame_2/delay_sec = 0.0
-frame_3/texture = ExtResource( 38 )
-frame_3/delay_sec = 0.0
-frame_4/texture = ExtResource( 37 )
-frame_4/delay_sec = 0.0
-frame_5/texture = ExtResource( 39 )
-frame_5/delay_sec = 0.0
-
-[sub_resource type="AnimatedTexture" id=17]
-flags = 4
-frames = 6
-pause = true
-oneshot = true
-fps = 7.7
-frame_0/texture = ExtResource( 35 )
-frame_1/texture = ExtResource( 36 )
-frame_1/delay_sec = 0.0
-frame_2/texture = ExtResource( 40 )
-frame_2/delay_sec = 0.0
-frame_3/texture = ExtResource( 38 )
-frame_3/delay_sec = 0.0
-frame_4/texture = ExtResource( 37 )
-frame_4/delay_sec = 0.0
-frame_5/texture = ExtResource( 39 )
-frame_5/delay_sec = 0.0
 
 [sub_resource type="DynamicFont" id=7]
 size = 42
@@ -242,9 +183,6 @@ position = Vector2( -160, 288 )
 [node name="RemoteTransform2D" parent="YSort/Player" index="0"]
 remote_path = NodePath("../../../Camera2D")
 
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 3
-
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 3 )
 
@@ -252,6 +190,7 @@ parameters/playback = SubResource( 3 )
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 pause_mode = 2
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -313,7 +252,7 @@ margin_right = 331.0
 margin_bottom = 102.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = SubResource( 15 )
+texture = ExtResource( 39 )
 expand = true
 stretch_mode = 6
 __meta__ = {
@@ -326,7 +265,7 @@ margin_right = 428.0
 margin_bottom = 102.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = SubResource( 16 )
+texture = ExtResource( 39 )
 expand = true
 stretch_mode = 6
 __meta__ = {
@@ -339,18 +278,26 @@ margin_right = 526.0
 margin_bottom = 102.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = SubResource( 17 )
+texture = ExtResource( 39 )
 expand = true
 stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2"]
 visible = false
-margin_left = 163.0
-margin_right = 451.0
-margin_bottom = 115.0
+margin_left = 219.0
+margin_right = 526.0
+margin_bottom = 102.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = -222
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/HBoxContainer"]
+margin_right = 250.0
+margin_bottom = 102.0
+rect_min_size = Vector2( 102, 102 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 4 )
@@ -360,11 +307,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect5" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2"]
-visible = false
-margin_left = 217.0
-margin_right = 505.0
-margin_bottom = 115.0
+[node name="TextureRect5" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/HBoxContainer"]
+margin_left = 28.0
+margin_right = 278.0
+margin_bottom = 102.0
+rect_min_size = Vector2( 102, 102 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 4 )
@@ -374,11 +321,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect6" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2"]
-visible = false
-margin_left = 271.0
-margin_right = 560.0
-margin_bottom = 115.0
+[node name="TextureRect6" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/HBoxContainer"]
+margin_left = 56.0
+margin_right = 307.0
+margin_bottom = 102.0
+rect_min_size = Vector2( 102, 102 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 4 )
