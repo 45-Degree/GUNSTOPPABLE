@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Counter/CounterSide.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Object/Detector/detector.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Object/Star/Star.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/Object/Decoration/Carpet.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scene/Object/Decoration/toilet.tscn" type="PackedScene" id=11]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -22,7 +24,7 @@ position = Vector2( 532.843, -268.068 )
 position = Vector2( 530.929, -400.551 )
 
 [node name="topLeft" parent="Camera2D/Limits" index="0"]
-position = Vector2( -61.0449, -340.636 )
+position = Vector2( -61.0449, -313.018 )
 
 [node name="bottomRight" parent="Camera2D/Limits" index="1"]
 position = Vector2( 642.832, 753.164 )
@@ -33,9 +35,6 @@ tile_data = PoolIntArray( -983048, 81, 0, -983047, 81, 0, -983046, 81, 0, -98304
 
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 530.929, -400.551 )
-
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 3
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -184,6 +183,15 @@ position = Vector2( 51.3238, 435.815 )
 
 [node name="Star3" parent="YSort" index="47" instance=ExtResource( 9 )]
 position = Vector2( 255.867, -22.0293 )
+
+[node name="Node2D" parent="YSort" index="48" instance=ExtResource( 10 )]
+position = Vector2( 531.073, -283.573 )
+
+[node name="Node2D2" parent="YSort" index="49" instance=ExtResource( 11 )]
+position = Vector2( 595.304, 203.7 )
+
+[node name="Control2" parent="CanvasLayer" index="1"]
+visible = false
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "Level - 3"

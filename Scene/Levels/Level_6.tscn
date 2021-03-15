@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Heater/HeaterFront.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scene/Character/NPC/Hostage/Hostage.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/Object/Heater/HeaterLeft.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/Object/Decoration/Carpet.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Object/Detector/detector.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scene/Object/Star/Star.tscn" type="PackedScene" id=12]
@@ -50,6 +51,9 @@ scale = Vector2( 2.3, 2.3 )
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( -192.96, 95.365 )
 
+[node name="AnimatedSprite" parent="YSort/Player" index="2"]
+frame = 0
+
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
 
@@ -93,10 +97,10 @@ position = Vector2( 338.207, 476.116 )
 position = Vector2( 639.207, 215.116 )
 
 [node name="TableHorizontal3" parent="YSort" index="14" instance=ExtResource( 6 )]
-position = Vector2( 401.472, 145.673 )
+position = Vector2( 396.133, 144.338 )
 
 [node name="TableHorizontal7" parent="YSort" index="15" instance=ExtResource( 6 )]
-position = Vector2( 594.341, 528.237 )
+position = Vector2( 586.332, 529.572 )
 
 [node name="Hostage" parent="YSort" index="16" instance=ExtResource( 5 )]
 position = Vector2( 393.594, 474.618 )
@@ -140,8 +144,18 @@ position = Vector2( 689.234, 203.452 )
 [node name="Star3" parent="YSort" index="29" instance=ExtResource( 12 )]
 position = Vector2( 563.158, 620.881 )
 
+[node name="Carpet" parent="YSort" index="30" instance=ExtResource( 7 )]
+position = Vector2( -34.7273, 100.191 )
+rotation = 1.5708
+
+[node name="Control2" parent="CanvasLayer" index="1"]
+visible = false
+
 [node name="Control4" parent="CanvasLayer" index="3"]
 visible = true
+
+[node name="Label" parent="CanvasLayer/Control4/CenterContainer" index="0"]
+visible = false
 
 [node name="ColorRect" parent="CanvasLayer" index="4"]
 margin_left = 903.379
@@ -150,6 +164,10 @@ margin_right = 903.379
 margin_bottom = 4.48987
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
+visible = false
 text = "Level - 6"
+
+[node name="Mouse_cursor" parent="CanvasLayer" index="6"]
+position = Vector2( -2.2449, -19.0818 )
 
 [editable path="YSort/Player"]
