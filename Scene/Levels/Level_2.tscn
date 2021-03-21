@@ -46,11 +46,7 @@ scale = Vector2( 2.3, 2.3 )
 position = Vector2( 489.181, 574.202 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-<<<<<<< HEAD
 frame = 2
-=======
-frame = 7
->>>>>>> parent of d0e0da6 (Add Lab table)
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
