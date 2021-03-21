@@ -9,8 +9,6 @@ export var explodable = false
 export var Reflectable = false
 export var pickable = false
 export var unlockable = false
-export var fallable = false
-export var fallableSide = false
 export var Laser = false
 export var Emit = false
 export var button = false
@@ -19,6 +17,7 @@ export(int, "Left", "Right", "Top", "Bottom") var BulletSpawn
 onready var animatedSprite = $AnimatedSprite
 onready var particle = $Particles2D
 onready var timer = $Timer
+onready var timer2 = $Timer2
 var sound_clip = preload("res://Sound/SFX/Object/Keycard_3.wav")
 onready var shelf = preload("res://Scene/Object/Shelf/ShelfFrontFallen.tscn")
 onready var shelfSide = preload("res://Scene/Object/Shelf/ShelfSideFallen.tscn")
@@ -45,8 +44,8 @@ func _on_Hurtbox_area_entered(area):
 		animatedSprite.show()
 		animationPlayer.play("Blink")
 		particle.emitting = true
-		get_tree().create_timer(0.2)
 		timer.start()
+		timer2.start()
 	if pickable == true:
 		var door = get_node(node_path)
 		door.queue_free()
@@ -54,6 +53,7 @@ func _on_Hurtbox_area_entered(area):
 		queue_free()
 
 func _on_Hurtbox_area_exited(area):
+	
 	if Laser == true:
 		Emit = false
 	if button == true:
@@ -64,21 +64,5 @@ func _on_Timer_timeout():
 	animationPlayer.play("Idle")
 	particle.emitting = false
 
-func _on_Hurtbox2_area_entered(area):
-	if fallable == true:
-		var shelfInstance = shelf.instance()
-		var world = get_tree().current_scene
-		world.add_child(shelfInstance)
-		shelfInstance.position = self.get_global_position() + Vector2(0,-30)
-		SoundManager.play_se("res://Sound/SFX/Object/Shelf_3.wav")
-		queue_free()
-	if fallableSide == true:
-		var shelfSideInstance = shelfSide.instance()
-		var world = get_tree().current_scene
-		world.add_child(shelfSideInstance)
-		shelfSideInstance.position = self.get_global_position() + Vector2(-30,15)
-		SoundManager.play_se("res://Sound/SFX/Object/Shelf_3.wav")
-		queue_free()
-
-
-
+func _on_Timer2_timeout():
+	health -= 4
