@@ -3,10 +3,10 @@
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 36.1226, 98.1648 )
+extents = Vector2( 22.0939, 112.83 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 14.1976, 38.7566 )
+extents = Vector2( 11.9957, 47.3547 )
 
 [node name="TableVertical" instance=ExtResource( 1 )]
 position = Vector2( 0, 0 )
@@ -17,7 +17,7 @@ region_rect = Rect2( 491, 689, 76, 201 )
 [node name="AnimatedSprite" parent="." index="1"]
 position = Vector2( 5.48253, -10.7493 )
 scale = Vector2( 1, 1 )
-frame = 17
+frame = 3
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -0.218826, -0.143819 )
