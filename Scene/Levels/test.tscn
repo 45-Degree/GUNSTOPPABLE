@@ -70,7 +70,7 @@ position = Vector2( 141.269, 92.7706 )
 LASER = true
 
 [node name="AnimatedSprite" parent="Player" index="2"]
-frame = 2
+frame = 4
 
 [node name="AnimationTree" parent="Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -80,7 +80,7 @@ position = Vector2( 208, 203.835 )
 LaserSpawn = 1
 
 [node name="AnimatedSprite" parent="DEchanger" index="1"]
-frame = 27
+frame = 26
 
 [node name="LaserBeam" parent="DEchanger" index="11"]
 collision_mask = 2147483706
@@ -89,7 +89,7 @@ collision_mask = 2147483706
 position = Vector2( 328, 200 )
 
 [node name="AnimatedSprite" parent="DEchanger2" index="1"]
-frame = 27
+frame = 26
 
 [node name="AnimationPlayer" parent="DEchanger2" index="3"]
 anims/Blink = SubResource( 2 )
