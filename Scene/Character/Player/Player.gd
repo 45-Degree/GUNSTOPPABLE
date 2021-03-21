@@ -83,7 +83,6 @@ func _physics_process(delta):
 	if LaserBeam.is_colliding():
 		var reflect = LaserBeam.get_collider()
 		var reflectParent = LaserBeam.get_collider().get_parent()
-		print(reflectParent)
 		if reflect.is_in_group("Bounce"):
 			var LaserEnd = LaserBeam.get_collision_point()
 			var LaserNormal = LaserBeam.get_collision_normal()

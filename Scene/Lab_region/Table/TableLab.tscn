@@ -74,7 +74,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 113.667, 68.8251 )
+extents = Vector2( 30.3974, 17.2389 )
 
 [sub_resource type="Animation" id=3]
 length = 0.6
@@ -109,7 +109,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 124.691, 76.0211 )
+extents = Vector2( 34.7097, 19.2164 )
 
 [sub_resource type="ParticlesMaterial" id=6]
 flag_disable_z = true
@@ -119,26 +119,25 @@ gravity = Vector3( -98, 0, 0 )
 initial_velocity = 58.9
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
+scale = 3.0
 
 [node name="TableHorizontal" type="StaticBody2D"]
-scale = Vector2( 0.25, 0.25 )
 collision_layer = 8
 script = ExtResource( 3 )
 destroyable = true
 
 [node name="Sprite2" type="Sprite" parent="."]
-scale = Vector2( 0.4, 0.4 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 61.0754, 62.7803, 720.61, 449.871 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 2.21085, -5.38688 )
+position = Vector2( 8.44711, -14.2959 )
 rotation = 1.5708
-scale = Vector2( 0.3, 0.4 )
 frames = SubResource( 1 )
-frame = 33
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -154,11 +153,11 @@ collision_layer = 2147483680
 collision_mask = 4
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2( 6.54028, 3.96643 )
+position = Vector2( 0.790276, 0.216426 )
 shape = SubResource( 5 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
-position = Vector2( -0.112572, -1.98876 )
+position = Vector2( -0.112572, -8.44777 )
 rotation = -1.5708
 emitting = false
 lifetime = 2.0
@@ -178,5 +177,6 @@ wait_time = 0.2
 
 [node name="BulletSpawnRight" type="Position2D" parent="."]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="area_exited" from="Hurtbox" to="." method="_on_Hurtbox_area_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
