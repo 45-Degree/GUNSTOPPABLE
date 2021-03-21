@@ -15,32 +15,32 @@ enum{
 }
 
 func _ready():
-		LaserBeam.global_position = $BulletSpawnRight.get_global_position()
-		LaserBeam.cast_to = Vector2(40,0)
-#		LaserBeam.cast_to = Vector2.ZERO
-#		LaserBeam.visible = false
+	LaserBeam.cast_to = Vector2.ZERO
+	LaserBeam.visible = false
 
 func _process(delta):
 	match state:
 		UNSHOT:
-			pass
-#			LaserBeam.visible = false
-#			LaserBeam.cast_to = Vector2.ZERO
+			$LaserBeam/Area2D/CollisionShape2D.disabled = true
+			LaserBeam.visible = false
+			LaserBeam.cast_to = Vector2.ZERO
 		SHOTTED:
+			$LaserBeam/Area2D/CollisionShape2D.disabled = false
 			LaserBeam.enabled = true
 			LaserBeam.visible = true
 			if LaserSpawn == 0:
 				LaserBeam.global_position = $BulletSpawnLeft.get_global_position()
-				LaserBeam.cast_to = Vector2(-2000,0)
+				LaserBeam.cast_to = Vector2(-500,0)
 			if LaserSpawn == 1:
-				pass
+				LaserBeam.global_position = $BulletSpawnRight.get_global_position()
+				LaserBeam.cast_to = Vector2(500,0)
 			if LaserSpawn == 2:
 				LaserBeam.global_position = $BulletSpawnUp.get_global_position()
-				LaserBeam.cast_to = Vector2(0,-2000)
+				LaserBeam.cast_to = Vector2(0,-500)
 			if LaserSpawn == 3:
 				LaserBeam.global_position = $BulletSpawnDown.get_global_position()
-				LaserBeam.cast_to = Vector2(0,2000)
-		
+				LaserBeam.cast_to = Vector2(0,500)
+			
 func _on_Hurtbox_area_entered(area):
 	state = SHOTTED
 	

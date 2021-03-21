@@ -163,7 +163,7 @@ position = Vector2( 2.21085, -5.38688 )
 rotation = 1.5708
 scale = Vector2( 0.3, 0.4 )
 frames = SubResource( 1 )
-frame = 9
+frame = 50
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -175,7 +175,7 @@ anims/Blink = SubResource( 3 )
 anims/Idle = SubResource( 4 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 2 )]
-collision_layer = 32
+collision_layer = 256
 collision_mask = 4
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
@@ -206,8 +206,15 @@ position = Vector2( -6, 0 )
 position = Vector2( 6, 0 )
 
 [node name="LaserBeam" parent="." instance=ExtResource( 3 )]
-cast_to = Vector2( 40, 0 )
+position = Vector2( 0.0840912, 0 )
+enabled = false
+collision_mask = 314
+
+[node name="CollisionShape2D" parent="LaserBeam/Area2D" index="0"]
+disabled = true
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="area_exited" from="Hurtbox" to="." method="_on_Hurtbox_area_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[editable path="LaserBeam"]

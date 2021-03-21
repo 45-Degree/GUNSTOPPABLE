@@ -12,6 +12,8 @@ func _physics_process(delta):
 		var mouse_position = get_local_mouse_position()
 		var max_cast_to = mouse_position.normalized() * MAX_LENGTH
 		cast_to = max_cast_to
+	else:
+		pass
 	if is_colliding():
 		end.global_position = get_collision_point()
 		$Area2D.global_position = get_collision_point()
