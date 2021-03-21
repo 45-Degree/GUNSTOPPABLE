@@ -1,132 +1,133 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Scene/Character/Player/Gun/Gun.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Character/Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Scene/Character/Player/Sprite/spritesheet_(1).png" type="Texture" id=3]
 [ext_resource path="res://Scene/Character/Player/Gun/Bullet/Bullet.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Character/Player/LaserBeam/Laser Beam.gd" type="Script" id=5]
 [ext_resource path="res://Scene/Character/Player/Sprite/spritesheet.png" type="Texture" id=7]
 [ext_resource path="res://Scene/Character/Player/Sprite/asda.png" type="Texture" id=8]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 8 )
 region = Rect2( 700, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 8 )
 region = Rect2( 1400, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 8 )
 region = Rect2( 2100, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 8 )
 region = Rect2( 2800, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 8 )
 region = Rect2( 3500, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 8 )
 region = Rect2( 4200, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 8 )
 region = Rect2( 4900, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 8 )
-region = Rect2( 0, 0, 700, 700 )
+region = Rect2( 5600, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 8 )
-region = Rect2( 700, 0, 700, 700 )
+region = Rect2( 6300, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 8 )
-region = Rect2( 1400, 0, 700, 700 )
+region = Rect2( 7000, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 8 )
-region = Rect2( 2100, 0, 700, 700 )
+region = Rect2( 7700, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 8 )
-region = Rect2( 2800, 0, 700, 700 )
+region = Rect2( 8400, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 8 )
-region = Rect2( 3500, 0, 700, 700 )
+region = Rect2( 9100, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 4200, 0, 700, 700 )
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 4900, 0, 700, 700 )
+atlas = ExtResource( 7 )
+region = Rect2( 700, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 5600, 0, 700, 700 )
+atlas = ExtResource( 7 )
+region = Rect2( 1400, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 6300, 0, 700, 700 )
+atlas = ExtResource( 7 )
+region = Rect2( 2100, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 7000, 0, 700, 700 )
+atlas = ExtResource( 7 )
+region = Rect2( 2800, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 7700, 0, 700, 700 )
+atlas = ExtResource( 7 )
+region = Rect2( 3500, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 8400, 0, 700, 700 )
+atlas = ExtResource( 7 )
+region = Rect2( 4200, 0, 700, 700 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 9100, 0, 700, 700 )
+atlas = ExtResource( 7 )
+region = Rect2( 4900, 0, 700, 700 )
 
 [sub_resource type="SpriteFrames" id=23]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 12.0
-}, {
-"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
 "loop": true,
 "name": "Run",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
+"loop": true,
+"name": "Idle",
 "speed": 12.0
 } ]
 
@@ -491,7 +492,7 @@ region_rect = Rect2( 560, 50, 530, 450 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 23 )
 animation = "Idle"
-frame = 7
+frame = 5
 
 [node name="Gun" type="Node2D" parent="."]
 position = Vector2( 28.9436, -7.55989 )
@@ -535,6 +536,8 @@ position = Vector2( -1.09983, 12.8526 )
 cast_to = Vector2( 0, 0 )
 collision_mask = 58
 collide_with_areas = true
+script = ExtResource( 5 )
+is_Player = true
 
 [node name="Beam" type="Sprite" parent="LaserBeam"]
 modulate = Color( 0.00784314, 0.784314, 0.784314, 1 )
@@ -557,7 +560,6 @@ collision_mask = 58
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LaserBeam/Area2D"]
 shape = SubResource( 54 )
-disabled = true
 
 [node name="CastingParticle" type="Particles2D" parent="LaserBeam"]
 lifetime = 0.3
