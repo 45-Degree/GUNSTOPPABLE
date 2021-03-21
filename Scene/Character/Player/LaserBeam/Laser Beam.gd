@@ -7,7 +7,6 @@ onready var end = $End
 export var is_Player = false
 signal send_reflect
 
-
 func _physics_process(delta):
 	if is_Player == true:
 		var mouse_position = get_local_mouse_position()
