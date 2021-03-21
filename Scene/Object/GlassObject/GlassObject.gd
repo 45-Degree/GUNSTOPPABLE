@@ -4,7 +4,6 @@ export var health = 10
 var invincible = false
 export var Laser = false
 export var Emit = false
-export(int, "Left", "Right", "Top", "Bottom") var BulletSpawn
 export(int, "Left", "Right", "Top", "Bottom") var LaserSpawn
 onready var animatedSprite = $AnimatedSprite
 onready var particle = $Particles2D

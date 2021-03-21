@@ -38,6 +38,7 @@ func _physics_process(delta):
 		state = STOP
 		LaserBeam.enabled = true
 		LaserBeam.visible = true
+		LaserBeam.cast_to = Vector2(2000,0)
 	else:
 		state = STOP
 		LaserBeam.enabled = false
@@ -90,10 +91,3 @@ func _physics_process(delta):
 			reflect.get_node("LaserBeam").global_rotation = reflection.angle()
 			reflect.get_node("LaserBeam").global_position = LaserEnd
 			reflect.get_node("LaserBeam").visible = true
-#	if Singleton.Playable == true:
-#		state = SHOOT
-
-#	if Input.is_action_pressed("shoot"):
-#		state = SHOOT
-#	if Input.is_action_pressed("stop"):
-#		state = STOP
