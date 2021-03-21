@@ -26,6 +26,7 @@ scale_curve = SubResource( 5 )
 color_ramp = SubResource( 3 )
 
 [sub_resource type="CircleShape2D" id=7]
+radius = 2.0
 
 [sub_resource type="ParticlesMaterial" id=8]
 flag_disable_z = true

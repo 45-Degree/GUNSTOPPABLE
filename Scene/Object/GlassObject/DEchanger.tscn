@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scene/Object/GlassObject/GlassObject.gd" type="Script" id=1]
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scene/Character/Player/LaserBeam/LaserBeamNP.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Character/Player/LaserBeam/Laser Beam.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprite/Effect/Burn/1_43.png" type="Texture" id=4]
 [ext_resource path="res://Sprite/Effect/Burn/1_52.png" type="Texture" id=5]
 [ext_resource path="res://Sprite/Effect/Burn/1_56.png" type="Texture" id=6]
@@ -75,7 +75,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 3.25583, 3.28415 )
+extents = Vector2( 2.87871, 3.0152 )
 
 [sub_resource type="Animation" id=3]
 length = 0.6
@@ -134,7 +134,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 3.2235, 3.159 )
+extents = Vector2( 2.86489, 2.9343 )
 
 [sub_resource type="ParticlesMaterial" id=6]
 flag_disable_z = true
@@ -163,7 +163,7 @@ position = Vector2( 2.21085, -5.38688 )
 rotation = 1.5708
 scale = Vector2( 0.3, 0.4 )
 frames = SubResource( 1 )
-frame = 40
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -206,10 +206,7 @@ position = Vector2( -6, 0 )
 position = Vector2( 6, 0 )
 
 [node name="LaserBeam" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4.81989, -0.0478516 )
-enabled = false
-exclude_parent = false
-cast_to = Vector2( 2000, 0 )
+cast_to = Vector2( 40, 0 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="area_exited" from="Hurtbox" to="." method="_on_Hurtbox_area_exited"]

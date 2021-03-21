@@ -123,6 +123,7 @@ scale = 3.0
 
 [node name="TableHorizontal" type="StaticBody2D"]
 collision_layer = 8
+collision_mask = 5
 script = ExtResource( 3 )
 destroyable = true
 
@@ -137,7 +138,7 @@ visible = false
 position = Vector2( 8.44711, -14.2959 )
 rotation = 1.5708
 frames = SubResource( 1 )
-frame = 1
+frame = 28
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
