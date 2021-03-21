@@ -38,7 +38,6 @@ func _physics_process(delta):
 		state = STOP
 		LaserBeam.enabled = true
 		LaserBeam.visible = true
-		LaserBeam.cast_to = Vector2(2000,0)
 	else:
 		state = STOP
 		LaserBeam.enabled = false
