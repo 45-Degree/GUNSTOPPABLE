@@ -430,6 +430,9 @@ position = Vector2( 640.028, 360.286 )
 
 [node name="YSort" type="YSort" parent="."]
 
+[node name="Hostage" parent="YSort" instance=ExtResource( 39 )]
+position = Vector2( 174, 272 )
+
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 149.431, 75.5846 )
 
@@ -840,9 +843,6 @@ collision_layer = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PoolVector2Array( 17, 41, 279, 3, 474, -11, 564, 107, 613, 91, 634, 187, 624, 259, 534, 337, 429, 358, 357, 422, 76, 365, -32, 371, -31, 253, -39, 246, 10, 109, -52, 74, 113, -81, 200, -41, 88, -12, 255, -60, 98, -97, -129, -41, -103, 212, -45, 427, 498, 461, 821, 203, 532, -62, 318, -62 )
-
-[node name="Hostage" parent="StaticBody2D" instance=ExtResource( 39 )]
-position = Vector2( 174, 272 )
 [connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/LevelButton" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton" to="." method="_on_Button_pressed"]

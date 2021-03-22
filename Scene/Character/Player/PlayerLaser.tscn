@@ -1,10 +1,10 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://Scene/Character/Player/Gun/Gun.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Character/Player/PlayerLaser.gd" type="Script" id=2]
 [ext_resource path="res://Scene/Character/Player/Sprite/spritesheet_(1).png" type="Texture" id=3]
 [ext_resource path="res://Scene/Character/Player/Gun/Bullet/Bullet.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scene/Character/Player/LaserBeam/Laser Beam.gd" type="Script" id=5]
+[ext_resource path="res://Scene/Character/Player/LaserBeam/Laser Beam.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/Character/Player/Sprite/spritesheet.png" type="Texture" id=7]
 [ext_resource path="res://Scene/Character/Player/Sprite/asda.png" type="Texture" id=8]
 
@@ -431,33 +431,6 @@ extents = Vector2( 12.7959, 12.196 )
 radius = 16.4771
 height = 10.6336
 
-[sub_resource type="CanvasItemMaterial" id=48]
-blend_mode = 1
-
-[sub_resource type="Gradient" id=49]
-offsets = PoolRealArray( 0, 0.832753, 1 )
-colors = PoolColorArray( 0.870588, 1, 1, 1, 0.978356, 1, 1, 0.167247, 1, 1, 1, 0 )
-
-[sub_resource type="GradientTexture" id=50]
-gradient = SubResource( 49 )
-
-[sub_resource type="Curve" id=51]
-_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.616129, 0.396591 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=52]
-curve = SubResource( 51 )
-
-[sub_resource type="ParticlesMaterial" id=53]
-flag_disable_z = true
-gravity = Vector3( 0, 98, 0 )
-initial_velocity = 120.0
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-scale_curve = SubResource( 52 )
-color_ramp = SubResource( 50 )
-
-[sub_resource type="CircleShape2D" id=54]
-
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
 ]]
@@ -482,7 +455,7 @@ region_rect = Rect2( 560, 50, 530, 450 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 23 )
 animation = "Idle"
-frame = 2
+frame = 1
 
 [node name="Gun" type="Node2D" parent="."]
 position = Vector2( 28.9436, -7.55989 )
@@ -521,36 +494,8 @@ position = Vector2( -1.77463, 13.3131 )
 rotation = 1.5708
 shape = SubResource( 47 )
 
-[node name="LaserBeam" type="RayCast2D" parent="."]
-position = Vector2( -1.09983, 12.8526 )
-cast_to = Vector2( 0, 0 )
-collision_mask = 58
-collide_with_areas = true
-script = ExtResource( 5 )
+[node name="LaserBeam" parent="." instance=ExtResource( 5 )]
+position = Vector2( -2.31838, 0 )
 is_Player = true
 
-[node name="Beam" type="Sprite" parent="LaserBeam"]
-modulate = Color( 0.00784314, 0.784314, 0.784314, 1 )
-show_behind_parent = true
-material = SubResource( 48 )
-centered = false
-offset = Vector2( 0, -12 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 10, 24 )
-
-[node name="End" type="Position2D" parent="LaserBeam"]
-
-[node name="CastingParticle2" type="Particles2D" parent="LaserBeam/End"]
-lifetime = 0.3
-process_material = SubResource( 53 )
-
-[node name="Area2D" type="Area2D" parent="LaserBeam"]
-collision_layer = 4
-collision_mask = 58
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LaserBeam/Area2D"]
-shape = SubResource( 54 )
-
-[node name="CastingParticle" type="Particles2D" parent="LaserBeam"]
-lifetime = 0.3
-process_material = SubResource( 53 )
+[editable path="LaserBeam"]

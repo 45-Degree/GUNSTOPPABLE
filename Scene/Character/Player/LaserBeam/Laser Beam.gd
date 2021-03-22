@@ -30,13 +30,3 @@ func _physics_process(delta):
 		end.global_position = cast_to
 	beam.rotation = cast_to.angle()
 	beam.region_rect.end.x = end.position.length()
-	
-#	if rayCast2D.is_colliding():
-#		end.global_position = rayCast2D.get_collision_point()
-#		var n = rayCast2D.get_collision_normal()
-#		print(n)
-#	else:
-#		end.global_position = rayCast2D.cast_to
-#	beam.rotation = rayCast2D.cast_to.angle()
-#	beam.region_rect.end.x = end.position.length()
-#
