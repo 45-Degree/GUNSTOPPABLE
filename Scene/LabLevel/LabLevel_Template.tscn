@@ -38,7 +38,7 @@
 [ext_resource path="res://Sprite/Tilemap/Tiles_LAB1.png" type="Texture" id=36]
 [ext_resource path="res://Scene/LabLevel/LabLevel.gd" type="Script" id=37]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=39]
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/ColorRect:margin_left")
@@ -65,7 +65,7 @@ tracks/1/keys = {
 "values": [ 665.148, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=40]
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/ColorRect:margin_left")
@@ -560,49 +560,49 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 1, 32, 0 )
 } ]
 16/z_index = 0
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=4]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=41]
 
-[sub_resource type="ShaderMaterial" id=5]
+[sub_resource type="ShaderMaterial" id=42]
 
-[sub_resource type="Theme" id=6]
+[sub_resource type="Theme" id=43]
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=44]
 size = 39
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxTexture" id=8]
+[sub_resource type="StyleBoxTexture" id=45]
 texture = ExtResource( 33 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="StyleBoxTexture" id=9]
+[sub_resource type="StyleBoxTexture" id=46]
 texture = ExtResource( 34 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="StyleBoxTexture" id=10]
+[sub_resource type="StyleBoxTexture" id=47]
 texture = ExtResource( 34 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="StyleBoxTexture" id=11]
+[sub_resource type="StyleBoxTexture" id=48]
 texture = ExtResource( 33 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="StyleBoxTexture" id=12]
+[sub_resource type="StyleBoxTexture" id=49]
 texture = ExtResource( 34 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="StyleBoxTexture" id=13]
+[sub_resource type="StyleBoxTexture" id=50]
 texture = ExtResource( 34 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="DynamicFont" id=14]
+[sub_resource type="DynamicFont" id=51]
 size = 30
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=15]
+[sub_resource type="DynamicFont" id=52]
 size = 14
 outline_size = 1
 font_data = ExtResource( 7 )
@@ -611,8 +611,8 @@ font_data = ExtResource( 7 )
 script = ExtResource( 37 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Wipe_In = SubResource( 1 )
-anims/Wipe_Out = SubResource( 2 )
+anims/Wipe_In = SubResource( 39 )
+anims/Wipe_Out = SubResource( 40 )
 
 [node name="Tween" type="Tween" parent="."]
 
@@ -625,7 +625,7 @@ format = 1
 position = Vector2( 8.9921, 298.075 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( -160, 288 )
+position = Vector2( 149.431, -105.844 )
 scale = Vector2( 1.22, 1.22 )
 current = true
 limit_smoothed = true
@@ -644,11 +644,11 @@ position = Vector2( 640.028, 360.286 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
 
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 5
+[node name="RemoteTransform2D" parent="YSort/Player" index="0"]
+remote_path = NodePath("../../../Camera2D")
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
-parameters/playback = SubResource( 4 )
+parameters/playback = SubResource( 41 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -682,13 +682,13 @@ margin_bottom = 228.0
 custom_constants/separation = 6
 
 [node name="Message" type="Label" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer"]
-material = SubResource( 5 )
+material = SubResource( 42 )
 margin_right = 548.0
 margin_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource( 6 )
-custom_fonts/font = SubResource( 7 )
+theme = SubResource( 43 )
+custom_fonts/font = SubResource( 44 )
 text = "You kill a hostage!"
 align = 1
 valign = 1
@@ -944,9 +944,9 @@ margin_right = 275.0
 margin_bottom = 30.0
 custom_icons/grabber_highlight = ExtResource( 32 )
 custom_icons/grabber = ExtResource( 32 )
-custom_styles/slider = SubResource( 8 )
-custom_styles/grabber_area_highlight = SubResource( 9 )
-custom_styles/grabber_area = SubResource( 10 )
+custom_styles/slider = SubResource( 45 )
+custom_styles/grabber_area_highlight = SubResource( 46 )
+custom_styles/grabber_area = SubResource( 47 )
 max_value = 1.0
 step = 0.05
 script = ExtResource( 31 )
@@ -970,9 +970,9 @@ margin_right = 275.0
 margin_bottom = 30.0
 custom_icons/grabber_highlight = ExtResource( 32 )
 custom_icons/grabber = ExtResource( 32 )
-custom_styles/slider = SubResource( 11 )
-custom_styles/grabber_area_highlight = SubResource( 12 )
-custom_styles/grabber_area = SubResource( 13 )
+custom_styles/slider = SubResource( 48 )
+custom_styles/grabber_area_highlight = SubResource( 49 )
+custom_styles/grabber_area = SubResource( 50 )
 max_value = 1.0
 step = 0.05
 script = ExtResource( 31 )
@@ -1016,7 +1016,7 @@ margin_left = 131.0
 margin_top = 166.0
 margin_right = 509.0
 margin_bottom = 193.0
-custom_fonts/font = SubResource( 14 )
+custom_fonts/font = SubResource( 51 )
 text = "Click to start Guning"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
@@ -1034,7 +1034,7 @@ margin_left = 6.64816
 margin_top = 331.621
 margin_right = 114.648
 margin_bottom = 366.621
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 52 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level - 1"
 __meta__ = {
