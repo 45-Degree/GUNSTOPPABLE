@@ -63,5 +63,3 @@ func _on_Hurtbox_area_entered(area):
 
 func _on_Hurtbox_area_exited(area):
 	state = UNSHOT
-	if Laser == true:
-		Emit = false

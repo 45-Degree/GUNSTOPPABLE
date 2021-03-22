@@ -19,9 +19,13 @@ func shoot():
 	if can_fire:
 		var bullet_instance = bullet.instance()
 		bullet_instance.position = self.get_global_position()
+#		bullet_instance.rotation_degrees = rotation_degrees
 		bullet_instance.direction = (bulletPoint.get_global_position() - self.get_global_position()).normalized()
 		bullet_instance.rotation = bullet_instance.direction.angle()
+#		bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed,0).rotated(rotation))
 		get_tree().current_scene.add_child(bullet_instance)
+#		get_tree().get_root().get_node("World/YSort").add_child(bullet_instance)
+#		get_tree().get_root().add_child(bullet_instance)
 		SoundManager.play_se("res://Scene/Character/Player/Gun/GunSound/GunsoundNew.wav")
 		SoundManager.set_pitch_scale(1,"res://Scene/Character/Player/Gun/GunSound/GunsoundNew.wav")
 		can_fire = false

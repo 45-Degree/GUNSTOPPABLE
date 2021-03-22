@@ -7,6 +7,7 @@ var ACCELERATION = 10000
 var FRICTION = 10000
 var state = STOP
 export var health = 4
+#export(int, "Left", "Right", "Top", "Bottom") var spawnHere
 var invul = false
 var invulTime = 1
 var velocity = Vector2.ZERO
@@ -33,11 +34,11 @@ func _physics_process(delta):
 		state = SHOOT
 		LaserBeam.enabled = false
 		LaserBeam.visible = false
-		$LaserBeam/Area2D/CollisionShape2D.disabled = true
 	elif LASER == true:
 		state = STOP
 		LaserBeam.enabled = true
 		LaserBeam.visible = true
+		LaserBeam.cast_to = Vector2(2000,0)
 	else:
 		state = STOP
 		LaserBeam.enabled = false
@@ -82,7 +83,6 @@ func _physics_process(delta):
 #	
 	if LaserBeam.is_colliding():
 		var reflect = LaserBeam.get_collider()
-		var reflectParent = LaserBeam.get_collider().get_parent()
 		if reflect.is_in_group("Bounce"):
 			var LaserEnd = LaserBeam.get_collision_point()
 			var LaserNormal = LaserBeam.get_collision_normal()

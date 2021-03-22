@@ -1,6 +1,6 @@
 [gd_scene load_steps=72 format=2]
 
-[ext_resource path="res://Scene/Object/GlassObject/GlassObject.gd" type="Script" id=1]
+[ext_resource path="res://Scene/Lab_region/GlassObject/GlassObject.gd" type="Script" id=1]
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Character/Player/LaserBeam/Laser Beam.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprite/Effect/Burn/1_43.png" type="Texture" id=4]
@@ -163,7 +163,7 @@ position = Vector2( 2.21085, -5.38688 )
 rotation = 1.5708
 scale = Vector2( 0.3, 0.4 )
 frames = SubResource( 1 )
-frame = 22
+frame = 55
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

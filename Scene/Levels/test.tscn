@@ -1,67 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scene/Character/Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scene/Object/GlassObject/DEchanger.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Lab_region/GlassObject/DEchanger.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Character/NPC/Hostage/Hostage.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scene/Lab_region/Table/TableLab.tscn" type="PackedScene" id=4]
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
-
-[sub_resource type="Animation" id=2]
-length = 0.6
-step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("../TableHorizontal/TableHorizontal4:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = false
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ Color( 100, 100, 100, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ Color( 100, 100, 100, 1 ), Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=3]
-length = 0.1
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("../TableHorizontal/TableHorizontal4:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
+[ext_resource path="res://Scene/Lab_region/Table/Lab_TableHorizontal.tscn" type="PackedScene" id=4]
 
 [node name="Node" type="Node"]
 
@@ -69,56 +11,21 @@ tracks/1/keys = {
 position = Vector2( 141.269, 92.7706 )
 LASER = true
 
-[node name="AnimatedSprite" parent="Player" index="2"]
-frame = 2
-
-[node name="AnimationTree" parent="Player" index="5"]
-parameters/playback = SubResource( 1 )
-
 [node name="DEchanger" parent="." instance=ExtResource( 2 )]
-position = Vector2( 208, 203.835 )
+position = Vector2( 316.569, 203.835 )
 LaserSpawn = 1
 
-[node name="AnimatedSprite" parent="DEchanger" index="1"]
-frame = 47
-
-[node name="LaserBeam" parent="DEchanger" index="11"]
-collision_mask = 2147483706
-
 [node name="DEchanger2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 328, 200 )
-
-[node name="AnimatedSprite" parent="DEchanger2" index="1"]
-frame = 47
-
-[node name="AnimationPlayer" parent="DEchanger2" index="3"]
-anims/Blink = SubResource( 2 )
-anims/Idle = SubResource( 3 )
-
-[node name="LaserBeam" parent="DEchanger2" index="11"]
-collision_mask = 2147483706
+position = Vector2( 428.822, 203.835 )
 
 [node name="Hostage" parent="." instance=ExtResource( 3 )]
-position = Vector2( 488, 208 )
-
-[node name="AnimatedSprite" parent="Hostage" index="0"]
-frame = 6
-
-[node name="TableHorizontal" parent="." instance=ExtResource( 4 )]
-position = Vector2( 432, 152 )
+position = Vector2( 522.59, 199.559 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 24, 0 )
 collision_layer = 2
-collision_mask = 5
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( 64, 16, 336, 16, 496, -8, 600, 32, 664, 144, 624, 224, 656, 304, 544, 384, 408, 352, 280, 384, 136, 384, 120, 328, 48, 320, 24, 352, 0, 352, -8, 240, 48, 208, -8, 144, 16, 88, 16, 24, 56, -16, -120, 104, -144, 312, -104, 392, 120, 448, 520, 440, 768, 368, 848, 128, 816, -48, 592, -80, 344, -112, 152, -48 )
+polygon = PoolVector2Array( 338.434, -61.4717, 704.594, 29.4, 696.575, 128.29, 651.14, 246.779, 584.322, 295.779, 549.577, 367.941, 361.598, 364.378, 353.579, 323.397, 196.781, 345.669, 118.382, 324.287, 85.4189, 236.088, 58.6919, 191.544, 39.9831, 137.199, 60.4737, 20.491, 122.837, 8.90929, 189.654, 30.2909, 227.963, -12.4723, 170.054, -66.8171, -9.01636, -40.981, -27.7252, 191.544, 9.69252, 334.978, 156.691, 405.359, 611.94, 391.105, 815.956, 295.779, 834.665, 18.7092, 693.012, -81.9624, 322.398, -105.126, 228.854, -79.2897, 245.781, -32.0721 )
 
-[editable path="Player"]
-
-[editable path="DEchanger"]
-
-[editable path="DEchanger2"]
-
-[editable path="Hostage"]
+[node name="Lab_TableHorizontal" parent="." instance=ExtResource( 4 )]
+position = Vector2( 296.049, 89.172 )
