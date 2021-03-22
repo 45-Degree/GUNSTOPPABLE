@@ -1,6 +1,7 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://Scene/Lab_region/Table/Lab_TableVertical_left.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/Lab_region/LabObjectBase.gd" type="Script" id=2]
 [ext_resource path="res://Sprite/Effect/Burn/1_8.png" type="Texture" id=3]
 [ext_resource path="res://Sprite/Effect/Burn/1_36.png" type="Texture" id=4]
 [ext_resource path="res://Sprite/Effect/Burn/1_41.png" type="Texture" id=5]
@@ -72,13 +73,16 @@ animations = [ {
 } ]
 
 [node name="Lab_TableVertical_Left" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+health = 10
+destroyable = false
 
 [node name="Sprite2" parent="." index="0"]
 region_rect = Rect2( 840.688, 107.698, 191.631, 891.35 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 frames = SubResource( 1 )
-frame = 27
+frame = 48
 
 [node name="CollisionShape2D" parent="." index="2"]
 visible = true
