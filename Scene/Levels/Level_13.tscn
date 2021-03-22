@@ -1,10 +1,9 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scene/Levels/Level_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Heater/HeaterFront.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Object/Star/Star.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Object/CoffeeTable/CoffeeTableH.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scene/Object/Decoration/Carpet.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/Object/Decoration/toilet_left.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/Object/Table/TableHorizontal.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Object/Table/TableVertical.tscn" type="PackedScene" id=8]
@@ -112,7 +111,7 @@ scale = Vector2( 1.124, 1 )
 position = Vector2( -152.246, 309.97 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 5
+frame = 3
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 3 )
@@ -178,11 +177,7 @@ position = Vector2( 301.96, 181.522 )
 [node name="Toilet" parent="YSort" index="28" instance=ExtResource( 6 )]
 position = Vector2( 90.0953, 196.985 )
 
-[node name="Carpet" parent="YSort" index="29" instance=ExtResource( 5 )]
-position = Vector2( 59.9696, 310.767 )
-rotation = 1.5708
-
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
-text = "Level - 13"
+text = "Office Level - 13"
 
 [editable path="YSort/Player"]

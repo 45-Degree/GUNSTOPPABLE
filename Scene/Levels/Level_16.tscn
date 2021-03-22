@@ -204,6 +204,6 @@ margin_left = 918.362
 margin_right = 918.362
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
-text = "Level - 16"
+text = "Office Level - 16"
 
 [editable path="YSort/Player"]

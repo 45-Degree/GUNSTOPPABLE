@@ -50,7 +50,7 @@ node_path = NodePath("../LockDoorH")
 position = Vector2( 278.63, 432.703 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 1
+frame = 4
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -144,7 +144,7 @@ margin_right = 825.467
 margin_bottom = -10.4882
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
-text = "Level - 5"
+text = "Office Level - 5"
 
 [node name="Mouse_cursor" parent="CanvasLayer" index="6"]
 position = Vector2( -72.96, 6.73477 )

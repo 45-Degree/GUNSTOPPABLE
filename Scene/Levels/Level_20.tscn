@@ -163,6 +163,8 @@ visible = false
 visible = false
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
-text = "Level - 20"
+margin_top = 333.035
+margin_bottom = 368.035
+text = "Office Level - 20"
 
 [editable path="YSort/Player"]

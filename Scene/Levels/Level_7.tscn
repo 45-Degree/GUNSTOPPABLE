@@ -44,9 +44,6 @@ scale = Vector2( 2.3, 2.3 )
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 186.979, 470.812 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 2
-
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
 
@@ -154,6 +151,6 @@ position = Vector2( 334.874, -53.1675 )
 visible = false
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
-text = "Level - 7"
+text = "Office Level - 7"
 
 [editable path="YSort/Player"]

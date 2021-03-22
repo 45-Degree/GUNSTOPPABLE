@@ -246,7 +246,7 @@ margin_left = 1196.41
 margin_right = 1196.41
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
-text = "Level - 14"
+text = "Office Level - 14"
 
 [node name="Mouse_cursor" parent="CanvasLayer" index="6"]
 position = Vector2( -70.4204, -56.9357 )

@@ -51,7 +51,7 @@ scale = Vector2( 2.3, 2.3 )
 position = Vector2( -217.64, 42.1957 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 1
+frame = 4
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -149,6 +149,6 @@ margin_left = 1000.73
 margin_right = 1000.73
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
-text = "Level - 4"
+text = "Office Level - 4"
 
 [editable path="YSort/Player"]

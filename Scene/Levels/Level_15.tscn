@@ -38,7 +38,7 @@ tile_data = PoolIntArray( -524298, 81, 0, -524297, 81, 0, -524296, 81, 0, -52429
 position = Vector2( -343.692, 288.009 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 4
+frame = 0
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -144,5 +144,8 @@ position = Vector2( 506.919, 694.526 )
 
 [node name="Star3" parent="YSort" index="31" instance=ExtResource( 2 )]
 position = Vector2( 363.449, 439.68 )
+
+[node name="LevelLabel" parent="CanvasLayer" index="5"]
+text = "Office Level - 15"
 
 [editable path="YSort/Player"]
