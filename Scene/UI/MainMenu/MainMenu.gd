@@ -7,7 +7,7 @@ func _ready():
 func _on_Button_button_up():
 	Transition.wipeOut()
 	yield(get_tree().create_timer(0.5),"timeout")
-	get_tree().change_scene("res://Scene/UI/LevelSelect/Level_select.tscn")
+	get_tree().change_scene("res://Scene/UI/Regionselect/RegionSelect.tscn")
 
 func _on_Button4_button_up():
 	get_tree().quit()
