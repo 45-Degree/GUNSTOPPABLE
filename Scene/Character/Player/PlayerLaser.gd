@@ -31,8 +31,10 @@ func _physics_process(delta):
 		state = STOP
 	match state:
 			SHOOT:
+				LaserBeam.visible = true
 				LaserBeam.enabled = true
 			STOP:
+				LaserBeam.visible = false
 				LaserBeam.enabled = false
 	target_sight = get_local_mouse_position()
 	
