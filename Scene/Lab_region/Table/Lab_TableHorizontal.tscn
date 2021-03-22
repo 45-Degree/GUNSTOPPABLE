@@ -14,5 +14,5 @@ texture = ExtResource( 2 )
 region_rect = Rect2( 55.3929, 51.7818, 734.88, 462.641 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 53
+frame = 58
 [connection signal="area_exited" from="Hurtbox" to="." method="_on_Hurtbox_area_exited"]
