@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tile_connectors_RE.png-260a8c0d6d2b6cc069c00e3903fffc70.stex"
+path="res://.import/Tiles_LAB1.png-1cee39417d3c61ddccf7ad921fc9df03.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Tilemap/Tile_connectors_RE.png"
-dest_files=[ "res://.import/Tile_connectors_RE.png-260a8c0d6d2b6cc069c00e3903fffc70.stex" ]
+source_file="res://Sprite/Tilemap/Tiles_LAB1.png"
+dest_files=[ "res://.import/Tiles_LAB1.png-1cee39417d3c61ddccf7ad921fc9df03.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
