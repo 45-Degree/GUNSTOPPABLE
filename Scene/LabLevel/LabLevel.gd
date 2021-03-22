@@ -44,7 +44,6 @@ func _ready():
 	yield(self,"mouse_click")
 	Singleton.Playable = true
 	$CanvasLayer/Control4.hide()
-	player.BULLET = true
 
 func _process(delta):
 	var terrorist = get_tree().get_nodes_in_group("Terrorist").size()
@@ -161,7 +160,6 @@ func _on_level_Completed():
 	if soundplay == false:
 		SoundManager.play_se("res://Sound/SFX/Object/ExitUnlock.wav")
 		soundplay = true
-
 
 func _on_Button3_pressed():
 		Transition.wipeOut()
