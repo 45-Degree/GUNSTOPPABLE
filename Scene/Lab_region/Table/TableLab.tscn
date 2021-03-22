@@ -138,7 +138,7 @@ visible = false
 position = Vector2( 8.44711, -14.2959 )
 rotation = 1.5708
 frames = SubResource( 1 )
-frame = 53
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
