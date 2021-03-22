@@ -4,7 +4,7 @@
 [ext_resource path="res://Scene/UI/Camera2D.gd" type="Script" id=2]
 [ext_resource path="res://Sprite/Tilemap/Tiles_Mix_LAB2.png" type="Texture" id=3]
 [ext_resource path="res://Scene/UI/Star/Star_Crack.png" type="Texture" id=4]
-[ext_resource path="res://Scene/Character/Player/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Character/Player/PlayerLaser.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://karma future.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Scene/UI/Mouse_cursor.tscn" type="PackedScene" id=8]
@@ -346,7 +346,7 @@ tracks/1/keys = {
 16/shapes = [  ]
 16/z_index = 0
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=4]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=17]
 
 [sub_resource type="ShaderMaterial" id=5]
 
@@ -429,16 +429,9 @@ position = Vector2( 640.028, 360.286 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( -160, 288 )
-
-[node name="RemoteTransform2D" parent="YSort/Player" index="0"]
-remote_path = NodePath("../../../Camera2D")
-
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 0
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
-parameters/playback = SubResource( 4 )
+parameters/playback = SubResource( 17 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

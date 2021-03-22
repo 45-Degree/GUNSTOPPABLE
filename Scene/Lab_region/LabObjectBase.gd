@@ -16,7 +16,6 @@ export(int, "Left", "Right", "Top", "Bottom") var BulletSpawn
 onready var animatedSprite = $AnimatedSprite
 onready var particle = $Particles2D
 onready var timer = $Timer
-onready var timer2 = $Timer2
 var sound_clip = preload("res://Sound/SFX/Object/Keycard_3.wav")
 onready var explodeDamage = preload("res://Scene/Object/Heater/ExplosionDamage.tscn")
 signal Star_Pick
@@ -36,11 +35,12 @@ func _process(delta):
 				animationPlayer.play("Idle")
 				particle.emitting = false
 			SHOTTED:
-				health =- 4
 				animatedSprite.show()
 				animationPlayer.play("Blink")
 				particle.emitting = true
 				yield(get_tree().create_timer(1.5),"timeout")
+				health =- 4
+
 	if unlockable == true and Singleton.unlock == true:
 		queue_free()
 	if explodable == true and health == 0:

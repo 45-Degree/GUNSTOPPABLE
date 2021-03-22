@@ -26,36 +26,18 @@ enum{
 	STOP
 }
 
-func _ready():
-	state = STOP
-
 func _physics_process(delta):
-	if BULLET == true:
+	if Input.is_action_just_pressed("shoot"):
 		state = SHOOT
-		LaserBeam.enabled = false
-		LaserBeam.visible = false
-	elif LASER == true:
+	if Input.is_action_just_pressed("StopFire"):
 		state = STOP
-		LaserBeam.enabled = true
-		LaserBeam.visible = true
-		LaserBeam.cast_to = Vector2(2000,0)
-	else:
-		state = STOP
-		LaserBeam.enabled = false
-		LaserBeam.visible = false
 	match state:
 			SHOOT:
-					$Gun.shoot()
-					if Singleton.Playable == false:
-						state = STOP
+				LaserBeam.enabled = true
 			STOP:
-				pass
+				LaserBeam.enabled = false
 	target_sight = get_local_mouse_position()
 	
-	if Input.is_action_just_pressed("shoot") and Singleton.Playable == true:
-		BULLET = true
-	if Input.is_action_just_pressed("StopFire"):
-		BULLET = false
 	if Singleton.Playable == true:
 		input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 		input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
