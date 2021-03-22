@@ -82,7 +82,6 @@ func _on_Button2_pressed():
 	get_tree().reload_current_scene()
 
 func _on_Hostage_Die():
-	player.BULLET = false
 	starCrack.show()
 	starAll.hide()
 	SoundManager.play_bgm("res://Sound/Music/Mission_Fail.wav")
@@ -106,7 +105,6 @@ func _on_Passable():
 		else:
 			pass
 		Save._on_Save()
-		player.BULLET = false
 		SoundManager.play_bgm("res://Sound/Music/Mission_Success.wav")
 		if Star_Count == 0:
 			pass

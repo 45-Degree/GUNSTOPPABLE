@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://Sprite/Tilemap/Tile_connectors_LAB.png" type="Texture" id=1]
 [ext_resource path="res://Scene/UI/Camera2D.gd" type="Script" id=2]
@@ -37,7 +37,8 @@
 [ext_resource path="res://Scene/UI/Star/tile000.png" type="Texture" id=35]
 [ext_resource path="res://Sprite/Tilemap/Tiles_LAB1.png" type="Texture" id=36]
 [ext_resource path="res://Scene/LabLevel/LabLevel.gd" type="Script" id=37]
-[ext_resource path="res://Scene/Lab_region/Mirror/Bounce.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Scene/Lab_region/Mirror/Mirror.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Scene/Character/NPC/Hostage/Hostage.tscn" type="PackedScene" id=39]
 
 [sub_resource type="Animation" id=1]
 length = 0.4
@@ -433,7 +434,7 @@ position = Vector2( 640.028, 360.286 )
 position = Vector2( 149.431, 75.5846 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 7
+frame = 5
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 4 )
@@ -833,6 +834,15 @@ __meta__ = {
 }
 
 [node name="Mouse_cursor" parent="CanvasLayer" instance=ExtResource( 8 )]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 17, 41, 279, 3, 474, -11, 564, 107, 613, 91, 634, 187, 624, 259, 534, 337, 429, 358, 357, 422, 76, 365, -32, 371, -31, 253, -39, 246, 10, 109, -52, 74, 113, -81, 200, -41, 88, -12, 255, -60, 98, -97, -129, -41, -103, 212, -45, 427, 498, 461, 821, 203, 532, -62, 318, -62 )
+
+[node name="Hostage" parent="StaticBody2D" instance=ExtResource( 39 )]
+position = Vector2( 174, 272 )
 [connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/LevelButton" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton" to="." method="_on_Button_pressed"]

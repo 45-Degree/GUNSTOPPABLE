@@ -10,7 +10,7 @@ extents = Vector2( 14.8667, 14.6425 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 14.533, 14.3088 )
 
-[node name="Bounce" type="StaticBody2D" groups=[
+[node name="Mirror" type="StaticBody2D" groups=[
 "Bounce",
 ]]
 collision_layer = 32
@@ -24,6 +24,8 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="LaserBeam" parent="." instance=ExtResource( 3 )]
+enabled = false
+cast_to = Vector2( 2000, 0 )
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 32
@@ -31,3 +33,5 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 2 )
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]

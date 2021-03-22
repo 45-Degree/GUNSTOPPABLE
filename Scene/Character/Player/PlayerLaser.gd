@@ -60,14 +60,3 @@ func _physics_process(delta):
 	elif Singleton.Playable == false:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	velocity = move_and_slide(velocity)
-#	
-	if LaserBeam.is_colliding():
-		var reflect = LaserBeam.get_collider()
-		if reflect.is_in_group("Bounce"):
-			var LaserEnd = LaserBeam.get_collision_point()
-			var LaserNormal = LaserBeam.get_collision_normal()
-			var forward = LaserEnd - LaserBeam.global_position
-			var reflection = -forward.reflect(LaserNormal)
-			reflect.get_node("LaserBeam").global_rotation = reflection.angle()
-			reflect.get_node("LaserBeam").global_position = LaserEnd
-			reflect.get_node("LaserBeam").visible = true

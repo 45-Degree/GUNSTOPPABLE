@@ -25,6 +25,7 @@ func _physics_process(delta):
 			reflect.get_node("LaserBeam").global_rotation = reflection.angle()
 			reflect.get_node("LaserBeam").global_position = end.global_position
 			reflect.get_node("LaserBeam").visible = true
+			reflect.get_node("LaserBeam").cast_to = Vector2(2000,0)
 	else:
 		end.global_position = cast_to
 	beam.rotation = cast_to.angle()
