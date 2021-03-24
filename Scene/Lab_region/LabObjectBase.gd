@@ -10,7 +10,6 @@ export var Reflectable = false
 export var pickable = false
 export var unlockable = false
 onready var damagable = false
-onready var state = UNSHOT
 export(int, "Left", "Right", "Top", "Bottom") var BulletSpawn
 onready var animatedSprite = $AnimatedSprite
 onready var particle = $Particles2D
@@ -18,11 +17,6 @@ onready var timer = $Timer
 var sound_clip = preload("res://Sound/SFX/Object/Keycard_3.wav")
 onready var explodeDamage = preload("res://Scene/Object/Heater/ExplosionDamage.tscn")
 signal Star_Pick
-
-enum{
-	SHOTTED,
-	UNSHOT
-}
 
 func _ready():
 	$AnimationPlayer.play("Idle")
@@ -38,7 +32,7 @@ func _process(delta):
 				particle.emitting = true
 	if unlockable == true and Singleton.unlock == true:
 		queue_free()
-	if explodable == true and health == 0:
+	if explodable == true and health <= 0:
 		var explodeInstance = explodeDamage.instance()
 		explodeInstance.position = self.get_global_position()
 		get_tree().current_scene.add_child(explodeInstance)

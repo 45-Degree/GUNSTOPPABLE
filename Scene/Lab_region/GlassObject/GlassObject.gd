@@ -15,29 +15,35 @@ enum{
 func _ready():
 		LaserBeam.cast_to = Vector2.ZERO
 		LaserBeam.visible = false
+		$Sprite2.texture = load("res://Scene/Lab_region/GlassObject/tile00"+ str(LaserSpawn) + ".png")
 		
 func _process(delta):
 	match state:
 			UNSHOT:
+				LaserBeam.enabled = false
 				LaserBeam.visible = false
-				LaserBeam.cast_to = Vector2.ZERO
+				LaserBeam.cast_to = Vector2(0,0)
 				$LaserBeam/Area2D/CollisionShape2D.disabled = true
 			SHOTTED:
-				LaserBeam.enabled = true
-				LaserBeam.visible = true
-				$LaserBeam/Area2D/CollisionShape2D.disabled = false
 				if LaserSpawn == 0:
 					LaserBeam.global_position = $BulletSpawnLeft.get_global_position()
 					LaserBeam.cast_to = Vector2(-2000,0)
+					$Sprite2.texture = load("res://Scene/Lab_region/GlassObject/tile000.png")
 				if LaserSpawn == 1:
 					LaserBeam.global_position = $BulletSpawnRight.get_global_position()
 					LaserBeam.cast_to = Vector2(2000,0)
+					$Sprite2.texture = load("res://Scene/Lab_region/GlassObject/tile001.png")
 				if LaserSpawn == 2:
 					LaserBeam.global_position = $BulletSpawnUp.get_global_position()
 					LaserBeam.cast_to = Vector2(0,-2000)
+					$Sprite2.texture = load("res://Scene/Lab_region/GlassObject/tile002.png")
 				if LaserSpawn == 3:
 					LaserBeam.global_position = $BulletSpawnDown.get_global_position()
 					LaserBeam.cast_to = Vector2(0,2000)
+					$Sprite2.texture = load("res://Scene/Lab_region/GlassObject/tile003.png")
+				LaserBeam.enabled = true
+				LaserBeam.visible = true
+				$LaserBeam/Area2D/CollisionShape2D.disabled = false
 		
 func _on_Hurtbox_area_entered(area):
 	state = SHOTTED

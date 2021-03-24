@@ -11,13 +11,12 @@ script = ExtResource( 3 )
 health = 10
 
 [node name="Sprite2" parent="." index="0"]
-modulate = Color( 100, 100, 100, 1 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 region_rect = Rect2( 55.3929, 51.7818, 734.88, 462.641 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 60
+frame = 30
 
 [node name="Timer" parent="." index="6"]
 wait_time = 0.5
