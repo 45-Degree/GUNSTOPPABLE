@@ -5,7 +5,8 @@
 [node name="Lab_TableHorizontal_back" instance=ExtResource( 1 )]
 
 [node name="Sprite2" parent="." index="0"]
+modulate = Color( 1, 1, 1, 1 )
 region_rect = Rect2( 1082.93, 95.4945, 736.546, 412.688 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 49
+frame = 31

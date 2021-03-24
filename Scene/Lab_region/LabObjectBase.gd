@@ -9,8 +9,7 @@ export var explodable = false
 export var Reflectable = false
 export var pickable = false
 export var unlockable = false
-export var Laser = false
-export var Emit = false
+onready var damagable = false
 onready var state = UNSHOT
 export(int, "Left", "Right", "Top", "Bottom") var BulletSpawn
 onready var animatedSprite = $AnimatedSprite
@@ -29,18 +28,14 @@ func _ready():
 	$AnimationPlayer.play("Idle")
 	
 func _process(delta):
-	match state:
-			UNSHOT:
+	if damagable == false:
 				animatedSprite.hide()
 				animationPlayer.play("Idle")
 				particle.emitting = false
-			SHOTTED:
+	if damagable == true:
 				animatedSprite.show()
 				animationPlayer.play("Blink")
 				particle.emitting = true
-				yield(get_tree().create_timer(1.5),"timeout")
-				health =- 4
-
 	if unlockable == true and Singleton.unlock == true:
 		queue_free()
 	if explodable == true and health == 0:
@@ -54,7 +49,9 @@ func _process(delta):
 
 func _on_Hurtbox_area_entered(area):
 	if invincible == false and destroyable == true:
-		state = SHOTTED
+		health -= 5
+		damagable = true
+		$Timer.start()
 	if pickable == true:
 		var door = get_node(node_path)
 		door.queue_free()
@@ -62,4 +59,8 @@ func _on_Hurtbox_area_entered(area):
 		queue_free()
 
 func _on_Hurtbox_area_exited(area):
-	state = UNSHOT
+	damagable = false
+	$Timer.stop()
+
+func _on_Timer_timeout():
+	health -= 3
