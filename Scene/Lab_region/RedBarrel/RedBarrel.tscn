@@ -45,4 +45,4 @@ frame = 2
 playing = true
 
 [node name="AnimatedSprite" parent="." index="2"]
-frame = 48
+frame = 18
