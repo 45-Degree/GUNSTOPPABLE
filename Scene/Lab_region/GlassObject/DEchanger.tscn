@@ -149,7 +149,7 @@ orbit_velocity_random = 0.0
 scale = Vector2( 5, 5 )
 collision_layer = 8
 script = ExtResource( 1 )
-LaserSpawn = 2
+LaserSpawn = 1
 
 [node name="Sprite2" type="Sprite" parent="."]
 scale = Vector2( 0.1, 0.1 )
@@ -162,7 +162,7 @@ position = Vector2( 2.21085, -5.38688 )
 rotation = 1.5708
 scale = Vector2( 0.3, 0.4 )
 frames = SubResource( 1 )
-frame = 22
+frame = 28
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

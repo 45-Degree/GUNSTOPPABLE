@@ -28,6 +28,9 @@ position = Vector2( 717.478, 627.432 )
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 14.9165, 291.873 )
 
+[node name="AnimatedSprite" parent="YSort/Player" index="2"]
+frame = 2
+
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
 
@@ -89,14 +92,7 @@ position = Vector2( 624.111, 304.051 )
 rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
-[node name="Control4" parent="CanvasLayer" index="3"]
-visible = false
-
-[node name="ColorRect" parent="CanvasLayer" index="4"]
-visible = false
-
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
-visible = false
 text = "Lab Level - 2"
 
 [editable path="YSort/Player"]
