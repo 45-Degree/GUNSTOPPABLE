@@ -30,7 +30,7 @@ position = Vector2( 717.478, 627.432 )
 position = Vector2( 14.9165, 291.873 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 2
+frame = 5
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
