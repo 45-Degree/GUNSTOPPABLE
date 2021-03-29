@@ -1,17 +1,18 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scene/LabLevel/LabLevel_Template.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scene/Character/NPC/Hostage/Hostage.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Character/NPC/Hostage/LabHostage.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Character/NPC/Terrorist/Terrorist.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Lab_region/RedBarrel/Lab_Redbarrel.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scene/Object/Counter/Counter_side.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Lab_region/Container/Container_Horizontal.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/Lab_region/Table/Lab_TableHorizontal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/Lab_region/Table/Lab_TableHorizontal_back.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Object/Detector/detector.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scene/Object/Star/Star.tscn" type="PackedScene" id=9]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
-[node name="LabLevel_Template" instance=ExtResource( 1 )]
+[node name="LabLevel_2" instance=ExtResource( 1 )]
 
 [node name="TileMap" parent="." index="2"]
 tile_data = PoolIntArray( 262141, 16, 0, 262142, 16, 0, 262143, 16, 0, 196608, 16, 0, 196609, 5, 0, 196610, 13, 0, 196611, 13, 0, 196612, 13, 0, 196613, 13, 0, 196614, 13, 0, 196615, 13, 0, 196616, 6, 0, 196617, 16, 0, 196618, 16, 0, 196619, 16, 0, 196620, 16, 0, 196621, 16, 0, 196622, 16, 0, 196623, 16, 0, 196624, 16, 0, 196625, 16, 0, 196626, 16, 0, 196627, 16, 0, 196628, 16, 0, 196629, 16, 0, 196630, 16, 0, 327677, 16, 0, 327678, 16, 0, 327679, 16, 0, 262144, 16, 0, 262145, 9, 0, 262146, 8, 0, 262147, 8, 0, 262148, 8, 0, 262149, 8, 0, 262150, 8, 0, 262151, 8, 0, 262152, 7, 0, 262153, 16, 0, 262154, 16, 0, 262155, 16, 0, 262156, 16, 0, 262157, 16, 0, 262158, 16, 0, 262159, 16, 0, 262160, 16, 0, 262161, 16, 0, 262162, 16, 0, 262163, 16, 0, 262164, 16, 0, 262165, 16, 0, 262166, 16, 0, 393213, 16, 0, 393214, 16, 0, 393215, 16, 0, 327680, 16, 0, 327681, 9, 0, 327682, 15, 0, 327683, 15, 0, 327684, 15, 0, 327685, 15, 0, 327686, 15, 0, 327687, 15, 0, 327688, 7, 0, 327689, 16, 0, 327690, 16, 0, 327691, 16, 0, 327692, 16, 0, 327693, 16, 0, 327694, 16, 0, 327695, 16, 0, 327696, 16, 0, 327697, 16, 0, 327698, 16, 0, 327699, 16, 0, 327700, 16, 0, 327701, 16, 0, 327702, 16, 0, 458749, 16, 0, 458750, 16, 0, 458751, 16, 0, 393216, 13, 0, 393217, 14, 0, 393218, 15, 0, 393219, 15, 0, 393220, 15, 0, 393221, 15, 0, 393222, 15, 0, 393223, 15, 0, 393224, 0, 65541, 393225, 13, 0, 393226, 13, 0, 393227, 13, 0, 393228, 13, 0, 393229, 13, 0, 393230, 13, 0, 393231, 6, 0, 393232, 16, 0, 393233, 16, 0, 393234, 16, 0, 393235, 16, 0, 393236, 16, 0, 393237, 16, 0, 393238, 16, 0, 524285, 16, 0, 524286, 16, 0, 524287, 8, 0, 458752, 8, 0, 458753, 8, 0, 458754, 15, 0, 458755, 15, 0, 458756, 15, 0, 458757, 15, 0, 458758, 15, 0, 458759, 15, 0, 458760, 1, 2, 458761, 8, 0, 458762, 8, 0, 458763, 8, 0, 458764, 8, 0, 458765, 8, 0, 458766, 8, 0, 458767, 7, 0, 458768, 16, 0, 458769, 16, 0, 458770, 16, 0, 458771, 16, 0, 458772, 16, 0, 458773, 16, 0, 458774, 16, 0, 589821, 16, 0, 589822, 16, 0, 589823, 15, 0, 524288, 15, 0, 524289, 15, 0, 524290, 15, 0, 524291, 15, 0, 524292, 15, 0, 524293, 15, 0, 524294, 15, 0, 524295, 15, 0, 524296, 1, 2, 524297, 15, 0, 524298, 15, 0, 524299, 15, 0, 524300, 15, 0, 524301, 15, 0, 524302, 15, 0, 524303, 7, 0, 524304, 16, 0, 524305, 16, 0, 524306, 16, 0, 524307, 16, 0, 524308, 16, 0, 524309, 16, 0, 524310, 16, 0, 655357, 16, 0, 655358, 16, 0, 655359, 15, 0, 589824, 15, 0, 589825, 15, 0, 589826, 15, 0, 589827, 15, 0, 589828, 15, 0, 589829, 15, 0, 589830, 15, 0, 589831, 15, 0, 589832, 1, 2, 589833, 15, 0, 589834, 15, 0, 589835, 15, 0, 589836, 15, 0, 589837, 15, 0, 589838, 15, 0, 589839, 7, 0, 589840, 9, 0, 589841, 15, 0, 589842, 15, 0, 589843, 15, 0, 589844, 7, 0, 589845, 16, 0, 589846, 16, 0, 720893, 16, 0, 720894, 16, 0, 720895, 15, 0, 655360, 15, 0, 655361, 15, 0, 655362, 15, 0, 655363, 15, 0, 655364, 15, 0, 655365, 15, 0, 655366, 15, 0, 655367, 15, 0, 655368, 1, 2, 655369, 15, 0, 655370, 15, 0, 655371, 15, 0, 655372, 15, 0, 655373, 15, 0, 655374, 15, 0, 655375, 7, 0, 655376, 9, 0, 655377, 15, 0, 655378, 15, 0, 655379, 15, 0, 655380, 7, 0, 655381, 16, 0, 655382, 16, 0, 786429, 16, 0, 786430, 16, 0, 786431, 3, 0, 720896, 3, 0, 720897, 4, 0, 720898, 15, 0, 720899, 15, 0, 720900, 15, 0, 720901, 15, 0, 720902, 15, 0, 720903, 15, 0, 720904, 1, 2, 720905, 15, 0, 720906, 15, 0, 720907, 15, 0, 720908, 15, 0, 720909, 15, 0, 720910, 15, 0, 720911, 12, 0, 720912, 14, 0, 720913, 15, 0, 720914, 15, 0, 720915, 15, 0, 720916, 12, 0, 720917, 6, 0, 720918, 16, 0, 851965, 16, 0, 851966, 16, 0, 851967, 16, 0, 786432, 16, 0, 786433, 0, 3, 786434, 1, 65538, 786435, 1, 65538, 786436, 1, 1, 786437, 15, 0, 786438, 15, 0, 786439, 15, 0, 786440, 1, 2, 786441, 15, 0, 786442, 15, 0, 786443, 15, 0, 786444, 15, 0, 786445, 15, 0, 786446, 15, 0, 786447, 8, 0, 786448, 8, 0, 786449, 15, 0, 786450, 15, 0, 786451, 15, 0, 786452, 8, 0, 786453, 7, 0, 786454, 16, 0, 917501, 16, 0, 917502, 16, 0, 917503, 16, 0, 851968, 16, 0, 851969, 9, 0, 851970, 8, 0, 851971, 8, 0, 851972, 8, 0, 851973, 15, 0, 851974, 15, 0, 851975, 15, 0, 851976, 1, 2, 851977, 15, 0, 851978, 15, 0, 851979, 15, 0, 851980, 15, 0, 851981, 15, 0, 851982, 15, 0, 851983, 15, 0, 851984, 15, 0, 851985, 15, 0, 851986, 15, 0, 851987, 15, 0, 851988, 15, 0, 851989, 7, 0, 851990, 16, 0, 983037, 16, 0, 983038, 16, 0, 983039, 16, 0, 917504, 16, 0, 917505, 9, 0, 917506, 15, 0, 917507, 15, 0, 917508, 15, 0, 917509, 15, 0, 917510, 15, 0, 917511, 15, 0, 917512, 1, 65537, 917513, 15, 0, 917514, 15, 0, 917515, 15, 0, 917516, 15, 0, 917517, 15, 0, 917518, 15, 0, 917519, 15, 0, 917520, 15, 0, 917521, 15, 0, 917522, 15, 0, 917523, 15, 0, 917524, 15, 0, 917525, 7, 0, 917526, 16, 0, 1048573, 16, 0, 1048574, 16, 0, 1048575, 16, 0, 983040, 16, 0, 983041, 9, 0, 983042, 15, 0, 983043, 15, 0, 983044, 15, 0, 983045, 15, 0, 983046, 15, 0, 983047, 15, 0, 983048, 15, 0, 983049, 15, 0, 983050, 15, 0, 983051, 15, 0, 983052, 15, 0, 983053, 15, 0, 983054, 15, 0, 983055, 15, 0, 983056, 15, 0, 983057, 15, 0, 983058, 15, 0, 983059, 15, 0, 983060, 15, 0, 983061, 7, 0, 983062, 16, 0, 1114109, 16, 0, 1114110, 16, 0, 1114111, 16, 0, 1048576, 16, 0, 1048577, 9, 0, 1048578, 15, 0, 1048579, 15, 0, 1048580, 15, 0, 1048581, 15, 0, 1048582, 15, 0, 1048583, 15, 0, 1048584, 15, 0, 1048585, 15, 0, 1048586, 15, 0, 1048587, 15, 0, 1048588, 15, 0, 1048589, 15, 0, 1048590, 15, 0, 1048591, 1, 0, 1048592, 15, 0, 1048593, 15, 0, 1048594, 15, 0, 1048595, 15, 0, 1048596, 15, 0, 1048597, 7, 0, 1048598, 16, 0, 1179645, 16, 0, 1179646, 16, 0, 1179647, 16, 0, 1114112, 16, 0, 1114113, 9, 0, 1114114, 15, 0, 1114115, 15, 0, 1114116, 15, 0, 1114117, 15, 0, 1114118, 15, 0, 1114119, 15, 0, 1114120, 15, 0, 1114121, 15, 0, 1114122, 15, 0, 1114123, 15, 0, 1114124, 15, 0, 1114125, 15, 0, 1114126, 15, 0, 1114127, 1, 2, 1114128, 15, 0, 1114129, 15, 0, 1114130, 15, 0, 1114131, 15, 0, 1114132, 15, 0, 1114133, 7, 0, 1114134, 16, 0, 1245181, 16, 0, 1245182, 16, 0, 1245183, 16, 0, 1179648, 16, 0, 1179649, 9, 0, 1179650, 15, 0, 1179651, 15, 0, 1179652, 15, 0, 1179653, 15, 0, 1179654, 15, 0, 1179655, 15, 0, 1179656, 15, 0, 1179657, 15, 0, 1179658, 15, 0, 1179659, 15, 0, 1179660, 15, 0, 1179661, 15, 0, 1179662, 15, 0, 1179663, 0, 6, 1179664, 3, 0, 1179665, 3, 0, 1179666, 3, 0, 1179667, 3, 0, 1179668, 3, 0, 1179669, 11, 0, 1179670, 16, 0, 1310717, 16, 0, 1310718, 16, 0, 1310719, 16, 0, 1245184, 16, 0, 1245185, 10, 0, 1245186, 3, 0, 1245187, 3, 0, 1245188, 3, 0, 1245189, 3, 0, 1245190, 3, 0, 1245191, 3, 0, 1245192, 3, 0, 1245193, 3, 0, 1245194, 3, 0, 1245195, 3, 0, 1245196, 3, 0, 1245197, 3, 0, 1245198, 3, 0, 1245199, 11, 0, 1245200, 16, 0, 1245201, 16, 0, 1245202, 16, 0, 1245203, 16, 0, 1245204, 16, 0, 1245205, 16, 0, 1245206, 16, 0 )
@@ -35,7 +36,7 @@ frame = 2
 parameters/playback = SubResource( 1 )
 
 [node name="Terrorist" parent="YSort" index="1" instance=ExtResource( 3 )]
-position = Vector2( 156.037, 166.87 )
+position = Vector2( 142.021, 189.562 )
 
 [node name="Terrorist2" parent="YSort" index="2" instance=ExtResource( 3 )]
 position = Vector2( 105.125, 470.218 )
@@ -46,51 +47,59 @@ position = Vector2( 369.078, 325.957 )
 [node name="Terrorist4" parent="YSort" index="4" instance=ExtResource( 3 )]
 position = Vector2( 554.287, 545.814 )
 
-[node name="Hostage" parent="YSort" index="5" instance=ExtResource( 2 )]
-position = Vector2( 126.952, 550.928 )
+[node name="HeaterFront" parent="YSort" index="5" instance=ExtResource( 4 )]
+position = Vector2( 192.246, 162.473 )
 
-[node name="Hostage2" parent="YSort" index="6" instance=ExtResource( 2 )]
-position = Vector2( 303.971, 293.274 )
-
-[node name="Hostage3" parent="YSort" index="7" instance=ExtResource( 2 )]
-position = Vector2( 431.223, 549.038 )
-
-[node name="Counter_side" parent="YSort" index="8" instance=ExtResource( 5 )]
-position = Vector2( 117.975, 206.273 )
-rotation = 4.71239
-
-[node name="HeaterFront" parent="YSort" index="9" instance=ExtResource( 4 )]
-position = Vector2( 206.262, 162.473 )
-
-[node name="HeaterFront2" parent="YSort" index="10" instance=ExtResource( 4 )]
+[node name="HeaterFront2" parent="YSort" index="6" instance=ExtResource( 4 )]
 position = Vector2( 161.823, 516.319 )
 
-[node name="HeaterFront3" parent="YSort" index="11" instance=ExtResource( 4 )]
+[node name="HeaterFront3" parent="YSort" index="7" instance=ExtResource( 4 )]
 position = Vector2( 335.19, 299.368 )
 
-[node name="Lab_TableHorizontal" parent="YSort" index="12" instance=ExtResource( 6 )]
+[node name="Lab_TableHorizontal" parent="YSort" index="8" instance=ExtResource( 6 )]
 position = Vector2( 103.575, 513.78 )
 
-[node name="Lab_TableHorizontal_back" parent="YSort" index="13" instance=ExtResource( 7 )]
+[node name="Lab_TableHorizontal_back" parent="YSort" index="9" instance=ExtResource( 7 )]
 position = Vector2( 436.707, 531.224 )
 
-[node name="Lab_TableHorizontal_back2" parent="YSort" index="14" instance=ExtResource( 7 )]
+[node name="Lab_TableHorizontal_back2" parent="YSort" index="10" instance=ExtResource( 7 )]
 position = Vector2( 554.509, 530.594 )
 
-[node name="Detector" parent="YSort" index="15" instance=ExtResource( 8 )]
+[node name="Detector" parent="YSort" index="11" instance=ExtResource( 8 )]
 position = Vector2( 560.045, 304.051 )
 rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
-[node name="Detector2" parent="YSort" index="16" instance=ExtResource( 8 )]
+[node name="Detector2" parent="YSort" index="12" instance=ExtResource( 8 )]
 position = Vector2( 591.96, 304.051 )
 rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
-[node name="Detector3" parent="YSort" index="17" instance=ExtResource( 8 )]
+[node name="Detector3" parent="YSort" index="13" instance=ExtResource( 8 )]
 position = Vector2( 624.111, 304.051 )
 rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
+
+[node name="Container_H" parent="YSort" index="14" instance=ExtResource( 5 )]
+position = Vector2( 113.614, 222.107 )
+
+[node name="Star" parent="YSort" index="15" instance=ExtResource( 9 )]
+position = Vector2( 95.5733, 180.316 )
+
+[node name="Star2" parent="YSort" index="16" instance=ExtResource( 9 )]
+position = Vector2( 93.4544, 582.912 )
+
+[node name="Star3" parent="YSort" index="17" instance=ExtResource( 9 )]
+position = Vector2( 432.482, 276.728 )
+
+[node name="Hostage" parent="YSort" index="18" instance=ExtResource( 2 )]
+position = Vector2( 131.046, 538.769 )
+
+[node name="Hostage2" parent="YSort" index="19" instance=ExtResource( 2 )]
+position = Vector2( 426.201, 578.291 )
+
+[node name="Hostage3" parent="YSort" index="20" instance=ExtResource( 2 )]
+position = Vector2( 305.953, 256.228 )
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "Lab Level - 2"
