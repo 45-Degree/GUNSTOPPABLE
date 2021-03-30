@@ -12,9 +12,9 @@ func _ready():
 
 func _physics_process(delta):
 	pass
-#	if Input.is_action_just_pressed("k"):
-#		for b in get_node("Control/MarginContainer/VBoxContainer/HBoxContainer/GridContainer").get_children():
-#			b.disabled = false
+	if Input.is_action_just_pressed("k"):
+		for b in get_node("Control/MarginContainer/VBoxContainer/HBoxContainer/GridContainer").get_children():
+			b.disabled = false
 
 func _button_pressed(which):
 	Transition.wipeOut()
