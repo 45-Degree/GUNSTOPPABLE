@@ -10,6 +10,7 @@ export var Reflectable = false
 export var pickable = false
 export var unlockable = false
 onready var damagable = false
+export var button = false
 export(int, "Left", "Right", "Top", "Bottom") var BulletSpawn
 onready var animatedSprite = $AnimatedSprite
 onready var particle = $Particles2D
@@ -19,10 +20,9 @@ export(PackedScene) var explodeDamage
 signal Star_Pick
 
 func _ready():
-	$AnimationPlayer.play("Idle")
-	
+	animationPlayer.play("Idle")
 func _process(delta):
-	if damagable == false:
+	if damagable == false and destroyable == true:
 				animatedSprite.hide()
 				animationPlayer.play("Idle")
 				particle.emitting = false
@@ -42,6 +42,8 @@ func _process(delta):
 		queue_free()
 
 func _on_Hurtbox_area_entered(area):
+	if button == true:
+		animationPlayer.play("Pressed")
 	if invincible == false and destroyable == true:
 		health -= 5
 		damagable = true
@@ -55,6 +57,8 @@ func _on_Hurtbox_area_entered(area):
 func _on_Hurtbox_area_exited(area):
 	damagable = false
 	$Timer.stop()
+	if button:
+		animationPlayer.play("Idle")
 
 func _on_Timer_timeout():
 	health -= 3
