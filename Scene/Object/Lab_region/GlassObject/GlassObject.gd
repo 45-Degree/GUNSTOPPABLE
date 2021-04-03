@@ -6,7 +6,7 @@ onready var animatedSprite = $AnimatedSprite
 onready var particle = $Particles2D
 onready var timer = $Timer
 onready var LaserBeam = $LaserBeam
-
+onready var ForceMovement =  []
 enum{
 	UNSHOT,
 	SHOTTED

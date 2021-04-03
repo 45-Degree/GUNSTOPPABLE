@@ -454,6 +454,7 @@ region_rect = Rect2( 560, 50, 530, 450 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 23 )
 animation = "Idle"
+frame = 4
 
 [node name="Gun" type="Node2D" parent="."]
 position = Vector2( 28.9436, -7.55989 )

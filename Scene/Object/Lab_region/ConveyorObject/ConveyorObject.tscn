@@ -8,87 +8,87 @@
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 158, 152, 158 )
+region = Rect2( 0, 0, 152, 158 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 152, 158, 152, 158 )
+region = Rect2( 152, 0, 152, 158 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 304, 158, 152, 158 )
+region = Rect2( 304, 0, 152, 158 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 152, 158 )
+region = Rect2( 0, 158, 152, 158 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 152, 0, 152, 158 )
+region = Rect2( 152, 158, 152, 158 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 304, 0, 152, 158 )
+region = Rect2( 304, 158, 152, 158 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 474, 152, 158 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 152, 474, 152, 158 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 304, 474, 152, 158 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 316, 152, 158 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 152, 316, 152, 158 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 304, 316, 152, 158 )
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=13]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
-"loop": true,
-"name": "MovingUp",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "MovingDown",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "MovingUp",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "MovingLeft",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
 "loop": true,
 "name": "MovingRight",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 18, 21 )
 
 [node name="ConveryorObject" type="StaticBody2D" groups=[
@@ -109,7 +109,7 @@ region_rect = Rect2( 55.3929, 51.7818, 734.88, 462.641 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1.61624, -5.05318 )
 scale = Vector2( 0.3, 0.4 )
-frames = SubResource( 7 )
+frames = SubResource( 13 )
 animation = "MovingUp"
 frame = 1
 playing = true
@@ -119,7 +119,7 @@ collision_layer = 128
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 position = Vector2( 1, -8.02744 )
-shape = SubResource( 17 )
+shape = SubResource( 14 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5

@@ -15,18 +15,18 @@ func _ready():
 
 func _on_Hurtbox_area_entered(area):
 	var object =  area.get_parent()
-	object.conveyorCount += 1
-	if Direction == "MovingUp" and object.conveyorCount == 1 :
-		object.ForceMovement =  Vector2(0,30)
-	if Direction == "MovingDown" and object.conveyorCount == 1 :
-		object.ForceMovement =  Vector2(0,-30)
-	if Direction  == "MovingLeft" and object.conveyorCount == 1 :
-		object.ForceMovement =  Vector2(30,0)
-	if Direction == "MovingRight" and object.conveyorCount == 1 :
-		object.ForceMovement =  Vector2(-30,0)
+	if Direction == "MovingUp" :
+		object.ForceMovement.append(Vector2(0,30))
+	if Direction == "MovingDown":
+		object.ForceMovement.append(Vector2(0,-30))
+	if Direction  == "MovingLeft":
+		object.ForceMovement.append(Vector2(30,0))
+	if Direction == "MovingRight":
+		object.ForceMovement.append(Vector2(-30,0))
 
 func _on_Hurtbox_area_exited(area):
 	var object =  area.get_parent()
-	object.conveyorCount -= 1
-	if object.conveyorCount == 0:
-		object.ForceMovement = Vector2.ZERO
+	object.ForceMovement.pop_front()
+
+
+

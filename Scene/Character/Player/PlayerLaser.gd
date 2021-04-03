@@ -12,7 +12,7 @@ var target_sight = Vector2.ZERO
 var input_vector = Vector2.ZERO
 var bullet = preload("res://Scene/Character/Player/Gun/Bullet/Bullet.tscn")
 var hiteffect = preload("res://Scene/Character/Player/Gun/ExplosionEffect/Explosion.tscn")
-onready var ForceMovement =  Vector2.ZERO
+onready var ForceMovement =  []
 onready var LaserBeam = $LaserBeam
 onready var animationTree = $AnimationTree
 onready var bulletPoint = $Gun/Bulletpoint
@@ -24,6 +24,7 @@ enum{
 }
 
 func _physics_process(delta):
+	print(ForceMovement)
 	if Input.is_action_just_pressed("shoot"):
 		state = SHOOT
 	if Input.is_action_just_pressed("StopFire"):
@@ -50,13 +51,19 @@ func _physics_process(delta):
 		animationTree.set("parameters/Idle/blend_position", target_sight)
 		animationTree.set("parameters/Run/blend_position", target_sight)
 		animationState.travel("Idle")
-		velocity = velocity.move_toward((Vector2.ZERO * MAX_SPEED) - ForceMovement, FRICTION * delta)
+		if ForceMovement.size() != 0:
+			velocity = velocity.move_toward((Vector2.ZERO * MAX_SPEED) - ForceMovement[0], FRICTION * delta)
+		elif ForceMovement.size() == 0:
+				velocity = velocity.move_toward((Vector2.ZERO * MAX_SPEED), FRICTION * delta)
 	
 	elif input_vector != Vector2.ZERO and Singleton.Playable == true:
 		animationTree.set("parameters/Idle/blend_position", target_sight)
 		animationTree.set("parameters/Run/blend_position", target_sight)
 		animationState.travel("Run")
-		velocity = velocity.move_toward((input_vector * MAX_SPEED) - ForceMovement, ACCELERATION * delta)
+		if ForceMovement.size() != 0:
+			velocity = velocity.move_toward((input_vector * MAX_SPEED) - ForceMovement[0], ACCELERATION * delta)
+		elif ForceMovement.size() == 0:
+			velocity = velocity.move_toward((input_vector * MAX_SPEED), ACCELERATION * delta)
 	
 	elif Singleton.Playable == false:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
