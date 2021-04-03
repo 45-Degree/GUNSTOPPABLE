@@ -5,15 +5,14 @@ var ACCELERATION = 10000
 var FRICTION = 10000
 var state = STOP
 export var health = 4
-#export(int, "Left", "Right", "Top", "Bottom") var spawnHere
-var invul = false
-var invulTime = 1
+var conveyorCount = 0
 var velocity = Vector2.ZERO
 var target = Vector2.ZERO
 var target_sight = Vector2.ZERO
 var input_vector = Vector2.ZERO
 var bullet = preload("res://Scene/Character/Player/Gun/Bullet/Bullet.tscn")
 var hiteffect = preload("res://Scene/Character/Player/Gun/ExplosionEffect/Explosion.tscn")
+onready var ForceMovement =  Vector2.ZERO
 onready var LaserBeam = $LaserBeam
 onready var animationTree = $AnimationTree
 onready var bulletPoint = $Gun/Bulletpoint
@@ -51,13 +50,13 @@ func _physics_process(delta):
 		animationTree.set("parameters/Idle/blend_position", target_sight)
 		animationTree.set("parameters/Run/blend_position", target_sight)
 		animationState.travel("Idle")
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+		velocity = velocity.move_toward((Vector2.ZERO * MAX_SPEED) - ForceMovement, FRICTION * delta)
 	
 	elif input_vector != Vector2.ZERO and Singleton.Playable == true:
 		animationTree.set("parameters/Idle/blend_position", target_sight)
 		animationTree.set("parameters/Run/blend_position", target_sight)
 		animationState.travel("Run")
-		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
+		velocity = velocity.move_toward((input_vector * MAX_SPEED) - ForceMovement, ACCELERATION * delta)
 	
 	elif Singleton.Playable == false:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)

@@ -115,7 +115,7 @@ StopFire={
 2d_physics/layer_5="Terrorist"
 2d_physics/layer_6="Object"
 2d_physics/layer_7="Detector"
-2d_physics/layer_8="Boss_bullet"
+2d_physics/layer_8="Conveyor"
 
 [rendering]
 

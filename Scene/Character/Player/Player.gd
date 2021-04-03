@@ -75,7 +75,7 @@ func _physics_process(delta):
 		animationTree.set("parameters/Idle/blend_position", target_sight)
 		animationTree.set("parameters/Run/blend_position", target_sight)
 		animationState.travel("Run")
-		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
+		velocity = velocity.move_toward(input_vector * (MAX_SPEED), ACCELERATION * delta)
 	
 	elif Singleton.Playable == false:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)

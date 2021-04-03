@@ -20,9 +20,9 @@ onready var animatedSprite = $AnimatedSprite
 onready var particle = $Particles2D
 onready var timer = $Timer
 var sound_clip = preload("res://Sound/SFX/Object/Keycard_3.wav")
-onready var shelf = preload("res://Scene/Object/Shelf/ShelfFrontFallen.tscn")
-onready var shelfSide = preload("res://Scene/Object/Shelf/ShelfSideFallen.tscn")
-onready var explodeDamage = preload("res://Scene/Object/Heater/ExplosionDamage.tscn")
+export(PackedScene) var shelf 
+export(PackedScene) var shelfSide 
+export(PackedScene) var explodeDamage 
 signal Star_Pick
 
 func _ready():
