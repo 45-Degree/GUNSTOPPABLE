@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scene/Object/Office_region/Server/Server.png" type="Texture" id=1]
+[ext_resource path="res://Scene/Object/Office_region/Table/TableHorizontal.tscn" type="PackedScene" id=2]
+
+
+
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 226.088, 438.979 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 21.9602, 43.2905 )
+
+[node name="ServerBack" instance=ExtResource( 2 )]
+destroyable = false
+
+[node name="Sprite2" parent="." index="0"]
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 133.627, 60.6217, 83.5363, 146.21 )
+
+[node name="AnimatedSprite" parent="." index="1"]
+position = Vector2( 2.13391, -2.23217 )
+frame = 46
+
+[node name="CollisionShape2D" parent="." index="2"]
+visible = false
+position = Vector2( -0.0833642, -0.143819 )
+scale = Vector2( 0.1, 0.1 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" parent="Hurtbox" index="1"]
+visible = true
+shape = SubResource( 2 )
