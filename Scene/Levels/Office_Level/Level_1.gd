@@ -73,8 +73,7 @@ func _process(delta):
 func _on_Button_pressed():
 		Transition.wipeOut()
 		yield(get_tree().create_timer(0.5),"timeout")
-		get_tree().change_scene("res://Scene/Levels/Level_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
-
+		get_tree().change_scene("res://Scene/Levels/Office_Level/Level_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
 func _on_Button2_pressed():
 	Transition.wipeOut()
 	control.hide()

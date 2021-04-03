@@ -4,8 +4,6 @@
 [ext_resource path="res://Scene/Object/Lab_region/Table/Lab_table_sprite_short.png" type="Texture" id=2]
 [ext_resource path="res://Scene/Object/Lab_region/LabObjectBase.gd" type="Script" id=3]
 
-
-
 [node name="Lab_TableHorizontal" groups=[
 "LaserAble",
 ] instance=ExtResource( 1 )]
@@ -18,7 +16,7 @@ texture = ExtResource( 2 )
 region_rect = Rect2( 55.3929, 51.7818, 734.88, 462.641 )
 
 [node name="AnimatedSprite" parent="." index="1"]
-frame = 17
+frame = 31
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -0.788254, 2.07526 )

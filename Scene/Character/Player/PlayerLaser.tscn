@@ -455,7 +455,7 @@ region_rect = Rect2( 560, 50, 530, 450 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 23 )
 animation = "Idle"
-frame = 6
+frame = 4
 
 [node name="Gun" type="Node2D" parent="."]
 position = Vector2( 28.9436, -7.55989 )
@@ -495,7 +495,7 @@ rotation = 1.5708
 shape = SubResource( 47 )
 
 [node name="LaserBeam" parent="." instance=ExtResource( 5 )]
-position = Vector2( -2.31838, 0 )
+position = Vector2( -1.15919, -10.4327 )
 is_Player = true
 
 [editable path="LaserBeam"]
