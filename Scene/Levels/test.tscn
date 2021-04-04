@@ -28,10 +28,12 @@ position = Vector2( 428.993, 165.351 )
 
 [node name="ConveryorObject2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 383.211, 276.73 )
+collision_mask = 33
 Direction = "MovingRight"
 
 [node name="DEchanger" parent="." instance=ExtResource( 4 )]
-position = Vector2( 314.35, 264.773 )
+position = Vector2( 313.789, 269.263 )
+collision_layer = 32
 
 [node name="Button" parent="." instance=ExtResource( 3 )]
 
@@ -42,7 +44,7 @@ modulate = Color( 100, 100, 100, 1 )
 position = Vector2( 217.141, 293.869 )
 
 [node name="AnimatedSprite" parent="Player" index="2"]
-frame = 7
+frame = 5
 
 [node name="AnimationTree" parent="Player" index="5"]
 parameters/playback = SubResource( 1 )
