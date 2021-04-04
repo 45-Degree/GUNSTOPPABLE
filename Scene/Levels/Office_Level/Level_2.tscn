@@ -10,9 +10,6 @@
 [ext_resource path="res://Scene/Object/Office_region/Detector/detector.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Object/Office_region/Star/Star.tscn" type="PackedScene" id=9]
 
-
-
-
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="Level_2" instance=ExtResource( 1 )]

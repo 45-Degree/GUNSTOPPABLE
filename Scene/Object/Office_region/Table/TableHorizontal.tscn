@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Office_region/Obstacle.png" type="Texture" id=2]
@@ -64,9 +64,6 @@
 [ext_resource path="res://Sprite/Effect/Burn/1_29.png" type="Texture" id=62]
 [ext_resource path="res://Sprite/Effect/Burn/1_42.png" type="Texture" id=63]
 [ext_resource path="res://Sprite/Effect/Burn/1_35.png" type="Texture" id=64]
-[ext_resource path="res://Scene/Object/Office_region/Shelf/ShelfSide.tscn" type="PackedScene" id=65]
-[ext_resource path="res://Scene/Object/Office_region/Heater/ExplosionDamage.tscn" type="PackedScene" id=66]
-[ext_resource path="res://Scene/Object/Office_region/Shelf/ShelfFrontFallen.tscn" type="PackedScene" id=67]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -129,9 +126,6 @@ collision_layer = 8
 script = ExtResource( 3 )
 health = 15
 destroyable = true
-shelf = ExtResource( 67 )
-shelfSide = ExtResource( 65 )
-explodeDamage = ExtResource( 66 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 scale = Vector2( 0.4, 0.4 )
@@ -145,7 +139,7 @@ position = Vector2( 2.21085, -5.38688 )
 rotation = 1.5708
 scale = Vector2( 0.3, 0.4 )
 frames = SubResource( 1 )
-frame = 44
+frame = 59
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scene/Object/Office_region/Table/TableHorizontal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Office_region/Shelf/Shelf_Fall_sprite1.png" type="Texture" id=2]
-
+[ext_resource path="res://Scene/Object/Office_region/Shelf/ShelfFrontFallen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Object/Office_region/Shelf/ShelfSideFallen.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 67.4165, 107.305 )
@@ -22,6 +23,8 @@ scale = Vector2( 4, 4 )
 collision_mask = 5
 destroyable = false
 fallable = true
+shelf = ExtResource( 3 )
+shelfSide = ExtResource( 4 )
 
 [node name="Sprite2" parent="." index="0"]
 scale = Vector2( 0.015, 0.015 )
@@ -30,7 +33,7 @@ region_rect = Rect2( 67.4046, 280.007, 932.812, 1529.07 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 position = Vector2( 2.13391, -0.539402 )
-frame = 15
+frame = 9
 
 [node name="CollisionShape2D" parent="." index="2"]
 visible = false
