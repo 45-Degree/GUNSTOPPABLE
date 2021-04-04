@@ -51,16 +51,18 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 7.75, 7 )
+extents = Vector2( 16.331, 13.597 )
 
 [node name="Rotator" type="Node2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 9 )
+frame = 6
+playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -0.353554, -1.06066 )
+position = Vector2( 0.981285, 0.441034 )
 shape = SubResource( 10 )
