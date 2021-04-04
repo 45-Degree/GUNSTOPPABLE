@@ -11,10 +11,6 @@
 [ext_resource path="res://Scene/Object/Lab_region/Container/Container_Horizontal.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/Object/Office_region/Star/Star.tscn" type="PackedScene" id=10]
 
-
-
-
-
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="LabLevel_5" instance=ExtResource( 1 )]
@@ -38,7 +34,7 @@ position = Vector2( 678.192, 441.103 )
 position = Vector2( 28.2051, 148.955 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 2
+frame = 7
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
