@@ -6,7 +6,7 @@ enum{
 	SHOTTED,
 	UNSHOT
 }
-	
+
 func _physics_process(delta):
 	if ForceMovement.size() != 0:
 		velocity = velocity.move_toward(ForceMovement[0] ,50* delta)
@@ -15,7 +15,6 @@ func _physics_process(delta):
 #		velocity.move_toward(Vector2.ZERO, delta)
 	match state:
 			UNSHOT:
-				$LaserBeam.enabled = false
 				$LaserBeam.visible = false
 				$LaserBeam.cast_to = Vector2(0,0)
 				$LaserBeam/Area2D/CollisionShape2D.disabled = true
@@ -27,9 +26,11 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity)
 	
 func _on_Area2D_area_entered(area):
+	print(area.get_parent().name + "In")
 	if area.get_parent().is_in_group("Laser"):
 		state = SHOTTED
 
 func _on_Area2D_area_exited(area):
+	print(area.get_parent().name + "oout")
 	if area.get_parent().is_in_group("Laser"):
 		state = UNSHOT
