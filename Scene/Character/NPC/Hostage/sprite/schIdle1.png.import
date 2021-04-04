@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/schIdle3.1.png-1a3b34be4f3905c52aff32601946d4a4.stex"
+path="res://.import/schIdle1.png-cf7984d44dd544afd13a2b6eb5f4f8bb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Character/NPC/Hostage/sprite/schIdle3.1.png"
-dest_files=[ "res://.import/schIdle3.1.png-1a3b34be4f3905c52aff32601946d4a4.stex" ]
+source_file="res://Scene/Character/NPC/Hostage/sprite/schIdle1.png"
+dest_files=[ "res://.import/schIdle1.png-cf7984d44dd544afd13a2b6eb5f4f8bb.stex" ]
 
 [params]
 
