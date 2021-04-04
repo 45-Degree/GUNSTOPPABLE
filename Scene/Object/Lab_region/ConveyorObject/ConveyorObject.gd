@@ -16,9 +16,9 @@ func _ready():
 func _on_Hurtbox_area_entered(area):
 	var object =  area.get_parent()
 	if Direction == "MovingUp" :
-		object.ForceMovement.append(Vector2(0,30))
-	if Direction == "MovingDown":
 		object.ForceMovement.append(Vector2(0,-30))
+	if Direction == "MovingDown":
+		object.ForceMovement.append(Vector2(0,30))
 	if Direction  == "MovingLeft":
 		object.ForceMovement.append(Vector2(30,0))
 	if Direction == "MovingRight":

@@ -1,12 +1,18 @@
-extends StaticBody2D
+extends KinematicBody2D
 onready var state = UNSHOT
-
+onready var ForceMovement = []
+var velocity = Vector2.ZERO
 enum{
 	SHOTTED,
 	UNSHOT
 }
 	
 func _physics_process(delta):
+	if ForceMovement.size() != 0:
+		velocity = velocity.move_toward(ForceMovement[0] ,50* delta)
+	elif ForceMovement.size() == 0:
+		velocity = Vector2.ZERO
+#		velocity.move_toward(Vector2.ZERO, delta)
 	match state:
 			UNSHOT:
 				$LaserBeam.enabled = false
@@ -18,11 +24,12 @@ func _physics_process(delta):
 				$LaserBeam.visible = true
 				$LaserBeam.cast_to = Vector2(2000,0)
 				$LaserBeam/Area2D/CollisionShape2D.disabled = false
-
-
+	velocity = move_and_slide(velocity)
+	
 func _on_Area2D_area_entered(area):
-	state = SHOTTED
-
+	if area.get_parent().is_in_group("Laser"):
+		state = SHOTTED
 
 func _on_Area2D_area_exited(area):
-	state = UNSHOT
+	if area.get_parent().is_in_group("Laser"):
+		state = UNSHOT

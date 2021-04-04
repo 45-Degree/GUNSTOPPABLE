@@ -5,12 +5,8 @@
 [ext_resource path="res://Scene/Character/Player/LaserBeam/Laser Beam.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Object/Lab_region/Mirror/Mirror_sprite.png" type="Texture" id=4]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14.8667, 14.6425 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 14.533, 14.3088 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
@@ -80,7 +76,10 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[node name="Mirror" type="StaticBody2D" groups=[
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 14.533, 14.3088 )
+
+[node name="Mirror" type="KinematicBody2D" groups=[
 "Bounce",
 ]]
 collision_layer = 32
@@ -98,17 +97,17 @@ shape = SubResource( 1 )
 enabled = false
 cast_to = Vector2( 2000, 0 )
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 32
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 2 )
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.225, 0.15 )
 frames = SubResource( 15 )
-frame = 2
+frame = 4
 playing = true
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 132
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
