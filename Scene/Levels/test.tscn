@@ -20,7 +20,7 @@ polygon = PoolVector2Array( 338.434, -61.4717, 704.594, 29.4, 696.575, 128.29, 6
 position = Vector2( 217.141, 293.869 )
 
 [node name="AnimatedSprite" parent="Player" index="2"]
-frame = 7
+frame = 5
 
 [node name="AnimationTree" parent="Player" index="5"]
 parameters/playback = SubResource( 1 )

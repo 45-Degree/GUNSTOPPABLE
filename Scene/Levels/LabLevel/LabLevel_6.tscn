@@ -32,9 +32,6 @@ position = Vector2( 719.705, 455.423 )
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 44.305, 210.425 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 0
-
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
 
@@ -50,7 +47,6 @@ position = Vector2( 624.513, 205.92 )
 
 [node name="Rotator" parent="YSort" index="4" instance=ExtResource( 9 )]
 position = Vector2( 418.076, 207.105 )
-scale = Vector2( 1, 1 )
 
 [node name="Star" parent="YSort" index="5" instance=ExtResource( 7 )]
 position = Vector2( 674.489, 227.733 )

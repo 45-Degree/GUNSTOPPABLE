@@ -3,7 +3,6 @@
 [ext_resource path="res://Scene/Object/Lab_region/Table/Lab_TableHorizontal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Lab_region/RedBarrel/BarreL_sprite (1).png" type="Texture" id=2]
 
-
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
 atlas = ExtResource( 2 )
@@ -42,8 +41,7 @@ visible = false
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="." index="1"]
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 5 )
-frame = 2
 playing = true
 
 [node name="AnimatedSprite" parent="." index="2"]
-frame = 18
+frame = 54

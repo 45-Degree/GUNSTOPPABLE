@@ -12,7 +12,7 @@ func _physics_process(delta):
 	if abs(dir) < turn_speed:
 		rotation += dir
 	else:
-		if dir>0: rotation += turn_speed #clockwise
+		if dir>0: rotation += turn_speed 
 		if dir<0: rotation -= turn_speed
 	
 func shoot():
