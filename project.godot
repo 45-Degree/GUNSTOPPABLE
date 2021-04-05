@@ -117,6 +117,7 @@ StopFire={
 2d_physics/layer_7="Detector"
 2d_physics/layer_8="Conveyor"
 2d_physics/layer_9="Medal"
+2d_physics/layer_10="Rotator"
 
 [rendering]
 

@@ -41,7 +41,8 @@ visible = false
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="." index="1"]
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 5 )
+frame = 3
 playing = true
 
 [node name="AnimatedSprite" parent="." index="2"]
-frame = 54
+frame = 59

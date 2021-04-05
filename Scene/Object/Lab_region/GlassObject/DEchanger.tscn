@@ -1,109 +1,15 @@
-[gd_scene load_steps=72 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scene/Object/Lab_region/GlassObject/GlassObject.gd" type="Script" id=1]
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Character/Player/LaserBeam/Laser Beam.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Sprite/Effect/Burn/1_43.png" type="Texture" id=4]
-[ext_resource path="res://Sprite/Effect/Burn/1_52.png" type="Texture" id=5]
-[ext_resource path="res://Sprite/Effect/Burn/1_56.png" type="Texture" id=6]
-[ext_resource path="res://Sprite/Effect/Burn/1_35.png" type="Texture" id=7]
-[ext_resource path="res://Sprite/Effect/Burn/1_32.png" type="Texture" id=8]
-[ext_resource path="res://Sprite/Effect/Burn/1_40.png" type="Texture" id=9]
-[ext_resource path="res://Sprite/Effect/Burn/1_46.png" type="Texture" id=10]
-[ext_resource path="res://Sprite/Effect/Burn/1_42.png" type="Texture" id=11]
-[ext_resource path="res://Sprite/Effect/Burn/1_29.png" type="Texture" id=12]
-[ext_resource path="res://Sprite/Effect/Burn/1_9.png" type="Texture" id=13]
-[ext_resource path="res://Sprite/Effect/Burn/1_23.png" type="Texture" id=14]
-[ext_resource path="res://Sprite/Effect/Burn/1_12.png" type="Texture" id=15]
-[ext_resource path="res://Sprite/Effect/Burn/1_20.png" type="Texture" id=16]
-[ext_resource path="res://Sprite/Effect/Burn/1_54.png" type="Texture" id=17]
-[ext_resource path="res://Sprite/Effect/Burn/1_41.png" type="Texture" id=18]
-[ext_resource path="res://Sprite/Effect/Burn/1_30.png" type="Texture" id=19]
-[ext_resource path="res://Sprite/Effect/Burn/1_25.png" type="Texture" id=20]
-[ext_resource path="res://Sprite/Effect/Burn/1_31.png" type="Texture" id=21]
-[ext_resource path="res://Sprite/Effect/Burn/1_55.png" type="Texture" id=22]
-[ext_resource path="res://Sprite/Effect/Burn/1_51.png" type="Texture" id=23]
-[ext_resource path="res://Sprite/Effect/Burn/1_57.png" type="Texture" id=24]
-[ext_resource path="res://Sprite/Effect/Burn/1_44.png" type="Texture" id=25]
-[ext_resource path="res://Sprite/Effect/Burn/1_5.png" type="Texture" id=26]
-[ext_resource path="res://Sprite/Effect/Burn/1_14.png" type="Texture" id=27]
-[ext_resource path="res://Sprite/Effect/Burn/1_10.png" type="Texture" id=28]
-[ext_resource path="res://Sprite/Effect/Burn/1_16.png" type="Texture" id=29]
-[ext_resource path="res://Sprite/Effect/Burn/1_13.png" type="Texture" id=30]
-[ext_resource path="res://Sprite/Effect/Burn/1_7.png" type="Texture" id=31]
-[ext_resource path="res://Sprite/Effect/Burn/1_11.png" type="Texture" id=32]
-[ext_resource path="res://Sprite/Effect/Burn/1_0.png" type="Texture" id=33]
-[ext_resource path="res://Sprite/Effect/Burn/1_18.png" type="Texture" id=34]
-[ext_resource path="res://Sprite/Effect/Burn/1_15.png" type="Texture" id=35]
-[ext_resource path="res://Sprite/Effect/Burn/1_24.png" type="Texture" id=36]
-[ext_resource path="res://Sprite/Effect/Burn/1_6.png" type="Texture" id=37]
-[ext_resource path="res://Sprite/Effect/Burn/1_53.png" type="Texture" id=38]
-[ext_resource path="res://Sprite/Effect/Burn/1_36.png" type="Texture" id=39]
-[ext_resource path="res://Sprite/Effect/Burn/1_1.png" type="Texture" id=40]
-[ext_resource path="res://Sprite/Effect/Burn/1_2.png" type="Texture" id=41]
-[ext_resource path="res://Sprite/Effect/Burn/1_28.png" type="Texture" id=42]
-[ext_resource path="res://Sprite/Effect/Burn/1_8.png" type="Texture" id=43]
-[ext_resource path="res://Sprite/Effect/Burn/1_22.png" type="Texture" id=44]
-[ext_resource path="res://Sprite/Effect/Burn/1_19.png" type="Texture" id=45]
-[ext_resource path="res://Sprite/Effect/Burn/1_26.png" type="Texture" id=46]
-[ext_resource path="res://Sprite/Effect/Burn/1_21.png" type="Texture" id=47]
-[ext_resource path="res://Sprite/Effect/Burn/1_4.png" type="Texture" id=48]
-[ext_resource path="res://Sprite/Effect/Burn/1_3.png" type="Texture" id=49]
-[ext_resource path="res://Sprite/Effect/Burn/1_17.png" type="Texture" id=50]
-[ext_resource path="res://Sprite/Effect/Burn/1_27.png" type="Texture" id=51]
-[ext_resource path="res://Sprite/Effect/Burn/1_58.png" type="Texture" id=52]
-[ext_resource path="res://Sprite/Effect/Burn/1_39.png" type="Texture" id=53]
-[ext_resource path="res://Sprite/Effect/Burn/1_34.png" type="Texture" id=54]
-[ext_resource path="res://Sprite/Effect/Burn/1_59.png" type="Texture" id=55]
-[ext_resource path="res://Sprite/Effect/Burn/1_47.png" type="Texture" id=56]
-[ext_resource path="res://Sprite/Effect/Burn/1_38.png" type="Texture" id=57]
-[ext_resource path="res://Sprite/Effect/Burn/1_45.png" type="Texture" id=58]
-[ext_resource path="res://Sprite/Effect/Burn/1_37.png" type="Texture" id=59]
-[ext_resource path="res://Sprite/Effect/Burn/1_50.png" type="Texture" id=60]
-[ext_resource path="res://Sprite/Effect/Burn/1_49.png" type="Texture" id=61]
-[ext_resource path="res://Sprite/Effect/Burn/1_60.png" type="Texture" id=62]
-[ext_resource path="res://Sprite/Effect/Burn/1_48.png" type="Texture" id=63]
-[ext_resource path="res://Sprite/Effect/Burn/1_33.png" type="Texture" id=64]
 [ext_resource path="res://Scene/Object/Lab_region/GlassObject/tile001.png" type="Texture" id=65]
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 33 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 49 ), ExtResource( 48 ), ExtResource( 26 ), ExtResource( 37 ), ExtResource( 31 ), ExtResource( 43 ), ExtResource( 13 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 15 ), ExtResource( 30 ), ExtResource( 27 ), ExtResource( 35 ), ExtResource( 29 ), ExtResource( 50 ), ExtResource( 34 ), ExtResource( 45 ), ExtResource( 16 ), ExtResource( 47 ), ExtResource( 44 ), ExtResource( 14 ), ExtResource( 36 ), ExtResource( 20 ), ExtResource( 46 ), ExtResource( 51 ), ExtResource( 42 ), ExtResource( 12 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 8 ), ExtResource( 64 ), ExtResource( 54 ), ExtResource( 7 ), ExtResource( 39 ), ExtResource( 59 ), ExtResource( 57 ), ExtResource( 53 ), ExtResource( 9 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 4 ), ExtResource( 25 ), ExtResource( 58 ), ExtResource( 10 ), ExtResource( 56 ), ExtResource( 63 ), ExtResource( 61 ), ExtResource( 60 ), ExtResource( 23 ), ExtResource( 5 ), ExtResource( 38 ), ExtResource( 17 ), ExtResource( 22 ), ExtResource( 6 ), ExtResource( 24 ), ExtResource( 52 ), ExtResource( 55 ), ExtResource( 62 ) ],
-"loop": true,
-"name": "default",
-"speed": 30.0
-} ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 3.03878, 4.00748 )
 
-[sub_resource type="Animation" id=3]
-length = 0.6
-step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("../TableHorizontal/TableHorizontal4:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = false
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ Color( 100, 100, 100, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ Color( 100, 100, 100, 1 ), Color( 1, 1, 1, 1 ) ]
-}
+[sub_resource type="Animation" id=7]
+resource_name = "EastToNorth"
 
 [sub_resource type="Animation" id=4]
 length = 0.1
@@ -133,6 +39,15 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
+[sub_resource type="Animation" id=8]
+resource_name = "NorthToWest"
+
+[sub_resource type="Animation" id=9]
+resource_name = "SouthToEast"
+
+[sub_resource type="Animation" id=10]
+resource_name = "WestToSouth"
+
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 2.4702, 4.16832 )
 
@@ -145,37 +60,34 @@ initial_velocity = 58.9
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 
-[node name="DEchanger" type="StaticBody2D"]
+[node name="DEchanger" type="StaticBody2D" groups=[
+"Rotatable",
+]]
 scale = Vector2( 5, 5 )
 collision_layer = 8
 script = ExtResource( 1 )
 LaserSpawn = 1
 
 [node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 0.150763, -0.210487 )
 scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 65 )
 region_rect = Rect2( 16.0754, 733, 200.845, 108 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-visible = false
-position = Vector2( 2.21085, -5.38688 )
-rotation = 1.5708
-scale = Vector2( 0.3, 0.4 )
-frames = SubResource( 1 )
-frame = 16
-playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -0.143819 )
 shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Blink = SubResource( 3 )
+anims/EastToNorth = SubResource( 7 )
 anims/Idle = SubResource( 4 )
+anims/NorthToWest = SubResource( 8 )
+anims/SouthToEast = SubResource( 9 )
+anims/WestToSouth = SubResource( 10 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 2 )]
-collision_layer = 256
-collision_mask = 4
+collision_layer = 32
+collision_mask = 2147484160
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
 visible = false
@@ -211,13 +123,13 @@ enabled = false
 collision_mask = 314
 
 [node name="Sprite" parent="LaserBeam" index="0"]
-scale = Vector2( 0.1, 0.1 )
+scale = Vector2( 0.05, 0.05 )
 
 [node name="Beam" parent="LaserBeam" index="1"]
-scale = Vector2( 1, 0.1 )
+scale = Vector2( 1, 0.045 )
 
 [node name="Sprite" parent="LaserBeam/End" index="1"]
-scale = Vector2( 0.1, 0.1 )
+scale = Vector2( 0.05, 0.05 )
 
 [node name="CollisionShape2D" parent="LaserBeam/Area2D" index="0"]
 disabled = true

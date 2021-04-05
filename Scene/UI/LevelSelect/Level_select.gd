@@ -26,13 +26,12 @@ func _physics_process(delta):
 func _button_pressed(which):
 	Transition.wipeOut()
 	yield(get_tree().create_timer(0.5),"timeout")
-	get_tree().change_scene("res://Scene/Levels/Level_" +str(int(which.name))+ ".tscn")
+	get_tree().change_scene("res://Scene/Levels/Office_Level/Level_" +str(int(which.name))+ ".tscn")
 
 func _on_buttonQuite_button_up():
 	Transition.wipeOut()
 	yield(get_tree().create_timer(0.5),"timeout")
 	get_tree().change_scene("res://Scene/UI/Regionselect/RegionSelect.tscn")
-
 func _button_entered(which):
 	pass
 #	if which.disabled == false:

@@ -161,4 +161,4 @@ func _on_level_Completed():
 func _on_Button3_pressed():
 		Transition.wipeOut()
 		yield(get_tree().create_timer(0.5),"timeout")
-		get_tree().change_scene("res://Scene/UI/LabLevelSelect/LabLevel_select.gd")
+		get_tree().change_scene("res://Scene/UI/LabLevelSelect/LabLevel_select.tscn")

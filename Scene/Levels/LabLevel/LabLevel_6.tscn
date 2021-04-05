@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scene/Levels/LabLevel/LabLevel_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Lab_region/GlassObject/DEchanger.tscn" type="PackedScene" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://Scene/Object/Office_region/Detector/detector.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/Object/Office_region/Star/Star.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Character/NPC/Hostage/LabHostage.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scene/Object/Lab_region/Rotator/Rotator.tscn" type="PackedScene" id=9]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -32,7 +31,10 @@ position = Vector2( 719.705, 455.423 )
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 44.305, 210.425 )
 
-[node name="AnimationTree" parent="YSort/Player" index="5"]
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 2
+
+[node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
 
 [node name="Lab_TableVertical_right" parent="YSort" index="1" instance=ExtResource( 3 )]
@@ -45,55 +47,56 @@ script = null
 [node name="Lab_TableVertical_Left" parent="YSort" index="3" instance=ExtResource( 4 )]
 position = Vector2( 624.513, 205.92 )
 
-[node name="Rotator" parent="YSort" index="4" instance=ExtResource( 9 )]
-position = Vector2( 418.076, 207.105 )
-
-[node name="Star" parent="YSort" index="5" instance=ExtResource( 7 )]
+[node name="Star" parent="YSort" index="4" instance=ExtResource( 7 )]
 position = Vector2( 674.489, 227.733 )
 
-[node name="Star2" parent="YSort" index="6" instance=ExtResource( 7 )]
+[node name="Star2" parent="YSort" index="5" instance=ExtResource( 7 )]
 position = Vector2( 288.323, 46.3041 )
 script = null
 
-[node name="Star3" parent="YSort" index="7" instance=ExtResource( 7 )]
+[node name="Star3" parent="YSort" index="6" instance=ExtResource( 7 )]
 position = Vector2( 131.463, 349.945 )
 script = null
 
-[node name="Detector" parent="YSort" index="8" instance=ExtResource( 6 )]
+[node name="Detector" parent="YSort" index="7" instance=ExtResource( 6 )]
 position = Vector2( 527.964, 431.856 )
 scale = Vector2( 2.3, 2.3 )
 
-[node name="Detector2" parent="YSort" index="9" instance=ExtResource( 6 )]
+[node name="Detector2" parent="YSort" index="8" instance=ExtResource( 6 )]
 position = Vector2( 560.138, 431.856 )
 scale = Vector2( 2.3, 2.3 )
 script = null
 
-[node name="Detector3" parent="YSort" index="10" instance=ExtResource( 6 )]
+[node name="Detector3" parent="YSort" index="9" instance=ExtResource( 6 )]
 position = Vector2( 592.134, 432.032 )
 scale = Vector2( 2.3, 2.3 )
 script = null
 
-[node name="Hostage" parent="YSort" index="11" instance=ExtResource( 8 )]
+[node name="Hostage" parent="YSort" index="10" instance=ExtResource( 8 )]
 position = Vector2( 287.576, 96.6708 )
 
-[node name="Hostage2" parent="YSort" index="12" instance=ExtResource( 8 )]
+[node name="Hostage2" parent="YSort" index="11" instance=ExtResource( 8 )]
 position = Vector2( 132.676, 59.6296 )
 
-[node name="Hostage3" parent="YSort" index="13" instance=ExtResource( 8 )]
+[node name="Hostage3" parent="YSort" index="12" instance=ExtResource( 8 )]
 position = Vector2( 673.765, 183.307 )
 
-[node name="Terrorist" parent="YSort" index="14" instance=ExtResource( 5 )]
+[node name="Terrorist" parent="YSort" index="13" instance=ExtResource( 5 )]
 position = Vector2( 287.351, 336.502 )
 
-[node name="Terrorist2" parent="YSort" index="15" instance=ExtResource( 5 )]
+[node name="Terrorist2" parent="YSort" index="14" instance=ExtResource( 5 )]
 position = Vector2( 417.422, 376.592 )
 
-[node name="Terrorist3" parent="YSort" index="16" instance=ExtResource( 5 )]
+[node name="Terrorist3" parent="YSort" index="15" instance=ExtResource( 5 )]
 position = Vector2( 420.326, 2.05774 )
 
-[node name="DEchanger" parent="YSort" index="17" instance=ExtResource( 2 )]
-position = Vector2( 419.935, 196.626 )
+[node name="DEchanger" parent="YSort" index="16" instance=ExtResource( 2 )]
+position = Vector2( 419.935, 178.371 )
 LaserSpawn = 2
+
+[node name="DEchanger2" parent="YSort" index="17" instance=ExtResource( 2 )]
+position = Vector2( 419.935, 225.993 )
+LaserSpawn = 3
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 margin_top = 330.207

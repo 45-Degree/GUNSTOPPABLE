@@ -19,8 +19,8 @@ func _physics_process(delta):
 func _button_pressed(which):
 	Transition.wipeOut()
 	yield(get_tree().create_timer(0.5),"timeout")
-	get_tree().change_scene("res://Scene/LabLevel/LabLevel_" +str(int(which.name))+ ".tscn")
-
+	get_tree().change_scene("res://Scene/Levels/LabLevel/LabLevel_" +str(int(which.name))+ ".tscn")
+	
 func _on_buttonQuite_button_up():
 	Transition.wipeOut()
 	yield(get_tree().create_timer(0.5),"timeout")

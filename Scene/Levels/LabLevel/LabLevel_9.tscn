@@ -32,10 +32,10 @@ position = Vector2( 599.595, 375.746 )
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 65.4262, 105.584 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 3
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 1
 
-[node name="AnimationTree" parent="YSort/Player" index="5"]
+[node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
 
 [node name="Hostage" parent="YSort" index="1" instance=ExtResource( 6 )]
