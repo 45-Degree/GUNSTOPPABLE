@@ -32,7 +32,7 @@ position = Vector2( 719.705, 455.423 )
 position = Vector2( 44.305, 210.425 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 2
+frame = 3
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
@@ -41,8 +41,7 @@ parameters/playback = SubResource( 1 )
 position = Vector2( 240.223, 78.945 )
 
 [node name="Lab_TableVertical_right2" parent="YSort" index="2" instance=ExtResource( 3 )]
-position = Vector2( 239.382, 332.896 )
-script = null
+position = Vector2( 240.223, 330.929 )
 
 [node name="Lab_TableVertical_Left" parent="YSort" index="3" instance=ExtResource( 4 )]
 position = Vector2( 624.513, 205.92 )
@@ -59,18 +58,16 @@ position = Vector2( 131.463, 349.945 )
 script = null
 
 [node name="Detector" parent="YSort" index="7" instance=ExtResource( 6 )]
-position = Vector2( 527.964, 431.856 )
+position = Vector2( 527.964, 434.376 )
 scale = Vector2( 2.3, 2.3 )
 
 [node name="Detector2" parent="YSort" index="8" instance=ExtResource( 6 )]
-position = Vector2( 560.138, 431.856 )
+position = Vector2( 560.722, 434.376 )
 scale = Vector2( 2.3, 2.3 )
-script = null
 
 [node name="Detector3" parent="YSort" index="9" instance=ExtResource( 6 )]
-position = Vector2( 592.134, 432.032 )
+position = Vector2( 593.48, 434.376 )
 scale = Vector2( 2.3, 2.3 )
-script = null
 
 [node name="Hostage" parent="YSort" index="10" instance=ExtResource( 8 )]
 position = Vector2( 287.576, 96.6708 )

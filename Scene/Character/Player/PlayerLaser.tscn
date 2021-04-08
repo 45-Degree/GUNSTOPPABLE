@@ -358,7 +358,7 @@ __meta__ = {
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 17 )
 animation = "Idle"
-frame = 2
+frame = 7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Idle_Left = SubResource( 18 )
@@ -391,6 +391,7 @@ shape = SubResource( 41 )
 
 [node name="LaserBeam" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1.27771, -6.4118 )
+cast_to = Vector2( 2000, 0 )
 is_Player = true
 
 [editable path="LaserBeam"]

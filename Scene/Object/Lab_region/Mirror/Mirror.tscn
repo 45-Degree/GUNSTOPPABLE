@@ -5,7 +5,7 @@
 [ext_resource path="res://Scene/Object/Lab_region/Mirror/Mirror_sprite.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 12.6134, 11.8577 )
+extents = Vector2( 15.8864, 16.984 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
@@ -76,7 +76,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=15]
-extents = Vector2( 11.3521, 12.068 )
+extents = Vector2( 14.469, 15.8816 )
 
 [node name="Mirror" type="KinematicBody2D" groups=[
 "Bounce",
@@ -90,7 +90,7 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.225, 0.15 )
 frames = SubResource( 14 )
-frame = 9
+frame = 5
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]

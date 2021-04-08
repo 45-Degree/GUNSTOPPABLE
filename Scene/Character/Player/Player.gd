@@ -63,14 +63,14 @@ func _physics_process(delta):
 	else:
 		input_vector.x = 0
 		input_vector.y = 0
-	
 	target_sight = target_sight.normalized()
+
 	if input_vector == Vector2.ZERO and Singleton.Playable == true:
 		animationTree.set("parameters/Idle/blend_position", target_sight)
 		animationTree.set("parameters/Run/blend_position", target_sight)
 		animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
-	
+
 	elif input_vector != Vector2.ZERO and Singleton.Playable == true:
 		animationTree.set("parameters/Idle/blend_position", target_sight)
 		animationTree.set("parameters/Run/blend_position", target_sight)
