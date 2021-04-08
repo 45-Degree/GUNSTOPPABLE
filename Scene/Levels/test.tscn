@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scene/Character/Player/PlayerLaser.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scene/Object/Lab_region/ConveyorObject/ConveyorObject.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Object/Lab_region/Rotator/Rotator.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Object/Lab_region/GlassObject/DEchanger.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scene/Object/Lab_region/Mirror/Mirror.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/Object/Lab_region/RedBarrel/Lab_Redbarrel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/Object/Lab_region/AutoWalkWay/AutoWalkWay.tscn" type="PackedScene" id=7]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -19,17 +19,8 @@ collision_layer = 2
 position = Vector2( 181, 101 )
 polygon = PoolVector2Array( 338.434, -61.4717, 704.594, 29.4, 696.575, 128.29, 651.14, 246.779, 584.322, 295.779, 549.577, 367.941, 361.598, 364.378, 353.579, 323.397, 196.781, 345.669, 118.382, 324.287, 85.4189, 236.088, 58.6919, 191.544, 39.9831, 137.199, 60.4737, 20.491, 122.837, 8.90929, 189.654, 30.2909, 227.963, -12.4723, 170.054, -66.8171, -9.01636, -40.981, -27.7252, 191.544, 9.69252, 334.978, 156.691, 405.359, 611.94, 391.105, 815.956, 295.779, 834.665, 18.7092, 693.012, -81.9624, 322.398, -105.126, 228.854, -79.2897, 245.781, -32.0721 )
 
-[node name="ConveryorObject" parent="." instance=ExtResource( 2 )]
-position = Vector2( 411.285, 137.844 )
-
-[node name="ConveryorObject2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 411.285, 192.532 )
-
-[node name="ConveryorObject3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 411.285, 247.221 )
-
 [node name="Mirror" parent="." instance=ExtResource( 5 )]
-position = Vector2( 413.116, 254.737 )
+position = Vector2( 413.116, 306.394 )
 
 [node name="Rotator" parent="." instance=ExtResource( 3 )]
 position = Vector2( 197.99, 188.798 )
@@ -43,9 +34,21 @@ position = Vector2( 199.299, 174.578 )
 position = Vector2( 149.431, 286.151 )
 
 [node name="AnimatedSprite" parent="Player" index="1"]
-frame = 4
+frame = 3
 
 [node name="AnimationTree" parent="Player" index="3"]
 parameters/playback = SubResource( 1 )
+
+[node name="AutoWalkWay" parent="." instance=ExtResource( 7 )]
+position = Vector2( 316.87, 112.133 )
+Direction = "MovingDown"
+
+[node name="AutoWalkWay2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 316.87, 163.79 )
+Direction = "MovingUp"
+
+[node name="AutoWalkWay3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 316.87, 217.966 )
+Direction = "MovingUp"
 
 [editable path="Player"]

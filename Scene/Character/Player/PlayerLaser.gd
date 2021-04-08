@@ -24,6 +24,7 @@ enum{
 }
 
 func _physics_process(delta):
+	print(ForceMovement)
 	if Input.is_action_just_pressed("shoot"):
 		state = SHOOT
 	if Input.is_action_just_pressed("StopFire"):
