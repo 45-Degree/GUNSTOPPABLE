@@ -12,9 +12,6 @@
 [ext_resource path="res://Scene/Object/Office_region/Detector/detector.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scene/Object/Office_region/Star/Star.tscn" type="PackedScene" id=11]
 
-
-
-
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="Level_1" instance=ExtResource( 1 )]
@@ -56,7 +53,7 @@ rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 5
+frame = 6
 
 [node name="AnimationTree" parent="YSort/Player" index="5"]
 parameters/playback = SubResource( 1 )
@@ -99,6 +96,21 @@ position = Vector2( 410.102, 302.097 )
 
 [node name="Tree" parent="YSort" index="13" instance=ExtResource( 7 )]
 position = Vector2( 114.809, 58.4565 )
+node_path = NodePath("")
+explodable = false
+Reflectable = false
+pickable = false
+unlockable = false
+fallable = false
+fallableSide = false
+Laser = false
+Emit = false
+button = false
+Star = false
+BulletSpawn = 0
+shelf = null
+shelfSide = null
+explodeDamage = null
 
 [node name="Watertank" parent="YSort" index="14" instance=ExtResource( 6 )]
 position = Vector2( 572.542, 159.592 )
@@ -114,6 +126,21 @@ position = Vector2( 514.006, 267.103 )
 
 [node name="Tree" parent="." index="7" instance=ExtResource( 7 )]
 position = Vector2( 323.077, 304.767 )
+node_path = NodePath("")
+explodable = false
+Reflectable = false
+pickable = false
+unlockable = false
+fallable = false
+fallableSide = false
+Laser = false
+Emit = false
+button = false
+Star = false
+BulletSpawn = 0
+shelf = null
+shelfSide = null
+explodeDamage = null
 
 [node name="VBoxContainer" parent="CanvasLayer/Control3" index="0"]
 margin_right = 459.0

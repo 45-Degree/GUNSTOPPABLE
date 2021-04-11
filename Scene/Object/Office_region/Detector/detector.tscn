@@ -2,8 +2,7 @@
 
 [ext_resource path="res://Scene/Object/Office_region/Detector/detector.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Object/Office_region/Detector/Stop_line_freeze_n1.png" type="Texture" id=2]
-[ext_resource path="res://Scene/Object/Office_region/Detector/spritesheet_(4).png" type="Texture" id=3]
-
+[ext_resource path="res://Scene/Object/Office_region/Detector/spritesheet_(10).png" type="Texture" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -39,7 +38,7 @@ script = ExtResource( 1 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.02, 0.02 )
 frames = SubResource( 3 )
-animation = "NotClear"
+animation = "Clear"
 
 [node name="Area2D" type="Area2D" parent="."]
 

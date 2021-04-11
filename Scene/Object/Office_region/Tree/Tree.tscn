@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Scene/Object/Office_region/Table/TableHorizontal.tscn" type="PackedScene" id=1]
 
-
 [sub_resource type="GDScript" id=1]
 script/source = "extends StaticBody2D
 onready var animationPlayer = $AnimationPlayer
@@ -134,15 +133,30 @@ extents = Vector2( 11.7508, 27.0135 )
 
 [node name="Tree" instance=ExtResource( 1 )]
 script = SubResource( 1 )
+node_path = NodePath("")
 health = 10
 destroyable = false
+explodable = false
+Reflectable = false
+pickable = false
+unlockable = false
+fallable = false
+fallableSide = false
+Laser = false
+Emit = false
+button = false
+Star = false
+BulletSpawn = 0
+shelf = null
+shelfSide = null
+explodeDamage = null
 
 [node name="Sprite2" parent="." index="0"]
 region_rect = Rect2( 18, 43.0192, 100.396, 139.981 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 position = Vector2( 2.07197, 0.168484 )
-frame = 9
+frame = 14
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( 0.0565643, 15.4698 )
