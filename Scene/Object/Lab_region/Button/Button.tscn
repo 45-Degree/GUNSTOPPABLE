@@ -1,35 +1,38 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scene/Object/Lab_region/LabObjectBase.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Object/Lab_region/Button/Button.png" type="Texture" id=2]
 [ext_resource path="res://Scene/Object/Office_region/Heater/ExplosionDamage.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Object/Lab_region/Button/BottonFloor1.png" type="Texture" id=5]
 
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 210, 244 )
 
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 5 )
 region = Rect2( 210, 0, 210, 244 )
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ SubResource( 4 ) ],
+"frames": [ SubResource( 1 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 5 ) ],
+"frames": [ SubResource( 2 ) ],
 "loop": true,
 "name": "Pressed",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 36.5866, 19.1014 )
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=5]
 length = 0.6
 step = 0.2
 tracks/0/type = "value"
@@ -45,7 +48,7 @@ tracks/0/keys = {
 "values": [ Color( 100, 100, 100, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=6]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -73,8 +76,7 @@ tracks/1/keys = {
 "values": [ "Idle", "Idle" ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "Pressed"
+[sub_resource type="Animation" id=7]
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -119,19 +121,19 @@ region_rect = Rect2( 17, 34, 176, 177 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 2.21085, -5.38688 )
 scale = Vector2( 0.2, 0.2 )
-frames = SubResource( 6 )
+frames = SubResource( 3 )
 animation = "Idle"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.788254, 2.07526 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Blink = SubResource( 1 )
-anims/Idle = SubResource( 2 )
-anims/Pressed = SubResource( 3 )
+anims/Blink = SubResource( 5 )
+anims/Idle = SubResource( 6 )
+anims/Pressed = SubResource( 7 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 4 )]
 collision_layer = 8

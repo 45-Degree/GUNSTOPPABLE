@@ -96,21 +96,6 @@ position = Vector2( 410.102, 302.097 )
 
 [node name="Tree" parent="YSort" index="13" instance=ExtResource( 7 )]
 position = Vector2( 114.809, 58.4565 )
-node_path = NodePath("")
-explodable = false
-Reflectable = false
-pickable = false
-unlockable = false
-fallable = false
-fallableSide = false
-Laser = false
-Emit = false
-button = false
-Star = false
-BulletSpawn = 0
-shelf = null
-shelfSide = null
-explodeDamage = null
 
 [node name="Watertank" parent="YSort" index="14" instance=ExtResource( 6 )]
 position = Vector2( 572.542, 159.592 )
@@ -126,21 +111,6 @@ position = Vector2( 514.006, 267.103 )
 
 [node name="Tree" parent="." index="7" instance=ExtResource( 7 )]
 position = Vector2( 323.077, 304.767 )
-node_path = NodePath("")
-explodable = false
-Reflectable = false
-pickable = false
-unlockable = false
-fallable = false
-fallableSide = false
-Laser = false
-Emit = false
-button = false
-Star = false
-BulletSpawn = 0
-shelf = null
-shelfSide = null
-explodeDamage = null
 
 [node name="VBoxContainer" parent="CanvasLayer/Control3" index="0"]
 margin_right = 459.0

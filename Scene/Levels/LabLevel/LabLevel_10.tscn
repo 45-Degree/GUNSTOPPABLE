@@ -1,0 +1,173 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scene/Levels/LabLevel/LabLevel_Template.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/Character/NPC/Hostage/LabHostage.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Character/NPC/Terrorist/Terrorist.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Object/Lab_region/Table/Lab_TableHorizontal_back.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Object/Lab_region/GlassObject/DEchanger.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/Object/Lab_region/ConveyorObject/ConveyorObject.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scene/Object/Office_region/Star/Star.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scene/Object/Office_region/Detector/detector.tscn" type="PackedScene" id=9]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[node name="LabLevel_10" instance=ExtResource( 1 )]
+
+[node name="TileMap" parent="." index="2"]
+tile_data = PoolIntArray( 131067, 16, 0, 131068, 16, 0, 131069, 16, 0, 131070, 16, 0, 131071, 16, 0, 65536, 16, 0, 65537, 16, 0, 65538, 16, 0, 65539, 16, 0, 65540, 16, 0, 65541, 16, 0, 65542, 16, 0, 65543, 16, 0, 65544, 16, 0, 65545, 16, 0, 65546, 16, 0, 65547, 16, 0, 65548, 16, 0, 65549, 16, 0, 65550, 16, 0, 65551, 16, 0, 65552, 16, 0, 65553, 16, 0, 65554, 16, 0, 196603, 16, 0, 196604, 16, 0, 196605, 16, 0, 196606, 16, 0, 196607, 16, 0, 131072, 16, 0, 131073, 16, 0, 131074, 16, 0, 131075, 16, 0, 131076, 16, 0, 131077, 9, 0, 131078, 15, 0, 131079, 15, 0, 131080, 7, 0, 131081, 16, 0, 131082, 16, 0, 131083, 16, 0, 131084, 16, 0, 131085, 16, 0, 131086, 16, 0, 131087, 16, 0, 131088, 16, 0, 131089, 16, 0, 131090, 16, 0, 262139, 16, 0, 262140, 16, 0, 262141, 16, 0, 262142, 16, 0, 262143, 16, 0, 196608, 16, 0, 196609, 16, 0, 196610, 5, 0, 196611, 13, 0, 196612, 13, 0, 196613, 14, 0, 196614, 15, 0, 196615, 15, 0, 196616, 12, 0, 196617, 13, 0, 196618, 13, 0, 196619, 13, 0, 196620, 13, 0, 196621, 13, 0, 196622, 13, 0, 196623, 13, 0, 196624, 6, 0, 196625, 16, 0, 196626, 16, 0, 327675, 16, 0, 327676, 16, 0, 327677, 16, 0, 327678, 16, 0, 327679, 16, 0, 262144, 16, 0, 262145, 16, 0, 262146, 9, 0, 262147, 8, 0, 262148, 8, 0, 262149, 8, 0, 262150, 15, 0, 262151, 15, 0, 262152, 8, 0, 262153, 8, 0, 262154, 8, 0, 262155, 8, 0, 262156, 8, 0, 262157, 8, 0, 262158, 8, 0, 262159, 8, 0, 262160, 7, 0, 262161, 16, 0, 262162, 16, 0, 393211, 16, 0, 393212, 16, 0, 393213, 16, 0, 393214, 16, 0, 393215, 16, 0, 327680, 16, 0, 327681, 16, 0, 327682, 9, 0, 327683, 15, 0, 327684, 15, 0, 327685, 15, 0, 327686, 15, 0, 327687, 15, 0, 327688, 15, 0, 327689, 15, 0, 327690, 15, 0, 327691, 15, 0, 327692, 15, 0, 327693, 15, 0, 327694, 15, 0, 327695, 15, 0, 327696, 7, 0, 327697, 16, 0, 327698, 16, 0, 458747, 16, 0, 458748, 16, 0, 458749, 16, 0, 458750, 16, 0, 458751, 16, 0, 393216, 16, 0, 393217, 16, 0, 393218, 9, 0, 393219, 15, 0, 393220, 15, 0, 393221, 15, 0, 393222, 15, 0, 393223, 15, 0, 393224, 15, 0, 393225, 15, 0, 393226, 15, 0, 393227, 15, 0, 393228, 15, 0, 393229, 15, 0, 393230, 15, 0, 393231, 15, 0, 393232, 7, 0, 393233, 16, 0, 393234, 16, 0, 524283, 16, 0, 524284, 16, 0, 524285, 13, 0, 524286, 13, 0, 524287, 13, 0, 458752, 13, 0, 458753, 13, 0, 458754, 14, 0, 458755, 15, 0, 458756, 15, 0, 458757, 15, 0, 458758, 15, 0, 458759, 15, 0, 458760, 15, 0, 458761, 15, 0, 458762, 15, 0, 458763, 15, 0, 458764, 15, 0, 458765, 15, 0, 458766, 15, 0, 458767, 15, 0, 458768, 7, 0, 458769, 16, 0, 458770, 16, 0, 589819, 16, 0, 589820, 16, 0, 589821, 8, 0, 589822, 8, 0, 589823, 8, 0, 524288, 8, 0, 524289, 8, 0, 524290, 8, 0, 524291, 15, 0, 524292, 15, 0, 524293, 15, 0, 524294, 15, 0, 524295, 15, 0, 524296, 15, 0, 524297, 15, 0, 524298, 15, 0, 524299, 15, 0, 524300, 15, 0, 524301, 15, 0, 524302, 15, 0, 524303, 15, 0, 524304, 7, 0, 524305, 16, 0, 524306, 16, 0, 655355, 16, 0, 655356, 16, 0, 655357, 15, 0, 655358, 15, 0, 655359, 15, 0, 589824, 15, 0, 589825, 15, 0, 589826, 15, 0, 589827, 15, 0, 589828, 15, 0, 589829, 15, 0, 589830, 15, 0, 589831, 15, 0, 589832, 15, 0, 589833, 15, 0, 589834, 15, 0, 589835, 15, 0, 589836, 15, 0, 589837, 15, 0, 589838, 15, 0, 589839, 15, 0, 589840, 7, 0, 589841, 16, 0, 589842, 16, 0, 720891, 16, 0, 720892, 16, 0, 720893, 15, 0, 720894, 15, 0, 720895, 15, 0, 655360, 15, 0, 655361, 15, 0, 655362, 15, 0, 655363, 15, 0, 655364, 15, 0, 655365, 15, 0, 655366, 15, 0, 655367, 15, 0, 655368, 15, 0, 655369, 15, 0, 655370, 15, 0, 655371, 15, 0, 655372, 15, 0, 655373, 15, 0, 655374, 15, 0, 655375, 15, 0, 655376, 7, 0, 655377, 16, 0, 655378, 16, 0, 786427, 16, 0, 786428, 16, 0, 786429, 3, 0, 786430, 3, 0, 786431, 3, 0, 720896, 3, 0, 720897, 3, 0, 720898, 4, 0, 720899, 15, 0, 720900, 15, 0, 720901, 15, 0, 720902, 15, 0, 720903, 15, 0, 720904, 15, 0, 720905, 15, 0, 720906, 15, 0, 720907, 15, 0, 720908, 15, 0, 720909, 15, 0, 720910, 15, 0, 720911, 15, 0, 720912, 7, 0, 720913, 16, 0, 720914, 16, 0, 851963, 16, 0, 851964, 16, 0, 851965, 16, 0, 851966, 16, 0, 851967, 16, 0, 786432, 16, 0, 786433, 16, 0, 786434, 9, 0, 786435, 15, 0, 786436, 15, 0, 786437, 15, 0, 786438, 15, 0, 786439, 15, 0, 786440, 15, 0, 786441, 15, 0, 786442, 15, 0, 786443, 15, 0, 786444, 15, 0, 786445, 15, 0, 786446, 15, 0, 786447, 15, 0, 786448, 7, 0, 786449, 16, 0, 786450, 16, 0, 917499, 16, 0, 917500, 16, 0, 917501, 16, 0, 917502, 16, 0, 917503, 16, 0, 851968, 16, 0, 851969, 16, 0, 851970, 9, 0, 851971, 15, 0, 851972, 15, 0, 851973, 15, 0, 851974, 15, 0, 851975, 15, 0, 851976, 15, 0, 851977, 15, 0, 851978, 15, 0, 851979, 15, 0, 851980, 15, 0, 851981, 15, 0, 851982, 15, 0, 851983, 15, 0, 851984, 7, 0, 851985, 16, 0, 851986, 16, 0, 983035, 16, 0, 983036, 16, 0, 983037, 16, 0, 983038, 16, 0, 983039, 16, 0, 917504, 16, 0, 917505, 16, 0, 917506, 9, 0, 917507, 15, 0, 917508, 15, 0, 917509, 15, 0, 917510, 15, 0, 917511, 15, 0, 917512, 15, 0, 917513, 15, 0, 917514, 15, 0, 917515, 15, 0, 917516, 15, 0, 917517, 15, 0, 917518, 15, 0, 917519, 15, 0, 917520, 7, 0, 917521, 16, 0, 917522, 16, 0, 1048571, 16, 0, 1048572, 16, 0, 1048573, 16, 0, 1048574, 16, 0, 1048575, 16, 0, 983040, 16, 0, 983041, 16, 0, 983042, 9, 0, 983043, 15, 0, 983044, 15, 0, 983045, 15, 0, 983046, 15, 0, 983047, 15, 0, 983048, 15, 0, 983049, 15, 0, 983050, 15, 0, 983051, 15, 0, 983052, 15, 0, 983053, 15, 0, 983054, 15, 0, 983055, 15, 0, 983056, 7, 0, 983057, 16, 0, 983058, 16, 0, 1114107, 16, 0, 1114108, 16, 0, 1114109, 16, 0, 1114110, 16, 0, 1114111, 16, 0, 1048576, 16, 0, 1048577, 16, 0, 1048578, 10, 0, 1048579, 3, 0, 1048580, 3, 0, 1048581, 3, 0, 1048582, 3, 0, 1048583, 3, 0, 1048584, 3, 0, 1048585, 3, 0, 1048586, 3, 0, 1048587, 3, 0, 1048588, 3, 0, 1048589, 3, 0, 1048590, 3, 0, 1048591, 3, 0, 1048592, 11, 0, 1048593, 16, 0, 1048594, 16, 0, 1179643, 16, 0, 1179644, 16, 0, 1179645, 16, 0, 1179646, 16, 0, 1179647, 16, 0, 1114112, 16, 0, 1114113, 16, 0, 1114114, 16, 0, 1114115, 16, 0, 1114116, 16, 0, 1114117, 16, 0, 1114118, 16, 0, 1114119, 16, 0, 1114120, 16, 0, 1114121, 16, 0, 1114122, 16, 0, 1114123, 16, 0, 1114124, 16, 0, 1114125, 16, 0, 1114126, 16, 0, 1114127, 16, 0, 1114128, 16, 0, 1114129, 16, 0, 1114130, 16, 0, 1245179, 16, 0, 1245180, 16, 0, 1245181, 16, 0, 1245182, 16, 0, 1245183, 16, 0, 1179648, 16, 0, 1179649, 16, 0, 1179650, 16, 0, 1179651, 16, 0, 1179652, 16, 0, 1179653, 16, 0, 1179654, 16, 0, 1179655, 16, 0, 1179656, 16, 0, 1179657, 16, 0, 1179658, 16, 0, 1179659, 16, 0, 1179660, 16, 0, 1179661, 16, 0, 1179662, 16, 0, 1179663, 16, 0, 1179664, 16, 0, 1179665, 16, 0, 1179666, 16, 0 )
+
+[node name="SpawnPosition" parent="." index="3"]
+position = Vector2( 56.1858, 308.458 )
+
+[node name="Camera2D" parent="." index="4"]
+position = Vector2( 58.8191, 305.685 )
+
+[node name="topLeft" parent="Camera2D/Limits" index="0"]
+position = Vector2( -4.20603, 74.5415 )
+
+[node name="bottomRight" parent="Camera2D/Limits" index="1"]
+position = Vector2( 544.46, 537.72 )
+
+[node name="Player" parent="YSort" index="0"]
+position = Vector2( 58.8191, 305.685 )
+
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 6
+
+[node name="AnimationTree" parent="YSort/Player" index="3"]
+parameters/playback = SubResource( 1 )
+
+[node name="Hostage" parent="YSort" index="1" instance=ExtResource( 2 )]
+position = Vector2( 304.146, 222.403 )
+
+[node name="Hostage2" parent="YSort" index="2" instance=ExtResource( 2 )]
+position = Vector2( 140.856, 225.234 )
+
+[node name="Terrorist" parent="YSort" index="3" instance=ExtResource( 3 )]
+position = Vector2( 463.664, 222.532 )
+
+[node name="Terrorist2" parent="YSort" index="4" instance=ExtResource( 3 )]
+position = Vector2( 401.392, 419.648 )
+
+[node name="Terrorist3" parent="YSort" index="5" instance=ExtResource( 3 )]
+position = Vector2( 219.298, 420.397 )
+
+[node name="Lab_TableHorizontal_back" parent="YSort" index="6" instance=ExtResource( 4 )]
+position = Vector2( 464.057, 278.423 )
+
+[node name="Lab_TableHorizontal_back2" parent="YSort" index="7" instance=ExtResource( 4 )]
+position = Vector2( 306.43, 277.479 )
+
+[node name="DEchanger" parent="YSort" index="8" instance=ExtResource( 6 )]
+position = Vector2( 480.13, 380.661 )
+LaserSpawn = 2
+
+[node name="ConveryorObject" parent="YSort" index="9" instance=ExtResource( 7 )]
+position = Vector2( 478.814, 424.269 )
+
+[node name="ConveryorObject14" parent="YSort" index="10" instance=ExtResource( 7 )]
+position = Vector2( 478.814, 472.776 )
+
+[node name="ConveryorObject2" parent="YSort" index="11" instance=ExtResource( 7 )]
+position = Vector2( 478.507, 376.493 )
+Direction = "MovingLeft"
+
+[node name="ConveryorObject3" parent="YSort" index="12" instance=ExtResource( 7 )]
+position = Vector2( 438.97, 376.493 )
+Direction = "MovingLeft"
+
+[node name="ConveryorObject4" parent="YSort" index="13" instance=ExtResource( 7 )]
+position = Vector2( 400.253, 375.963 )
+Direction = "MovingLeft"
+
+[node name="ConveryorObject5" parent="YSort" index="14" instance=ExtResource( 7 )]
+position = Vector2( 361.682, 375.626 )
+Direction = "MovingLeft"
+
+[node name="ConveryorObject6" parent="YSort" index="15" instance=ExtResource( 7 )]
+position = Vector2( 323.092, 375.398 )
+Direction = "MovingLeft"
+
+[node name="ConveryorObject7" parent="YSort" index="16" instance=ExtResource( 7 )]
+position = Vector2( 283.709, 375.096 )
+Direction = "MovingLeft"
+
+[node name="ConveryorObject9" parent="YSort" index="17" instance=ExtResource( 7 )]
+position = Vector2( 244.686, 374.609 )
+Direction = "MovingLeft"
+
+[node name="ConveryorObject10" parent="YSort" index="18" instance=ExtResource( 7 )]
+position = Vector2( 205.569, 374.188 )
+Direction = "MovingLeft"
+
+[node name="ConveryorObject11" parent="YSort" index="19" instance=ExtResource( 7 )]
+position = Vector2( 166.011, 373.659 )
+Direction = "MovingLeft"
+
+[node name="ConveryorObject12" parent="YSort" index="20" instance=ExtResource( 7 )]
+position = Vector2( 127.02, 373.323 )
+Direction = "MovingDown"
+
+[node name="ConveryorObject8" parent="YSort" index="21" instance=ExtResource( 7 )]
+position = Vector2( 127.258, 423.109 )
+Direction = "MovingDown"
+
+[node name="ConveryorObject13" parent="YSort" index="22" instance=ExtResource( 7 )]
+position = Vector2( 127.513, 474.354 )
+Direction = "MovingRight"
+
+[node name="ConveryorObject15" parent="YSort" index="23" instance=ExtResource( 7 )]
+position = Vector2( 166.57, 474.354 )
+Direction = "MovingRight"
+
+[node name="ConveryorObject16" parent="YSort" index="24" instance=ExtResource( 7 )]
+position = Vector2( 204.368, 474.984 )
+Direction = "MovingRight"
+
+[node name="ConveryorObject17" parent="YSort" index="25" instance=ExtResource( 7 )]
+position = Vector2( 242.796, 474.984 )
+Direction = "MovingRight"
+
+[node name="ConveryorObject18" parent="YSort" index="26" instance=ExtResource( 7 )]
+position = Vector2( 281.853, 474.984 )
+Direction = "MovingRight"
+
+[node name="ConveryorObject19" parent="YSort" index="27" instance=ExtResource( 7 )]
+position = Vector2( 320.911, 474.984 )
+Direction = "MovingRight"
+
+[node name="ConveryorObject20" parent="YSort" index="28" instance=ExtResource( 7 )]
+position = Vector2( 359.968, 475.614 )
+Direction = "MovingRight"
+
+[node name="ConveryorObject21" parent="YSort" index="29" instance=ExtResource( 7 )]
+position = Vector2( 398.396, 474.984 )
+Direction = "MovingRight"
+
+[node name="ConveryorObject22" parent="YSort" index="30" instance=ExtResource( 7 )]
+position = Vector2( 438.083, 474.984 )
+Direction = "MovingRight"
+
+[node name="Star" parent="YSort" index="31" instance=ExtResource( 8 )]
+position = Vector2( 222.029, 220.515 )
+
+[node name="Star2" parent="YSort" index="32" instance=ExtResource( 8 )]
+position = Vector2( 463.661, 177.096 )
+
+[node name="Star3" parent="YSort" index="33" instance=ExtResource( 8 )]
+position = Vector2( 463.661, 317.937 )
+
+[node name="Detector" parent="YSort" index="34" instance=ExtResource( 9 )]
+position = Vector2( 207.868, 80.0736 )
+rotation = 3.14159
+scale = Vector2( 2.3, 2.3 )
+
+[node name="Detector2" parent="YSort" index="35" instance=ExtResource( 9 )]
+position = Vector2( 240.029, 80.0123 )
+rotation = 3.14159
+scale = Vector2( 2.3, 2.3 )
+
+[node name="LevelLabel" parent="CanvasLayer" index="5"]
+text = "LabLevel - 10"
+
+[editable path="YSort/Player"]
