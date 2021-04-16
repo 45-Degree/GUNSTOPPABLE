@@ -865,10 +865,10 @@ position = Vector2( 640.028, 360.286 )
 [node name="RemoteTransform2D" parent="YSort/Player" index="0"]
 remote_path = NodePath("../../../Camera2D")
 
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 5
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 4
 
-[node name="AnimationTree" parent="YSort/Player" index="5"]
+[node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 50 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

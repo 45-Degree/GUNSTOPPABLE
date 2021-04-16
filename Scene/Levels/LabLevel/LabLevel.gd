@@ -69,17 +69,6 @@ func _process(delta):
 			camera.set_zoom(Vector2(smooth_zoom, smooth_zoom))
 			camera.position = lerp(player.global_position, Singleton.hostagePosition, 1)
 
-func _on_Button_pressed():
-		Transition.wipeOut()
-		yield(get_tree().create_timer(0.5),"timeout")
-		get_tree().change_scene("res://Scene/Levels/LabLevel/LabLevel_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
-func _on_Button2_pressed():
-	Transition.wipeOut()
-	control.hide()
-	yield(get_tree().create_timer(0.5),"timeout")
-	Singleton.Playable = true
-	get_tree().reload_current_scene()
-
 func _on_Hostage_Die():
 	starCrack.show()
 	starAll.hide()
@@ -121,25 +110,6 @@ func _on_Passable():
 		control.show()
 		get_tree().call_group("Hostage", "invincible")
 
-func _on_Button_button_up():
-	get_tree().paused = false
-	pause.hide()
-
-func _on_Button3_button_up():
-	get_tree().paused = false
-	Transition.wipeOut()
-	yield(get_tree().create_timer(0.5),"timeout")
-	get_tree().change_scene("res://Scene/UI/MainMenu/MainMenu.tscn")
-
-
-func _on_Button4_pressed():
-	option.hide()
-	pause.show()
-
-func _on_Button2_button_up():
-	pause.hide()
-	option.show()
-
 func _spawn():
 	if spawnHere == 0:
 		player.position = finalPosition.get_global_position() - Vector2(100,0)
@@ -158,7 +128,37 @@ func _on_level_Completed():
 		SoundManager.play_se("res://Sound/SFX/Object/ExitUnlock.wav")
 		soundplay = true
 
-func _on_Button3_pressed():
-		Transition.wipeOut()
-		yield(get_tree().create_timer(0.5),"timeout")
-		get_tree().change_scene("res://Scene/UI/LabLevelSelect/LabLevel_select.tscn")
+func _on_LevelButton_pressed():
+	Transition.wipeOut()
+	yield(get_tree().create_timer(0.5),"timeout")
+	get_tree().change_scene("res://Scene/UI/LabLevelSelect/LabLevel_select.tscn")
+	
+func _on_ExitButton_pressed():
+	get_tree().paused = false
+	Transition.wipeOut()
+	yield(get_tree().create_timer(0.5),"timeout")
+	get_tree().change_scene("res://Scene/UI/MainMenu/MainMenu.tscn")
+
+func _on_RetryButton_pressed():
+	Transition.wipeOut()
+	control.hide()
+	yield(get_tree().create_timer(0.5),"timeout")
+	Singleton.Playable = true
+	get_tree().reload_current_scene()
+
+func _on_NextLevelButton_pressed():
+	Transition.wipeOut()
+	yield(get_tree().create_timer(0.5),"timeout")
+	get_tree().change_scene("res://Scene/Levels/LabLevel/LabLevel_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
+
+func _on_BackButton_pressed():
+	option.hide()
+	pause.show()
+
+func _on_ResumeButton_pressed():
+	get_tree().paused = false
+	pause.hide()
+
+func _on_OptionButton_pressed():
+	pause.hide()
+	option.show()
