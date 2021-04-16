@@ -18,11 +18,13 @@ func _physics_process(delta):
 			queue_free()
 
 func _on_Hitbox_area_entered(area):
-	var explosion_instance = explosion.instance()
-	explosion_instance.position = get_global_position()
-	get_tree().current_scene.add_child(explosion_instance)
-	queue_free()
-
+	if area.get_parent().is_in_group("CampFire"):
+		$AnimatedSprite.play("Flame")
+	else:
+		var explosion_instance = explosion.instance()
+		explosion_instance.position = get_global_position()
+		get_tree().current_scene.add_child(explosion_instance)
+		queue_free()
 
 func _on_Timer_timeout():
 	queue_free()

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scene/Character/Player/Gun/Bullet/Bullet.gd" type="Script" id=1]
 [ext_resource path="res://Scene/UI/Hitbox.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Sprite/Effect/Bullet4.png" type="Texture" id=3]
+[ext_resource path="res://Scene/Character/Player/Gun/Bullet/Bullet4.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3.985, 3.742 )

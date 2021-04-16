@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spritesheet.png-e1fb9033a7487e331db27716bc7f9899.stex"
+path="res://.import/FireArrow.png-84a62d1de8b12a9a698744ea742e151a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Character/Player/Sprite/spritesheet.png"
-dest_files=[ "res://.import/spritesheet.png-e1fb9033a7487e331db27716bc7f9899.stex" ]
+source_file="res://Scene/Character/Player/Gun/Arrow/FireArrow.png"
+dest_files=[ "res://.import/FireArrow.png-84a62d1de8b12a9a698744ea742e151a.stex" ]
 
 [params]
 

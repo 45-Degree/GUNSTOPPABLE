@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bullet4.png-4e51efb2d3f5d74c40113f53304dc5ce.stex"
+path="res://.import/Arrow1.png-0c9c1f8604bcf8f7a0ebe0754ab16bbc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Effect/Bullet4.png"
-dest_files=[ "res://.import/Bullet4.png-4e51efb2d3f5d74c40113f53304dc5ce.stex" ]
+source_file="res://Scene/Character/Player/Gun/Arrow/Arrow1.png"
+dest_files=[ "res://.import/Arrow1.png-0c9c1f8604bcf8f7a0ebe0754ab16bbc.stex" ]
 
 [params]
 

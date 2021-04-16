@@ -1,0 +1,1280 @@
+[gd_scene load_steps=99 format=2]
+
+[ext_resource path="res://Sprite/Tilemap/Tile_connectors_LAB.png" type="Texture" id=1]
+[ext_resource path="res://Scene/UI/Camera2D.gd" type="Script" id=2]
+[ext_resource path="res://Sprite/Tilemap/Tiles_Mix_LAB2.png" type="Texture" id=3]
+[ext_resource path="res://Scene/UI/Star/Star_Crack.png" type="Texture" id=4]
+[ext_resource path="res://Scene/Character/Player/PlayerLaser.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://karma future.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Scene/UI/Mouse_cursor.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scene/UI/button/OptionSprite/OptionPauseNormal.png" type="Texture" id=9]
+[ext_resource path="res://Scene/UI/button/ResumeSprite/ResumeNormal.png" type="Texture" id=10]
+[ext_resource path="res://Scene/UI/button/OptionSprite/OptionPauseHover.png" type="Texture" id=11]
+[ext_resource path="res://Scene/UI/button/ResumeSprite/ResumePush.png" type="Texture" id=12]
+[ext_resource path="res://Scene/UI/button/OptionSprite/OptionPausePush.png" type="Texture" id=13]
+[ext_resource path="res://Scene/UI/button/ExitButtonSprite/ExitNormal.png" type="Texture" id=14]
+[ext_resource path="res://Scene/UI/button/ResumeSprite/ResumeHover.png" type="Texture" id=15]
+[ext_resource path="res://Scene/UI/button/ExitButtonSprite/ExitPush.png" type="Texture" id=16]
+[ext_resource path="res://Scene/UI/button/ExitButtonSprite/ExitHover.png" type="Texture" id=17]
+[ext_resource path="res://Scene/UI/button/NextLevelSprite/NextLevelPush.png" type="Texture" id=18]
+[ext_resource path="res://Scene/UI/button/NextLevelSprite/NextLevelHover.png" type="Texture" id=19]
+[ext_resource path="res://Scene/UI/button/NextLevelSprite/NextLevelNormal.png" type="Texture" id=20]
+[ext_resource path="res://Scene/UI/button/LevelSprite/LevelPush.png" type="Texture" id=21]
+[ext_resource path="res://Scene/UI/button/RetrySprite/RetryPush.png" type="Texture" id=22]
+[ext_resource path="res://Scene/UI/button/LevelSprite/LevelNormal.png" type="Texture" id=23]
+[ext_resource path="res://Scene/UI/button/LevelSprite/LevelHover.png" type="Texture" id=24]
+[ext_resource path="res://Scene/UI/button/RetrySprite/RetryHover.png" type="Texture" id=25]
+[ext_resource path="res://Scene/UI/button/RetrySprite/RetryNormal.png" type="Texture" id=26]
+[ext_resource path="res://Scene/UI/button/BackSprite/BackPush.png" type="Texture" id=27]
+[ext_resource path="res://Scene/UI/button/BackSprite/BackHover.png" type="Texture" id=28]
+[ext_resource path="res://Scene/UI/button/BackSprite/BackNormal.png" type="Texture" id=29]
+[ext_resource path="res://Font/PIXEL_30.tres" type="DynamicFont" id=30]
+[ext_resource path="res://Scene/UI/Option/HSlider.gd" type="Script" id=31]
+[ext_resource path="res://Scene/UI/button/Slider/SMALLSLIDER.png" type="Texture" id=32]
+[ext_resource path="res://Scene/UI/button/Slider/greybody.png" type="Texture" id=33]
+[ext_resource path="res://Scene/UI/button/Slider/bluebody.png" type="Texture" id=34]
+[ext_resource path="res://Scene/UI/Star/tile000.png" type="Texture" id=35]
+[ext_resource path="res://Sprite/Tilemap/Tiles_LAB1.png" type="Texture" id=36]
+[ext_resource path="res://Scene/Levels/LabLevel/LabLevel.gd" type="Script" id=37]
+
+[sub_resource type="Animation" id=1]
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/ColorRect:margin_left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 665.148, 0.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/ColorRect:margin_right")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 665.148, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/ColorRect:margin_left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -650.542 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/ColorRect:margin_right")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -650.542 ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=22]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=24]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=29]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=30]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=31]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=32]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=33]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=34]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=35]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=36]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=37]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=38]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=39]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=40]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=41]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=42]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=43]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=44]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=45]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=46]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=47]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=48]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 1, 32, 0 )
+
+[sub_resource type="TileSet" id=49]
+0/name = "Tile_connectors_LAB.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 5, 5, 254, 143 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 5
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 3 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 4, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 5, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 6, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 6, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 5, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 5, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 5, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 4, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 4, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 4, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 18 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 19 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 20 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 21 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 22 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 23 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 24 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 25 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 26 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 27 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 28 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Tiles_Mix_LAB2.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 5, 5, 106, 69 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 32, 32 )
+1/autotile/spacing = 5
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 29 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 29 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 30 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 31 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 32 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 33 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 34 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "Tiles_LAB1.png 2"
+2/texture = ExtResource( 36 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 5, 5, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 41 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 41 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "Tiles_LAB1.png 3"
+3/texture = ExtResource( 36 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 42, 5, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 42 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 42 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "Tiles_LAB1.png 4"
+4/texture = ExtResource( 36 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 79, 5, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 43 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 43 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "Tiles_LAB1.png 5"
+5/texture = ExtResource( 36 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 116, 5, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 44 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 44 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "Tiles_LAB1.png 6"
+6/texture = ExtResource( 36 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 153, 5, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 45 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 45 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+7/name = "Tiles_LAB1.png 7"
+7/texture = ExtResource( 36 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 5, 41, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 46 )
+7/shape_one_way = false
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 46 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+8/name = "Tiles_LAB1.png 8"
+8/texture = ExtResource( 36 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 42, 41, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape = SubResource( 47 )
+8/shape_one_way = false
+8/shape_one_way_margin = 1.0
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 47 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+8/z_index = 0
+9/name = "Tiles_LAB1.png 9"
+9/texture = ExtResource( 36 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 79, 41, 32, 32 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape = SubResource( 48 )
+9/shape_one_way = false
+9/shape_one_way_margin = 1.0
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 48 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+9/z_index = 0
+10/name = "Tiles_LAB1.png 10"
+10/texture = ExtResource( 36 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 116, 41, 32, 32 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape = SubResource( 35 )
+10/shape_one_way = false
+10/shape_one_way_margin = 1.0
+10/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 35 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+10/z_index = 0
+11/name = "Tiles_LAB1.png 11"
+11/texture = ExtResource( 36 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 153, 41, 32, 32 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape = SubResource( 36 )
+11/shape_one_way = false
+11/shape_one_way_margin = 1.0
+11/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 36 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+11/z_index = 0
+12/name = "Tiles_LAB1.png 12"
+12/texture = ExtResource( 36 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 5, 77, 32, 32 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape = SubResource( 37 )
+12/shape_one_way = false
+12/shape_one_way_margin = 1.0
+12/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 37 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+12/z_index = 0
+13/name = "Tiles_LAB1.png 13"
+13/texture = ExtResource( 36 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 42, 77, 32, 32 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape = SubResource( 38 )
+13/shape_one_way = false
+13/shape_one_way_margin = 1.0
+13/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 38 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+13/z_index = 0
+14/name = "Tiles_LAB1.png 14"
+14/texture = ExtResource( 36 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 79, 77, 32, 32 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape = SubResource( 39 )
+14/shape_one_way = false
+14/shape_one_way_margin = 1.0
+14/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 39 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+14/z_index = 0
+15/name = "Tiles_LAB1.png 15"
+15/texture = ExtResource( 36 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 116, 77, 32, 32 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "Tiles_LAB1.png 16"
+16/texture = ExtResource( 36 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 153, 77, 32, 32 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape = SubResource( 40 )
+16/shape_one_way = false
+16/shape_one_way_margin = 1.0
+16/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 40 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+16/z_index = 0
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=50]
+
+[sub_resource type="ShaderMaterial" id=51]
+
+[sub_resource type="Theme" id=52]
+
+[sub_resource type="DynamicFont" id=53]
+size = 39
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxTexture" id=54]
+texture = ExtResource( 33 )
+region_rect = Rect2( 0, 0, 180, 24 )
+
+[sub_resource type="StyleBoxTexture" id=55]
+texture = ExtResource( 34 )
+region_rect = Rect2( 0, 0, 180, 24 )
+
+[sub_resource type="StyleBoxTexture" id=56]
+texture = ExtResource( 34 )
+region_rect = Rect2( 0, 0, 180, 24 )
+
+[sub_resource type="StyleBoxTexture" id=57]
+texture = ExtResource( 33 )
+region_rect = Rect2( 0, 0, 180, 24 )
+
+[sub_resource type="StyleBoxTexture" id=58]
+texture = ExtResource( 34 )
+region_rect = Rect2( 0, 0, 180, 24 )
+
+[sub_resource type="StyleBoxTexture" id=59]
+texture = ExtResource( 34 )
+region_rect = Rect2( 0, 0, 180, 24 )
+
+[sub_resource type="DynamicFont" id=60]
+size = 30
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=61]
+size = 14
+outline_size = 1
+font_data = ExtResource( 7 )
+
+[node name="LabLevel_Template" type="Node"]
+script = ExtResource( 37 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Wipe_In = SubResource( 1 )
+anims/Wipe_Out = SubResource( 2 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 49 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 2
+collision_mask = 5
+format = 1
+
+[node name="SpawnPosition" type="Position2D" parent="."]
+position = Vector2( 8.9921, 298.075 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 149.431, -105.844 )
+scale = Vector2( 1.22, 1.22 )
+current = true
+limit_smoothed = true
+smoothing_enabled = true
+script = ExtResource( 2 )
+
+[node name="Limits" type="Node" parent="Camera2D"]
+
+[node name="topLeft" type="Position2D" parent="Camera2D/Limits"]
+position = Vector2( -86.2613, -146.651 )
+
+[node name="bottomRight" type="Position2D" parent="Camera2D/Limits"]
+position = Vector2( 640.028, 360.286 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 5 )]
+
+[node name="RemoteTransform2D" parent="YSort/Player" index="0"]
+remote_path = NodePath("../../../Camera2D")
+
+[node name="AnimatedSprite" parent="YSort/Player" index="2"]
+frame = 5
+
+[node name="AnimationTree" parent="YSort/Player" index="5"]
+parameters/playback = SubResource( 50 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control"]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 600.0
+margin_bottom = 320.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control/MarginContainer"]
+margin_right = 560.0
+margin_bottom = 280.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/CenterContainer"]
+margin_left = 6.0
+margin_top = 51.0
+margin_right = 554.0
+margin_bottom = 228.0
+custom_constants/separation = 6
+
+[node name="Message" type="Label" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer"]
+material = SubResource( 51 )
+margin_right = 548.0
+margin_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource( 52 )
+custom_fonts/font = SubResource( 53 )
+text = "You kill a hostage!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer"]
+margin_top = 41.0
+margin_right = 548.0
+margin_bottom = 121.0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 150.0
+margin_right = 230.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+texture = ExtResource( 35 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 234.0
+margin_right = 314.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+texture = ExtResource( 35 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 318.0
+margin_right = 398.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+texture = ExtResource( 35 )
+expand = true
+stretch_mode = 6
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer"]
+visible = false
+margin_top = 127.0
+margin_right = 548.0
+margin_bottom = 207.0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 150.0
+margin_right = 230.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 234.0
+margin_right = 314.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 318.0
+margin_right = 398.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer"]
+margin_top = 127.0
+margin_right = 548.0
+margin_bottom = 177.0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_constants/separation = 49
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_right = 150.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 150, 50 )
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 21 )
+texture_hover = ExtResource( 24 )
+expand = true
+
+[node name="RetryButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 199.0
+margin_right = 349.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 150, 50 )
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 22 )
+texture_hover = ExtResource( 25 )
+expand = true
+
+[node name="NextLevelButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 398.0
+margin_right = 548.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 150, 50 )
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 19 )
+expand = true
+
+[node name="Control2" type="Control" parent="CanvasLayer"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control2/CenterContainer"]
+margin_left = 245.0
+margin_top = 54.0
+margin_right = 395.0
+margin_bottom = 306.0
+custom_constants/separation = 21
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer"]
+margin_right = 150.0
+margin_bottom = 27.0
+rect_pivot_offset = Vector2( 97.0978, 46.03 )
+custom_fonts/font = ExtResource( 30 )
+text = "Pause"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer"]
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 252.0
+custom_constants/separation = -18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="TextureButton" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer"]
+margin_right = 150.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 150, 80 )
+size_flags_vertical = 3
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 4
+
+[node name="Button2" type="TextureButton" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer"]
+margin_top = 62.0
+margin_right = 150.0
+margin_bottom = 142.0
+rect_min_size = Vector2( 150, 80 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 11 )
+expand = true
+stretch_mode = 4
+
+[node name="Button3" type="TextureButton" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer"]
+margin_top = 124.0
+margin_right = 150.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 150, 80 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 17 )
+expand = true
+stretch_mode = 4
+
+[node name="Control3" type="Control" parent="CanvasLayer"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control3"]
+margin_left = 184.0
+margin_top = 92.0
+margin_right = 456.0
+margin_bottom = 268.0
+custom_constants/separation = 19
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Control3/VBoxContainer"]
+margin_right = 275.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 30 )
+text = "Option"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control3/VBoxContainer"]
+margin_top = 46.0
+margin_right = 275.0
+margin_bottom = 110.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckButton2" type="HBoxContainer" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2"]
+margin_right = 275.0
+margin_bottom = 30.0
+custom_constants/separation = 41
+
+[node name="Label" type="Label" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton2"]
+margin_top = 1.0
+margin_right = 54.0
+margin_bottom = 28.0
+custom_fonts/font = ExtResource( 30 )
+text = "BGM"
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton2"]
+margin_left = 95.0
+margin_right = 275.0
+margin_bottom = 30.0
+custom_icons/grabber_highlight = ExtResource( 32 )
+custom_icons/grabber = ExtResource( 32 )
+custom_styles/slider = SubResource( 54 )
+custom_styles/grabber_area_highlight = SubResource( 55 )
+custom_styles/grabber_area = SubResource( 56 )
+max_value = 1.0
+step = 0.05
+script = ExtResource( 31 )
+
+[node name="CheckButton3" type="HBoxContainer" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2"]
+margin_top = 34.0
+margin_right = 275.0
+margin_bottom = 64.0
+custom_constants/separation = 41
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton3"]
+margin_top = 1.0
+margin_right = 54.0
+margin_bottom = 28.0
+custom_fonts/font = ExtResource( 30 )
+text = "SFX"
+
+[node name="HSlider2" type="HSlider" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton3"]
+margin_left = 95.0
+margin_right = 275.0
+margin_bottom = 30.0
+custom_icons/grabber_highlight = ExtResource( 32 )
+custom_icons/grabber = ExtResource( 32 )
+custom_styles/slider = SubResource( 57 )
+custom_styles/grabber_area_highlight = SubResource( 58 )
+custom_styles/grabber_area = SubResource( 59 )
+max_value = 1.0
+step = 0.05
+script = ExtResource( 31 )
+audio_bus_name = "SE"
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control3/VBoxContainer"]
+margin_top = 129.0
+margin_right = 275.0
+margin_bottom = 179.0
+
+[node name="Button4" type="TextureButton" parent="CanvasLayer/Control3/VBoxContainer/CenterContainer"]
+margin_left = 62.0
+margin_right = 212.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 150, 50 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 27 )
+texture_hover = ExtResource( 28 )
+expand = true
+stretch_mode = 5
+
+[node name="Control4" type="Control" parent="CanvasLayer"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Control4/CenterContainer"]
+margin_left = 131.0
+margin_top = 166.0
+margin_right = 509.0
+margin_bottom = 193.0
+custom_fonts/font = SubResource( 60 )
+text = "Click to start Guning"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 665.148
+margin_right = 665.148
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelLabel" type="Label" parent="CanvasLayer"]
+margin_left = 6.64816
+margin_top = 331.621
+margin_right = 114.648
+margin_bottom = 366.621
+custom_fonts/font = SubResource( 61 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Level - 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mouse_cursor" parent="CanvasLayer" instance=ExtResource( 8 )]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/LevelButton" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton" to="." method="_on_Button_pressed"]
+[connection signal="button_up" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer/Button" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer/Button2" to="." method="_on_Button2_button_up"]
+[connection signal="button_up" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer/Button3" to="." method="_on_Button3_button_up"]
+[connection signal="mouse_exited" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton2/HSlider" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton2/HSlider" method="_on_HSlider_mouse_exited"]
+[connection signal="value_changed" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton2/HSlider" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton2/HSlider" method="_on_HSlider_value_changed"]
+[connection signal="mouse_exited" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton3/HSlider2" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton3/HSlider2" method="_on_HSlider2_mouse_exited"]
+[connection signal="value_changed" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton3/HSlider2" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton3/HSlider2" method="_on_HSlider2_value_changed"]
+[connection signal="pressed" from="CanvasLayer/Control3/VBoxContainer/CenterContainer/Button4" to="." method="_on_Button4_pressed"]
+
+[editable path="YSort/Player"]
