@@ -841,6 +841,9 @@ position = Vector2( 640.028, 360.286 )
 [node name="RemoteTransform2D" parent="YSort/Player" index="0"]
 remote_path = NodePath("../../../Camera2D")
 
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 3
+
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 50 )
 
@@ -1261,6 +1264,7 @@ stretch_mode = 5
 
 [node name="Control4" type="Control" parent="CanvasLayer"]
 pause_mode = 2
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -1280,6 +1284,7 @@ margin_top = 166.0
 margin_right = 509.0
 margin_bottom = 193.0
 custom_fonts/font = SubResource( 64 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Click to start Guning"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]

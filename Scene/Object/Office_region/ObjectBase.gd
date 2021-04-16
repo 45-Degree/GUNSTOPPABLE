@@ -66,23 +66,7 @@ func _on_Hurtbox_area_entered(area):
 		door.queue_free()
 		SoundManager.play_se("res://Sound/SFX/Object/Keycard_3.wav")
 		queue_free()
-#	if Reflectable == true:
-#		var BulletP_Instance = Bullet.instance()
-#		var world = get_tree().current_scene
-#		world.call_deferred("add_child", BulletP_Instance)
-#		if BulletSpawn == 0:
-#			BulletP_Instance.position = $BulletSpawnLeft.get_global_position()
-#			BulletP_Instance.direction = Vector2.LEFT.normalized()
-#		if BulletSpawn == 1:
-#			BulletP_Instance.position = $BulletSpawnRight.get_global_position()
-#			BulletP_Instance.direction = Vector2.RIGHT.normalized()
-#		if BulletSpawn == 2:
-#			BulletP_Instance.position = $BulletSpawnUp.get_global_position()
-#			BulletP_Instance.direction = Vector2.UP.normalized()
-#		if BulletSpawn == 3:
-#			BulletP_Instance.position = $BulletSpawnDown.get_global_position()
-#			BulletP_Instance.direction = Vector2.DOWN.normalized()
-#		BulletP_Instance.rotation = BulletP_Instance.direction.angle()
+		
 func _on_Hurtbox_area_exited(area):
 	if Laser == true:
 		Emit = false

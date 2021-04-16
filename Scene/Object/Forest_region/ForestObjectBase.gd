@@ -13,23 +13,14 @@ onready var damagable = false
 export var button = false
 export(int, "Left", "Right", "Top", "Bottom") var BulletSpawn
 onready var animatedSprite = $AnimatedSprite
-onready var particle = $Particles2D
 onready var timer = $Timer
 var sound_clip = preload("res://Sound/SFX/Object/Keycard_3.wav")
 export(PackedScene) var explodeDamage 
-signal Star_Pick
 
 func _ready():
 	animationPlayer.play("Idle")
+	
 func _process(delta):
-	if damagable == false and destroyable == true:
-				animatedSprite.hide()
-				animationPlayer.play("Idle")
-				particle.emitting = false
-	if damagable == true:
-				animatedSprite.show()
-				animationPlayer.play("Blink")
-				particle.emitting = true
 	if unlockable == true and Singleton.unlock == true:
 		queue_free()
 	if explodable == true and health <= 0:
@@ -42,23 +33,8 @@ func _process(delta):
 		queue_free()
 
 func _on_Hurtbox_area_entered(area):
-	if button == true:
-		animationPlayer.play("Pressed")
-	if invincible == false and destroyable == true:
-		health -= 5
-		damagable = true
-		$Timer.start()
-	if pickable == true:
-		var door = get_node(node_path)
-		door.queue_free()
-		SoundManager.play_se("res://Sound/SFX/Object/Keycard_3.wav")
-		queue_free()
+	if area.get_parent().flaming:
+		visible = false
+		$MiddleCollsion.set_deferred("disabled", false)
 
-func _on_Hurtbox_area_exited(area):
-	damagable = false
-	$Timer.stop()
-	if button:
-		animationPlayer.play("Idle")
 
-func _on_Timer_timeout():
-	health -= 3

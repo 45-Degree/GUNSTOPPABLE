@@ -3,6 +3,7 @@ extends KinematicBody2D
 var explosion = preload("res://Scene/Character/Player/Gun/ExplosionEffect/Explosion.tscn")
 export var speed = 400
 var direction = Vector2.ZERO
+var flaming = false
 
 
 func _physics_process(delta):
@@ -20,6 +21,7 @@ func _physics_process(delta):
 func _on_Hitbox_area_entered(area):
 	if area.get_parent().is_in_group("CampFire"):
 		$AnimatedSprite.play("Flame")
+		flaming = true
 	else:
 		var explosion_instance = explosion.instance()
 		explosion_instance.position = get_global_position()

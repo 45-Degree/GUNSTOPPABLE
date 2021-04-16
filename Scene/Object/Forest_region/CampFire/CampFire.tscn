@@ -26,14 +26,14 @@ region = Rect2( 1500, 0, 500, 500 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "Dud",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "Normal",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Dud",
 "speed": 5.0
 } ]
 
@@ -100,7 +100,7 @@ position = Vector2( -0.0710406, -0.128614 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 5 )
 animation = "Normal"
-frame = 2
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -125,9 +125,3 @@ emitting = false
 lifetime = 2.0
 speed_scale = 1.49
 process_material = SubResource( 10 )
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
-[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
-[connection signal="area_exited" from="Hurtbox" to="." method="_on_Hurtbox_area_exited"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
