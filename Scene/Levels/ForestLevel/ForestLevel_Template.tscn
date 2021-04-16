@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=2]
+[gd_scene load_steps=103 format=2]
 
 [ext_resource path="res://Sprite/Tilemap/Tile_connectors_LAB.png" type="Texture" id=1]
 [ext_resource path="res://Scene/UI/Camera2D.gd" type="Script" id=2]
@@ -29,68 +29,20 @@
 [ext_resource path="res://Scene/UI/button/BackSprite/BackPush.png" type="Texture" id=27]
 [ext_resource path="res://Scene/UI/button/BackSprite/BackHover.png" type="Texture" id=28]
 [ext_resource path="res://Scene/UI/button/BackSprite/BackNormal.png" type="Texture" id=29]
-[ext_resource path="res://Font/PIXEL_30.tres" type="DynamicFont" id=30]
+[ext_resource path="res://Scene/Levels/ForestLevel/ForestLevel.gd" type="Script" id=30]
 [ext_resource path="res://Scene/UI/Option/HSlider.gd" type="Script" id=31]
 [ext_resource path="res://Scene/UI/button/Slider/SMALLSLIDER.png" type="Texture" id=32]
 [ext_resource path="res://Scene/UI/button/Slider/greybody.png" type="Texture" id=33]
 [ext_resource path="res://Scene/UI/button/Slider/bluebody.png" type="Texture" id=34]
 [ext_resource path="res://Scene/UI/Star/tile000.png" type="Texture" id=35]
 [ext_resource path="res://Sprite/Tilemap/Tiles_LAB1.png" type="Texture" id=36]
-[ext_resource path="res://Scene/Levels/LabLevel/LabLevel.gd" type="Script" id=37]
+[ext_resource path="res://Scene/UI/Overlay/PauseOverlay.png" type="Texture" id=37]
 
 [sub_resource type="Animation" id=1]
 length = 0.4
-tracks/0/type = "value"
-tracks/0/path = NodePath("CanvasLayer/ColorRect:margin_left")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 665.148, 0.0, 0.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("CanvasLayer/ColorRect:margin_right")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 665.148, 0.0, 0.0 ]
-}
 
 [sub_resource type="Animation" id=2]
 length = 0.4
-tracks/0/type = "value"
-tracks/0/path = NodePath("CanvasLayer/ColorRect:margin_left")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, -650.542 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("CanvasLayer/ColorRect:margin_right")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, -650.542 ]
-}
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -783,22 +735,28 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 1, 32, 0 )
 [sub_resource type="Theme" id=52]
 
 [sub_resource type="DynamicFont" id=53]
-size = 39
-outline_size = 5
+size = 30
+outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxTexture" id=54]
-texture = ExtResource( 33 )
-region_rect = Rect2( 0, 0, 180, 24 )
+[sub_resource type="DynamicFont" id=54]
+size = 38
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxTexture" id=55]
-texture = ExtResource( 34 )
-region_rect = Rect2( 0, 0, 180, 24 )
+[sub_resource type="DynamicFont" id=55]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxTexture" id=56]
-texture = ExtResource( 34 )
-region_rect = Rect2( 0, 0, 180, 24 )
+[sub_resource type="DynamicFont" id=56]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="StyleBoxTexture" id=57]
 texture = ExtResource( 33 )
@@ -814,17 +772,35 @@ region_rect = Rect2( 0, 0, 180, 24 )
 
 [sub_resource type="DynamicFont" id=60]
 size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxTexture" id=61]
+texture = ExtResource( 33 )
+region_rect = Rect2( 0, 0, 180, 24 )
+
+[sub_resource type="StyleBoxTexture" id=62]
+texture = ExtResource( 34 )
+region_rect = Rect2( 0, 0, 180, 24 )
+
+[sub_resource type="StyleBoxTexture" id=63]
+texture = ExtResource( 34 )
+region_rect = Rect2( 0, 0, 180, 24 )
+
+[sub_resource type="DynamicFont" id=64]
+size = 30
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=61]
+[sub_resource type="DynamicFont" id=65]
 size = 14
 outline_size = 1
 font_data = ExtResource( 7 )
 
 [node name="LabLevel_Template" type="Node"]
-script = ExtResource( 37 )
+script = ExtResource( 30 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Wipe_In = SubResource( 1 )
@@ -865,9 +841,6 @@ position = Vector2( 640.028, 360.286 )
 [node name="RemoteTransform2D" parent="YSort/Player" index="0"]
 remote_path = NodePath("../../../Camera2D")
 
-[node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 4
-
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 50 )
 
@@ -878,6 +851,24 @@ pause_mode = 2
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="NinePatchRect" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -229.5
+margin_top = -122.0
+margin_right = 229.5
+margin_bottom = 122.0
+texture = ExtResource( 37 )
+patch_margin_left = 39
+patch_margin_top = 33
+patch_margin_right = 46
+patch_margin_bottom = 29
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -896,21 +887,25 @@ margin_right = 560.0
 margin_bottom = 280.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/CenterContainer"]
-margin_left = 6.0
-margin_top = 51.0
-margin_right = 554.0
-margin_bottom = 228.0
+margin_left = 86.0
+margin_top = 55.0
+margin_right = 474.0
+margin_bottom = 224.0
 custom_constants/separation = 6
 
 [node name="Message" type="Label" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer"]
 material = SubResource( 51 )
-margin_right = 548.0
-margin_bottom = 35.0
+margin_right = 388.0
+margin_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource( 52 )
 custom_fonts/font = SubResource( 53 )
-text = "You kill a hostage!"
+custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 2
+text = "YOU KILL A HOSTAGE!"
 align = 1
 valign = 1
 __meta__ = {
@@ -918,14 +913,14 @@ __meta__ = {
 }
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer"]
-margin_top = 41.0
-margin_right = 548.0
-margin_bottom = 121.0
+margin_top = 33.0
+margin_right = 388.0
+margin_bottom = 113.0
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer2"]
-margin_left = 150.0
-margin_right = 230.0
+margin_left = 70.0
+margin_right = 150.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 80, 80 )
 texture = ExtResource( 35 )
@@ -933,8 +928,8 @@ expand = true
 stretch_mode = 6
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer2"]
-margin_left = 234.0
-margin_right = 314.0
+margin_left = 154.0
+margin_right = 234.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 80, 80 )
 texture = ExtResource( 35 )
@@ -942,8 +937,8 @@ expand = true
 stretch_mode = 6
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer2"]
-margin_left = 318.0
-margin_right = 398.0
+margin_left = 238.0
+margin_right = 318.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 80, 80 )
 texture = ExtResource( 35 )
@@ -953,13 +948,13 @@ stretch_mode = 6
 [node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer"]
 visible = false
 margin_top = 127.0
-margin_right = 548.0
+margin_right = 478.0
 margin_bottom = 207.0
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer3"]
-margin_left = 150.0
-margin_right = 230.0
+margin_left = 115.0
+margin_right = 195.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 80, 80 )
 texture = ExtResource( 4 )
@@ -967,8 +962,8 @@ expand = true
 stretch_mode = 6
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer3"]
-margin_left = 234.0
-margin_right = 314.0
+margin_left = 199.0
+margin_right = 279.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 80, 80 )
 texture = ExtResource( 4 )
@@ -976,8 +971,8 @@ expand = true
 stretch_mode = 6
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer3"]
-margin_left = 318.0
-margin_right = 398.0
+margin_left = 283.0
+margin_right = 363.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 80, 80 )
 texture = ExtResource( 4 )
@@ -985,45 +980,48 @@ expand = true
 stretch_mode = 6
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer"]
-margin_top = 127.0
-margin_right = 548.0
-margin_bottom = 177.0
+margin_top = 119.0
+margin_right = 388.0
+margin_bottom = 169.0
 size_flags_horizontal = 7
 size_flags_vertical = 3
-custom_constants/separation = 49
+custom_constants/separation = 14
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="LevelButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
-margin_right = 150.0
+margin_right = 120.0
 margin_bottom = 50.0
-rect_min_size = Vector2( 150, 50 )
+rect_min_size = Vector2( 120, 50 )
 texture_normal = ExtResource( 23 )
 texture_pressed = ExtResource( 21 )
 texture_hover = ExtResource( 24 )
 expand = true
+stretch_mode = 5
 
 [node name="RetryButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
-margin_left = 199.0
-margin_right = 349.0
+margin_left = 134.0
+margin_right = 254.0
 margin_bottom = 50.0
-rect_min_size = Vector2( 150, 50 )
+rect_min_size = Vector2( 120, 50 )
 texture_normal = ExtResource( 26 )
 texture_pressed = ExtResource( 22 )
 texture_hover = ExtResource( 25 )
 expand = true
+stretch_mode = 5
 
 [node name="NextLevelButton" type="TextureButton" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
-margin_left = 398.0
-margin_right = 548.0
+margin_left = 268.0
+margin_right = 388.0
 margin_bottom = 50.0
-rect_min_size = Vector2( 150, 50 )
+rect_min_size = Vector2( 120, 50 )
 texture_normal = ExtResource( 20 )
 texture_pressed = ExtResource( 18 )
 texture_hover = ExtResource( 19 )
 expand = true
+stretch_mode = 5
 
 [node name="Control2" type="Control" parent="CanvasLayer"]
 pause_mode = 2
@@ -1032,6 +1030,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="NinePatchRect" parent="CanvasLayer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -221.0
+margin_top = -103.495
+margin_right = 221.0
+margin_bottom = 94.5051
+texture = ExtResource( 37 )
+patch_margin_left = 39
+patch_margin_top = 33
+patch_margin_right = 46
+patch_margin_bottom = 29
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1046,67 +1062,68 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control2/CenterContainer"]
-margin_left = 245.0
-margin_top = 54.0
-margin_right = 395.0
-margin_bottom = 306.0
+margin_left = 126.0
+margin_top = 112.0
+margin_right = 514.0
+margin_bottom = 247.0
 custom_constants/separation = 21
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer"]
-margin_right = 150.0
-margin_bottom = 27.0
+margin_right = 388.0
+margin_bottom = 34.0
 rect_pivot_offset = Vector2( 97.0978, 46.03 )
-custom_fonts/font = ExtResource( 30 )
-text = "Pause"
+custom_fonts/font = SubResource( 54 )
+custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 2
+text = "Game Paused"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer"]
-margin_top = 48.0
-margin_right = 150.0
-margin_bottom = 252.0
-custom_constants/separation = -18
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="TextureButton" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer"]
-margin_right = 150.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 150, 80 )
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer"]
+margin_top = 55.0
+margin_right = 388.0
+margin_bottom = 135.0
+size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_constants/separation = 14
+
+[node name="ResumeButton" type="TextureButton" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_right = 120.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 120, 80 )
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 12 )
 texture_hover = ExtResource( 15 )
 expand = true
-stretch_mode = 4
+stretch_mode = 5
 
-[node name="Button2" type="TextureButton" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer"]
-margin_top = 62.0
-margin_right = 150.0
-margin_bottom = 142.0
-rect_min_size = Vector2( 150, 80 )
+[node name="OptionButton" type="TextureButton" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 134.0
+margin_right = 254.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 120, 80 )
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 13 )
 texture_hover = ExtResource( 11 )
 expand = true
-stretch_mode = 4
+stretch_mode = 5
 
-[node name="Button3" type="TextureButton" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer"]
-margin_top = 124.0
-margin_right = 150.0
-margin_bottom = 204.0
-rect_min_size = Vector2( 150, 80 )
+[node name="ExitButton" type="TextureButton" parent="CanvasLayer/Control2/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 268.0
+margin_right = 388.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 120, 80 )
 texture_normal = ExtResource( 14 )
 texture_pressed = ExtResource( 16 )
 texture_hover = ExtResource( 17 )
 expand = true
-stretch_mode = 4
+stretch_mode = 5
 
 [node name="Control3" type="Control" parent="CanvasLayer"]
 pause_mode = 2
@@ -1117,21 +1134,43 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TextureRect3" type="NinePatchRect" parent="CanvasLayer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -199.5
+margin_top = -117.0
+margin_right = 199.5
+margin_bottom = 117.0
+texture = ExtResource( 37 )
+patch_margin_left = 39
+patch_margin_top = 33
+patch_margin_right = 46
+patch_margin_bottom = 29
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control3"]
 margin_left = 184.0
-margin_top = 92.0
-margin_right = 456.0
-margin_bottom = 268.0
-custom_constants/separation = 19
+margin_top = 83.0101
+margin_right = 459.0
+margin_bottom = 259.01
+custom_constants/separation = 13
 alignment = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="CanvasLayer/Control3/VBoxContainer"]
+margin_top = 9.0
 margin_right = 275.0
-margin_bottom = 27.0
-custom_fonts/font = ExtResource( 30 )
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 55 )
+custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 2
 text = "Option"
 align = 1
 __meta__ = {
@@ -1139,9 +1178,9 @@ __meta__ = {
 }
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Control3/VBoxContainer"]
-margin_top = 46.0
+margin_top = 49.0
 margin_right = 275.0
-margin_bottom = 110.0
+margin_bottom = 113.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1156,7 +1195,9 @@ custom_constants/separation = 41
 margin_top = 1.0
 margin_right = 54.0
 margin_bottom = 28.0
-custom_fonts/font = ExtResource( 30 )
+custom_fonts/font = SubResource( 56 )
+custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
+custom_constants/shadow_offset_y = 2
 text = "BGM"
 
 [node name="HSlider" type="HSlider" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton2"]
@@ -1165,9 +1206,9 @@ margin_right = 275.0
 margin_bottom = 30.0
 custom_icons/grabber_highlight = ExtResource( 32 )
 custom_icons/grabber = ExtResource( 32 )
-custom_styles/slider = SubResource( 54 )
-custom_styles/grabber_area_highlight = SubResource( 55 )
-custom_styles/grabber_area = SubResource( 56 )
+custom_styles/slider = SubResource( 57 )
+custom_styles/grabber_area_highlight = SubResource( 58 )
+custom_styles/grabber_area = SubResource( 59 )
 max_value = 1.0
 step = 0.05
 script = ExtResource( 31 )
@@ -1182,7 +1223,8 @@ custom_constants/separation = 41
 margin_top = 1.0
 margin_right = 54.0
 margin_bottom = 28.0
-custom_fonts/font = ExtResource( 30 )
+custom_fonts/font = SubResource( 60 )
+custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
 text = "SFX"
 
 [node name="HSlider2" type="HSlider" parent="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton3"]
@@ -1191,20 +1233,20 @@ margin_right = 275.0
 margin_bottom = 30.0
 custom_icons/grabber_highlight = ExtResource( 32 )
 custom_icons/grabber = ExtResource( 32 )
-custom_styles/slider = SubResource( 57 )
-custom_styles/grabber_area_highlight = SubResource( 58 )
-custom_styles/grabber_area = SubResource( 59 )
+custom_styles/slider = SubResource( 61 )
+custom_styles/grabber_area_highlight = SubResource( 62 )
+custom_styles/grabber_area = SubResource( 63 )
 max_value = 1.0
 step = 0.05
 script = ExtResource( 31 )
 audio_bus_name = "SE"
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control3/VBoxContainer"]
-margin_top = 129.0
+margin_top = 126.0
 margin_right = 275.0
-margin_bottom = 179.0
+margin_bottom = 176.0
 
-[node name="Button4" type="TextureButton" parent="CanvasLayer/Control3/VBoxContainer/CenterContainer"]
+[node name="BackButton" type="TextureButton" parent="CanvasLayer/Control3/VBoxContainer/CenterContainer"]
 margin_left = 62.0
 margin_right = 212.0
 margin_bottom = 50.0
@@ -1219,7 +1261,6 @@ stretch_mode = 5
 
 [node name="Control4" type="Control" parent="CanvasLayer"]
 pause_mode = 2
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -1238,11 +1279,10 @@ margin_left = 131.0
 margin_top = 166.0
 margin_right = 509.0
 margin_bottom = 193.0
-custom_fonts/font = SubResource( 60 )
+custom_fonts/font = SubResource( 64 )
 text = "Click to start Guning"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 665.148
@@ -1257,7 +1297,7 @@ margin_left = 6.64816
 margin_top = 331.621
 margin_right = 114.648
 margin_bottom = 366.621
-custom_fonts/font = SubResource( 61 )
+custom_fonts/font = SubResource( 65 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level - 1"
 __meta__ = {
@@ -1265,16 +1305,16 @@ __meta__ = {
 }
 
 [node name="Mouse_cursor" parent="CanvasLayer" instance=ExtResource( 8 )]
-[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/LevelButton" to="." method="_on_Button3_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_Button2_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton" to="." method="_on_Button_pressed"]
-[connection signal="button_up" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer/Button" to="." method="_on_Button_button_up"]
-[connection signal="button_up" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer/Button2" to="." method="_on_Button2_button_up"]
-[connection signal="button_up" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/VBoxContainer/Button3" to="." method="_on_Button3_button_up"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/LevelButton" to="." method="_on_LevelButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_RetryButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/HBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/HBoxContainer/OptionButton" to="." method="_on_OptionButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control2/CenterContainer/VBoxContainer/HBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="mouse_exited" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton2/HSlider" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton2/HSlider" method="_on_HSlider_mouse_exited"]
 [connection signal="value_changed" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton2/HSlider" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton2/HSlider" method="_on_HSlider_value_changed"]
 [connection signal="mouse_exited" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton3/HSlider2" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton3/HSlider2" method="_on_HSlider2_mouse_exited"]
 [connection signal="value_changed" from="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton3/HSlider2" to="CanvasLayer/Control3/VBoxContainer/VBoxContainer2/CheckButton3/HSlider2" method="_on_HSlider2_value_changed"]
-[connection signal="pressed" from="CanvasLayer/Control3/VBoxContainer/CenterContainer/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control3/VBoxContainer/CenterContainer/BackButton" to="." method="_on_BackButton_pressed"]
 
 [editable path="YSort/Player"]

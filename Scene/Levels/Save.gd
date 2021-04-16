@@ -6,6 +6,8 @@ var save_path = SAVE_DIR +"/"+ "save.json"
 
 var data_default = {
 	"Level1" : false,
+	"Region2": false,
+	"Resion3": false
 	}
 
 var data = {}

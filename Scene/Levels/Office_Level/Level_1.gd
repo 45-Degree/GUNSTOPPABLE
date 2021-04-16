@@ -44,7 +44,6 @@ func _ready():
 	yield(self,"mouse_click")
 	Singleton.Playable = true
 	$CanvasLayer/Control4.hide()
-	player.BULLET = true
 
 func _process(delta):
 	var terrorist = get_tree().get_nodes_in_group("Terrorist").size()
@@ -99,6 +98,8 @@ func  _on_Star_Pick():
 func _on_Passable():
 	if Complete == true:
 		Save.data["Level"+ str(int(get_tree().current_scene.name)+1)] = true
+		if get_tree().current_scene.name == "Level_20":
+			Save.data["Region2"] = true
 		if !Save.data.has("Star" + str(int(get_tree().current_scene.name))):
 			Save.data["Star"+ str(int(get_tree().current_scene.name))] = Star_Count
 		elif Save.data["Star" + str(int(get_tree().current_scene.name))] <= Star_Count:

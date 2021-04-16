@@ -32,6 +32,7 @@ func _on_buttonQuite_button_up():
 	Transition.wipeOut()
 	yield(get_tree().create_timer(0.5),"timeout")
 	get_tree().change_scene("res://Scene/UI/Regionselect/RegionSelect.tscn")
+	
 func _button_entered(which):
 	pass
 #	if which.disabled == false:

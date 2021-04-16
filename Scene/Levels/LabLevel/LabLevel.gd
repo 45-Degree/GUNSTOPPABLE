@@ -85,11 +85,11 @@ func  _on_Star_Pick():
 
 func _on_Passable():
 	if Complete == true:
-		Save.data["Level"+ str(int(get_tree().current_scene.name)+1)] = true
-		if !Save.data.has("Star" + str(int(get_tree().current_scene.name))):
-			Save.data["Star"+ str(int(get_tree().current_scene.name))] = Star_Count
-		elif Save.data["Star" + str(int(get_tree().current_scene.name))] <= Star_Count:
-			Save.data["Star" + str(int(get_tree().current_scene.name))] = Star_Count
+		Save.data["LabLevel"+ str(int(get_tree().current_scene.name)+1)] = true
+		if !Save.data.has("LabStar" + str(int(get_tree().current_scene.name))):
+			Save.data["LabStar"+ str(int(get_tree().current_scene.name))] = Star_Count
+		elif Save.data["LabStar" + str(int(get_tree().current_scene.name))] <= Star_Count:
+			Save.data["LabStar" + str(int(get_tree().current_scene.name))] = Star_Count
 		else:
 			pass
 		Save._on_Save()
@@ -162,3 +162,5 @@ func _on_ResumeButton_pressed():
 func _on_OptionButton_pressed():
 	pause.hide()
 	option.show()
+
+
