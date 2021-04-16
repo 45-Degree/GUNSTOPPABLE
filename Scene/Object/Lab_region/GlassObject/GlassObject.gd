@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends KinematicBody2D
 onready var animationPlayer = $AnimationPlayer
 export(int, "Left", "Right", "Top", "Bottom") var LaserSpawn
 onready var state = UNSHOT
@@ -7,6 +7,8 @@ onready var particle = $Particles2D
 onready var timer = $Timer
 onready var LaserBeam = $LaserBeam
 onready var ForceMovement =  []
+var velocity = Vector2.ZERO
+
 enum{
 	UNSHOT,
 	SHOTTED
@@ -16,7 +18,13 @@ func _ready():
 		LaserBeam.cast_to = Vector2.ZERO
 		LaserBeam.visible = false
 		$Sprite2.texture = load("res://Scene/Object/Lab_region/GlassObject/tile00"+ str(LaserSpawn) + ".png")
+		
 func _process(delta):
+	if ForceMovement.size() != 0:
+		velocity = velocity.move_toward(ForceMovement[0] ,50* delta)
+	elif ForceMovement.size() == 0:
+		velocity = Vector2.ZERO
+	
 	match state:
 		UNSHOT:
 			LaserBeam.enabled = false
@@ -43,6 +51,7 @@ func _process(delta):
 			LaserBeam.enabled = true
 			LaserBeam.visible = true
 			$LaserBeam/Area2D/CollisionShape2D.disabled = false
+	velocity = move_and_slide(velocity)
 		
 func _on_Hurtbox_area_entered(area):
 	state = SHOTTED

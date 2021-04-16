@@ -10,6 +10,7 @@ enum{
 
 func _ready():
 	$LaserBeam.enabled = true
+	
 func _physics_process(delta):
 	if ForceMovement.size() != 0:
 		velocity = velocity.move_toward(ForceMovement[0] ,50* delta)

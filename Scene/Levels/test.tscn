@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scene/Character/Player/PlayerArrow.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Forest_region/CampFire/CampFire.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Object/Forest_region/Bridge/BridgeVertical.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Object/Forest_region/Bridge/BridgeHorizontal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Object/Forest_region/Crocodile/Crocodile.tscn" type="PackedScene" id=5]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -19,12 +20,15 @@ position = Vector2( 190.488, 117.468 )
 position = Vector2( 149.431, 264.568 )
 
 [node name="AnimatedSprite" parent="Player" index="1"]
-frame = 3
+frame = 4
 
 [node name="AnimationTree" parent="Player" index="4"]
 parameters/playback = SubResource( 1 )
 
 [node name="CampFire" parent="." instance=ExtResource( 2 )]
 position = Vector2( 364.8, 121.226 )
+
+[node name="BridgeVertical3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 325.417, 294.463 )
 
 [editable path="Player"]

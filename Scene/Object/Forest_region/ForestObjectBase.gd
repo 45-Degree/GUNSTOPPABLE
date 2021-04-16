@@ -6,11 +6,9 @@ export var health = 10
 var invincible = false
 export var destroyable = false
 export var explodable = false
-export var Reflectable = false
 export var pickable = false
-export var unlockable = false
-onready var damagable = false
-export var button = false
+export var bridge = false
+export var platform = false
 export(int, "Left", "Right", "Top", "Bottom") var BulletSpawn
 onready var animatedSprite = $AnimatedSprite
 onready var timer = $Timer
@@ -21,8 +19,6 @@ func _ready():
 	animationPlayer.play("Idle")
 	
 func _process(delta):
-	if unlockable == true and Singleton.unlock == true:
-		queue_free()
 	if explodable == true and health <= 0:
 		var explodeInstance = explodeDamage.instance()
 		explodeInstance.position = self.get_global_position()
@@ -33,8 +29,11 @@ func _process(delta):
 		queue_free()
 
 func _on_Hurtbox_area_entered(area):
-	if area.get_parent().flaming:
-		visible = false
+	if bridge and area.get_parent().flaming :
+		modulate.a = 0.5
 		$MiddleCollsion.set_deferred("disabled", false)
 
-
+func _on_Hurtbox_area_exited(area):
+	if platform:
+		modulate.a = 0.5
+		$CollisionShape2D.set_deferred("disabled", false)

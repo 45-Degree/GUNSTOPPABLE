@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scene/Object/Forest_region/ForestObjectBase.gd" type="Script" id=1]
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=2]
@@ -40,25 +40,22 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 24.5047, 10.5726 )
+extents = Vector2( 5.01311, 4.99105 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 24.0093, 8.72261 )
+extents = Vector2( 5.33333, 5.25 )
 
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 24.2568, 1.51644 )
-
-[node name="BridgeVertical" type="StaticBody2D"]
+[node name="Crocodile" type="StaticBody2D"]
 scale = Vector2( 3, 3 )
 collision_layer = 8
 script = ExtResource( 1 )
-bridge = true
+platform = true
 
 [node name="Sprite2" type="Sprite" parent="."]
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 4 )
 region_enabled = true
-region_rect = Rect2( 640.476, 140.421, 516.942, 308.873 )
+region_rect = Rect2( 254, 152, 97, 101 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 visible = false
@@ -74,26 +71,11 @@ anims/Idle = SubResource( 3 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 2 )]
 collision_layer = 8
-collision_mask = 4
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2( -0.260891, 3.99312 )
 shape = SubResource( 4 )
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
-
-[node name="MiddleCollsion" type="CollisionShape2D" parent="."]
-position = Vector2( -0.472606, 5.20723 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 5 )
 disabled = true
-
-[node name="SideCollisionLeft" type="CollisionShape2D" parent="."]
-position = Vector2( -0.602194, -6.35943 )
-shape = SubResource( 6 )
-
-[node name="SideCollisionRight" type="CollisionShape2D" parent="."]
-position = Vector2( -0.105508, 14.5002 )
-shape = SubResource( 6 )
-[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="area_exited" from="Hurtbox" to="." method="_on_Hurtbox_area_exited"]

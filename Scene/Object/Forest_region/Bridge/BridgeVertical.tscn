@@ -52,6 +52,7 @@ extents = Vector2( 1.73469, 23.9866 )
 scale = Vector2( 3, 3 )
 collision_layer = 8
 script = ExtResource( 1 )
+bridge = true
 
 [node name="Sprite2" type="Sprite" parent="."]
 scale = Vector2( 0.1, 0.1 )
