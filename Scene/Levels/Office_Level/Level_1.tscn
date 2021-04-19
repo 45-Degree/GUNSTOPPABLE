@@ -53,24 +53,29 @@ rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 1
+frame = 5
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
 
 [node name="Hostage" parent="YSort" index="1" instance=ExtResource( 2 )]
+visible = true
 position = Vector2( 251.618, 70.0117 )
 
 [node name="Hostage2" parent="YSort" index="2" instance=ExtResource( 2 )]
+visible = true
 position = Vector2( 315.296, 70.0117 )
 
 [node name="Terrorist" parent="YSort" index="3" instance=ExtResource( 3 )]
+visible = true
 position = Vector2( 133.913, 140.334 )
 
 [node name="Terrorist2" parent="YSort" index="4" instance=ExtResource( 3 )]
+visible = true
 position = Vector2( 514.483, 312.639 )
 
 [node name="Terrorist3" parent="YSort" index="5" instance=ExtResource( 3 )]
+visible = true
 position = Vector2( 335.435, 198.019 )
 
 [node name="Counter" parent="YSort" index="6" instance=ExtResource( 5 )]
@@ -101,12 +106,15 @@ position = Vector2( 114.809, 58.4565 )
 position = Vector2( 572.542, 159.592 )
 
 [node name="Star" parent="YSort" index="15" instance=ExtResource( 11 )]
+visible = true
 position = Vector2( 121.54, 214.187 )
 
 [node name="Star2" parent="YSort" index="16" instance=ExtResource( 11 )]
+visible = true
 position = Vector2( 454.16, -54.8066 )
 
 [node name="Star3" parent="YSort" index="17" instance=ExtResource( 11 )]
+visible = true
 position = Vector2( 514.006, 267.103 )
 
 [node name="Tree" parent="." index="7" instance=ExtResource( 7 )]

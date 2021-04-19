@@ -14,9 +14,6 @@
 [ext_resource path="res://Scene/Object/Office_region/Counter/Counter_side.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scene/Object/Office_region/Door/LockDoorV.tscn" type="PackedScene" id=16]
 
-
-
-
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="Level_15" instance=ExtResource( 1 )]
@@ -40,10 +37,7 @@ tile_data = PoolIntArray( -524298, 81, 0, -524297, 81, 0, -524296, 81, 0, -52429
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( -343.692, 288.009 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 0
-
-[node name="AnimationTree" parent="YSort/Player" index="5"]
+[node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
 
 [node name="Counter_side" parent="YSort" index="1" instance=ExtResource( 15 )]
@@ -89,7 +83,7 @@ scale = Vector2( 1.3, 1.35 )
 position = Vector2( 419.731, 678.902 )
 
 [node name="ShelfSide2" parent="YSort" index="14" instance=ExtResource( 11 )]
-position = Vector2( 327.568, 422.265 )
+position = Vector2( 363.204, 420.483 )
 
 [node name="Terrorist" parent="YSort" index="15" instance=ExtResource( 6 )]
 position = Vector2( -66.2283, 544.766 )
@@ -101,7 +95,7 @@ position = Vector2( 505.171, 574.43 )
 position = Vector2( 455.207, 268.064 )
 
 [node name="Terrorist5" parent="YSort" index="18" instance=ExtResource( 6 )]
-position = Vector2( 409.758, 434.341 )
+position = Vector2( 438.267, 434.341 )
 
 [node name="Terrorist2" parent="YSort" index="19" instance=ExtResource( 6 )]
 position = Vector2( 135.61, 293.193 )
@@ -119,7 +113,7 @@ position = Vector2( 202.445, 703.427 )
 position = Vector2( 459.885, 688.161 )
 
 [node name="Hostage5" parent="YSort" index="24" instance=ExtResource( 13 )]
-position = Vector2( 290.838, 439.037 )
+position = Vector2( 298.856, 441.71 )
 
 [node name="HeaterFront" parent="YSort" index="25" instance=ExtResource( 9 )]
 position = Vector2( 459.966, 644.574 )
@@ -146,7 +140,7 @@ position = Vector2( -66.0146, 624.679 )
 position = Vector2( 506.919, 694.526 )
 
 [node name="Star3" parent="YSort" index="31" instance=ExtResource( 2 )]
-position = Vector2( 363.449, 439.68 )
+position = Vector2( 397.303, 439.68 )
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "Office Level - 15"
