@@ -274,6 +274,7 @@ tracks/1/keys = {
 [node name="Terrorist" groups=[
 "Terrorist",
 ] instance=ExtResource( 5 )]
+visible = false
 position = Vector2( 443.634, 550.191 )
 scale = Vector2( 2.25, 2.25 )
 collision_layer = 16
@@ -284,7 +285,7 @@ script = ExtResource( 7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 47 )
 animation = "Die"
-frame = 1
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" parent="." index="1"]

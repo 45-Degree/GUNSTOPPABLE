@@ -33,9 +33,11 @@ func _physics_process(delta):
 			SHOOT:
 				LaserBeam.visible = true
 				LaserBeam.enabled = true
+				LaserBeam.cast_to = Vector2(2000,0)
 			STOP:
 				LaserBeam.visible = false
 				LaserBeam.enabled = false
+				LaserBeam.cast_to = Vector2(0,0)
 	target_sight = get_local_mouse_position()
 	
 	if Singleton.Playable == true:

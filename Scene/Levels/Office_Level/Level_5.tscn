@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scene/Levels/Office_Level/Level_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Office_region/Table/TableVertical.tscn" type="PackedScene" id=2]
@@ -7,13 +7,8 @@
 [ext_resource path="res://Scene/Character/NPC/Hostage/Hostage.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Object/Office_region/Detector/detector.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Object/Office_region/Star/Star.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scene/Object/Office_region/Shelf/ShelfFront.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scene/Object/Office_region/CoffeeTable/CoffeeTableH.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/Object/Office_region/Door/LockDoorH.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scene/Object/Office_region/KeyCard/Keycard.tscn" type="PackedScene" id=14]
-
-
-
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -52,10 +47,10 @@ node_path = NodePath("../LockDoorH")
 [node name="Player" parent="YSort" index="1"]
 position = Vector2( 278.63, 432.703 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 4
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 2
 
-[node name="AnimationTree" parent="YSort/Player" index="5"]
+[node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
 
 [node name="TableVertical" parent="YSort" index="2" instance=ExtResource( 2 )]
@@ -114,26 +109,32 @@ rotation = 8.12934e-06
 position = Vector2( 418.019, -116.319 )
 rotation = 8.12934e-06
 
-[node name="TableHorizontal3" parent="YSort" index="16" instance=ExtResource( 4 )]
+[node name="TableHorizontal5" parent="YSort" index="16" instance=ExtResource( 4 )]
+position = Vector2( 255.019, -116.319 )
+rotation = 8.12934e-06
+
+[node name="TableHorizontal6" parent="YSort" index="17" instance=ExtResource( 4 )]
+position = Vector2( 255.019, -116.319 )
+rotation = 8.12934e-06
+
+[node name="TableHorizontal7" parent="YSort" index="18" instance=ExtResource( 4 )]
+position = Vector2( 32.019, -162.319 )
+rotation = 8.12934e-06
+
+[node name="TableHorizontal3" parent="YSort" index="19" instance=ExtResource( 4 )]
 position = Vector2( 31.0247, 182.677 )
 rotation = 8.12934e-06
 
-[node name="CoffeTableH" parent="YSort" index="17" instance=ExtResource( 12 )]
-position = Vector2( 20.0347, -157.006 )
-
-[node name="ShelfFront" parent="YSort" index="18" instance=ExtResource( 10 )]
-position = Vector2( 241.285, -131.974 )
-
-[node name="Star" parent="YSort" index="19" instance=ExtResource( 9 )]
+[node name="Star" parent="YSort" index="20" instance=ExtResource( 9 )]
 position = Vector2( 63.5679, 224.834 )
 
-[node name="Star2" parent="YSort" index="20" instance=ExtResource( 9 )]
+[node name="Star2" parent="YSort" index="21" instance=ExtResource( 9 )]
 position = Vector2( 578.507, 37.7458 )
 
-[node name="Star3" parent="YSort" index="21" instance=ExtResource( 9 )]
+[node name="Star3" parent="YSort" index="22" instance=ExtResource( 9 )]
 position = Vector2( 240.857, -178.743 )
 
-[node name="LockDoorH" parent="YSort" index="22" instance=ExtResource( 13 )]
+[node name="LockDoorH" parent="YSort" index="23" instance=ExtResource( 13 )]
 position = Vector2( 488.068, -6.82394 )
 scale = Vector2( 1.65, 1 )
 

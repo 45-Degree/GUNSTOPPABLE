@@ -6,7 +6,11 @@ func _ready():
 		$MarginContainer/VBoxContainer/LabRegion.disabled = false
 	if Save.data.has("Region3") and Save.data["Region3"]:
 		$MarginContainer/VBoxContainer/LabRegion.disabled = false
-		
+
+func _physics_process(delta):
+	if Input.is_action_just_pressed("k"):
+		$LabRegion.disabled = false
+		$ForestRegion.disabled = false
 
 func _on_Button_pressed():
 	Transition.wipeOut()

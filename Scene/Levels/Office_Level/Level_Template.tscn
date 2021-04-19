@@ -94,71 +94,71 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=3]
 
-[sub_resource type="ShaderMaterial" id=51]
+[sub_resource type="ShaderMaterial" id=4]
 
-[sub_resource type="Theme" id=52]
+[sub_resource type="Theme" id=5]
 
-[sub_resource type="DynamicFont" id=53]
+[sub_resource type="DynamicFont" id=6]
 size = 30
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=54]
+[sub_resource type="DynamicFont" id=7]
 size = 38
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=55]
+[sub_resource type="DynamicFont" id=8]
 size = 30
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=56]
+[sub_resource type="DynamicFont" id=9]
 size = 30
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxTexture" id=57]
+[sub_resource type="StyleBoxTexture" id=10]
 texture = ExtResource( 33 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="StyleBoxTexture" id=58]
+[sub_resource type="StyleBoxTexture" id=11]
 texture = ExtResource( 34 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="StyleBoxTexture" id=59]
+[sub_resource type="StyleBoxTexture" id=12]
 texture = ExtResource( 34 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="DynamicFont" id=60]
+[sub_resource type="DynamicFont" id=13]
 size = 30
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxTexture" id=61]
+[sub_resource type="StyleBoxTexture" id=14]
 texture = ExtResource( 33 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="StyleBoxTexture" id=62]
+[sub_resource type="StyleBoxTexture" id=15]
 texture = ExtResource( 34 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="StyleBoxTexture" id=63]
+[sub_resource type="StyleBoxTexture" id=16]
 texture = ExtResource( 34 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="DynamicFont" id=64]
+[sub_resource type="DynamicFont" id=17]
 size = 30
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=65]
+[sub_resource type="DynamicFont" id=18]
 size = 14
 outline_size = 1
 font_data = ExtResource( 7 )
@@ -176,12 +176,15 @@ anims/Wipe_Out = SubResource( 2 )
 position = Vector2( 8.9921, 298.075 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 position = Vector2( -160, 288 )
 scale = Vector2( 1.22, 1.22 )
 current = true
+zoom = Vector2( 2, 2 )
 limit_smoothed = true
 smoothing_enabled = true
 script = ExtResource( 2 )
+limit = false
 
 [node name="Limits" type="Node" parent="Camera2D"]
 
@@ -203,7 +206,7 @@ position = Vector2( -160, 288 )
 remote_path = NodePath("../../../Camera2D")
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 0
+frame = 4
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 3 )
@@ -258,13 +261,13 @@ margin_bottom = 224.0
 custom_constants/separation = 6
 
 [node name="Message" type="Label" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer"]
-material = SubResource( 51 )
+material = SubResource( 4 )
 margin_right = 388.0
 margin_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource( 52 )
-custom_fonts/font = SubResource( 53 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
@@ -439,7 +442,7 @@ __meta__ = {
 margin_right = 388.0
 margin_bottom = 34.0
 rect_pivot_offset = Vector2( 97.0978, 46.03 )
-custom_fonts/font = SubResource( 54 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_y = 2
@@ -531,7 +534,7 @@ __meta__ = {
 margin_top = 9.0
 margin_right = 275.0
 margin_bottom = 36.0
-custom_fonts/font = SubResource( 55 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_y = 2
@@ -559,7 +562,7 @@ custom_constants/separation = 41
 margin_top = 1.0
 margin_right = 54.0
 margin_bottom = 28.0
-custom_fonts/font = SubResource( 56 )
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
 custom_constants/shadow_offset_y = 2
 text = "BGM"
@@ -570,9 +573,9 @@ margin_right = 275.0
 margin_bottom = 30.0
 custom_icons/grabber_highlight = ExtResource( 32 )
 custom_icons/grabber = ExtResource( 32 )
-custom_styles/slider = SubResource( 57 )
-custom_styles/grabber_area_highlight = SubResource( 58 )
-custom_styles/grabber_area = SubResource( 59 )
+custom_styles/slider = SubResource( 10 )
+custom_styles/grabber_area_highlight = SubResource( 11 )
+custom_styles/grabber_area = SubResource( 12 )
 max_value = 1.0
 step = 0.05
 script = ExtResource( 31 )
@@ -587,7 +590,7 @@ custom_constants/separation = 41
 margin_top = 1.0
 margin_right = 54.0
 margin_bottom = 28.0
-custom_fonts/font = SubResource( 60 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
 text = "SFX"
 
@@ -597,9 +600,9 @@ margin_right = 275.0
 margin_bottom = 30.0
 custom_icons/grabber_highlight = ExtResource( 32 )
 custom_icons/grabber = ExtResource( 32 )
-custom_styles/slider = SubResource( 61 )
-custom_styles/grabber_area_highlight = SubResource( 62 )
-custom_styles/grabber_area = SubResource( 63 )
+custom_styles/slider = SubResource( 14 )
+custom_styles/grabber_area_highlight = SubResource( 15 )
+custom_styles/grabber_area = SubResource( 16 )
 max_value = 1.0
 step = 0.05
 script = ExtResource( 31 )
@@ -643,7 +646,7 @@ margin_left = 131.0
 margin_top = 166.0
 margin_right = 509.0
 margin_bottom = 193.0
-custom_fonts/font = SubResource( 64 )
+custom_fonts/font = SubResource( 17 )
 text = "Click to start Guning"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
@@ -657,11 +660,12 @@ __meta__ = {
 }
 
 [node name="LevelLabel" type="Label" parent="CanvasLayer"]
+visible = false
 margin_left = 6.64816
 margin_top = 331.621
 margin_right = 114.648
 margin_bottom = 366.621
-custom_fonts/font = SubResource( 65 )
+custom_fonts/font = SubResource( 18 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level - 1"
 __meta__ = {

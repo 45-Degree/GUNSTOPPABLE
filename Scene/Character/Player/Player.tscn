@@ -6,82 +6,82 @@
 [ext_resource path="res://Scene/Character/Player/Sprite/WALKING.png" type="Texture" id=5]
 [ext_resource path="res://Scene/Character/Player/Sprite/spritesheet_(11).png" type="Texture" id=6]
 
-[sub_resource type="AtlasTexture" id=48]
+[sub_resource type="AtlasTexture" id=1]
 flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 0, 0, 700, 700 )
 
-[sub_resource type="AtlasTexture" id=49]
+[sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 700, 0, 700, 700 )
 
-[sub_resource type="AtlasTexture" id=50]
+[sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 1400, 0, 700, 700 )
 
-[sub_resource type="AtlasTexture" id=51]
+[sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 2100, 0, 700, 700 )
 
-[sub_resource type="AtlasTexture" id=52]
+[sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 2800, 0, 700, 700 )
 
-[sub_resource type="AtlasTexture" id=53]
+[sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 3500, 0, 700, 700 )
 
-[sub_resource type="AtlasTexture" id=54]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 495, 579 )
 
-[sub_resource type="AtlasTexture" id=55]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 5 )
 region = Rect2( 495, 0, 495, 579 )
 
-[sub_resource type="AtlasTexture" id=56]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 5 )
 region = Rect2( 990, 0, 495, 579 )
 
-[sub_resource type="AtlasTexture" id=57]
+[sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 5 )
 region = Rect2( 1485, 0, 495, 579 )
 
-[sub_resource type="AtlasTexture" id=58]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 5 )
 region = Rect2( 1980, 0, 495, 579 )
 
-[sub_resource type="AtlasTexture" id=59]
+[sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 5 )
 region = Rect2( 2475, 0, 495, 579 )
 
-[sub_resource type="AtlasTexture" id=60]
+[sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 5 )
 region = Rect2( 2970, 0, 495, 579 )
 
-[sub_resource type="AtlasTexture" id=61]
+[sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 5 )
 region = Rect2( 3465, 0, 495, 579 )
 
-[sub_resource type="SpriteFrames" id=23]
+[sub_resource type="SpriteFrames" id=15]
 animations = [ {
-"frames": [ SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 12.0
 }, {
-"frames": [ SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ) ],
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
 "loop": true,
 "name": "Run",
 "speed": 12.0
 } ]
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=16]
 resource_name = "Idle_Left"
 length = 0.6
 loop = true
@@ -122,7 +122,7 @@ tracks/2/keys = {
 "values": [ "Idle" ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=17]
 resource_name = "Idle_Right"
 length = 0.6
 loop = true
@@ -163,7 +163,7 @@ tracks/2/keys = {
 "values": [ "Idle" ]
 }
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id=18]
 resource_name = "Run_Left"
 length = 0.8
 loop = true
@@ -204,7 +204,7 @@ tracks/2/keys = {
 "values": [ "Run" ]
 }
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=19]
 resource_name = "Run_Right"
 length = 0.8
 loop = true
@@ -245,97 +245,98 @@ tracks/2/keys = {
 "values": [ "Run" ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=28]
+[sub_resource type="AnimationNodeAnimation" id=20]
 animation = "Idle_Left"
 
-[sub_resource type="AnimationNodeAnimation" id=29]
+[sub_resource type="AnimationNodeAnimation" id=21]
 animation = "Idle_Right"
 
-[sub_resource type="AnimationNodeAnimation" id=30]
+[sub_resource type="AnimationNodeAnimation" id=22]
 animation = "Idle_Left"
 
-[sub_resource type="AnimationNodeAnimation" id=31]
+[sub_resource type="AnimationNodeAnimation" id=23]
 animation = "Idle_Right"
 
-[sub_resource type="AnimationNodeAnimation" id=32]
+[sub_resource type="AnimationNodeAnimation" id=24]
 animation = "Idle_Left"
 
-[sub_resource type="AnimationNodeAnimation" id=33]
+[sub_resource type="AnimationNodeAnimation" id=25]
 animation = "Idle_Right"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=34]
-blend_point_0/node = SubResource( 28 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=26]
+blend_point_0/node = SubResource( 20 )
 blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 29 )
+blend_point_1/node = SubResource( 21 )
 blend_point_1/pos = Vector2( 1, 0 )
-blend_point_2/node = SubResource( 30 )
+blend_point_2/node = SubResource( 22 )
 blend_point_2/pos = Vector2( -0.1, 1 )
-blend_point_3/node = SubResource( 31 )
+blend_point_3/node = SubResource( 23 )
 blend_point_3/pos = Vector2( 0.1, 1 )
-blend_point_4/node = SubResource( 32 )
+blend_point_4/node = SubResource( 24 )
 blend_point_4/pos = Vector2( -0.1, -1 )
-blend_point_5/node = SubResource( 33 )
+blend_point_5/node = SubResource( 25 )
 blend_point_5/pos = Vector2( 0.1, -1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=35]
+[sub_resource type="AnimationNodeAnimation" id=27]
 animation = "Run_Left"
 
-[sub_resource type="AnimationNodeAnimation" id=36]
+[sub_resource type="AnimationNodeAnimation" id=28]
 animation = "Run_Right"
 
-[sub_resource type="AnimationNodeAnimation" id=37]
+[sub_resource type="AnimationNodeAnimation" id=29]
 animation = "Run_Right"
 
-[sub_resource type="AnimationNodeAnimation" id=38]
+[sub_resource type="AnimationNodeAnimation" id=30]
 animation = "Run_Left"
 
-[sub_resource type="AnimationNodeAnimation" id=39]
+[sub_resource type="AnimationNodeAnimation" id=31]
 animation = "Run_Left"
 
-[sub_resource type="AnimationNodeAnimation" id=40]
+[sub_resource type="AnimationNodeAnimation" id=32]
 animation = "Run_Right"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=41]
-blend_point_0/node = SubResource( 35 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=33]
+blend_point_0/node = SubResource( 27 )
 blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 36 )
+blend_point_1/node = SubResource( 28 )
 blend_point_1/pos = Vector2( 1, 0 )
-blend_point_2/node = SubResource( 37 )
+blend_point_2/node = SubResource( 29 )
 blend_point_2/pos = Vector2( 0, -1 )
-blend_point_3/node = SubResource( 38 )
+blend_point_3/node = SubResource( 30 )
 blend_point_3/pos = Vector2( 0, -1 )
-blend_point_4/node = SubResource( 39 )
+blend_point_4/node = SubResource( 31 )
 blend_point_4/pos = Vector2( 0, 1 )
-blend_point_5/node = SubResource( 40 )
+blend_point_5/node = SubResource( 32 )
 blend_point_5/pos = Vector2( 0, 1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=42]
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=43]
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
 
-[sub_resource type="AnimationNodeStateMachine" id=44]
-states/Idle/node = SubResource( 34 )
+[sub_resource type="AnimationNodeStateMachine" id=36]
+states/Idle/node = SubResource( 26 )
 states/Idle/position = Vector2( 412, 124 )
-states/Run/node = SubResource( 41 )
+states/Run/node = SubResource( 33 )
 states/Run/position = Vector2( 623, 124 )
-transitions = [ "Idle", "Run", SubResource( 42 ), "Run", "Idle", SubResource( 43 ) ]
+transitions = [ "Idle", "Run", SubResource( 34 ), "Run", "Idle", SubResource( 35 ) ]
 start_node = "Idle"
 graph_offset = Vector2( 39, -10 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=45]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=37]
 
-[sub_resource type="RectangleShape2D" id=46]
+[sub_resource type="RectangleShape2D" id=38]
 extents = Vector2( 12.7959, 12.196 )
 
-[sub_resource type="CapsuleShape2D" id=47]
+[sub_resource type="CapsuleShape2D" id=39]
 radius = 16.4771
 height = 10.6336
 
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
 ]]
+visible = false
 position = Vector2( 149.431, -105.844 )
 scale = Vector2( 1.22, 1.22 )
 collision_mask = 194
@@ -349,9 +350,8 @@ MAX_SPEED = 200
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.1, 0.1 )
-frames = SubResource( 23 )
+frames = SubResource( 15 )
 animation = "Idle"
-frame = 4
 
 [node name="Gun" type="Node2D" parent="."]
 position = Vector2( 0.236725, -4.63605 )
@@ -363,16 +363,16 @@ bullet = ExtResource( 4 )
 position = Vector2( 11.272, 0 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Idle_Left = SubResource( 24 )
-anims/Idle_Right = SubResource( 25 )
-anims/Run_Left = SubResource( 26 )
-anims/Run_Right = SubResource( 27 )
+anims/Idle_Left = SubResource( 16 )
+anims/Idle_Right = SubResource( 17 )
+anims/Run_Left = SubResource( 18 )
+anims/Run_Right = SubResource( 19 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 44 )
+tree_root = SubResource( 36 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 45 )
+parameters/playback = SubResource( 37 )
 parameters/Idle/blend_position = Vector2( 0.18091, 0.508621 )
 parameters/Run/blend_position = Vector2( 0.987358, -0.981873 )
 
@@ -380,7 +380,7 @@ parameters/Run/blend_position = Vector2( 0.987358, -0.981873 )
 light_mask = 0
 position = Vector2( -1.19623, 12.7573 )
 rotation = 1.5708
-shape = SubResource( 46 )
+shape = SubResource( 38 )
 
 [node name="Hurtbox" type="Area2D" parent="."]
 collision_mask = 32
@@ -388,4 +388,4 @@ collision_mask = 32
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2( -1.77463, 13.3131 )
 rotation = 1.5708
-shape = SubResource( 47 )
+shape = SubResource( 39 )

@@ -45,10 +45,10 @@ scale = Vector2( 2.3, 2.3 )
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 489.181, 574.202 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 7
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 1
 
-[node name="AnimationTree" parent="YSort/Player" index="5"]
+[node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
 
 [node name="TableHorizontal" parent="YSort" index="1" instance=ExtResource( 3 )]
