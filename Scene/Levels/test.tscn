@@ -1,34 +1,28 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scene/Character/Player/PlayerArrow.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scene/Object/Forest_region/CampFire/CampFire.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scene/Object/Forest_region/Bridge/BridgeVertical.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scene/Object/Forest_region/Bridge/BridgeHorizontal.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scene/Object/Forest_region/Crocodile/Crocodile.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Character/Player/PlayerLaser.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/Object/Lab_region/AutoWalkWay/AutoWalkWay.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Object/Lab_region/ConveyorObject/ConveyorObject.tscn" type="PackedScene" id=3]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="Node" type="Node"]
 
-[node name="BridgeVertical" parent="." instance=ExtResource( 3 )]
-position = Vector2( 527.277, 123.472 )
+[node name="ConveryorObject" parent="." instance=ExtResource( 3 )]
+position = Vector2( 436.92, 184.722 )
+Direction = "MovingLeft"
 
-[node name="BridgeVertical2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 190.488, 117.468 )
+[node name="AutoWalkWay" parent="." instance=ExtResource( 2 )]
+position = Vector2( 269.065, 141.279 )
+Direction = "MovingLeft"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 149.431, 264.568 )
+visible = true
 
 [node name="AnimatedSprite" parent="Player" index="1"]
-frame = 4
+frame = 5
 
-[node name="AnimationTree" parent="Player" index="4"]
+[node name="AnimationTree" parent="Player" index="3"]
 parameters/playback = SubResource( 1 )
-
-[node name="CampFire" parent="." instance=ExtResource( 2 )]
-position = Vector2( 364.8, 121.226 )
-
-[node name="BridgeVertical3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 325.417, 294.463 )
 
 [editable path="Player"]

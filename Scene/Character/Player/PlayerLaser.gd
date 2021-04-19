@@ -15,7 +15,6 @@ var hiteffect = preload("res://Scene/Character/Player/Gun/ExplosionEffect/Explos
 onready var ForceMovement =  []
 onready var LaserBeam = $LaserBeam
 onready var animationTree = $AnimationTree
-onready var bulletPoint = $Gun/Bulletpoint
 onready var animationState = animationTree.get("parameters/playback")
 
 enum{

@@ -16,13 +16,13 @@ func _ready():
 func _on_Hurtbox_area_entered(area):
 	var object =  area.get_parent()
 	if Direction == "MovingUp" :
-		object.ForceMovement.append(Vector2(0,-30))
+		object.ForceMovement.append(Vector2(0,speed))
 	if Direction == "MovingDown":
-		object.ForceMovement.append(Vector2(0,30))
+		object.ForceMovement.append(Vector2(0,-speed))
 	if Direction  == "MovingLeft":
-		object.ForceMovement.append(Vector2(30,0))
+		object.ForceMovement.append(Vector2(speed,0))
 	if Direction == "MovingRight":
-		object.ForceMovement.append(Vector2(-30,0))
+		object.ForceMovement.append(Vector2(-speed,0))
 
 func _on_Hurtbox_area_exited(area):
 	var object =  area.get_parent()
