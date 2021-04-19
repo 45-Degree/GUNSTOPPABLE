@@ -6,13 +6,14 @@ export var speed = 50
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimatedSprite.play(str(Direction))
-	if Direction == "MovingUp" or "MovingDown":
-		$Hurtbox/CollisionShape2D.shape.extents = Vector2(16,26)
-		$Hurtbox/CollisionShape2D.position = (Vector2(1,-2.5))
-	if Direction  == "MovingLeft" or "MovingRight":
-		$Hurtbox/CollisionShape2D.shape.extents = Vector2(18, 21)
-		$Hurtbox/CollisionShape2D.position = (Vector2(1,-8))
+#	if Direction == "MovingUp" or "MovingDown":
+#		$Hurtbox/CollisionShape2D.shape.extents = Vector2(16,26)
+#		$Hurtbox/CollisionShape2D.position = (Vector2(1,-2.5))
+#	if Direction  == "MovingLeft" or "MovingRight":
+#		$Hurtbox/CollisionShape2D.shape.extents = Vector2(24, 23)
+#		$Hurtbox/CollisionShape2D.position = (Vector2(-1,-6.5))
 
+#Autowalkway
 func _on_Hurtbox_area_entered(area):
 	var object =  area.get_parent()
 	if Direction == "MovingUp":

@@ -23,32 +23,32 @@ region = Rect2( 304, 456, 152, 152 )
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 0, 152, 152, 152 )
+region = Rect2( 0, 0, 152, 152 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 152, 152, 152, 152 )
+region = Rect2( 152, 0, 152, 152 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 304, 152, 152, 152 )
+region = Rect2( 304, 0, 152, 152 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 152, 152 )
+region = Rect2( 0, 152, 152, 152 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 152, 0, 152, 152 )
+region = Rect2( 152, 152, 152, 152 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 304, 0, 152, 152 )
+region = Rect2( 304, 152, 152, 152 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
@@ -74,12 +74,12 @@ animations = [ {
 }, {
 "frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
-"name": "MovingUp",
+"name": "MovingDown",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
-"name": "MovingDown",
+"name": "MovingUp",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
@@ -89,13 +89,14 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 18, 21 )
+extents = Vector2( 18.8423, 17.9081 )
 
 [node name="AutoWalkWay" type="StaticBody2D" groups=[
 "LaserAble",
 ]]
 collision_layer = 128
 script = ExtResource( 1 )
+Direction = "MovingUp"
 speed = 100
 
 [node name="Sprite2" type="Sprite" parent="."]
@@ -108,19 +109,18 @@ region_rect = Rect2( 55.3929, 51.7818, 734.88, 462.641 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1.61624, -5.05318 )
-scale = Vector2( 0.3, 0.4 )
+scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 13 )
 animation = "MovingUp"
-frame = 1
 playing = true
 
 [node name="Hurtbox" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, 2.37841 )
 collision_layer = 128
-collision_mask = 9
+collision_mask = 153
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2( 1, -8.02744 )
+position = Vector2( -0.123734, -6.52913 )
 shape = SubResource( 14 )
 
 [node name="Timer" type="Timer" parent="."]

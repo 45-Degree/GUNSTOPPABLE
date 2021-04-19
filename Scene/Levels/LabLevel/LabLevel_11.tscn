@@ -8,7 +8,7 @@
 [ext_resource path="res://Scene/Object/Office_region/Star/Star.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/Object/Lab_region/Table/Lab_TableVertical_right.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Object/Lab_region/Table/Lab_TableVertical_left.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scene/Object/Lab_region/Treadmill/Treadmill.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/Object/Lab_region/AutoWalkWay/AutoWalkWay.tscn" type="PackedScene" id=9]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -29,11 +29,97 @@ position = Vector2( -59.7747, -148.77 )
 [node name="bottomRight" parent="Camera2D/Limits" index="1"]
 position = Vector2( 768.54, 313.669 )
 
+[node name="BottomLayer" type="Node2D" parent="." index="5"]
+
+[node name="AutoWalkWay" parent="BottomLayer" index="0" instance=ExtResource( 9 )]
+position = Vector2( 189.316, 191.333 )
+
+[node name="AutoWalkWay2" parent="BottomLayer" index="1" instance=ExtResource( 9 )]
+position = Vector2( 241.879, 191.333 )
+
+[node name="AutoWalkWay3" parent="BottomLayer" index="2" instance=ExtResource( 9 )]
+position = Vector2( 189.316, 142.334 )
+
+[node name="AutoWalkWay4" parent="BottomLayer" index="3" instance=ExtResource( 9 )]
+position = Vector2( 241.879, 142.334 )
+
+[node name="AutoWalkWay5" parent="BottomLayer" index="4" instance=ExtResource( 9 )]
+position = Vector2( 189.316, 92.889 )
+
+[node name="AutoWalkWay6" parent="BottomLayer" index="5" instance=ExtResource( 9 )]
+position = Vector2( 241.879, 92.889 )
+
+[node name="AutoWalkWay7" parent="BottomLayer" index="6" instance=ExtResource( 9 )]
+position = Vector2( 189.316, 44.3351 )
+
+[node name="AutoWalkWay8" parent="BottomLayer" index="7" instance=ExtResource( 9 )]
+position = Vector2( 241.879, 44.3351 )
+
+[node name="AutoWalkWay9" parent="BottomLayer" index="8" instance=ExtResource( 9 )]
+position = Vector2( 189.316, -5.55527 )
+
+[node name="AutoWalkWay10" parent="BottomLayer" index="9" instance=ExtResource( 9 )]
+position = Vector2( 241.879, -5.55527 )
+
+[node name="AutoWalkWay11" parent="BottomLayer" index="10" instance=ExtResource( 9 )]
+position = Vector2( 189.316, -55.4456 )
+
+[node name="AutoWalkWay12" parent="BottomLayer" index="11" instance=ExtResource( 9 )]
+position = Vector2( 241.879, -55.4456 )
+
+[node name="AutoWalkWay13" parent="BottomLayer" index="12" instance=ExtResource( 9 )]
+position = Vector2( 435.594, 191.333 )
+Direction = "MovingDown"
+
+[node name="AutoWalkWay14" parent="BottomLayer" index="13" instance=ExtResource( 9 )]
+position = Vector2( 488.157, 191.333 )
+Direction = "MovingDown"
+
+[node name="AutoWalkWay15" parent="BottomLayer" index="14" instance=ExtResource( 9 )]
+position = Vector2( 435.594, 142.334 )
+Direction = "MovingDown"
+
+[node name="AutoWalkWay16" parent="BottomLayer" index="15" instance=ExtResource( 9 )]
+position = Vector2( 488.157, 142.334 )
+Direction = "MovingDown"
+
+[node name="AutoWalkWay17" parent="BottomLayer" index="16" instance=ExtResource( 9 )]
+position = Vector2( 435.594, 92.889 )
+Direction = "MovingDown"
+
+[node name="AutoWalkWay18" parent="BottomLayer" index="17" instance=ExtResource( 9 )]
+position = Vector2( 488.157, 92.889 )
+Direction = "MovingDown"
+
+[node name="AutoWalkWay19" parent="BottomLayer" index="18" instance=ExtResource( 9 )]
+position = Vector2( 435.594, 44.3351 )
+Direction = "MovingDown"
+
+[node name="AutoWalkWay20" parent="BottomLayer" index="19" instance=ExtResource( 9 )]
+position = Vector2( 488.157, 44.3351 )
+Direction = "MovingDown"
+
+[node name="AutoWalkWay21" parent="BottomLayer" index="20" instance=ExtResource( 9 )]
+position = Vector2( 435.594, -5.55527 )
+Direction = "MovingDown"
+
+[node name="AutoWalkWay22" parent="BottomLayer" index="21" instance=ExtResource( 9 )]
+position = Vector2( 488.157, -5.55527 )
+Direction = "MovingDown"
+
+[node name="AutoWalkWay23" parent="BottomLayer" index="22" instance=ExtResource( 9 )]
+position = Vector2( 435.594, -55.4456 )
+Direction = "MovingDown"
+
+[node name="AutoWalkWay24" parent="BottomLayer" index="23" instance=ExtResource( 9 )]
+position = Vector2( 488.157, -55.4456 )
+Direction = "MovingDown"
+
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 17.669, 252.941 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 4
+frame = 0
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
@@ -48,10 +134,10 @@ position = Vector2( 120.442, 38.334 )
 position = Vector2( 371.513, 71.3696 )
 
 [node name="Hostage" parent="YSort" index="4" instance=ExtResource( 2 )]
-position = Vector2( 563.151, 103.306 )
+position = Vector2( 617.212, 103.306 )
 
 [node name="Hostage2" parent="YSort" index="5" instance=ExtResource( 2 )]
-position = Vector2( 492.361, 100.474 )
+position = Vector2( 546.422, 100.474 )
 
 [node name="Hostage3" parent="YSort" index="6" instance=ExtResource( 2 )]
 position = Vector2( 371.545, -57.153 )
@@ -73,7 +159,7 @@ scale = Vector2( 2.3, 2.3 )
 position = Vector2( 332.818, 12.9184 )
 
 [node name="Star2" parent="YSort" index="11" instance=ExtResource( 6 )]
-position = Vector2( 594.271, 78.9896 )
+position = Vector2( 648.332, 78.9896 )
 
 [node name="Star3" parent="YSort" index="12" instance=ExtResource( 6 )]
 position = Vector2( 112.895, 110.137 )
@@ -85,76 +171,16 @@ position = Vector2( 81.2316, 44.87 )
 position = Vector2( 334.19, 82.625 )
 
 [node name="Container_V3" parent="YSort" index="15" instance=ExtResource( 4 )]
-position = Vector2( 528.628, 170.405 )
+position = Vector2( 582.689, 170.405 )
 
 [node name="Container_V4" parent="YSort" index="16" instance=ExtResource( 4 )]
-position = Vector2( 528.628, 41.0945 )
+position = Vector2( 582.689, 41.0945 )
 
 [node name="Lab_TableVertical_right" parent="YSort" index="17" instance=ExtResource( 8 )]
 position = Vector2( 334.423, -60.127 )
 
 [node name="Lab_TableVertical_Left" parent="YSort" index="18" instance=ExtResource( 7 )]
 position = Vector2( 82.1484, 175.479 )
-
-[node name="ConveryorObject" parent="YSort" index="19" instance=ExtResource( 9 )]
-position = Vector2( 178.136, 166.175 )
-
-[node name="ConveryorObject2" parent="YSort" index="20" instance=ExtResource( 9 )]
-position = Vector2( 178.432, 119.346 )
-
-[node name="ConveryorObject3" parent="YSort" index="21" instance=ExtResource( 9 )]
-position = Vector2( 178.877, 73.0196 )
-
-[node name="ConveryorObject4" parent="YSort" index="22" instance=ExtResource( 9 )]
-position = Vector2( 178.877, 26.6405 )
-
-[node name="ConveryorObject5" parent="YSort" index="23" instance=ExtResource( 9 )]
-position = Vector2( 179.472, -17.9547 )
-
-[node name="ConveryorObject6" parent="YSort" index="24" instance=ExtResource( 9 )]
-position = Vector2( 215.132, 166.175 )
-
-[node name="ConveryorObject7" parent="YSort" index="25" instance=ExtResource( 9 )]
-position = Vector2( 215.428, 119.346 )
-
-[node name="ConveryorObject8" parent="YSort" index="26" instance=ExtResource( 9 )]
-position = Vector2( 215.874, 73.0196 )
-
-[node name="ConveryorObject9" parent="YSort" index="27" instance=ExtResource( 9 )]
-position = Vector2( 215.874, 26.6405 )
-
-[node name="ConveryorObject10" parent="YSort" index="28" instance=ExtResource( 9 )]
-position = Vector2( 216.468, -17.9547 )
-
-[node name="ConveryorObject11" parent="YSort" index="29" instance=ExtResource( 9 )]
-position = Vector2( 417.88, 167.119 )
-
-[node name="ConveryorObject12" parent="YSort" index="30" instance=ExtResource( 9 )]
-position = Vector2( 418.176, 120.29 )
-
-[node name="ConveryorObject13" parent="YSort" index="31" instance=ExtResource( 9 )]
-position = Vector2( 418.622, 73.9635 )
-
-[node name="ConveryorObject14" parent="YSort" index="32" instance=ExtResource( 9 )]
-position = Vector2( 418.622, 27.5844 )
-
-[node name="ConveryorObject15" parent="YSort" index="33" instance=ExtResource( 9 )]
-position = Vector2( 419.216, -17.0109 )
-
-[node name="ConveryorObject16" parent="YSort" index="34" instance=ExtResource( 9 )]
-position = Vector2( 454.876, 167.119 )
-
-[node name="ConveryorObject17" parent="YSort" index="35" instance=ExtResource( 9 )]
-position = Vector2( 455.172, 120.29 )
-
-[node name="ConveryorObject18" parent="YSort" index="36" instance=ExtResource( 9 )]
-position = Vector2( 455.618, 73.9635 )
-
-[node name="ConveryorObject19" parent="YSort" index="37" instance=ExtResource( 9 )]
-position = Vector2( 455.618, 27.5844 )
-
-[node name="ConveryorObject20" parent="YSort" index="38" instance=ExtResource( 9 )]
-position = Vector2( 456.212, -17.0109 )
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "LabLevel - 11"

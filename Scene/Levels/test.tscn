@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scene/Character/Player/PlayerLaser.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Lab_region/AutoWalkWay/AutoWalkWay.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scene/Object/Lab_region/ConveyorObject/ConveyorObject.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Object/Lab_region/ConveyorObject/ConveyorObjectUP.tscn" type="PackedScene" id=3]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -17,10 +17,9 @@ position = Vector2( 269.065, 141.279 )
 Direction = "MovingLeft"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-visible = true
 
 [node name="AnimatedSprite" parent="Player" index="1"]
-frame = 5
+frame = 3
 
 [node name="AnimationTree" parent="Player" index="3"]
 parameters/playback = SubResource( 1 )

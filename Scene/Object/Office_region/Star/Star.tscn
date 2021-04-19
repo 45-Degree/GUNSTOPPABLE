@@ -1,6 +1,5 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Scene/Object/Office_region/Star/star-icon.png" type="Texture" id=1]
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Object/Office_region/Star/Star.gd" type="Script" id=3]
 [ext_resource path="res://Scene/UI/Star/Star_sprite.png" type="Texture" id=4]
@@ -43,18 +42,9 @@ extents = Vector2( 3.331, 3.273 )
 [sub_resource type="Animation" id=9]
 length = 0.6
 step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite2:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ Color( 100, 100, 100, 1 ), Color( 1, 1, 1, 1 ) ]
-}
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 5.03911
 
 [sub_resource type="ParticlesMaterial" id=10]
 flag_disable_z = true
@@ -73,20 +63,7 @@ script = ExtResource( 3 )
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.02, 0.02 )
 frames = SubResource( 7 )
-playing = true
-
-[node name="Sprite2" type="Sprite" parent="."]
-visible = false
-modulate = Color( 100, 100, 100, 1 )
-scale = Vector2( 0.01, 0.01 )
-texture = ExtResource( 1 )
-region_rect = Rect2( 2, 1, 74, 111 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-visible = false
-position = Vector2( 2.21085, -5.38688 )
-rotation = 1.5708
-scale = Vector2( 0.3, 0.4 )
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -100,9 +77,11 @@ anims/Idle = SubResource( 9 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 2 )]
 collision_layer = 256
+collision_mask = 129
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2( 0.0433216, -0.0362891 )
+shape = SubResource( 11 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( -0.112572, -1.98876 )
@@ -114,12 +93,4 @@ process_material = SubResource( 10 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
-
-[node name="BulletSpawnUp" type="Position2D" parent="."]
-
-[node name="BulletSpawnDown" type="Position2D" parent="."]
-
-[node name="BulletSpawnLeft" type="Position2D" parent="."]
-
-[node name="BulletSpawnRight" type="Position2D" parent="."]
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_Hurtbox_body_entered"]

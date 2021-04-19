@@ -70,6 +70,7 @@ func _process(delta):
 			camera.position = lerp(player.global_position, Singleton.hostagePosition, 1)
 
 func _on_Hostage_Die():
+	get_tree().call_group("Hostage", "invincible")
 	starCrack.show()
 	starAll.hide()
 	SoundManager.play_bgm("res://Sound/Music/Mission_Fail.wav")

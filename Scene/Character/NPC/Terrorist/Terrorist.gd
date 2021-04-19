@@ -5,6 +5,9 @@ export var moving = false
 export var speed = 150
 onready var move_direction = 0
 onready var pathFollow
+var velocity = Vector2.ZERO
+var ForceMovement = []
+export var testing = false
 
 func _ready():
 	$Sprite2.play("Idle")
@@ -12,9 +15,14 @@ func _ready():
 		pathFollow = get_parent()
 
 func _physics_process(delta):
+	if ForceMovement.size() != 0:
+		velocity = velocity.move_toward(-ForceMovement[0] ,5000* delta)
+	elif ForceMovement.size() == 0:
+		velocity = Vector2.ZERO
 	if moving == true:
 		MovementLoop(delta)
 		AnimationLoop()
+	velocity = move_and_slide(velocity)
 
 func MovementLoop(delta):
 	var prepos = pathFollow.get_global_position()
@@ -39,11 +47,14 @@ func AnimationLoop():
 			pass
 
 func _on_Hurtbox_area_entered(area):
-	alive = false
-	Singleton.emit_signal("Terrorist_Die")
-	$Sprite2.play("Die")
-	$CollisionShape2D.set_deferred("disabled", true)
-	$Hurtbox/CollisionShape2D.set_deferred("disabled", true)
-	SoundManager.play_se("res://Scene/Character/NPC/NPC death.wav")
-	yield($Sprite2,"animation_finished")
-	queue_free()
+	if area.get_parent().is_in_group("Laser"):
+		alive = false
+		Singleton.emit_signal("Terrorist_Die")
+		$Sprite2.play("Die")
+		$CollisionShape2D.set_deferred("disabled", true)
+		$Hurtbox/CollisionShape2D.set_deferred("disabled", true)
+		SoundManager.play_se("res://Scene/Character/NPC/NPC death.wav")
+		yield($Sprite2,"animation_finished")
+		queue_free()
+	else:
+		pass

@@ -176,15 +176,12 @@ anims/Wipe_Out = SubResource( 2 )
 position = Vector2( 8.9921, 298.075 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 position = Vector2( -160, 288 )
 scale = Vector2( 1.22, 1.22 )
 current = true
-zoom = Vector2( 2, 2 )
 limit_smoothed = true
 smoothing_enabled = true
 script = ExtResource( 2 )
-limit = false
 
 [node name="Limits" type="Node" parent="Camera2D"]
 
@@ -206,7 +203,7 @@ position = Vector2( -160, 288 )
 remote_path = NodePath("../../../Camera2D")
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 4
+frame = 5
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 3 )

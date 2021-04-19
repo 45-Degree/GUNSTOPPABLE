@@ -2,7 +2,6 @@ extends KinematicBody2D
 onready var animationPlayer = $AnimationPlayer
 export(int, "Left", "Right", "Top", "Bottom") var LaserSpawn
 onready var state = UNSHOT
-onready var animatedSprite = $AnimatedSprite
 onready var particle = $Particles2D
 onready var timer = $Timer
 onready var LaserBeam = $LaserBeam
@@ -21,7 +20,7 @@ func _ready():
 		
 func _process(delta):
 	if ForceMovement.size() != 0:
-		velocity = velocity.move_toward(ForceMovement[0] ,50* delta)
+		velocity = velocity.move_toward(ForceMovement[0] ,5000* delta)
 	elif ForceMovement.size() == 0:
 		velocity = Vector2.ZERO
 	
@@ -54,8 +53,10 @@ func _process(delta):
 	velocity = move_and_slide(velocity)
 		
 func _on_Hurtbox_area_entered(area):
-	state = SHOTTED
+	if area.get_parent().is_in_group("Laser"):
+		state = SHOTTED
 
 func _on_Hurtbox_area_exited(area):
-	state = UNSHOT
+	if area.get_parent().is_in_group("Laser"):
+		state = UNSHOT
 

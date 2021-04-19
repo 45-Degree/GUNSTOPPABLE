@@ -1,13 +1,16 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scene/Levels/LabLevel/LabLevel_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Character/NPC/Hostage/LabHostage.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Character/NPC/Terrorist/Terrorist.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Object/Lab_region/Table/Lab_TableHorizontal_back.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Object/Lab_region/ConveyorObject/ConveyorObjectLeft.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/Object/Lab_region/GlassObject/DEchanger.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scene/Object/Lab_region/ConveyorObject/ConveyorObject.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scene/Object/Lab_region/ConveyorObject/ConveyorObjectUP.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Object/Office_region/Star/Star.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Object/Office_region/Detector/detector.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/Object/Lab_region/ConveyorObject/ConveyorObjectDown.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scene/Object/Lab_region/ConveyorObject/ConveyorObjectRight.tscn" type="PackedScene" id=11]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -28,11 +31,74 @@ position = Vector2( -4.20603, 74.5415 )
 [node name="bottomRight" parent="Camera2D/Limits" index="1"]
 position = Vector2( 544.46, 537.72 )
 
+[node name="Bottom" type="Node2D" parent="." index="5"]
+position = Vector2( -165.002, -65.1028 )
+
+[node name="ConveryorObject11" parent="Bottom" index="0" instance=ExtResource( 10 )]
+position = Vector2( 306.527, 448.011 )
+
+[node name="ConveryorObject12" parent="Bottom" index="1" instance=ExtResource( 10 )]
+position = Vector2( 306.527, 490.218 )
+
+[node name="ConveryorObject" parent="Bottom" index="2" instance=ExtResource( 5 )]
+position = Vector2( 644.284, 453.411 )
+
+[node name="ConveryorObject4" parent="Bottom" index="3" instance=ExtResource( 5 )]
+position = Vector2( 602.571, 453.411 )
+
+[node name="ConveryorObject5" parent="Bottom" index="4" instance=ExtResource( 5 )]
+position = Vector2( 559.856, 453.411 )
+
+[node name="ConveryorObject6" parent="Bottom" index="5" instance=ExtResource( 5 )]
+position = Vector2( 517.59, 453.411 )
+
+[node name="ConveryorObject7" parent="Bottom" index="6" instance=ExtResource( 5 )]
+position = Vector2( 475.076, 453.411 )
+
+[node name="ConveryorObject8" parent="Bottom" index="7" instance=ExtResource( 5 )]
+position = Vector2( 433.454, 453.411 )
+
+[node name="ConveryorObject9" parent="Bottom" index="8" instance=ExtResource( 5 )]
+position = Vector2( 390.642, 453.411 )
+
+[node name="ConveryorObject10" parent="Bottom" index="9" instance=ExtResource( 5 )]
+position = Vector2( 347.831, 453.411 )
+
+[node name="ConveryorObject3" parent="Bottom" index="10" instance=ExtResource( 7 )]
+position = Vector2( 645.513, 485.401 )
+
+[node name="ConveryorObject2" parent="Bottom" index="11" instance=ExtResource( 7 )]
+position = Vector2( 645.513, 526.371 )
+
+[node name="ConveryorObject13" parent="Bottom" index="12" instance=ExtResource( 11 )]
+position = Vector2( 307.47, 534.843 )
+
+[node name="ConveryorObject14" parent="Bottom" index="13" instance=ExtResource( 11 )]
+position = Vector2( 349.473, 534.843 )
+
+[node name="ConveryorObject15" parent="Bottom" index="14" instance=ExtResource( 11 )]
+position = Vector2( 391.003, 534.843 )
+
+[node name="ConveryorObject16" parent="Bottom" index="15" instance=ExtResource( 11 )]
+position = Vector2( 432.062, 534.843 )
+
+[node name="ConveryorObject17" parent="Bottom" index="16" instance=ExtResource( 11 )]
+position = Vector2( 474.064, 534.843 )
+
+[node name="ConveryorObject18" parent="Bottom" index="17" instance=ExtResource( 11 )]
+position = Vector2( 515.123, 534.843 )
+
+[node name="ConveryorObject19" parent="Bottom" index="18" instance=ExtResource( 11 )]
+position = Vector2( 557.597, 534.843 )
+
+[node name="ConveryorObject20" parent="Bottom" index="19" instance=ExtResource( 11 )]
+position = Vector2( 602.903, 534.843 )
+
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 58.8191, 305.685 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 6
+frame = 0
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
@@ -58,114 +124,28 @@ position = Vector2( 464.057, 278.423 )
 [node name="Lab_TableHorizontal_back2" parent="YSort" index="7" instance=ExtResource( 4 )]
 position = Vector2( 306.43, 277.479 )
 
-[node name="DEchanger" parent="YSort" index="8" instance=ExtResource( 6 )]
-position = Vector2( 480.13, 380.661 )
-LaserSpawn = 2
-
-[node name="ConveryorObject" parent="YSort" index="9" instance=ExtResource( 7 )]
-position = Vector2( 478.814, 424.269 )
-
-[node name="ConveryorObject14" parent="YSort" index="10" instance=ExtResource( 7 )]
-position = Vector2( 478.814, 472.776 )
-
-[node name="ConveryorObject2" parent="YSort" index="11" instance=ExtResource( 7 )]
-position = Vector2( 478.507, 376.493 )
-Direction = "MovingLeft"
-
-[node name="ConveryorObject3" parent="YSort" index="12" instance=ExtResource( 7 )]
-position = Vector2( 438.97, 376.493 )
-Direction = "MovingLeft"
-
-[node name="ConveryorObject4" parent="YSort" index="13" instance=ExtResource( 7 )]
-position = Vector2( 400.253, 375.963 )
-Direction = "MovingLeft"
-
-[node name="ConveryorObject5" parent="YSort" index="14" instance=ExtResource( 7 )]
-position = Vector2( 361.682, 375.626 )
-Direction = "MovingLeft"
-
-[node name="ConveryorObject6" parent="YSort" index="15" instance=ExtResource( 7 )]
-position = Vector2( 323.092, 375.398 )
-Direction = "MovingLeft"
-
-[node name="ConveryorObject7" parent="YSort" index="16" instance=ExtResource( 7 )]
-position = Vector2( 283.709, 375.096 )
-Direction = "MovingLeft"
-
-[node name="ConveryorObject9" parent="YSort" index="17" instance=ExtResource( 7 )]
-position = Vector2( 244.686, 374.609 )
-Direction = "MovingLeft"
-
-[node name="ConveryorObject10" parent="YSort" index="18" instance=ExtResource( 7 )]
-position = Vector2( 205.569, 374.188 )
-Direction = "MovingLeft"
-
-[node name="ConveryorObject11" parent="YSort" index="19" instance=ExtResource( 7 )]
-position = Vector2( 166.011, 373.659 )
-Direction = "MovingLeft"
-
-[node name="ConveryorObject12" parent="YSort" index="20" instance=ExtResource( 7 )]
-position = Vector2( 127.02, 373.323 )
-Direction = "MovingDown"
-
-[node name="ConveryorObject8" parent="YSort" index="21" instance=ExtResource( 7 )]
-position = Vector2( 127.258, 423.109 )
-Direction = "MovingDown"
-
-[node name="ConveryorObject13" parent="YSort" index="22" instance=ExtResource( 7 )]
-position = Vector2( 127.513, 474.354 )
-Direction = "MovingRight"
-
-[node name="ConveryorObject15" parent="YSort" index="23" instance=ExtResource( 7 )]
-position = Vector2( 166.57, 474.354 )
-Direction = "MovingRight"
-
-[node name="ConveryorObject16" parent="YSort" index="24" instance=ExtResource( 7 )]
-position = Vector2( 204.368, 474.984 )
-Direction = "MovingRight"
-
-[node name="ConveryorObject17" parent="YSort" index="25" instance=ExtResource( 7 )]
-position = Vector2( 242.796, 474.984 )
-Direction = "MovingRight"
-
-[node name="ConveryorObject18" parent="YSort" index="26" instance=ExtResource( 7 )]
-position = Vector2( 281.853, 474.984 )
-Direction = "MovingRight"
-
-[node name="ConveryorObject19" parent="YSort" index="27" instance=ExtResource( 7 )]
-position = Vector2( 320.911, 474.984 )
-Direction = "MovingRight"
-
-[node name="ConveryorObject20" parent="YSort" index="28" instance=ExtResource( 7 )]
-position = Vector2( 359.968, 475.614 )
-Direction = "MovingRight"
-
-[node name="ConveryorObject21" parent="YSort" index="29" instance=ExtResource( 7 )]
-position = Vector2( 398.396, 474.984 )
-Direction = "MovingRight"
-
-[node name="ConveryorObject22" parent="YSort" index="30" instance=ExtResource( 7 )]
-position = Vector2( 438.083, 474.984 )
-Direction = "MovingRight"
-
-[node name="Star" parent="YSort" index="31" instance=ExtResource( 8 )]
+[node name="Star" parent="YSort" index="8" instance=ExtResource( 8 )]
 position = Vector2( 222.029, 220.515 )
 
-[node name="Star2" parent="YSort" index="32" instance=ExtResource( 8 )]
+[node name="Star2" parent="YSort" index="9" instance=ExtResource( 8 )]
 position = Vector2( 463.661, 177.096 )
 
-[node name="Star3" parent="YSort" index="33" instance=ExtResource( 8 )]
+[node name="Star3" parent="YSort" index="10" instance=ExtResource( 8 )]
 position = Vector2( 463.661, 317.937 )
 
-[node name="Detector" parent="YSort" index="34" instance=ExtResource( 9 )]
+[node name="Detector" parent="YSort" index="11" instance=ExtResource( 9 )]
 position = Vector2( 207.868, 80.0736 )
 rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
-[node name="Detector2" parent="YSort" index="35" instance=ExtResource( 9 )]
+[node name="Detector2" parent="YSort" index="12" instance=ExtResource( 9 )]
 position = Vector2( 240.029, 80.0123 )
 rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
+
+[node name="DEchanger" parent="." index="7" instance=ExtResource( 6 )]
+position = Vector2( 480.13, 456.413 )
+LaserSpawn = 2
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "LabLevel - 10"
