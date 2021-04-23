@@ -32,5 +32,6 @@ func _physics_process(delta):
 			reflect.get_node("LaserBeam").cast_to = Vector2(2000,0)
 	else:
 		$Area2D.global_position = Vector2(0,0)
+		end.position = Vector2(0,0)
 	beam.rotation = cast_to.angle()
 	beam.region_rect.end.x = end.position.length()

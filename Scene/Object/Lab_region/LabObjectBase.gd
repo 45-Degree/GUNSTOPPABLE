@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-export(NodePath) var node_path
+export(NodePath) var door
 onready var animationPlayer = $AnimationPlayer
 export var health = 10
 var invincible = false
@@ -12,6 +12,7 @@ export var unlockable = false
 onready var damagable = false
 export var button = false
 export(int, "Left", "Right", "Top", "Bottom") var BulletSpawn
+export(NodePath) var rotator
 onready var animatedSprite = $AnimatedSprite
 onready var particle = $Particles2D
 onready var timer = $Timer
@@ -44,12 +45,15 @@ func _process(delta):
 func _on_Hurtbox_area_entered(area):
 	if button == true:
 		animationPlayer.play("Pressed")
+		var rotatorIN = get_node(rotator)
+		rotatorIN.Rotating()
+		
 	if invincible == false and destroyable == true:
 		health -= 5
 		damagable = true
 		$Timer.start()
 	if pickable == true:
-		var door = get_node(node_path)
+		var door = get_node(door)
 		door.queue_free()
 		SoundManager.play_se("res://Sound/SFX/Object/Keycard_3.wav")
 		queue_free()

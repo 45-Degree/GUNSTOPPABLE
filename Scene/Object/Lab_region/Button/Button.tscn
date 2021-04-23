@@ -1,7 +1,6 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scene/Object/Lab_region/LabObjectBase.gd" type="Script" id=1]
-[ext_resource path="res://Scene/Object/Lab_region/Button/Button.png" type="Texture" id=2]
 [ext_resource path="res://Scene/Object/Office_region/Heater/ExplosionDamage.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scene/Object/Lab_region/Button/BottonFloor1.png" type="Texture" id=5]
@@ -35,41 +34,17 @@ extents = Vector2( 36.5866, 19.1014 )
 [sub_resource type="Animation" id=5]
 length = 0.6
 step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite2:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ Color( 100, 100, 100, 1 ), Color( 1, 1, 1, 1 ) ]
-}
 
 [sub_resource type="Animation" id=6]
 length = 0.1
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite2:modulate")
+tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("AnimatedSprite:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
@@ -111,13 +86,6 @@ script = ExtResource( 1 )
 button = true
 explodeDamage = ExtResource( 3 )
 
-[node name="Sprite2" type="Sprite" parent="."]
-visible = false
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 2 )
-region_enabled = true
-region_rect = Rect2( 17, 34, 176, 177 )
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 2.21085, -5.38688 )
 scale = Vector2( 0.2, 0.2 )
@@ -126,7 +94,8 @@ animation = "Idle"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.788254, 2.07526 )
+visible = false
+position = Vector2( 4.33441, -5.7201 )
 shape = SubResource( 4 )
 disabled = true
 
@@ -136,8 +105,8 @@ anims/Idle = SubResource( 6 )
 anims/Pressed = SubResource( 7 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 4 )]
-collision_layer = 8
-collision_mask = 4
+collision_layer = 1024
+collision_mask = 2147483649
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2( 2.4665, -4.45658 )
@@ -154,14 +123,6 @@ process_material = SubResource( 9 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
-
-[node name="BulletSpawnUp" type="Position2D" parent="."]
-
-[node name="BulletSpawnDown" type="Position2D" parent="."]
-
-[node name="BulletSpawnLeft" type="Position2D" parent="."]
-
-[node name="BulletSpawnRight" type="Position2D" parent="."]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="area_exited" from="Hurtbox" to="." method="_on_Hurtbox_area_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

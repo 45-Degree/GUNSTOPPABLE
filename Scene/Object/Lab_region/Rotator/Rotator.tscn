@@ -1,0 +1,165 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scene/Object/Lab_region/Rotator/Rotator.gd" type="Script" id=1]
+[ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Character/Player/LaserBeam/Laser Beam.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Object/Lab_region/Rotator/NeoRotation.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2.29052, 3.75821 )
+
+[sub_resource type="Animation" id=2]
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TableHorizontal/TableHorizontal4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Rotate_0"
+length = 0.4
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Rotate_1"
+length = 0.4
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Rotate_2"
+length = 0.4
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Rotate_3"
+length = 0.4
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 2.91055, 4.40464 )
+
+[node name="Rotator" type="KinematicBody2D" groups=[
+"Rotatable",
+]]
+scale = Vector2( 5, 5 )
+collision_layer = 8
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.0840896, -0.71476 )
+scale = Vector2( 0.04, 0.04 )
+texture = ExtResource( 4 )
+hframes = 8
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0235977, -0.143819 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Idle = SubResource( 2 )
+anims/Rotate_0 = SubResource( 3 )
+anims/Rotate_1 = SubResource( 4 )
+anims/Rotate_2 = SubResource( 5 )
+anims/Rotate_3 = SubResource( 6 )
+
+[node name="Hurtbox" parent="." instance=ExtResource( 2 )]
+collision_layer = 32
+collision_mask = 2147484160
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2( -0.0921383, -0.290805 )
+shape = SubResource( 7 )
+
+[node name="BulletSpawnUp" type="Position2D" parent="."]
+position = Vector2( 0, -6 )
+
+[node name="BulletSpawnDown" type="Position2D" parent="."]
+position = Vector2( 0, 6 )
+
+[node name="BulletSpawnLeft" type="Position2D" parent="."]
+position = Vector2( -6, 0 )
+
+[node name="BulletSpawnRight" type="Position2D" parent="."]
+position = Vector2( 6, 0 )
+
+[node name="LaserBeam" parent="." instance=ExtResource( 3 )]
+enabled = false
+collision_mask = 314
+
+[node name="Sprite" parent="LaserBeam" index="0"]
+position = Vector2( 0, 0 )
+scale = Vector2( 0.05, 0.05 )
+
+[node name="Beam" parent="LaserBeam" index="1"]
+position = Vector2( 0, 0 )
+scale = Vector2( 1, 0.045 )
+region_rect = Rect2( -0.665, 0, 0, 25 )
+
+[node name="Sprite" parent="LaserBeam/End" index="1"]
+position = Vector2( 0, 0 )
+scale = Vector2( 0.05, 0.05 )
+
+[node name="CollisionShape2D" parent="LaserBeam/Area2D" index="0"]
+disabled = true
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="area_exited" from="Hurtbox" to="." method="_on_Hurtbox_area_exited"]
+
+[editable path="LaserBeam"]

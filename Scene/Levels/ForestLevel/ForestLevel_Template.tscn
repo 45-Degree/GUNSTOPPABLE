@@ -799,7 +799,7 @@ size = 14
 outline_size = 1
 font_data = ExtResource( 7 )
 
-[node name="LabLevel_Template" type="Node"]
+[node name="ForestLevel_Template" type="Node"]
 script = ExtResource( 30 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -839,7 +839,7 @@ position = Vector2( 640.028, 360.286 )
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 1
+frame = 4
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 50 )
@@ -1261,7 +1261,6 @@ stretch_mode = 5
 
 [node name="Control4" type="Control" parent="CanvasLayer"]
 pause_mode = 2
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -1276,13 +1275,13 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="CanvasLayer/Control4/CenterContainer"]
-margin_left = 131.0
+margin_left = 122.0
 margin_top = 166.0
-margin_right = 509.0
+margin_right = 518.0
 margin_bottom = 193.0
 custom_fonts/font = SubResource( 64 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Click to start Guning"
+text = "Click to start Gunning"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 anchor_right = 1.0

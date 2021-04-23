@@ -6,31 +6,31 @@
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
-[sub_resource type="Gradient" id=3]
+[sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.832753, 1 )
 colors = PoolColorArray( 0.870588, 1, 1, 1, 0.978356, 1, 1, 0.167247, 1, 1, 1, 0 )
 
-[sub_resource type="GradientTexture" id=4]
-gradient = SubResource( 3 )
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
 
-[sub_resource type="Curve" id=5]
+[sub_resource type="Curve" id=4]
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.616129, 0.396591 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=6]
-curve = SubResource( 5 )
+[sub_resource type="CurveTexture" id=5]
+curve = SubResource( 4 )
 
-[sub_resource type="ParticlesMaterial" id=7]
+[sub_resource type="ParticlesMaterial" id=6]
 flag_disable_z = true
 gravity = Vector3( 0, 98, 0 )
 initial_velocity = 120.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-scale_curve = SubResource( 6 )
-color_ramp = SubResource( 4 )
+scale_curve = SubResource( 5 )
+color_ramp = SubResource( 3 )
 
-[sub_resource type="CanvasItemMaterial" id=8]
+[sub_resource type="CanvasItemMaterial" id=7]
 
-[sub_resource type="CircleShape2D" id=9]
+[sub_resource type="CircleShape2D" id=8]
 radius = 2.0
 
 [node name="LaserBeam" type="RayCast2D" groups=[
@@ -59,16 +59,18 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 3 )
 centered = false
 offset = Vector2( 0, -12 )
+region_enabled = true
+region_rect = Rect2( -0.664627, 0, 25.5768, 24.7359 )
 
 [node name="End" type="Position2D" parent="."]
 
 [node name="CastingParticle2" type="Particles2D" parent="End"]
 lifetime = 0.3
-process_material = SubResource( 7 )
+process_material = SubResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="End"]
 modulate = Color( 1, 0, 0, 1 )
-material = SubResource( 8 )
+material = SubResource( 7 )
 position = Vector2( 0.00272943, 0.0200996 )
 rotation = 4.71239
 scale = Vector2( 0.2, 0.2 )
@@ -79,8 +81,8 @@ collision_layer = 4
 collision_mask = 58
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="CastingParticle" type="Particles2D" parent="."]
 lifetime = 0.3
-process_material = SubResource( 7 )
+process_material = SubResource( 6 )

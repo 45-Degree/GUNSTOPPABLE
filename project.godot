@@ -119,9 +119,10 @@ StopFire={
 2d_physics/layer_8="Conveyor"
 2d_physics/layer_9="Medal"
 2d_physics/layer_10="Rotator"
+2d_physics/layer_11="Button"
 
 [rendering]
 
-2d/snapping/use_gpu_pixel_snap=true
-quality/depth/hdr=false
 quality/2d/use_pixel_snap=true
+quality/depth/hdr=false
+2d/snapping/use_gpu_pixel_snap=true

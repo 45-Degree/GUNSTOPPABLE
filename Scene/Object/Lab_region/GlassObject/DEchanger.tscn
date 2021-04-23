@@ -1,22 +1,12 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scene/Object/Lab_region/GlassObject/GlassObject.gd" type="Script" id=1]
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Character/Player/LaserBeam/Laser Beam.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Object/Lab_region/GlassObject/tile001.png" type="Texture" id=65]
 
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "Down",
-"speed": 5.0
-}, {
-"frames": [  ],
-"loop": true,
-"name": "Up",
-"speed": 5.0
-}, {
 "frames": [  ],
 "loop": true,
 "name": "Left",
@@ -26,15 +16,24 @@ animations = [ {
 "loop": true,
 "name": "Right",
 "speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Up",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Down",
+"speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 2.64358, 4.00748 )
 
-[sub_resource type="Animation" id=2]
-resource_name = "EastToNorth"
-
 [sub_resource type="Animation" id=3]
+
+[sub_resource type="Animation" id=4]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -62,26 +61,14 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "NorthToWest"
-
 [sub_resource type="Animation" id=5]
-resource_name = "SouthToEast"
 
 [sub_resource type="Animation" id=6]
-resource_name = "WestToSouth"
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="Animation" id=7]
+
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 2.91055, 4.40464 )
-
-[sub_resource type="ParticlesMaterial" id=8]
-flag_disable_z = true
-direction = Vector3( 0, 0, 0 )
-spread = 28.35
-gravity = Vector3( -98, 0, 0 )
-initial_velocity = 58.9
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
 
 [node name="DEchanger" type="KinematicBody2D" groups=[
 "Rotatable",
@@ -92,8 +79,7 @@ script = ExtResource( 1 )
 LaserSpawn = 1
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-scale = Vector2( 1, 1 )
-frames = SubResource( 9 )
+frames = SubResource( 1 )
 animation = "Right"
 
 [node name="Sprite2" type="Sprite" parent="."]
@@ -104,14 +90,14 @@ region_rect = Rect2( 16.0754, 733, 200.845, 108 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.0235977, -0.143819 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/EastToNorth = SubResource( 2 )
-anims/Idle = SubResource( 3 )
-anims/NorthToWest = SubResource( 4 )
-anims/SouthToEast = SubResource( 5 )
-anims/WestToSouth = SubResource( 6 )
+anims/EastToNorth = SubResource( 3 )
+anims/Idle = SubResource( 4 )
+anims/NorthToWest = SubResource( 5 )
+anims/SouthToEast = SubResource( 6 )
+anims/WestToSouth = SubResource( 7 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 2 )]
 collision_layer = 32
@@ -119,18 +105,7 @@ collision_mask = 2147484160
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2( -0.0921383, -0.290805 )
-shape = SubResource( 7 )
-
-[node name="Particles2D" type="Particles2D" parent="."]
-position = Vector2( -0.112572, -1.98876 )
-rotation = -1.5708
-emitting = false
-lifetime = 2.0
-speed_scale = 1.49
-process_material = SubResource( 8 )
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.2
+shape = SubResource( 8 )
 
 [node name="BulletSpawnUp" type="Position2D" parent="."]
 position = Vector2( 0, -6 )
@@ -160,7 +135,6 @@ scale = Vector2( 0.05, 0.05 )
 
 [node name="CollisionShape2D" parent="LaserBeam/Area2D" index="0"]
 disabled = true
-
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="area_exited" from="Hurtbox" to="." method="_on_Hurtbox_area_exited"]
 

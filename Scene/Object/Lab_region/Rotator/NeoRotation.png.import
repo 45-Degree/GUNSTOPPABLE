@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WALKING.png-96091b690fd5f08c70ec8cb270e5fd38.stex"
+path="res://.import/NeoRotation.png-a0823297b0c545332f8bbd3b2bbd26b6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Object/Lab_region/GlassObject/WALKING.png"
-dest_files=[ "res://.import/WALKING.png-96091b690fd5f08c70ec8cb270e5fd38.stex" ]
+source_file="res://Scene/Object/Lab_region/Rotator/NeoRotation.png"
+dest_files=[ "res://.import/NeoRotation.png-a0823297b0c545332f8bbd3b2bbd26b6.stex" ]
 
 [params]
 

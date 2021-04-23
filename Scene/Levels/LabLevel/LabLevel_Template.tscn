@@ -1275,12 +1275,12 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="CanvasLayer/Control4/CenterContainer"]
-margin_left = 131.0
+margin_left = 122.0
 margin_top = 166.0
-margin_right = 509.0
+margin_right = 518.0
 margin_bottom = 193.0
 custom_fonts/font = SubResource( 64 )
-text = "Click to start Guning"
+text = "Click to start Gunning"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 anchor_right = 1.0
