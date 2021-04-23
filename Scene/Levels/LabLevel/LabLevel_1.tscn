@@ -30,7 +30,7 @@ position = Vector2( 631.048, 621.82 )
 position = Vector2( -149.08, 294.875 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 4
+frame = 1
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
@@ -91,3 +91,4 @@ position = Vector2( 585.232, 558.407 )
 text = "Lab Level - 1"
 
 [editable path="YSort/Player"]
+[editable path="YSort/Player/LaserBeam"]
