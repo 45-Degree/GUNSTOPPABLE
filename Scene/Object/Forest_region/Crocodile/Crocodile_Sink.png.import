@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rotation.png-c5342d6e2f749897294d3d96a05fbbb4.stex"
+path="res://.import/Crocodile_Sink.png-ad520cd903833f685e75d24c029f1e63.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Object/Lab_region/Rotator/Rotation.png"
-dest_files=[ "res://.import/Rotation.png-c5342d6e2f749897294d3d96a05fbbb4.stex" ]
+source_file="res://Scene/Object/Forest_region/Crocodile/Crocodile_Sink.png"
+dest_files=[ "res://.import/Crocodile_Sink.png-ad520cd903833f685e75d24c029f1e63.stex" ]
 
 [params]
 

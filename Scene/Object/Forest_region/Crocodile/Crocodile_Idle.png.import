@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GlassObject2.png-04581c6af9ba04ec65409b3c455a5b85.stex"
+path="res://.import/Crocodile_Idle.png-d93e6a2f981ed18834ae942b6c4fe01c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Object/Lab_region/GlassObject/GlassObject2.png"
-dest_files=[ "res://.import/GlassObject2.png-04581c6af9ba04ec65409b3c455a5b85.stex" ]
+source_file="res://Scene/Object/Forest_region/Crocodile/Crocodile_Idle.png"
+dest_files=[ "res://.import/Crocodile_Idle.png-d93e6a2f981ed18834ae942b6c4fe01c.stex" ]
 
 [params]
 
