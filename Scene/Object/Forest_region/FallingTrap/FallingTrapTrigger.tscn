@@ -1,10 +1,9 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Scene/Object/Lab_region/Table/Lab_table_sprite_short.png" type="Texture" id=2]
 [ext_resource path="res://Scene/Object/Forest_region/CampFire/CampfireSprite.png" type="Texture" id=3]
-[ext_resource path="res://Scene/Object/Forest_region/ArrowTrap/ArrowTrap.gd" type="Script" id=4]
-[ext_resource path="res://Scene/Object/Forest_region/ArrowTrap/ArrowStack.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Object/Forest_region/FallingTrap/FallingTrapTrigger.gd" type="Script" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -73,7 +72,8 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="CircleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 5.24036, 22.0335 )
 
 [sub_resource type="ParticlesMaterial" id=10]
 flag_disable_z = true
@@ -84,20 +84,18 @@ initial_velocity = 58.9
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 
-[node name="ArrowTrap" type="StaticBody2D" groups=[
-"CampFire",
-]]
-collision_layer = 8
+[node name="FallingTrapTrigger" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource( 4 )
-Arrow = ExtResource( 5 )
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( -3.33005, 1.76178 )
-scale = Vector2( 0.4, 0.4 )
+visible = false
+modulate = Color( 100, 100, 100, 1 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
-offset = Vector2( 12.9137, -5.23873 )
 region_enabled = true
-region_rect = Rect2( -0.265778, -1.54683, 65.3241, 65.7874 )
+region_rect = Rect2( 55.3929, 51.7818, 734.88, 462.641 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 visible = false
@@ -105,10 +103,10 @@ position = Vector2( -0.0710406, -0.128614 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 5 )
 animation = "Normal"
-frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -116,13 +114,12 @@ anims/Blink = SubResource( 7 )
 anims/Idle = SubResource( 8 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 1 )]
-collision_layer = 8
-collision_mask = 4
+collision_layer = 32
+collision_mask = 2147483652
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2( 0.190668, -0.0020799 )
 shape = SubResource( 9 )
-disabled = true
 
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( -0.112572, -1.98876 )
@@ -131,3 +128,5 @@ emitting = false
 lifetime = 2.0
 speed_scale = 1.49
 process_material = SubResource( 10 )
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]

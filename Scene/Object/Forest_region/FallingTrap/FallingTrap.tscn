@@ -1,10 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Scene/Object/Forest_region/FallingTrap/FallingTrap.gd" type="Script" id=2]
 [ext_resource path="res://Scene/Object/Forest_region/CampFire/CampfireSprite.png" type="Texture" id=3]
-[ext_resource path="res://Scene/Object/Forest_region/ArrowTrap/ArrowTrap.gd" type="Script" id=4]
-[ext_resource path="res://Scene/Object/Forest_region/ArrowTrap/ArrowStack.tscn" type="PackedScene" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -44,36 +42,13 @@ animations = [ {
 [sub_resource type="Animation" id=7]
 length = 0.6
 step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite2:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ Color( 100, 100, 100, 1 ), Color( 1, 1, 1, 1 ) ]
-}
 
 [sub_resource type="Animation" id=8]
 length = 0.1
 loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite2:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
 
-[sub_resource type="CircleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 18.7436, 19.6273 )
 
 [sub_resource type="ParticlesMaterial" id=10]
 flag_disable_z = true
@@ -84,20 +59,11 @@ initial_velocity = 58.9
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 
-[node name="ArrowTrap" type="StaticBody2D" groups=[
-"CampFire",
+[node name="FallingTrap" type="StaticBody2D" groups=[
+"Laser",
 ]]
 collision_layer = 8
-script = ExtResource( 4 )
-Arrow = ExtResource( 5 )
-
-[node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( -3.33005, 1.76178 )
-scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 2 )
-offset = Vector2( 12.9137, -5.23873 )
-region_enabled = true
-region_rect = Rect2( -0.265778, -1.54683, 65.3241, 65.7874 )
+script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 visible = false
@@ -105,23 +71,24 @@ position = Vector2( -0.0710406, -0.128614 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 5 )
 animation = "Normal"
-frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 6 )
+disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Blink = SubResource( 7 )
 anims/Idle = SubResource( 8 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 1 )]
-collision_layer = 8
-collision_mask = 4
+collision_layer = 4
+collision_mask = 24
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2( 0.190668, -0.0020799 )
-shape = SubResource( 9 )
+shape = SubResource( 11 )
 disabled = true
 
 [node name="Particles2D" type="Particles2D" parent="."]

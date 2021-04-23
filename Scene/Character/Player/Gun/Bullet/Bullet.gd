@@ -3,7 +3,7 @@ extends KinematicBody2D
 var explosion = preload("res://Scene/Character/Player/Gun/ExplosionEffect/Explosion.tscn")
 export var speed = 400
 var direction = Vector2.ZERO
-var flaming = false
+export var flaming = false
 
 func _physics_process(delta):
 	var collisionResult = move_and_collide(direction * speed * delta)
