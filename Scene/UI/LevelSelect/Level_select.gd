@@ -34,6 +34,5 @@ func _on_buttonQuite_button_up():
 	get_tree().change_scene("res://Scene/UI/Regionselect/RegionSelect.tscn")
 	
 func _button_entered(which):
-	pass
-#	if which.disabled == false:
-#		levelpic.texture = load("res://Scene/UI/LevelSelect/LevelPic/LevelPic_"+ str(int(which.name)) +".png")
+	if which.disabled == false:
+		levelpic.texture = load("res://Scene/UI/LevelSelect/LevelPic/1-"+ str(int(which.name)) +".png")

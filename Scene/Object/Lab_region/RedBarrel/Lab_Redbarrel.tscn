@@ -4,7 +4,7 @@
 [ext_resource path="res://Scene/Object/Office_region/Heater/Heater_pulse_sprite_soverynew.png" type="Texture" id=2]
 [ext_resource path="res://Scene/Object/Lab_region/RedBarrel/BarreL_sprite (1).png" type="Texture" id=3]
 [ext_resource path="res://Scene/Object/Lab_region/LabObjectBase.gd" type="Script" id=4]
-[ext_resource path="res://Scene/Object/Office_region/Heater/ExplosionDamage.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Object/Lab_region/RedBarrel/ExplosionDamageLab.tscn" type="PackedScene" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -57,7 +57,7 @@ texture = ExtResource( 2 )
 region_rect = Rect2( 52.8893, 49.0328, 231.712, 475.727 )
 
 [node name="AnimatedSprite" parent="." index="2"]
-frame = 45
+frame = 44
 
 [node name="CollisionShape2D" parent="." index="3"]
 position = Vector2( 0.198959, 1.57235 )

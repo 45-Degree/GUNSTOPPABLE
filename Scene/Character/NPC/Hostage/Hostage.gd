@@ -2,22 +2,25 @@ extends StaticBody2D
 
 signal Hostage_Die
 signal Terrorist_Die
+var HostageAnim = 0
+var Die = false
 
 func _ready():
+	HostageAnim = int(rand_range(1,4))
 	connect("Hostage_Die", owner, "_on_Hostage_Die")
-	$AnimatedSprite.play("HostageIdle_" + str(randi() % 4 + 1 ))
+	$AnimatedSprite.play("HostageIdle_" + str(HostageAnim))
 
 func _on_Hurtbox_area_entered(area):
+	Die = true
 	Singleton.emit_signal("Hostage_Die")
 	Singleton.hostagePosition = self.global_position
-	var Blood_instance = load("res://Scene/Character/NPC/Hostage/Blood.tscn")
-	var blood_instace = Blood_instance.instance()
-	var world = get_tree().current_scene
-	world.add_child(blood_instace)
-	blood_instace.global_position = global_position
+	$Hurtbox/CollisionShape2D.set_deferred("disabled",true)
 	emit_signal("Hostage_Die")
 	SoundManager.play_se("res://Scene/Character/NPC/NPC death.wav")
-	queue_free()
 
 func invincible():
 	$Hurtbox/CollisionShape2D.disabled = true
+
+func _on_AnimatedSprite_animation_finished():
+	if Die == true:
+		$AnimatedSprite.playing = false

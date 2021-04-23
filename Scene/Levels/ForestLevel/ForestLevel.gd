@@ -96,11 +96,11 @@ func  _on_Star_Pick():
 
 func _on_Passable():
 	if Complete == true:
-		Save.data["Level"+ str(int(get_tree().current_scene.name)+1)] = true
-		if !Save.data.has("Star" + str(int(get_tree().current_scene.name))):
-			Save.data["Star"+ str(int(get_tree().current_scene.name))] = Star_Count
-		elif Save.data["Star" + str(int(get_tree().current_scene.name))] <= Star_Count:
-			Save.data["Star" + str(int(get_tree().current_scene.name))] = Star_Count
+		Save.data["ForestLevel"+ str(int(get_tree().current_scene.name)+1)] = true
+		if !Save.data.has("ForestStar" + str(int(get_tree().current_scene.name))):
+			Save.data["ForestStar"+ str(int(get_tree().current_scene.name))] = Star_Count
+		elif Save.data["ForestStar" + str(int(get_tree().current_scene.name))] <= Star_Count:
+			Save.data["ForestStar" + str(int(get_tree().current_scene.name))] = Star_Count
 		else:
 			pass
 		Save._on_Save()

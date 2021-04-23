@@ -47,7 +47,7 @@ func AnimationLoop():
 			pass
 
 func _on_Hurtbox_area_entered(area):
-	if area.get_parent().is_in_group("Laser"):
+	if area.get_parent().is_in_group("Laser") or area.get_parent().is_in_group("Explosion"):
 		alive = false
 		Singleton.emit_signal("Terrorist_Die")
 		$Sprite2.play("Die")

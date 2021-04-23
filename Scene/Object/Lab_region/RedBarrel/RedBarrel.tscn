@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scene/Object/Lab_region/Table/Lab_TableHorizontal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Lab_region/RedBarrel/BarreL_sprite (1).png" type="Texture" id=2]
+[ext_resource path="res://Scene/Object/Lab_region/RedBarrel/ExplosionDamageLab.tscn" type="PackedScene" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -31,9 +32,16 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 16.0694, 19.1014 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 17.616, 18.1377 )
+
 [node name="RedBarrel" instance=ExtResource( 1 )]
 health = 1
 explodable = true
+explodeDamage = ExtResource( 3 )
 
 [node name="Sprite2" parent="." index="0"]
 visible = false
@@ -41,8 +49,15 @@ visible = false
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="." index="1"]
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 5 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="AnimatedSprite" parent="." index="2"]
-frame = 59
+frame = 56
+
+[node name="CollisionShape2D" parent="." index="3"]
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D2" parent="Hurtbox" index="1"]
+position = Vector2( 0.190668, 1.401 )
+shape = SubResource( 7 )

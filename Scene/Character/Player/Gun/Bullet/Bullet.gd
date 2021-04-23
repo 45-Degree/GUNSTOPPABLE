@@ -5,7 +5,6 @@ export var speed = 400
 var direction = Vector2.ZERO
 var flaming = false
 
-
 func _physics_process(delta):
 	var collisionResult = move_and_collide(direction * speed * delta)
 	if collisionResult:

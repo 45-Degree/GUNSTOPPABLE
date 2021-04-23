@@ -8,12 +8,12 @@ func _ready():
 		b.connect("pressed", self, "_button_pressed",[b])
 		b.connect("mouse_entered",self,"_button_entered", [b])
 		if Save.data.has("Star" + str(int(b.name))):
-			b.texture_normal = load("res://Scene/UI/button/LevelSelectSprite/still"+ str(Save.data.get("Star" + str(int(b.name))))  + ".png")
-			b.texture_pressed = load("res://Scene/UI/button/LevelSelectSprite/push" + str(Save.data.get("Star" + str(int(b.name)))) + ".png")
-			b.texture_hover = load("res://Scene/UI/button/LevelSelectSprite/hover" + str(Save.data.get("Star" + str(int(b.name)))) + ".png")
+			b.texture_normal = load("res://Scene/UI/button/LevelSelectLab/still"+ str(Save.data.get("Star" + str(int(b.name))))  + ".png")
+			b.texture_pressed = load("res://Scene/UI/button/LevelSelectLab/push" + str(Save.data.get("Star" + str(int(b.name)))) + ".png")
+			b.texture_hover = load("res://Scene/UI/button/LevelSelectLab/hover" + str(Save.data.get("Star" + str(int(b.name)))) + ".png")
 		else:
 			pass
-		if Save.data.get("Level"+ str(int(b.name))):
+		if Save.data.get("LabLevel"+ str(int(b.name))):
 			b.disabled = false
 		for w in b.get_children():
 			w.text = str(int(b.name))
