@@ -35,7 +35,7 @@ func _process(delta):
 	match state:
 		UNSHOT:
 			LaserBeam.enabled = false
-#			LaserBeam.visible = false
+			LaserBeam.visible = false
 			LaserBeam.cast_to = Vector2(0,0)
 			$LaserBeam/Area2D/CollisionShape2D.disabled = true
 		SHOTTED:
