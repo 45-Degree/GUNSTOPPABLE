@@ -121,7 +121,7 @@ initial_velocity = 58.9
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 
-[node name="Lab_TableHorizontal" type="StaticBody2D" groups=[
+[node name="Bush_1" type="StaticBody2D" groups=[
 "LaserAble",
 ]]
 position = Vector2( 141.033, 106.99 )
@@ -143,7 +143,7 @@ position = Vector2( 2.21085, -5.38688 )
 rotation = 1.5708
 scale = Vector2( 0.3, 0.4 )
 frames = SubResource( 1 )
-frame = 14
+frame = 16
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -180,6 +180,7 @@ wait_time = 0.5
 [node name="BulletSpawnLeft" type="Position2D" parent="."]
 
 [node name="BulletSpawnRight" type="Position2D" parent="."]
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="area_exited" from="Hurtbox" to="." method="_on_Hurtbox_area_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
