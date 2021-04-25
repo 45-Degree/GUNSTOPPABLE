@@ -118,6 +118,9 @@ Direction = "MovingDown"
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 17.669, 252.941 )
 
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 4
+
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
 
@@ -183,3 +186,4 @@ position = Vector2( 82.1484, 175.479 )
 text = "LabLevel - 11"
 
 [editable path="YSort/Player"]
+[editable path="YSort/Player/LaserBeam"]

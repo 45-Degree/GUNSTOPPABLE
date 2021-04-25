@@ -7,77 +7,77 @@
 [ext_resource path="res://Scene/Character/Player/Sprite/spritesheet_(11).png" type="Texture" id=6]
 
 [sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 495, 579 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 5 )
-region = Rect2( 495, 0, 495, 579 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 5 )
-region = Rect2( 990, 0, 495, 579 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 5 )
-region = Rect2( 1485, 0, 495, 579 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 5 )
-region = Rect2( 1980, 0, 495, 579 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 5 )
-region = Rect2( 2475, 0, 495, 579 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 5 )
-region = Rect2( 2970, 0, 495, 579 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 5 )
-region = Rect2( 3465, 0, 495, 579 )
-
-[sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 0, 0, 700, 700 )
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 700, 0, 700, 700 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 1400, 0, 700, 700 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 2100, 0, 700, 700 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 2800, 0, 700, 700 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 3500, 0, 700, 700 )
 
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 495, 579 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 5 )
+region = Rect2( 495, 0, 495, 579 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 5 )
+region = Rect2( 990, 0, 495, 579 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 5 )
+region = Rect2( 1485, 0, 495, 579 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 5 )
+region = Rect2( 1980, 0, 495, 579 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 5 )
+region = Rect2( 2475, 0, 495, 579 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 5 )
+region = Rect2( 2970, 0, 495, 579 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 5 )
+region = Rect2( 3465, 0, 495, 579 )
+
 [sub_resource type="SpriteFrames" id=15]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
-"loop": true,
-"name": "Run",
-"speed": 12.0
-}, {
-"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "Idle",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "Run",
 "speed": 12.0
 } ]
 
@@ -350,7 +350,7 @@ MAX_SPEED = 200
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 15 )
 animation = "Idle"
-frame = 2
+frame = 4
 
 [node name="Gun" type="Node2D" parent="."]
 position = Vector2( 0.236725, -4.63605 )
@@ -377,6 +377,7 @@ parameters/Idle/blend_position = Vector2( 0.18091, 0.508621 )
 parameters/Run/blend_position = Vector2( 0.987358, -0.981873 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 light_mask = 0
 position = Vector2( -1.19623, 12.7573 )
 rotation = 1.5708
@@ -386,6 +387,7 @@ shape = SubResource( 38 )
 collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+visible = false
 position = Vector2( -1.77463, 13.3131 )
 rotation = 1.5708
 shape = SubResource( 39 )

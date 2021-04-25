@@ -82,7 +82,7 @@ position = Vector2( 243.805, 364.819 )
 position = Vector2( 243.805, 325.619 )
 
 [node name="AnimatedSprite" parent="Bottom/AutoWalkWay14" index="1"]
-frame = 1
+frame = 2
 
 [node name="AutoWalkWay15" parent="Bottom" index="12" instance=ExtResource( 13 )]
 position = Vector2( 243.805, 288.008 )
@@ -216,7 +216,7 @@ position = Vector2( 364.56, 333.539 )
 position = Vector2( 34.2783, 183.925 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 5
+frame = 2
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
@@ -289,9 +289,6 @@ LaserSpawn = 2
 position = Vector2( 364.766, 223.538 )
 LaserSpawn = 3
 
-[node name="Control4" parent="CanvasLayer" index="3"]
-visible = false
-
 [node name="CenterContainer" parent="CanvasLayer/Control4" index="0"]
 margin_left = 1.0
 margin_top = 0.5
@@ -303,5 +300,6 @@ mouse_filter = 2
 text = "LabLevel - 12"
 
 [editable path="Bottom/AutoWalkWay14"]
-
+[editable path="Bottom/AutoWalkWay14/Hurtbox"]
 [editable path="YSort/Player"]
+[editable path="YSort/Player/LaserBeam"]
