@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tiles_SET_JUNGLEGROUND1.png-94a4b6432c61b9c2f2eb0e804d01784b.stex"
+path="res://.import/Tiles_SET_JUNGLEGROUND1 (1).png-c870b659057b992a053ae434e7a81f69.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Tilemap/Tiles_SET_JUNGLEGROUND1.png"
-dest_files=[ "res://.import/Tiles_SET_JUNGLEGROUND1.png-94a4b6432c61b9c2f2eb0e804d01784b.stex" ]
+source_file="res://Sprite/Tilemap/Tiles_SET_JUNGLEGROUND1 (1).png"
+dest_files=[ "res://.import/Tiles_SET_JUNGLEGROUND1 (1).png-c870b659057b992a053ae434e7a81f69.stex" ]
 
 [params]
 
