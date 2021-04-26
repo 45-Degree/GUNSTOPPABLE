@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LaserBeam_start.png-77aa0d99c05f02546ac02ad639ad427e.stex"
+path="res://.import/laser_to_object.png-2660763bb8629e21296cb8e6359f43c5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Character/Player/LaserBeam/LaserBeam_start.png"
-dest_files=[ "res://.import/LaserBeam_start.png-77aa0d99c05f02546ac02ad639ad427e.stex" ]
+source_file="res://Scene/Character/Player/LaserBeam/laser_to_object.png"
+dest_files=[ "res://.import/laser_to_object.png-2660763bb8629e21296cb8e6359f43c5.stex" ]
 
 [params]
 

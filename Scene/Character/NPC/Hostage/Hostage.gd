@@ -11,6 +11,7 @@ func _ready():
 	$AnimatedSprite.play("HostageIdle_" + str(HostageAnim))
 
 func _on_Hurtbox_area_entered(area):
+	$AnimatedSprite.play("HostageDie_" + str(HostageAnim))
 	Die = true
 	Singleton.emit_signal("Hostage_Die")
 	Singleton.hostagePosition = self.global_position
@@ -20,7 +21,3 @@ func _on_Hurtbox_area_entered(area):
 
 func invincible():
 	$Hurtbox/CollisionShape2D.disabled = true
-
-func _on_AnimatedSprite_animation_finished():
-	if Die == true:
-		$AnimatedSprite.playing = false

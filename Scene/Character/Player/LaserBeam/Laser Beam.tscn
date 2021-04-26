@@ -1,37 +1,101 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scene/Character/Player/LaserBeam/Laser Beam.gd" type="Script" id=1]
-[ext_resource path="res://Scene/Character/Player/LaserBeam/Begin.png" type="Texture" id=2]
-[ext_resource path="res://Scene/Character/Player/LaserBeam/Beam.png" type="Texture" id=3]
+[ext_resource path="res://Scene/Character/Player/LaserBeam/laser_to_object.png" type="Texture" id=2]
+[ext_resource path="res://Scene/Character/Player/LaserBeam/body_laser.png" type="Texture" id=3]
+[ext_resource path="res://Scene/Character/Player/LaserBeam/head_laser.png" type="Texture" id=4]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
-[sub_resource type="Gradient" id=2]
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 117, 107 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 117, 0, 117, 107 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 234, 0, 117, 107 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="Gradient" id=6]
 offsets = PoolRealArray( 0, 0.832753, 1 )
 colors = PoolColorArray( 0.870588, 1, 1, 1, 0.978356, 1, 1, 0.167247, 1, 1, 1, 0 )
 
-[sub_resource type="GradientTexture" id=3]
-gradient = SubResource( 2 )
+[sub_resource type="GradientTexture" id=7]
+gradient = SubResource( 6 )
 
-[sub_resource type="Curve" id=4]
+[sub_resource type="Curve" id=8]
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.616129, 0.396591 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=5]
-curve = SubResource( 4 )
+[sub_resource type="CurveTexture" id=9]
+curve = SubResource( 8 )
 
-[sub_resource type="ParticlesMaterial" id=6]
+[sub_resource type="ParticlesMaterial" id=10]
 flag_disable_z = true
 gravity = Vector3( 0, 98, 0 )
 initial_velocity = 120.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-scale_curve = SubResource( 5 )
-color_ramp = SubResource( 3 )
+scale_curve = SubResource( 9 )
+color_ramp = SubResource( 7 )
 
-[sub_resource type="CanvasItemMaterial" id=7]
+[sub_resource type="CanvasItemMaterial" id=11]
 
-[sub_resource type="CircleShape2D" id=8]
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 120, 58 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 120, 0, 120, 58 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 240, 0, 120, 58 )
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=16]
 radius = 2.0
+
+[sub_resource type="Animation" id=17]
+resource_name = "Laser"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Beam:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
 
 [node name="LaserBeam" type="RayCast2D" groups=[
 "Laser",
@@ -42,47 +106,51 @@ collision_mask = 58
 collide_with_areas = true
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 1, 0, 0, 1 )
+[node name="Start" type="AnimatedSprite" parent="."]
 light_mask = -2147483647
 material = SubResource( 1 )
 position = Vector2( 0.0133133, -0.0783844 )
 rotation = 1.5708
-scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 2 )
+scale = Vector2( 0.15, 0.15 )
+frames = SubResource( 5 )
+playing = true
 
 [node name="Beam" type="Sprite" parent="."]
-modulate = Color( 1, 0, 0, 1 )
 show_behind_parent = true
-position = Vector2( 0.158354, 0.0264316 )
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( 0.154228, 0.164406 )
+scale = Vector2( 1, 0.2 )
 texture = ExtResource( 3 )
 centered = false
-offset = Vector2( 0, -12 )
+offset = Vector2( 0.150766, -21.5341 )
+vframes = 2
 region_enabled = true
-region_rect = Rect2( -0.664627, 0, 25.5768, 24.7359 )
+region_rect = Rect2( 0, 0, 42, 84 )
 
 [node name="End" type="Position2D" parent="."]
 
 [node name="CastingParticle2" type="Particles2D" parent="End"]
 lifetime = 0.3
-process_material = SubResource( 6 )
+process_material = SubResource( 10 )
 
-[node name="Sprite" type="Sprite" parent="End"]
-modulate = Color( 1, 0, 0, 1 )
-material = SubResource( 7 )
+[node name="Sprite" type="AnimatedSprite" parent="End"]
+material = SubResource( 11 )
 position = Vector2( 0.00272943, 0.0200996 )
-rotation = 4.71239
+rotation = 1.5708
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 2 )
+frames = SubResource( 15 )
+playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 4
 collision_mask = 58
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 8 )
+shape = SubResource( 16 )
 
 [node name="CastingParticle" type="Particles2D" parent="."]
 lifetime = 0.3
-process_material = SubResource( 6 )
+process_material = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Laser"
+anims/Laser = SubResource( 17 )

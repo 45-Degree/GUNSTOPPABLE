@@ -14,6 +14,7 @@ onready var camera =$Camera2D
 onready var player = $YSort/Player
 onready var animationPlayer = $AnimationPlayer
 onready var finalPosition = $SpawnPosition
+var pauseStatus = false
 var soundplay = false
 export(int, "Left", "Right", "Top", "Bottom") var spawnHere
 onready var Complete = false
@@ -51,9 +52,6 @@ func _process(delta):
 		get_tree().call_group("Detector", "detector_ON")
 		emit_signal("level_Completed")
 		Complete = true
-	if Input.is_action_just_pressed("Pause") and Singleton.Playable == true:
-		get_tree().paused = true
-		pause.show()
 	if Input.is_action_just_pressed("k") and Singleton.Playable == true:
 		emit_signal("cheat")
 		Complete = true
@@ -126,6 +124,7 @@ func _spawn():
 
 func _on_level_Completed():
 	if soundplay == false:
+		$CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer3.hide()
 		SoundManager.play_se("res://Sound/SFX/Object/ExitUnlock.wav")
 		soundplay = true
 
@@ -150,7 +149,10 @@ func _on_RetryButton_pressed():
 func _on_NextLevelButton_pressed():
 	Transition.wipeOut()
 	yield(get_tree().create_timer(0.5),"timeout")
-	get_tree().change_scene("res://Scene/Levels/LabLevel/LabLevel_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
+	if get_tree().current_scene.name == "LabLevel_20":
+		get_tree().change_scene("res://Scene/Levels/ForestLevel/ForestLevel_1.tscn")
+	else:
+		get_tree().change_scene("res://Scene/Levels/LabLevel/LabLevel_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
 
 func _on_BackButton_pressed():
 	option.hide()

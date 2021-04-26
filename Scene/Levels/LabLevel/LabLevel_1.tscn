@@ -29,11 +29,14 @@ position = Vector2( 631.048, 621.82 )
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( -149.08, 294.875 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 1
-
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
+
+[node name="Start" parent="YSort/Player/LaserBeam" index="0"]
+frame = 1
+
+[node name="Sprite" parent="YSort/Player/LaserBeam/End" index="1"]
+frame = 0
 
 [node name="Detector" parent="YSort" index="1" instance=ExtResource( 2 )]
 position = Vector2( 400.539, 431.733 )
@@ -86,6 +89,9 @@ position = Vector2( 263.322, 397.137 )
 
 [node name="Hostage2" parent="YSort" index="16" instance=ExtResource( 3 )]
 position = Vector2( 585.232, 558.407 )
+
+[node name="CanvasLayer" parent="." index="6"]
+pause_mode = 2
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "Lab Level - 1"

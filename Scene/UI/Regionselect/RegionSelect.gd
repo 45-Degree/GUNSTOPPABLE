@@ -2,10 +2,10 @@ extends Control
 
 func _ready():
 	Transition.wipeIn()
-	if Save.data.has("Region2") and Save.data["Region2"]:
-		$MarginContainer/VBoxContainer/LabRegion.disabled = false
-	if Save.data.has("Region3") and Save.data["Region3"]:
-		$MarginContainer/VBoxContainer/LabRegion.disabled = false
+	if Save.data.has("Region2"):
+		$LabRegion.disabled = false
+	if Save.data.has("Region3"):
+		$ForestRegion.disabled = false
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("k"):

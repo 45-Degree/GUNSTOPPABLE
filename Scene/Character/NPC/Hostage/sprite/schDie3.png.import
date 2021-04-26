@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LaserBeam_end.png-c16eb5b34c842adc2d07a36d543441a0.stex"
+path="res://.import/schDie3.png-ddad1b780d6792ad8bb11c87c74cac60.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Character/Player/LaserBeam/LaserBeam_end.png"
-dest_files=[ "res://.import/LaserBeam_end.png-c16eb5b34c842adc2d07a36d543441a0.stex" ]
+source_file="res://Scene/Character/NPC/Hostage/sprite/schDie3.png"
+dest_files=[ "res://.import/schDie3.png-ddad1b780d6792ad8bb11c87c74cac60.stex" ]
 
 [params]
 

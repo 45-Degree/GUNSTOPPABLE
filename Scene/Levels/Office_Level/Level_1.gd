@@ -72,7 +72,11 @@ func _process(delta):
 func _on_Button_pressed():
 		Transition.wipeOut()
 		yield(get_tree().create_timer(0.5),"timeout")
-		get_tree().change_scene("res://Scene/Levels/Office_Level/Level_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
+		if get_tree().current_scene.name == "Level_20":
+			get_tree().change_scene("res://Scene/Levels/LabLevel/LabLevel_1.tscn")
+		else:
+			get_tree().change_scene("res://Scene/Levels/Office_Level/Level_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
+
 func _on_Button2_pressed():
 	Transition.wipeOut()
 	control.hide()
@@ -135,7 +139,6 @@ func _on_Button3_button_up():
 	yield(get_tree().create_timer(0.5),"timeout")
 	get_tree().change_scene("res://Scene/UI/MainMenu/MainMenu.tscn")
 
-
 func _on_Button4_pressed():
 	option.hide()
 	pause.show()
@@ -159,9 +162,9 @@ func _spawn():
 
 func _on_level_Completed():
 	if soundplay == false:
+		$CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer3.hide()
 		SoundManager.play_se("res://Sound/SFX/Object/ExitUnlock.wav")
 		soundplay = true
-
 
 func _on_Button3_pressed():
 		Transition.wipeOut()
