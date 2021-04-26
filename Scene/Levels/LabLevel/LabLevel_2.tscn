@@ -30,7 +30,7 @@ position = Vector2( 717.478, 627.432 )
 position = Vector2( 14.9165, 291.873 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 4
+frame = 1
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
@@ -47,61 +47,62 @@ position = Vector2( 369.078, 325.957 )
 [node name="Terrorist4" parent="YSort" index="4" instance=ExtResource( 3 )]
 position = Vector2( 554.287, 545.814 )
 
-[node name="HeaterFront" parent="YSort" index="5" instance=ExtResource( 4 )]
-position = Vector2( 192.246, 162.473 )
-
-[node name="HeaterFront2" parent="YSort" index="6" instance=ExtResource( 4 )]
-position = Vector2( 161.823, 516.319 )
-
-[node name="HeaterFront3" parent="YSort" index="7" instance=ExtResource( 4 )]
-position = Vector2( 335.19, 299.368 )
-
-[node name="Lab_TableHorizontal" parent="YSort" index="8" instance=ExtResource( 6 )]
+[node name="Lab_TableHorizontal" parent="YSort" index="5" instance=ExtResource( 6 )]
 position = Vector2( 103.575, 513.78 )
 
-[node name="Lab_TableHorizontal_back" parent="YSort" index="9" instance=ExtResource( 7 )]
+[node name="Lab_TableHorizontal_back" parent="YSort" index="6" instance=ExtResource( 7 )]
 position = Vector2( 436.707, 531.224 )
 
-[node name="Lab_TableHorizontal_back2" parent="YSort" index="10" instance=ExtResource( 7 )]
+[node name="Lab_TableHorizontal_back2" parent="YSort" index="7" instance=ExtResource( 7 )]
 position = Vector2( 554.509, 530.594 )
 
-[node name="Detector" parent="YSort" index="11" instance=ExtResource( 8 )]
+[node name="Detector" parent="YSort" index="8" instance=ExtResource( 8 )]
 position = Vector2( 560.045, 304.051 )
 rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
-[node name="Detector2" parent="YSort" index="12" instance=ExtResource( 8 )]
+[node name="Detector2" parent="YSort" index="9" instance=ExtResource( 8 )]
 position = Vector2( 591.96, 304.051 )
 rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
-[node name="Detector3" parent="YSort" index="13" instance=ExtResource( 8 )]
+[node name="Detector3" parent="YSort" index="10" instance=ExtResource( 8 )]
 position = Vector2( 624.111, 304.051 )
 rotation = 3.14159
 scale = Vector2( 2.3, 2.3 )
 
-[node name="Container_H" parent="YSort" index="14" instance=ExtResource( 5 )]
+[node name="Container_H" parent="YSort" index="11" instance=ExtResource( 5 )]
 position = Vector2( 113.614, 222.107 )
 
-[node name="Star" parent="YSort" index="15" instance=ExtResource( 9 )]
+[node name="Star" parent="YSort" index="12" instance=ExtResource( 9 )]
 position = Vector2( 95.5733, 180.316 )
 
-[node name="Star2" parent="YSort" index="16" instance=ExtResource( 9 )]
+[node name="Star2" parent="YSort" index="13" instance=ExtResource( 9 )]
 position = Vector2( 93.4544, 582.912 )
 
-[node name="Star3" parent="YSort" index="17" instance=ExtResource( 9 )]
+[node name="Star3" parent="YSort" index="14" instance=ExtResource( 9 )]
 position = Vector2( 432.482, 276.728 )
 
-[node name="Hostage" parent="YSort" index="18" instance=ExtResource( 2 )]
+[node name="Hostage" parent="YSort" index="15" instance=ExtResource( 2 )]
 position = Vector2( 131.046, 538.769 )
 
-[node name="Hostage2" parent="YSort" index="19" instance=ExtResource( 2 )]
+[node name="Hostage2" parent="YSort" index="16" instance=ExtResource( 2 )]
 position = Vector2( 426.201, 578.291 )
 
-[node name="Hostage3" parent="YSort" index="20" instance=ExtResource( 2 )]
+[node name="Hostage3" parent="YSort" index="17" instance=ExtResource( 2 )]
 position = Vector2( 305.953, 256.228 )
+
+[node name="RedBarrel" parent="YSort" index="18" instance=ExtResource( 4 )]
+position = Vector2( 181.612, 161.875 )
+
+[node name="RedBarrel2" parent="YSort" index="19" instance=ExtResource( 4 )]
+position = Vector2( 322.52, 299.415 )
+
+[node name="RedBarrel3" parent="YSort" index="20" instance=ExtResource( 4 )]
+position = Vector2( 158.146, 508.756 )
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "Lab Level - 2"
 
 [editable path="YSort/Player"]
+[editable path="YSort/Player/LaserBeam"]

@@ -1,7 +1,5 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://Scene/Object/Lab_region/Mirror/Bounce.gd" type="Script" id=2]
-[ext_resource path="res://Scene/Character/Player/LaserBeam/Laser Beam.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Object/Lab_region/Mirror/Mirror_sprite.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -78,18 +76,19 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 14.469, 15.8816 )
 
-[node name="Mirror" type="KinematicBody2D" groups=[
+[node name="FakeMirror" type="KinematicBody2D" groups=[
 "Bounce",
 ]]
 collision_layer = 32
-script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+disabled = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.225, 0.15 )
 frames = SubResource( 14 )
+frame = 4
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -98,13 +97,7 @@ collision_mask = 132
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 15 )
-
-[node name="LaserBeam" parent="." instance=ExtResource( 3 )]
-position = Vector2( 24.3366, 0 )
-enabled = false
-collide_with_areas = false
+disabled = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
-
-[editable path="LaserBeam"]
