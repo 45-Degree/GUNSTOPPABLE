@@ -842,12 +842,15 @@ position = Vector2( 640.028, 360.286 )
 remote_path = NodePath("../../../Camera2D")
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 4
+frame = 2
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 50 )
 
 [node name="Start" parent="YSort/Player/LaserBeam" index="0"]
+frame = 1
+
+[node name="Sprite" parent="YSort/Player/LaserBeam/End" index="1"]
 frame = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

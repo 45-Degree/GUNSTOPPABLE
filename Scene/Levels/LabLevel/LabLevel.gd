@@ -137,7 +137,7 @@ func _on_ExitButton_pressed():
 	get_tree().paused = false
 	Transition.wipeOut()
 	yield(get_tree().create_timer(0.5),"timeout")
-	get_tree().change_scene("res://Scene/UI/MainMenu/MainMenu.tscn")
+	get_tree().change_scene("res://Scene/UI/LabLevelSelect/LabLevel_select.tscn")
 
 func _on_RetryButton_pressed():
 	Transition.wipeOut()

@@ -137,7 +137,7 @@ func _on_Button3_button_up():
 	get_tree().paused = false
 	Transition.wipeOut()
 	yield(get_tree().create_timer(0.5),"timeout")
-	get_tree().change_scene("res://Scene/UI/MainMenu/MainMenu.tscn")
+	get_tree().change_scene("res://Scene/UI/LevelSelect/Level_select.tscn")
 
 func _on_Button4_pressed():
 	option.hide()
