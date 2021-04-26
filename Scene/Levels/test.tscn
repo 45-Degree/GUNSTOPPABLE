@@ -17,16 +17,18 @@ extents = Vector2( 447.771, 10 )
 
 [node name="Button" parent="." instance=ExtResource( 2 )]
 position = Vector2( 167.469, 192.296 )
-rotator = NodePath("../Rotator")
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 149.431, 63.6478 )
 
 [node name="AnimatedSprite" parent="Player" index="1"]
-frame = 1
+frame = 2
 
 [node name="AnimationTree" parent="Player" index="3"]
 parameters/playback = SubResource( 1 )
+
+[node name="Sprite" parent="Player/LaserBeam/End" index="1"]
+frame = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 2147483650
@@ -51,8 +53,7 @@ shape = SubResource( 3 )
 position = Vector2( 520.662, 243.475 )
 
 [node name="Rotator" parent="." instance=ExtResource( 3 )]
-position = Vector2( 331.123, 139.343 )
+position = Vector2( 358.753, 158.74 )
 
 [editable path="Player"]
-
-[editable path="Rotator"]
+[editable path="Player/LaserBeam"]

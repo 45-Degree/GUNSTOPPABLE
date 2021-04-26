@@ -3,6 +3,8 @@ onready var animationPlayer = $AnimationPlayer
 export(int, "Bottom", "Right", "Top", "Left") var LaserSpawn
 onready var state = UNSHOT
 onready var LaserBeam = $LaserBeam
+onready var Start = $LaserBeam/Start
+onready var End = $LaserBeam/End
 onready var ForceMovement =  []
 var velocity = Vector2.ZERO
 
@@ -42,15 +44,23 @@ func _process(delta):
 			if LaserSpawn == 0:
 				LaserBeam.global_position = $BulletSpawnDown.get_global_position()
 				LaserBeam.cast_to = Vector2(0,2000)
+				Start.rotation_degrees = 180
+				End.rotation_degrees = 180
 			if LaserSpawn == 1:
 				LaserBeam.global_position = $BulletSpawnRight.get_global_position()
 				LaserBeam.cast_to = Vector2(2000,0)
+				Start.rotation_degrees = 90
+				End.rotation_degrees = 90
 			if LaserSpawn == 2:
 				LaserBeam.global_position = $BulletSpawnUp.get_global_position()
 				LaserBeam.cast_to = Vector2(0,-2000)
+				Start.rotation_degrees = 0
+				End.rotation_degrees = 0
 			if LaserSpawn == 3:
 				LaserBeam.global_position = $BulletSpawnLeft.get_global_position()
 				LaserBeam.cast_to = Vector2(-2000,0)
+				Start.rotation_degrees = 270
+				End.rotation_degrees = 270
 			LaserBeam.enabled = true
 			LaserBeam.visible = true
 			$LaserBeam/Area2D/CollisionShape2D.disabled = false

@@ -3,6 +3,8 @@ onready var animationPlayer = $AnimationPlayer
 export(int, "Left", "Right", "Top", "Bottom") var LaserSpawn
 onready var state = UNSHOT
 onready var LaserBeam = $LaserBeam
+onready var Start = $LaserBeam/Start
+onready var End = $LaserBeam/End
 onready var ForceMovement =  []
 var velocity = Vector2.ZERO
 
@@ -21,7 +23,7 @@ func _process(delta):
 		velocity = velocity.move_toward(ForceMovement[0] ,5000* delta)
 	elif ForceMovement.size() == 0:
 		velocity = Vector2.ZERO
-	
+
 	match state:
 		UNSHOT:
 			LaserBeam.enabled = false
@@ -32,18 +34,26 @@ func _process(delta):
 			if LaserSpawn == 0:
 				LaserBeam.global_position = $BulletSpawnLeft.get_global_position()
 				LaserBeam.cast_to = Vector2(-2000,0)
+				Start.rotation_degrees = 190
+				End.rotation_degrees = 270
 				$Sprite2.texture = load("res://Scene/Object/Lab_region/GlassObject/tile000.png")
 			if LaserSpawn == 1:
 				LaserBeam.global_position = $BulletSpawnRight.get_global_position()
 				LaserBeam.cast_to = Vector2(2000,0)
+				Start.rotation_degrees = 270
+				End.rotation_degrees = 90
 				$Sprite2.texture = load("res://Scene/Object/Lab_region/GlassObject/tile001.png")
 			if LaserSpawn == 2:
 				LaserBeam.global_position = $BulletSpawnUp.get_global_position()
 				LaserBeam.cast_to = Vector2(0,-2000)
+				Start.rotation_degrees = 180
+				End.rotation_degrees = 0
 				$Sprite2.texture = load("res://Scene/Object/Lab_region/GlassObject/tile002.png")
 			if LaserSpawn == 3:
 				LaserBeam.global_position = $BulletSpawnDown.get_global_position()
 				LaserBeam.cast_to = Vector2(0,2000)
+				Start.rotation_degrees = 0
+				End.rotation_degrees = 180
 				$Sprite2.texture = load("res://Scene/Object/Lab_region/GlassObject/tile003.png")
 			LaserBeam.enabled = true
 			LaserBeam.visible = true
