@@ -96,7 +96,7 @@ Direction = "MovingLeft"
 position = Vector2( -72.8051, 48.1339 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 4
+frame = 5
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
@@ -154,7 +154,7 @@ position = Vector2( 80.3845, -111.231 )
 position = Vector2( 176.248, 0.667419 )
 
 [node name="AnimatedSprite" parent="YSort/CollisionMirror" index="1"]
-frame = 3
+frame = 6
 
 [node name="CollisionShape2D" parent="YSort/CollisionMirror/Area2D" index="0"]
 position = Vector2( 174.197, 0 )
