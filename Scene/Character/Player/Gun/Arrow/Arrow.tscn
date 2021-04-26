@@ -6,39 +6,39 @@
 [ext_resource path="res://Scene/Character/Player/Gun/Arrow/FireArrow.png" type="Texture" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 238, 598 )
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 144, 588 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 238, 0, 238, 598 )
+region = Rect2( 0, 0, 238, 598 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 476, 0, 238, 598 )
+region = Rect2( 238, 0, 238, 598 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 714, 0, 238, 598 )
+region = Rect2( 476, 0, 238, 598 )
 
 [sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 144, 588 )
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 714, 0, 238, 598 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
-"loop": true,
-"name": "Flame",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 5 ) ],
+"frames": [ SubResource( 1 ) ],
 "loop": true,
 "name": "Normal",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "Flame",
 "speed": 5.0
 } ]
 
@@ -81,6 +81,7 @@ wait_time = 5.0
 autostart = true
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_Hitbox_area_entered"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 [editable path="Hitbox"]

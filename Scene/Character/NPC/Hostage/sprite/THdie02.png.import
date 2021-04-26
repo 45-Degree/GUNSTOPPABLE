@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bushAsset03.png-596736e7df39feff5ead77bd5dbfa9bd.stex"
+path="res://.import/THdie02.png-7269baf880d339738e2ce084d60e8bd3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Object/Forest_region/Bush/bushAsset03.png"
-dest_files=[ "res://.import/bushAsset03.png-596736e7df39feff5ead77bd5dbfa9bd.stex" ]
+source_file="res://Scene/Character/NPC/Hostage/sprite/THdie02.png"
+dest_files=[ "res://.import/THdie02.png-7269baf880d339738e2ce084d60e8bd3.stex" ]
 
 [params]
 

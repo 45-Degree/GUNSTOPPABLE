@@ -1,59 +1,64 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Scene/Character/Player/PlayerLaser.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scene/Object/Lab_region/Button/Button.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scene/Object/Lab_region/Rotator/Rotator.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Object/Forest_region/Bush/Bush.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/Character/Player/PlayerArrow.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Object/Forest_region/Vine/Vine.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Character/NPC/Hostage/Hostage.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Object/Forest_region/CampFire/CampFire.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Object/Forest_region/Box/Box.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/Object/Forest_region/Box/BoxH.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scene/Object/Forest_region/Box/BoxL.tscn" type="PackedScene" id=8]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
-
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 34.2979, 227.597 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 447.771, 10 )
 
 [node name="Node" type="Node"]
 
-[node name="Button" parent="." instance=ExtResource( 2 )]
-position = Vector2( 167.469, 192.296 )
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 149.431, 63.6478 )
-
-[node name="AnimatedSprite" parent="Player" index="1"]
-frame = 2
-
-[node name="AnimationTree" parent="Player" index="3"]
-parameters/playback = SubResource( 1 )
-
-[node name="Sprite" parent="Player/LaserBeam/End" index="1"]
-frame = 2
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=[
+"Wall",
+]]
 collision_layer = 2147483650
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 0, 200.921 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 639.803, 200.921 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 274.19, 338.617 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 274.19, 1.49826 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Hostage" parent="." instance=ExtResource( 4 )]
 position = Vector2( 520.662, 243.475 )
 
-[node name="Rotator" parent="." instance=ExtResource( 3 )]
-position = Vector2( 358.753, 158.74 )
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 135.723, 70.6393 )
 
-[editable path="Player"]
-[editable path="Player/LaserBeam"]
+[node name="Vine" parent="." instance=ExtResource( 3 )]
+position = Vector2( 426.217, 73.8141 )
+
+[node name="CampFire" parent="." instance=ExtResource( 5 )]
+position = Vector2( 304.304, 83.0485 )
+
+[node name="Bush2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 292.398, 238.614 )
+
+[node name="Bush3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 142.389, 260.044 )
+
+[node name="Bush4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 177.312, 198.135 )
+
+[node name="Bush" parent="." instance=ExtResource( 1 )]
+position = Vector2( 402.406, 238.904 )

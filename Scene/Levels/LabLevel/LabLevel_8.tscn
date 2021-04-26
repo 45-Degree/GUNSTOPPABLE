@@ -31,10 +31,13 @@ position = Vector2( 694.061, 334.859 )
 position = Vector2( 433.367, -130.212 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 1
+frame = 3
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
+
+[node name="Sprite" parent="YSort/Player/LaserBeam/End" index="1"]
+frame = 0
 
 [node name="Hostage" parent="YSort" index="1" instance=ExtResource( 4 )]
 position = Vector2( 80.4382, 289.084 )
@@ -78,33 +81,23 @@ scale = Vector2( 2.3, 2.3 )
 [node name="DEchanger" parent="YSort" index="12" instance=ExtResource( 7 )]
 position = Vector2( 354.128, 21.0844 )
 
-[node name="DEchanger3" parent="YSort" index="13" instance=ExtResource( 7 )]
-position = Vector2( 75.5621, 20.6357 )
-LaserSpawn = 3
-
-[node name="DEchanger4" parent="YSort" index="14" instance=ExtResource( 7 )]
-position = Vector2( -2.21961, 19.9286 )
-
-[node name="DEchanger5" parent="YSort" index="15" instance=ExtResource( 7 )]
-position = Vector2( 160.415, 17.8073 )
-LaserSpawn = 0
-
-[node name="DEchanger2" parent="YSort" index="16" instance=ExtResource( 7 )]
+[node name="DEchanger2" parent="YSort" index="13" instance=ExtResource( 7 )]
 position = Vector2( 351.476, 260.276 )
 
-[node name="HeaterFront" parent="YSort" index="17" instance=ExtResource( 3 )]
+[node name="HeaterFront" parent="YSort" index="14" instance=ExtResource( 3 )]
 position = Vector2( 21.9635, 272.534 )
 
-[node name="HeaterFront5" parent="YSort" index="18" instance=ExtResource( 3 )]
+[node name="HeaterFront5" parent="YSort" index="15" instance=ExtResource( 3 )]
 position = Vector2( -23.4724, 239.571 )
 
-[node name="HeaterFront6" parent="YSort" index="19" instance=ExtResource( 3 )]
+[node name="HeaterFront6" parent="YSort" index="16" instance=ExtResource( 3 )]
 position = Vector2( 185.889, 241.352 )
 
-[node name="HeaterFront2" parent="YSort" index="20" instance=ExtResource( 3 )]
+[node name="HeaterFront2" parent="YSort" index="17" instance=ExtResource( 3 )]
 position = Vector2( 136.584, 271.785 )
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "LabLevel - 8"
 
 [editable path="YSort/Player"]
+[editable path="YSort/Player/LaserBeam"]

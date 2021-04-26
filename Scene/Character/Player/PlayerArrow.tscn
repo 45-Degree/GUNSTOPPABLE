@@ -350,7 +350,7 @@ MAX_SPEED = 200
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 15 )
 animation = "Idle"
-frame = 4
+frame = 1
 
 [node name="Gun" type="Node2D" parent="."]
 position = Vector2( 0.236725, -4.63605 )

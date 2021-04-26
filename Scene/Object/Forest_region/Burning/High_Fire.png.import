@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bushAsset04.png-7e25be8164349afcc95bdd31e11ec5b5.stex"
+path="res://.import/High_Fire.png-9f580bfc67cf4327e8f854987cb470aa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Object/Forest_region/Bush/bushAsset04.png"
-dest_files=[ "res://.import/bushAsset04.png-7e25be8164349afcc95bdd31e11ec5b5.stex" ]
+source_file="res://Scene/Object/Forest_region/Burning/High_Fire.png"
+dest_files=[ "res://.import/High_Fire.png-9f580bfc67cf4327e8f854987cb470aa.stex" ]
 
 [params]
 
