@@ -95,7 +95,6 @@ position = Vector2( 2.21085, -5.38688 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 1 )
 animation = "Vine_1"
-frame = 1
 playing = true
 
 [node name="Burn" type="AnimatedSprite" parent="."]
