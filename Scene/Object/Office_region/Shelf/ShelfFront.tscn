@@ -33,7 +33,7 @@ region_rect = Rect2( 67.4046, 280.007, 932.812, 1529.07 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 position = Vector2( 2.13391, -0.539402 )
-frame = 9
+frame = 11
 
 [node name="CollisionShape2D" parent="." index="2"]
 visible = false
@@ -65,4 +65,5 @@ collision_layer = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox2" index="0"]
 position = Vector2( 0.0718724, 8.77004 )
 shape = SubResource( 4 )
+
 [connection signal="area_entered" from="Hurtbox2" to="." method="_on_Hurtbox2_area_entered"]

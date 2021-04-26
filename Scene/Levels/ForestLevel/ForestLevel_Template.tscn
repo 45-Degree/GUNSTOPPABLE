@@ -3,7 +3,6 @@
 [ext_resource path="res://Sprite/Tilemap/Tile_connectors_LAB.png" type="Texture" id=1]
 [ext_resource path="res://Scene/UI/Camera2D.gd" type="Script" id=2]
 [ext_resource path="res://Sprite/Tilemap/Tiles_Mix_LAB2.png" type="Texture" id=3]
-[ext_resource path="res://Scene/UI/Star/Star_Crack.png" type="Texture" id=4]
 [ext_resource path="res://Scene/Character/Player/PlayerArrow.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://karma future.ttf" type="DynamicFontData" id=7]
@@ -39,6 +38,7 @@
 [ext_resource path="res://Scene/UI/Overlay/PauseOverlay.png" type="Texture" id=37]
 [ext_resource path="res://Sprite/Tilemap/Tiles_SET_JUNGLEWATER.png" type="Texture" id=38]
 [ext_resource path="res://Sprite/Tilemap/Tiles_SET_JUNGLE.png" type="Texture" id=39]
+[ext_resource path="res://Sprite/Tilemap/Tiles_SET_JUNGLEGROUND3.png" type="Texture" id=40]
 [ext_resource path="res://Sprite/Tilemap/Tiles_SET_JUNGLEGROUND1 (1).png" type="Texture" id=41]
 
 [sub_resource type="Animation" id=1]
@@ -793,6 +793,69 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 1, 32, 0 )
 34/shape_one_way_margin = 0.0
 34/shapes = [  ]
 34/z_index = 0
+35/name = "Tiles_SET_JUNGLEGROUND3.png 35"
+35/texture = ExtResource( 40 )
+35/tex_offset = Vector2( 0, 0 )
+35/modulate = Color( 1, 1, 1, 1 )
+35/region = Rect2( 5, 41, 180, 32 )
+35/tile_mode = 2
+35/autotile/icon_coordinate = Vector2( 0, 0 )
+35/autotile/tile_size = Vector2( 32, 32 )
+35/autotile/spacing = 5
+35/autotile/occluder_map = [  ]
+35/autotile/navpoly_map = [  ]
+35/autotile/priority_map = [  ]
+35/autotile/z_index_map = [  ]
+35/occluder_offset = Vector2( 0, 0 )
+35/navigation_offset = Vector2( 0, 0 )
+35/shape_offset = Vector2( 0, 0 )
+35/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+35/shape_one_way = false
+35/shape_one_way_margin = 0.0
+35/shapes = [  ]
+35/z_index = 0
+36/name = "Tiles_SET_JUNGLEGROUND3.png 36"
+36/texture = ExtResource( 40 )
+36/tex_offset = Vector2( 0, 0 )
+36/modulate = Color( 1, 1, 1, 1 )
+36/region = Rect2( 5, 77, 180, 32 )
+36/tile_mode = 2
+36/autotile/icon_coordinate = Vector2( 0, 0 )
+36/autotile/tile_size = Vector2( 32, 32 )
+36/autotile/spacing = 5
+36/autotile/occluder_map = [  ]
+36/autotile/navpoly_map = [  ]
+36/autotile/priority_map = [  ]
+36/autotile/z_index_map = [  ]
+36/occluder_offset = Vector2( 0, 0 )
+36/navigation_offset = Vector2( 0, 0 )
+36/shape_offset = Vector2( 0, 0 )
+36/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+36/shape_one_way = false
+36/shape_one_way_margin = 0.0
+36/shapes = [  ]
+36/z_index = 0
+37/name = "Tiles_SET_JUNGLEGROUND3.png 37"
+37/texture = ExtResource( 40 )
+37/tex_offset = Vector2( 0, 0 )
+37/modulate = Color( 1, 1, 1, 1 )
+37/region = Rect2( 5, 5, 180, 32 )
+37/tile_mode = 2
+37/autotile/icon_coordinate = Vector2( 0, 0 )
+37/autotile/tile_size = Vector2( 32, 32 )
+37/autotile/spacing = 5
+37/autotile/occluder_map = [  ]
+37/autotile/navpoly_map = [  ]
+37/autotile/priority_map = [  ]
+37/autotile/z_index_map = [  ]
+37/occluder_offset = Vector2( 0, 0 )
+37/navigation_offset = Vector2( 0, 0 )
+37/shape_offset = Vector2( 0, 0 )
+37/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+37/shape_one_way = false
+37/shape_one_way_margin = 0.0
+37/shapes = [  ]
+37/z_index = 0
 38/name = "Tiles_SET_JUNGLEWATER.png 38"
 38/texture = ExtResource( 38 )
 38/tex_offset = Vector2( 0, 0 )
@@ -1150,7 +1213,7 @@ position = Vector2( 640.028, 360.286 )
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 3
+frame = 1
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 50 )
@@ -1162,24 +1225,6 @@ pause_mode = 2
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="NinePatchRect" parent="CanvasLayer/Control"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -229.5
-margin_top = -122.0
-margin_right = 229.5
-margin_bottom = 122.0
-texture = ExtResource( 37 )
-patch_margin_left = 39
-patch_margin_top = 33
-patch_margin_right = 46
-patch_margin_bottom = 29
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1258,37 +1303,11 @@ stretch_mode = 6
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer"]
 visible = false
-margin_top = 127.0
-margin_right = 478.0
-margin_bottom = 207.0
+margin_top = 119.0
+margin_right = 388.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 80, 80 )
 alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer3"]
-margin_left = 115.0
-margin_right = 195.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 80, 80 )
-texture = ExtResource( 4 )
-expand = true
-stretch_mode = 6
-
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer3"]
-margin_left = 199.0
-margin_right = 279.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 80, 80 )
-texture = ExtResource( 4 )
-expand = true
-stretch_mode = 6
-
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer3"]
-margin_left = 283.0
-margin_right = 363.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 80, 80 )
-texture = ExtResource( 4 )
-expand = true
-stretch_mode = 6
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer"]
 margin_top = 119.0

@@ -49,11 +49,10 @@ visible = false
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="." index="1"]
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 5 )
-frame = 1
 playing = true
 
 [node name="AnimatedSprite" parent="." index="2"]
-frame = 56
+frame = 19
 
 [node name="CollisionShape2D" parent="." index="3"]
 shape = SubResource( 6 )

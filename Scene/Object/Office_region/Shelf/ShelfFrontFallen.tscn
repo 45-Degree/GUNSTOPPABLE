@@ -8,7 +8,9 @@ extents = Vector2( 5.33823, 9.02659 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 5.25953, 9.10312 )
 
-[node name="Node2D" type="StaticBody2D"]
+[node name="Node2D" type="StaticBody2D" groups=[
+"Laser",
+]]
 scale = Vector2( 4, 4 )
 collision_layer = 8
 
