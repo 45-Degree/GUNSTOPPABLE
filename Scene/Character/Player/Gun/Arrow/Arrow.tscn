@@ -66,6 +66,7 @@ animation = "Normal"
 position = Vector2( 14.1801, -0.0460582 )
 rotation = 1.5708
 shape = SubResource( 7 )
+disabled = true
 
 [node name="Hitbox" parent="." instance=ExtResource( 1 )]
 position = Vector2( 14.2355, 0 )
