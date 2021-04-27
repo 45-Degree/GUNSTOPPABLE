@@ -119,10 +119,16 @@ Direction = "MovingDown"
 position = Vector2( 17.669, 252.941 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 4
+frame = 5
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
+
+[node name="Start" parent="YSort/Player/LaserBeam" index="0"]
+frame = 0
+
+[node name="Sprite" parent="YSort/Player/LaserBeam/End" index="1"]
+frame = 1
 
 [node name="Terrorist" parent="YSort" index="1" instance=ExtResource( 3 )]
 position = Vector2( 300.722, -60.7728 )

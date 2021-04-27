@@ -4,7 +4,7 @@
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
-
+export var flaming = false
 onready var animatedSprite = $AnimatedSprite
 
 func _ready():
@@ -62,12 +62,13 @@ radius = 19.7839
 ]]
 scale = Vector2( 3, 3 )
 script = SubResource( 1 )
+flaming = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0.568144, 0.263495 )
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 8 )
-frame = 4
+frame = 5
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -76,4 +77,5 @@ collision_mask = 56
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 9 )
+
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

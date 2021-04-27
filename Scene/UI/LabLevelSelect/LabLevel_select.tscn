@@ -1,12 +1,15 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scene/UI/button/LevelSelectLab/hover0.png" type="Texture" id=2]
+[ext_resource path="res://Scene/UI/LabLevelSelect/LevelPic/2-1.png" type="Texture" id=3]
 [ext_resource path="res://Scene/UI/button/LevelSelectLab/push0.png" type="Texture" id=4]
 [ext_resource path="res://Scene/UI/button/LevelSelectLab/still0.png" type="Texture" id=5]
 [ext_resource path="res://Scene/UI/Mouse_cursor.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/UI/LabLevelSelect/LabLevel_select.gd" type="Script" id=7]
+[ext_resource path="res://Scene/UI/LabLevelSelect/LevelPic/LEVELFRAMELABREBIRTH.png" type="Texture" id=8]
 [ext_resource path="res://Font/PIXEL_20.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Scene/UI/LabLevelSelect/Level_Select_Lab.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 33
@@ -28,13 +31,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Level_Select_Lab" type="Sprite" parent="Control"]
+position = Vector2( 319.193, 180.129 )
+scale = Vector2( 0.333717, 0.335228 )
+texture = ExtResource( 10 )
+
 [node name="ColorRect" type="ColorRect" parent="Control"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0.929412, 1, 0.435294 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+margin_left = 69.1068
+margin_top = 55.2151
+margin_right = 309.107
+margin_bottom = 295.215
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LEVELFRAMELABREBIRTH" type="Sprite" parent="Control/TextureRect"]
+position = Vector2( 120.698, 119.912 )
+texture = ExtResource( 8 )
 
 [node name="MarginContainer" type="MarginContainer" parent="Control"]
 margin_left = 20.0

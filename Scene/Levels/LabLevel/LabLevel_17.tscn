@@ -48,10 +48,13 @@ rotator = NodePath("../../YSort/Rotator3")
 position = Vector2( -28.569, 248.156 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 4
+frame = 2
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
+
+[node name="Sprite" parent="YSort/Player/LaserBeam/End" index="1"]
+frame = 0
 
 [node name="RedBarrel" parent="YSort" index="1" instance=ExtResource( 4 )]
 position = Vector2( 258.054, 48.7696 )

@@ -1,6 +1,6 @@
 extends Node
 
-onready var levelpic = $Control/MarginContainer/VBoxContainer/HBoxContainer/TextureRect
+onready var levelpic = $Control/TextureRect
 
 func _ready():
 	Transition.wipeIn()
@@ -35,5 +35,5 @@ func _on_buttonQuite_button_up():
 
 func _button_entered(which):
 	pass
-#	if which.disabled == false:
-#		levelpic.texture = load("res://Scene/UI/LevelSelect/LevelPic/LevelPic_"+ str(int(which.name)) +".png")
+	if which.disabled == false and int(which.name) < 6:
+		levelpic.texture = load("res://Scene/UI/ForestLevelSelect/LevelPic/3-"+ str(int(which.name)) +".png")

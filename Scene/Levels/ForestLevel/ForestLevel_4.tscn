@@ -22,13 +22,10 @@ tile_data = PoolIntArray( -131077, 34, 1, -131076, 34, 1, -131075, 34, 1, -13107
 position = Vector2( 0.245499, 103.57 )
 
 [node name="topLeft" parent="Camera2D/Limits" index="0"]
-position = Vector2( -92.2073, 57.8926 )
+position = Vector2( -92.2073, -71.2877 )
 
 [node name="bottomRight" parent="Camera2D/Limits" index="1"]
-position = Vector2( 562.028, 464.286 )
-
-[node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 0
+position = Vector2( 537.083, 499.922 )
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )

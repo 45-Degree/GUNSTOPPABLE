@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scene/UI/button/LevelSelectForest/hover_0.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Scene/UI/button/LevelSelectForest/push_0.png" type="Texture" id=4]
 [ext_resource path="res://Scene/UI/button/LevelSelectForest/still_0.png" type="Texture" id=5]
 [ext_resource path="res://Scene/UI/Mouse_cursor.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/UI/LevelSelect/LEVELFRAMENEW.png" type="Texture" id=7]
+[ext_resource path="res://Scene/UI/ForestLevelSelect/LevelPic/3-1.png" type="Texture" id=8]
 [ext_resource path="res://Font/PIXEL_20.tres" type="DynamicFont" id=9]
 
 [sub_resource type="DynamicFont" id=1]
@@ -35,6 +37,21 @@ color = Color( 0, 0.929412, 1, 0.435294 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+margin_left = 80.9575
+margin_top = 55.559
+margin_right = 320.957
+margin_bottom = 295.559
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LEVELFRAMENEW" type="Sprite" parent="Control"]
+position = Vector2( 201.745, 175.627 )
+texture = ExtResource( 7 )
 
 [node name="MarginContainer" type="MarginContainer" parent="Control"]
 margin_left = 20.0
@@ -118,7 +135,6 @@ margin_right = 88.0
 margin_bottom = 47.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-disabled = true
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 2 )
@@ -143,7 +159,6 @@ margin_right = 136.0
 margin_bottom = 47.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-disabled = true
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 2 )
@@ -168,7 +183,6 @@ margin_right = 184.0
 margin_bottom = 47.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-disabled = true
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 2 )
@@ -193,7 +207,6 @@ margin_right = 232.0
 margin_bottom = 47.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-disabled = true
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 2 )

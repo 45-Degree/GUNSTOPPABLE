@@ -81,9 +81,6 @@ position = Vector2( 243.805, 364.819 )
 [node name="AutoWalkWay14" parent="Bottom" index="11" instance=ExtResource( 13 )]
 position = Vector2( 243.805, 325.619 )
 
-[node name="AnimatedSprite" parent="Bottom/AutoWalkWay14" index="1"]
-frame = 0
-
 [node name="AutoWalkWay15" parent="Bottom" index="12" instance=ExtResource( 13 )]
 position = Vector2( 243.805, 288.008 )
 
@@ -216,10 +213,16 @@ position = Vector2( 364.56, 333.539 )
 position = Vector2( 34.2783, 183.925 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 2
+frame = 4
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
+
+[node name="Start" parent="YSort/Player/LaserBeam" index="0"]
+frame = 0
+
+[node name="Sprite" parent="YSort/Player/LaserBeam/End" index="1"]
+frame = 1
 
 [node name="Hostage" parent="YSort" index="1" instance=ExtResource( 2 )]
 position = Vector2( 329.624, 308.453 )

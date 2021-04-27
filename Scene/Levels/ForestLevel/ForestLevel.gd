@@ -134,6 +134,8 @@ func _on_NextLevelButton_pressed():
 	yield(get_tree().create_timer(0.5),"timeout")
 	if get_tree().current_scene.name == "ForestLevel_20":
 		get_tree().change_scene("res://Scene/UI/ForestLevelSelect/ForestLevel_select.tscn")
+	elif get_tree().current_scene.name == "ForestLevel_5":
+		get_tree().change_scene("res://Scene/UI/ForestLevelSelect/ForestLevel_select.tscn")
 	else:
 		get_tree().change_scene("res://Scene/Levels/ForestLevel/ForestLevel_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
 

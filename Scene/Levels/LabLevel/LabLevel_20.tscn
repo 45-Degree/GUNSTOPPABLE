@@ -45,7 +45,7 @@ rotator = NodePath("../../YSort/Rotator")
 position = Vector2( -59.7159, 280.952 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 4
+frame = 1
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )

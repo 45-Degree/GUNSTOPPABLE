@@ -3,7 +3,6 @@ extends StaticBody2D
 signal Hostage_Die
 signal Terrorist_Die
 var HostageAnim = 0
-var Die = false
 
 func _ready():
 	HostageAnim = int(rand_range(1,4))
@@ -12,7 +11,6 @@ func _ready():
 
 func _on_Hurtbox_area_entered(area):
 	$AnimatedSprite.play("HostageDie_" + str(HostageAnim))
-	Die = true
 	Singleton.emit_signal("Hostage_Die")
 	Singleton.hostagePosition = self.global_position
 	$Hurtbox/CollisionShape2D.set_deferred("disabled",true)

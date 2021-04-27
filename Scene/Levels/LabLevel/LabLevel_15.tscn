@@ -85,11 +85,11 @@ position = Vector2( 258.562, 218.445 )
 [node name="ConveryorObjectUP3" parent="Node2D" index="17" instance=ExtResource( 10 )]
 position = Vector2( 259.123, 176.914 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 4
-
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
+
+[node name="Sprite" parent="YSort/Player/LaserBeam/End" index="1"]
+frame = 0
 
 [node name="Container_H" parent="YSort" index="1" instance=ExtResource( 5 )]
 position = Vector2( 190.992, 259.218 )

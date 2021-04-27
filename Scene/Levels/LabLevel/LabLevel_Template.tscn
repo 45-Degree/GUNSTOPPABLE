@@ -842,7 +842,7 @@ position = Vector2( 640.028, 360.286 )
 remote_path = NodePath("../../../Camera2D")
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 2
+frame = 3
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 50 )
@@ -851,7 +851,7 @@ parameters/playback = SubResource( 50 )
 frame = 1
 
 [node name="Sprite" parent="YSort/Player/LaserBeam/End" index="1"]
-frame = 1
+frame = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource( 4 )
@@ -1261,7 +1261,6 @@ __meta__ = {
 }
 
 [node name="LevelLabel" type="Label" parent="CanvasLayer"]
-visible = false
 margin_left = 6.64816
 margin_top = 331.621
 margin_right = 114.648
