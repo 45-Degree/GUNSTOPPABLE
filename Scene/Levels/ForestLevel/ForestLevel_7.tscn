@@ -1,0 +1,149 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scene/Levels/ForestLevel/ForestLevel_Template.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/Character/NPC/Hostage/ForestHostage.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Character/NPC/Terrorist/Terrorist.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Object/Forest_region/Box/BoxH.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Object/Forest_region/Vine/Vine.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Object/Forest_region/Bush/Bush.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/Object/Forest_region/Bridge/BridgeVertical.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scene/Object/Forest_region/OilBarrel/OilBarrel.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scene/Object/Office_region/Detector/detector.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/Object/Office_region/Star/Star.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scene/Object/Forest_region/Bridge/BridgeHorizontal.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scene/Object/Forest_region/Box/Box.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scene/Object/Forest_region/CampFire/CampFire.tscn" type="PackedScene" id=13]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[node name="ForestLevel_7" instance=ExtResource( 1 )]
+
+[node name="TileMap" parent="." index="2"]
+tile_data = PoolIntArray( -458755, 34, 1, -458754, 34, 1, -458753, 34, 1, -524288, 34, 1, -524287, 34, 1, -524286, 34, 1, -524285, 34, 1, -524284, 34, 1, -524283, 34, 1, -524282, 34, 1, -524281, 34, 1, -524280, 34, 1, -524279, 34, 1, -524278, 34, 1, -524277, 34, 1, -524276, 34, 1, -524275, 34, 1, -524274, 34, 1, -524273, 34, 1, -524272, 34, 1, -524271, 34, 1, -524270, 34, 1, -524269, 34, 1, -524268, 34, 1, -524267, 34, 1, -524266, 34, 1, -524265, 34, 1, -393219, 34, 1, -393218, 34, 1, -393217, 34, 1, -458752, 34, 1, -458751, 34, 1, -458750, 34, 1, -458749, 34, 1, -458748, 34, 1, -458747, 34, 1, -458746, 34, 1, -458745, 34, 1, -458744, 32, 3, -458743, 33, 1, -458742, 33, 1, -458741, 33, 1, -458740, 33, 1, -458739, 33, 1, -458738, 33, 1, -458737, 33, 1, -458736, 33, 1, -458735, 33, 1, -458734, 33, 1, -458733, 33, 1, -458732, 32, 4, -458731, 34, 1, -458730, 34, 1, -458729, 34, 1, -327683, 34, 1, -327682, 34, 1, -327681, 34, 1, -393216, 34, 1, -393215, 32, 3, -393214, 33, 1, -393213, 33, 1, -393212, 33, 1, -393211, 33, 1, -393210, 33, 1, -393209, 33, 1, -393208, 33, 2, -393207, 51, 0, -393206, 51, 1, -393205, 51, 1, -393204, 51, 1, -393203, 51, 1, -393202, 51, 1, -393201, 51, 1, -393200, 51, 1, -393199, 51, 1, -393198, 51, 1, -393197, 51, 2, -393196, 34, 0, -393195, 34, 1, -393194, 34, 1, -393193, 34, 1, -262147, 34, 1, -262146, 34, 1, -262145, 34, 1, -327680, 34, 1, -327679, 34, 2, -327678, 51, 0, -327677, 51, 1, -327676, 51, 1, -327675, 51, 1, -327674, 41, 0, -327673, 42, 0, -327672, 43, 0, -327671, 52, 4, -327670, 52, 1, -327669, 52, 1, -327668, 53, 3, -327667, 52, 1, -327666, 52, 1, -327665, 52, 1, -327664, 52, 1, -327663, 52, 1, -327662, 53, 4, -327661, 52, 2, -327660, 34, 0, -327659, 34, 1, -327658, 34, 1, -327657, 34, 1, -196611, 34, 1, -196610, 34, 1, -196609, 34, 1, -262144, 34, 1, -262143, 34, 2, -262142, 52, 0, -262141, 52, 1, -262140, 52, 1, -262139, 52, 1, -262138, 38, 0, -262137, 39, 0, -262136, 40, 0, -262135, 52, 1, -262134, 52, 1, -262133, 52, 1, -262132, 52, 1, -262131, 52, 1, -262130, 52, 1, -262129, 52, 1, -262128, 52, 1, -262127, 53, 3, -262126, 52, 1, -262125, 52, 2, -262124, 34, 0, -262123, 34, 1, -262122, 34, 1, -262121, 34, 1, -131075, 34, 1, -131074, 34, 1, -131073, 34, 1, -196608, 34, 1, -196607, 34, 2, -196606, 52, 0, -196605, 52, 1, -196604, 52, 1, -196603, 53, 3, -196602, 38, 0, -196601, 39, 0, -196600, 47, 0, -196599, 42, 0, -196598, 42, 0, -196597, 42, 0, -196596, 42, 0, -196595, 42, 0, -196594, 42, 0, -196593, 42, 0, -196592, 42, 0, -196591, 42, 0, -196590, 42, 0, -196589, 43, 0, -196588, 34, 0, -196587, 34, 1, -196586, 34, 1, -196585, 34, 1, -65539, 34, 1, -65538, 34, 1, -65537, 34, 1, -131072, 34, 1, -131071, 34, 2, -131070, 52, 0, -131069, 52, 1, -131068, 52, 1, -131067, 52, 1, -131066, 38, 0, -131065, 39, 0, -131064, 39, 0, -131063, 39, 0, -131062, 39, 0, -131061, 39, 0, -131060, 39, 0, -131059, 39, 0, -131058, 39, 0, -131057, 39, 0, -131056, 39, 0, -131055, 39, 0, -131054, 39, 0, -131053, 40, 0, -131052, 34, 0, -131051, 34, 1, -131050, 34, 1, -131049, 34, 1, -3, 34, 1, -2, 33, 1, -1, 33, 1, -65536, 33, 1, -65535, 33, 2, -65534, 52, 0, -65533, 52, 1, -65532, 52, 1, -65531, 52, 1, -65530, 38, 0, -65529, 39, 0, -65528, 49, 0, -65527, 45, 0, -65526, 45, 0, -65525, 45, 0, -65524, 45, 0, -65523, 45, 0, -65522, 45, 0, -65521, 45, 0, -65520, 45, 0, -65519, 45, 0, -65518, 45, 0, -65517, 46, 0, -65516, 34, 0, -65515, 34, 1, -65514, 34, 1, -65513, 34, 1, 65533, 34, 1, 65534, 51, 1, 65535, 51, 1, 0, 51, 1, 1, 51, 1, 2, 52, 4, 3, 52, 1, 4, 52, 1, 5, 52, 1, 6, 38, 0, 7, 39, 0, 8, 40, 0, 9, 52, 1, 10, 52, 1, 11, 52, 1, 12, 52, 1, 13, 52, 1, 14, 52, 1, 15, 52, 1, 16, 52, 1, 17, 52, 1, 18, 52, 1, 19, 52, 2, 20, 34, 0, 21, 34, 1, 22, 34, 1, 23, 34, 1, 131069, 34, 1, 131070, 53, 1, 131071, 53, 1, 65536, 53, 1, 65537, 53, 1, 65538, 51, 4, 65539, 52, 1, 65540, 52, 1, 65541, 52, 1, 65542, 38, 0, 65543, 39, 0, 65544, 40, 0, 65545, 52, 1, 65546, 52, 1, 65547, 52, 1, 65548, 52, 1, 65549, 52, 1, 65550, 52, 1, 65551, 52, 1, 65552, 53, 4, 65553, 52, 1, 65554, 52, 1, 65555, 52, 2, 65556, 34, 0, 65557, 34, 1, 65558, 34, 1, 65559, 34, 1, 196605, 34, 1, 196606, 32, 1, 196607, 32, 1, 131072, 32, 1, 131073, 32, 2, 131074, 52, 0, 131075, 52, 1, 131076, 52, 1, 131077, 52, 1, 131078, 38, 0, 131079, 39, 0, 131080, 40, 0, 131081, 53, 1, 131082, 53, 1, 131083, 53, 1, 131084, 53, 1, 131085, 53, 1, 131086, 53, 1, 131087, 53, 1, 131088, 51, 4, 131089, 51, 3, 131090, 53, 1, 131091, 53, 2, 131092, 34, 0, 131093, 34, 1, 131094, 34, 1, 131095, 34, 1, 262141, 34, 1, 262142, 34, 1, 262143, 34, 1, 196608, 34, 1, 196609, 34, 2, 196610, 52, 0, 196611, 52, 1, 196612, 53, 3, 196613, 52, 1, 196614, 38, 0, 196615, 39, 0, 196616, 40, 0, 196617, 32, 0, 196618, 32, 1, 196619, 32, 1, 196620, 32, 1, 196621, 32, 1, 196622, 32, 1, 196623, 32, 2, 196624, 52, 0, 196625, 52, 2, 196626, 32, 0, 196627, 32, 1, 196628, 32, 1, 196629, 34, 1, 196630, 34, 1, 196631, 34, 1, 327677, 34, 1, 327678, 34, 1, 327679, 34, 1, 262144, 34, 1, 262145, 34, 2, 262146, 52, 0, 262147, 52, 1, 262148, 52, 1, 262149, 52, 1, 262150, 38, 0, 262151, 39, 0, 262152, 40, 0, 262153, 34, 0, 262154, 34, 1, 262155, 34, 1, 262156, 34, 1, 262157, 34, 1, 262158, 34, 1, 262159, 34, 2, 262160, 52, 0, 262161, 52, 2, 262162, 34, 0, 262163, 34, 1, 262164, 34, 1, 262165, 34, 1, 262166, 34, 1, 262167, 34, 1, 393213, 34, 1, 393214, 34, 1, 393215, 34, 1, 327680, 34, 1, 327681, 34, 2, 327682, 53, 0, 327683, 53, 1, 327684, 53, 1, 327685, 53, 1, 327686, 44, 0, 327687, 45, 0, 327688, 46, 0, 327689, 34, 0, 327690, 34, 1, 327691, 34, 1, 327692, 34, 1, 327693, 34, 1, 327694, 34, 1, 327695, 34, 2, 327696, 52, 0, 327697, 52, 2, 327698, 34, 0, 327699, 34, 1, 327700, 34, 1, 327701, 34, 1, 327702, 34, 1, 327703, 34, 1, 458749, 34, 1, 458750, 34, 1, 458751, 34, 1, 393216, 34, 1, 393217, 34, 3, 393218, 32, 1, 393219, 32, 1, 393220, 32, 1, 393221, 32, 1, 393222, 32, 1, 393223, 32, 1, 393224, 34, 4, 393225, 34, 4, 393226, 34, 1, 393227, 34, 1, 393228, 34, 1, 393229, 34, 1, 393230, 34, 1, 393231, 34, 1, 393232, 34, 1, 393233, 34, 1, 393234, 34, 1, 393235, 34, 1, 393236, 34, 1, 393237, 34, 1, 393238, 34, 1, 393239, 34, 1, 524285, 34, 1, 524286, 34, 1, 524287, 34, 1, 458752, 34, 1, 458753, 34, 1, 458754, 34, 1, 458755, 34, 1, 458756, 34, 1, 458757, 34, 1, 458758, 34, 1, 458759, 34, 1, 458760, 34, 1, 458761, 34, 1, 458762, 34, 1, 458763, 34, 1, 458764, 34, 1, 458765, 34, 1, 458766, 34, 1, 458767, 34, 1, 458768, 34, 1, 458769, 34, 1, 458770, 34, 1, 458771, 34, 1, 458772, 34, 1, 458773, 34, 1, 458774, 34, 1, 458775, 34, 1 )
+
+[node name="SpawnPosition" parent="." index="3"]
+position = Vector2( 50.4371, 26.0624 )
+
+[node name="Camera2D" parent="." index="4"]
+position = Vector2( -11.1118, 24.6047 )
+
+[node name="topLeft" parent="Camera2D/Limits" index="0"]
+position = Vector2( 21.5375, -234.85 )
+
+[node name="bottomRight" parent="Camera2D/Limits" index="1"]
+position = Vector2( 696.18, 210.902 )
+
+[node name="BridgeVertical" parent="." index="5" instance=ExtResource( 11 )]
+position = Vector2( 241.97, 45.0576 )
+
+[node name="BridgeVertical2" parent="." index="6" instance=ExtResource( 7 )]
+position = Vector2( 388.441, -48.3152 )
+
+[node name="Player" parent="YSort" index="0"]
+position = Vector2( -11.1118, 24.6047 )
+
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 0
+
+[node name="AnimationTree" parent="YSort/Player" index="4"]
+parameters/playback = SubResource( 1 )
+
+[node name="Hostage" parent="YSort" index="1" instance=ExtResource( 2 )]
+position = Vector2( 180.254, 108.278 )
+
+[node name="Hostage2" parent="YSort" index="2" instance=ExtResource( 2 )]
+position = Vector2( 618.576, 13.8431 )
+
+[node name="Hostage3" parent="YSort" index="3" instance=ExtResource( 2 )]
+position = Vector2( 447.524, -181.264 )
+
+[node name="Terrorist" parent="YSort" index="4" instance=ExtResource( 3 )]
+position = Vector2( 135.968, -133.357 )
+
+[node name="Terrorist2" parent="YSort" index="5" instance=ExtResource( 3 )]
+position = Vector2( 337.783, -158.584 )
+
+[node name="Terrorist3" parent="YSort" index="6" instance=ExtResource( 3 )]
+position = Vector2( 619.307, -120.275 )
+
+[node name="Detector" parent="YSort" index="7" instance=ExtResource( 9 )]
+position = Vector2( 528.054, 176.272 )
+scale = Vector2( 2.3, 2.3 )
+
+[node name="Detector2" parent="YSort" index="8" instance=ExtResource( 9 )]
+position = Vector2( 559.798, 176.272 )
+scale = Vector2( 2.3, 2.3 )
+
+[node name="Star" parent="YSort" index="9" instance=ExtResource( 10 )]
+position = Vector2( 87.4719, -116.043 )
+
+[node name="Star2" parent="YSort" index="10" instance=ExtResource( 10 )]
+position = Vector2( 562.321, -156.134 )
+
+[node name="Star3" parent="YSort" index="11" instance=ExtResource( 10 )]
+position = Vector2( 624.684, 81.7364 )
+
+[node name="RedBarrel" parent="YSort" index="12" instance=ExtResource( 8 )]
+position = Vector2( 312.178, 4.10454 )
+
+[node name="Bush" parent="YSort" index="13" instance=ExtResource( 6 )]
+position = Vector2( 306.107, -147.219 )
+
+[node name="Bush6" parent="YSort" index="14" instance=ExtResource( 6 )]
+position = Vector2( 306.107, -175.503 )
+
+[node name="Bush10" parent="YSort" index="15" instance=ExtResource( 6 )]
+position = Vector2( 479.833, -175.503 )
+
+[node name="Bush8" parent="YSort" index="16" instance=ExtResource( 6 )]
+position = Vector2( 559.123, 15.149 )
+
+[node name="Bush9" parent="YSort" index="17" instance=ExtResource( 6 )]
+position = Vector2( 528.055, 13.8431 )
+
+[node name="Bush7" parent="YSort" index="18" instance=ExtResource( 6 )]
+position = Vector2( 336.702, -175.503 )
+
+[node name="Vine" parent="YSort" index="19" instance=ExtResource( 5 )]
+position = Vector2( 80.6181, -10.1963 )
+
+[node name="Vine3" parent="YSort" index="20" instance=ExtResource( 5 )]
+position = Vector2( 301.774, -111.945 )
+
+[node name="Vine4" parent="YSort" index="21" instance=ExtResource( 5 )]
+position = Vector2( 587.752, 81.3802 )
+
+[node name="Vine5" parent="YSort" index="22" instance=ExtResource( 5 )]
+position = Vector2( 586.662, 53.5676 )
+
+[node name="Vine6" parent="YSort" index="23" instance=ExtResource( 5 )]
+position = Vector2( 585.771, 21.4953 )
+
+[node name="Vine2" parent="YSort" index="24" instance=ExtResource( 5 )]
+position = Vector2( 105.109, -10.1963 )
+
+[node name="Bush2" parent="YSort" index="25" instance=ExtResource( 4 )]
+position = Vector2( 104.96, 165.216 )
+
+[node name="Bush3" parent="YSort" index="26" instance=ExtResource( 4 )]
+position = Vector2( 161.112, 165.216 )
+
+[node name="Bush4" parent="YSort" index="27" instance=ExtResource( 12 )]
+position = Vector2( 137.735, -21.7505 )
+
+[node name="Bush5" parent="YSort" index="28" instance=ExtResource( 12 )]
+position = Vector2( 174.005, -21.1887 )
+
+[node name="CampFire" parent="YSort" index="29" instance=ExtResource( 13 )]
+position = Vector2( 82.4827, 76.6676 )
+
+[node name="CampFire2" parent="YSort" index="30" instance=ExtResource( 13 )]
+position = Vector2( 136.774, -75.0643 )
+
+[node name="CampFire3" parent="YSort" index="31" instance=ExtResource( 13 )]
+position = Vector2( 561.733, -113.373 )
+
+[node name="LevelLabel" parent="CanvasLayer" index="5"]
+text = "Level - 7"
+
+[editable path="YSort/Player"]

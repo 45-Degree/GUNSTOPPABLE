@@ -5,83 +5,83 @@
 [ext_resource path="res://Scene/Object/Forest_region/ForestObjectBase.gd" type="Script" id=3]
 [ext_resource path="res://Scene/Object/Forest_region/Burning/High_Fire.png" type="Texture" id=4]
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
 region = Rect2( 100, 0, 100, 100 )
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ SubResource( 6 ), SubResource( 7 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
 "loop": true,
 "name": "Vine_1",
 "speed": 4.0
 } ]
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 100, 125 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 100, 0, 100, 125 )
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 200, 0, 100, 125 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 300, 0, 100, 125 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 400, 0, 100, 125 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 500, 0, 100, 125 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 600, 0, 100, 125 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 700, 0, 100, 125 )
 
-[sub_resource type="SpriteFrames" id=16]
+[sub_resource type="SpriteFrames" id=12]
 animations = [ {
-"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
 "loop": true,
 "name": "Burn",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 22.0226, 24.6886 )
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 12.325, 12.8056 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=14]
 length = 0.6
 step = 0.2
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=15]
 length = 0.1
 loop = true
 
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 21.9356, 24.9897 )
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 12.1644, 12.2893 )
 
 [node name="Vine" type="StaticBody2D" groups=[
 "LaserAble",
@@ -92,8 +92,8 @@ Bush = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 2.21085, -5.38688 )
-scale = Vector2( 0.6, 0.6 )
-frames = SubResource( 1 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 3 )
 animation = "Vine_1"
 playing = true
 
@@ -101,17 +101,17 @@ playing = true
 visible = false
 position = Vector2( 10.5946, 6.3568 )
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 16 )
+frames = SubResource( 12 )
 animation = "Burn"
 offset = Vector2( -10, -40 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 3.37395, -4.76268 )
-shape = SubResource( 2 )
+shape = SubResource( 13 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Blink = SubResource( 3 )
-anims/Idle = SubResource( 4 )
+anims/Blink = SubResource( 14 )
+anims/Idle = SubResource( 15 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 1 )]
 collision_layer = 8
@@ -119,7 +119,7 @@ collision_mask = 4
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2( 2.86639, -5.05621 )
-shape = SubResource( 5 )
+shape = SubResource( 16 )
 
 [connection signal="animation_finished" from="Burn" to="." method="_on_Burn_animation_finished"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
