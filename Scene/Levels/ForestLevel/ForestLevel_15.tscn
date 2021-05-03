@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scene/Levels/ForestLevel/ForestLevel_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Office_region/Detector/detector.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scene/Object/Forest_region/FallingTrap/FallingTrap.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Object/Forest_region/Bridge/BridgeVertical.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/Character/NPC/Hostage/ForestHostage.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scene/Object/Forest_region/Blocker/Blocker.tscn" type="PackedScene" id=11]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -35,6 +36,9 @@ position = Vector2( 251.191, -189.798 )
 
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( -25.8361, -5.3454 )
+
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 2
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
@@ -192,6 +196,30 @@ position = Vector2( 372.127, -79.2898 )
 
 [node name="Hostage3" parent="YSort" index="50" instance=ExtResource( 10 )]
 position = Vector2( 154.548, -65.9414 )
+
+[node name="Blocker" parent="YSort" index="51" instance=ExtResource( 11 )]
+position = Vector2( 95.994, -210.525 )
+rotation = 1.5708
+
+[node name="Blocker2" parent="YSort" index="52" instance=ExtResource( 11 )]
+position = Vector2( 154.265, -211.714 )
+rotation = 1.5708
+
+[node name="Blocker3" parent="YSort" index="53" instance=ExtResource( 11 )]
+position = Vector2( 98.9671, -142.74 )
+rotation = 1.5708
+
+[node name="Blocker4" parent="YSort" index="54" instance=ExtResource( 11 )]
+position = Vector2( 151.292, -143.93 )
+rotation = 1.5708
+
+[node name="Blocker5" parent="YSort" index="55" instance=ExtResource( 11 )]
+position = Vector2( 365.349, -144.524 )
+rotation = 1.5708
+
+[node name="Blocker6" parent="YSort" index="56" instance=ExtResource( 11 )]
+position = Vector2( 367.728, -211.12 )
+rotation = 1.5708
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "Level - 15"

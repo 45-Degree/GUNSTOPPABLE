@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scene/Levels/ForestLevel/ForestLevel_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Character/NPC/Hostage/ForestHostage.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Scene/Object/Forest_region/Bridge/BridgeHorizontal.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scene/Object/Forest_region/Box/Box.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/Object/Forest_region/CampFire/CampFire.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scene/Object/Forest_region/Blocker/Blocker.tscn" type="PackedScene" id=14]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -43,7 +44,7 @@ position = Vector2( 388.441, -48.3152 )
 position = Vector2( -11.1118, 24.6047 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 4
+frame = 1
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
@@ -142,6 +143,48 @@ position = Vector2( 136.774, -75.0643 )
 
 [node name="CampFire3" parent="YSort" index="31" instance=ExtResource( 13 )]
 position = Vector2( 561.733, -113.373 )
+
+[node name="Blocker" parent="YSort" index="32" instance=ExtResource( 14 )]
+position = Vector2( 206.823, -94.1071 )
+
+[node name="Blocker2" parent="YSort" index="33" instance=ExtResource( 14 )]
+position = Vector2( 206.823, -33.6071 )
+
+[node name="Blocker3" parent="YSort" index="34" instance=ExtResource( 14 )]
+position = Vector2( 206.823, 151.599 )
+
+[node name="Blocker4" parent="YSort" index="35" instance=ExtResource( 14 )]
+position = Vector2( 271.926, 151.599 )
+
+[node name="Blocker5" parent="YSort" index="36" instance=ExtResource( 14 )]
+position = Vector2( 275.854, -95.9038 )
+
+[node name="Blocker6" parent="YSort" index="37" instance=ExtResource( 14 )]
+position = Vector2( 276.415, -27.4336 )
+
+[node name="Blocker7" parent="YSort" index="38" instance=ExtResource( 14 )]
+position = Vector2( 290.446, -85.8016 )
+rotation = 1.5708
+
+[node name="Blocker8" parent="YSort" index="39" instance=ExtResource( 14 )]
+position = Vector2( 291.008, -9.4742 )
+rotation = 1.5708
+
+[node name="Blocker9" parent="YSort" index="40" instance=ExtResource( 14 )]
+position = Vector2( 485.755, -9.4742 )
+rotation = 1.5708
+
+[node name="Blocker10" parent="YSort" index="41" instance=ExtResource( 14 )]
+position = Vector2( 579.48, -10.0354 )
+rotation = 1.5708
+
+[node name="Blocker11" parent="YSort" index="42" instance=ExtResource( 14 )]
+position = Vector2( 579.48, -83.5567 )
+rotation = 1.5708
+
+[node name="Blocker12" parent="YSort" index="43" instance=ExtResource( 14 )]
+position = Vector2( 486.877, -82.4342 )
+rotation = 1.5708
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "Level - 7"

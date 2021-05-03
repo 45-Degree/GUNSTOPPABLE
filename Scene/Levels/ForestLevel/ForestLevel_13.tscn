@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scene/Levels/ForestLevel/ForestLevel_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Office_region/Detector/detector.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scene/Object/Forest_region/ArrowTrap/ArrowTrapTrigger_V.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Object/Forest_region/Bush/Bush.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Object/Forest_region/Box/BoxL.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/Object/Forest_region/Blocker/Blocker.tscn" type="PackedScene" id=10]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -27,7 +28,7 @@ position = Vector2( -94.2613, -526.651 )
 position = Vector2( 520.648, 27.0899 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 5
+frame = 3
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
@@ -142,6 +143,18 @@ position = Vector2( 365.26, -147.494 )
 
 [node name="Bush2" parent="YSort" index="35" instance=ExtResource( 9 )]
 position = Vector2( 210.896, -382.068 )
+
+[node name="Blocker" parent="YSort" index="36" instance=ExtResource( 10 )]
+position = Vector2( 50.8124, -226.075 )
+
+[node name="Blocker2" parent="YSort" index="37" instance=ExtResource( 10 )]
+position = Vector2( 14.1039, -226.075 )
+
+[node name="Blocker3" parent="YSort" index="38" instance=ExtResource( 10 )]
+position = Vector2( 16.3513, -193.113 )
+
+[node name="Blocker4" parent="YSort" index="39" instance=ExtResource( 10 )]
+position = Vector2( 47.8158, -191.614 )
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "Level - 13"
