@@ -27,9 +27,6 @@ position = Vector2( 18.3905, -81.5972 )
 [node name="bottomRight" parent="Camera2D/Limits" index="1"]
 position = Vector2( 583.459, 428.168 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 0
-
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
 
@@ -118,15 +115,22 @@ position = Vector2( 178.441, 230.271 )
 position = Vector2( 449.941, 285.771 )
 
 [node name="FallingTrap" parent="YSort" index="27" instance=ExtResource( 7 )]
-position = Vector2( 119.933, -121.179 )
+position = Vector2( 219.331, 2.91045 )
+scale = Vector2( -1, 1 )
 
-[node name="Vine" parent="YSort" index="28" instance=ExtResource( 11 )]
+[node name="FallingTrap2" parent="YSort" index="28" instance=ExtResource( 7 )]
+position = Vector2( 138.721, 203.729 )
+
+[node name="FallingTrap3" parent="YSort" index="29" instance=ExtResource( 7 )]
+position = Vector2( 366.409, 321.816 )
+
+[node name="Vine" parent="YSort" index="30" instance=ExtResource( 11 )]
 position = Vector2( 391.563, 298.968 )
 
-[node name="Vine2" parent="YSort" index="29" instance=ExtResource( 11 )]
+[node name="Vine2" parent="YSort" index="31" instance=ExtResource( 11 )]
 position = Vector2( 418.08, 298.968 )
 
-[node name="Vine3" parent="YSort" index="30" instance=ExtResource( 11 )]
+[node name="Vine3" parent="YSort" index="32" instance=ExtResource( 11 )]
 position = Vector2( 444, 274.505 )
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
