@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scene/Levels/ForestLevel/ForestLevel_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Office_region/Detector/detector.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scene/Object/Office_region/Star/Star.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Character/NPC/Terrorist/Terrorist.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Character/NPC/Hostage/ForestHostage.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/Object/Forest_region/ArrowTrap/ArrowTrapTrigger_V.tscn" type="PackedScene" id=10]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -33,7 +34,7 @@ position = Vector2( 525.856, 75.0396 )
 position = Vector2( -9.15868, -1.15829 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 0
+frame = 2
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
@@ -91,7 +92,7 @@ position = Vector2( 428.179, -245.76 )
 position = Vector2( 459, -245.76 )
 
 [node name="Bush15" parent="YSort" index="17" instance=ExtResource( 3 )]
-position = Vector2( 152.595, -221.735 )
+position = Vector2( 151.423, -202.665 )
 
 [node name="Bush16" parent="YSort" index="18" instance=ExtResource( 3 )]
 position = Vector2( 152.595, -84.8412 )
@@ -103,13 +104,13 @@ position = Vector2( 216.162, -84.8412 )
 position = Vector2( 248.476, -85.9007 )
 
 [node name="Bush17" parent="YSort" index="21" instance=ExtResource( 3 )]
-position = Vector2( 181.812, -221.936 )
+position = Vector2( 180.64, -202.867 )
 
 [node name="Bush18" parent="YSort" index="22" instance=ExtResource( 3 )]
-position = Vector2( 212.406, -221.936 )
+position = Vector2( 211.234, -202.867 )
 
 [node name="Bush19" parent="YSort" index="23" instance=ExtResource( 3 )]
-position = Vector2( 246, -222.867 )
+position = Vector2( 244.828, -203.797 )
 
 [node name="Bush22" parent="YSort" index="24" instance=ExtResource( 3 )]
 position = Vector2( 459, -220.604 )
@@ -185,6 +186,14 @@ position = Vector2( 104.75, -157.924 )
 
 [node name="Terrorist3" parent="YSort" index="48" instance=ExtResource( 8 )]
 position = Vector2( 334.129, -254.755 )
+
+[node name="ArrowTrapTrigger2" parent="YSort" index="49" instance=ExtResource( 10 )]
+position = Vector2( 215.027, -161.857 )
+node_path = NodePath("../ArrowTrap")
+
+[node name="ArrowTrapTrigger3" parent="YSort" index="50" instance=ExtResource( 10 )]
+position = Vector2( 215.846, -122.149 )
+node_path = NodePath("../ArrowTrap")
 
 [node name="Mouse_cursor" parent="CanvasLayer" index="6"]
 position = Vector2( -216.375, 19.0919 )

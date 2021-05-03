@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scene/Levels/ForestLevel/ForestLevel_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Office_region/Detector/detector.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Scene/Object/Forest_region/ArrowTrap/ArrowTrap.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/Character/NPC/Hostage/ForestHostage.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/Object/Office_region/Star/Star.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scene/Object/Forest_region/ArrowTrap/ArrowTrapTrigger_V.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scene/Object/Forest_region/ArrowTrap/ArrowTrapTrigger_H.tscn" type="PackedScene" id=9]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -29,6 +31,9 @@ position = Vector2( 118.907, 36.2858 )
 
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( -15.5566, 41.6244 )
+
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 3
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
@@ -62,9 +67,11 @@ position = Vector2( -336.967, -144.805 )
 
 [node name="ArrowTrap2" parent="YSort" index="8" instance=ExtResource( 5 )]
 position = Vector2( -209.568, -275.01 )
+DIRECTION = "RIGHT"
 
 [node name="ArrowTrap3" parent="YSort" index="9" instance=ExtResource( 5 )]
 position = Vector2( 14.3632, -196.438 )
+DIRECTION = "LEFT"
 
 [node name="Bush" parent="YSort" index="10" instance=ExtResource( 3 )]
 position = Vector2( -393.808, -51.1705 )
@@ -175,13 +182,37 @@ position = Vector2( -380.516, -195.978 )
 position = Vector2( -332.743, -333.1 )
 
 [node name="Hostage4" parent="YSort" index="46" instance=ExtResource( 6 )]
-position = Vector2( -6.66818, -288.201 )
+position = Vector2( -78.5869, -346.635 )
 
 [node name="Hostage2" parent="YSort" index="47" instance=ExtResource( 6 )]
 position = Vector2( -378.203, -99.0663 )
 
 [node name="Hostage3" parent="YSort" index="48" instance=ExtResource( 6 )]
 position = Vector2( -119.476, -110.852 )
+
+[node name="ArrowTrapTrigger" parent="YSort" index="49" instance=ExtResource( 9 )]
+position = Vector2( -37.8326, -144.566 )
+node_path = NodePath("../ArrowTrap3")
+
+[node name="ArrowTrapTrigger4" parent="YSort" index="50" instance=ExtResource( 9 )]
+position = Vector2( 4.12, -143.817 )
+node_path = NodePath("../ArrowTrap3")
+
+[node name="ArrowTrapTrigger2" parent="YSort" index="51" instance=ExtResource( 8 )]
+position = Vector2( -274.565, -79.3895 )
+node_path = NodePath("../ArrowTrap")
+
+[node name="ArrowTrapTrigger3" parent="YSort" index="52" instance=ExtResource( 8 )]
+position = Vector2( -274.565, -114.6 )
+node_path = NodePath("../ArrowTrap")
+
+[node name="ArrowTrapTrigger5" parent="YSort" index="53" instance=ExtResource( 8 )]
+position = Vector2( -174.178, -325.112 )
+node_path = NodePath("../ArrowTrap2")
+
+[node name="ArrowTrapTrigger6" parent="YSort" index="54" instance=ExtResource( 8 )]
+position = Vector2( -174.178, -281.661 )
+node_path = NodePath("../ArrowTrap2")
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 text = "Level - 14"
