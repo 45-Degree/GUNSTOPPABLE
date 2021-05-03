@@ -95,13 +95,13 @@ Direction = "MovingLeft"
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( -72.8051, 48.1339 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 0
-
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
 
 [node name="Start" parent="YSort/Player/LaserBeam" index="0"]
+frame = 2
+
+[node name="Sprite" parent="YSort/Player/LaserBeam/End" index="1"]
 frame = 0
 
 [node name="RedBarrel" parent="YSort" index="1" instance=ExtResource( 8 )]
@@ -150,55 +150,58 @@ position = Vector2( 554.492, -63.8387 )
 [node name="Terrorist" parent="YSort" index="14" instance=ExtResource( 5 )]
 position = Vector2( 217.827, 189.118 )
 
-[node name="CollisionMirror" parent="YSort" index="15" instance=ExtResource( 3 )]
+[node name="Terrorist2" parent="YSort" index="15" instance=ExtResource( 5 )]
+position = Vector2( 401.775, 27.8481 )
+
+[node name="CollisionMirror" parent="YSort" index="16" instance=ExtResource( 3 )]
 position = Vector2( 80.3845, -111.231 )
 
 [node name="CollisionShape2D" parent="YSort/CollisionMirror" index="0"]
 position = Vector2( 176.248, 0.667419 )
 
 [node name="AnimatedSprite" parent="YSort/CollisionMirror" index="1"]
-frame = 11
+frame = 8
 
 [node name="CollisionShape2D" parent="YSort/CollisionMirror/Area2D" index="0"]
 position = Vector2( 174.197, 0 )
 
-[node name="Start" parent="YSort/CollisionMirror/LaserBeam" index="0"]
+[node name="Sprite" parent="YSort/CollisionMirror/LaserBeam/End" index="1"]
 frame = 1
 
-[node name="FakeMirror" parent="YSort" index="16" instance=ExtResource( 11 )]
+[node name="FakeMirror" parent="YSort" index="17" instance=ExtResource( 11 )]
 position = Vector2( 80.3351, -110.656 )
 
-[node name="FakeMirror2" parent="YSort" index="17" instance=ExtResource( 11 )]
+[node name="FakeMirror2" parent="YSort" index="18" instance=ExtResource( 11 )]
 position = Vector2( 111.955, -110.656 )
 
-[node name="FakeMirror3" parent="YSort" index="18" instance=ExtResource( 11 )]
+[node name="FakeMirror3" parent="YSort" index="19" instance=ExtResource( 11 )]
 position = Vector2( 144.047, -110.656 )
 
-[node name="FakeMirror4" parent="YSort" index="19" instance=ExtResource( 11 )]
+[node name="FakeMirror4" parent="YSort" index="20" instance=ExtResource( 11 )]
 position = Vector2( 176.138, -111.128 )
 
-[node name="FakeMirror5" parent="YSort" index="20" instance=ExtResource( 11 )]
+[node name="FakeMirror5" parent="YSort" index="21" instance=ExtResource( 11 )]
 position = Vector2( 208.702, -110.656 )
 
-[node name="FakeMirror6" parent="YSort" index="21" instance=ExtResource( 11 )]
+[node name="FakeMirror6" parent="YSort" index="22" instance=ExtResource( 11 )]
 position = Vector2( 240.322, -110.656 )
 
-[node name="FakeMirror7" parent="YSort" index="22" instance=ExtResource( 11 )]
+[node name="FakeMirror7" parent="YSort" index="23" instance=ExtResource( 11 )]
 position = Vector2( 272.414, -110.656 )
 
-[node name="FakeMirror8" parent="YSort" index="23" instance=ExtResource( 11 )]
+[node name="FakeMirror8" parent="YSort" index="24" instance=ExtResource( 11 )]
 position = Vector2( 304.505, -111.128 )
 
-[node name="FakeMirror9" parent="YSort" index="24" instance=ExtResource( 11 )]
+[node name="FakeMirror9" parent="YSort" index="25" instance=ExtResource( 11 )]
 position = Vector2( 336.597, -110.656 )
 
-[node name="FakeMirror10" parent="YSort" index="25" instance=ExtResource( 11 )]
+[node name="FakeMirror10" parent="YSort" index="26" instance=ExtResource( 11 )]
 position = Vector2( 368.217, -110.656 )
 
-[node name="FakeMirror11" parent="YSort" index="26" instance=ExtResource( 11 )]
+[node name="FakeMirror11" parent="YSort" index="27" instance=ExtResource( 11 )]
 position = Vector2( 400.309, -110.656 )
 
-[node name="FakeMirror12" parent="YSort" index="27" instance=ExtResource( 11 )]
+[node name="FakeMirror12" parent="YSort" index="28" instance=ExtResource( 11 )]
 position = Vector2( 432.4, -111.128 )
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]

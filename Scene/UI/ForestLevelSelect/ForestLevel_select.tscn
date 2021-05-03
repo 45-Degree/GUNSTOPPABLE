@@ -6,7 +6,7 @@
 [ext_resource path="res://Scene/UI/button/LevelSelectForest/push_0.png" type="Texture" id=4]
 [ext_resource path="res://Scene/UI/button/LevelSelectForest/still_0.png" type="Texture" id=5]
 [ext_resource path="res://Scene/UI/Mouse_cursor.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scene/UI/LevelSelect/LEVELFRAMENEW.png" type="Texture" id=7]
+[ext_resource path="res://Sprite/Tilemap/LEVELFRAMEJG.png" type="Texture" id=7]
 [ext_resource path="res://Scene/UI/ForestLevelSelect/LevelPic/3-1.png" type="Texture" id=8]
 [ext_resource path="res://Font/PIXEL_20.tres" type="DynamicFont" id=9]
 

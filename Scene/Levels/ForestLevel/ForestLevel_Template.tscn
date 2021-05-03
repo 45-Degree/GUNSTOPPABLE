@@ -1,8 +1,9 @@
-[gd_scene load_steps=118 format=2]
+[gd_scene load_steps=123 format=2]
 
 [ext_resource path="res://Sprite/Tilemap/Tile_connectors_LAB.png" type="Texture" id=1]
 [ext_resource path="res://Scene/UI/Camera2D.gd" type="Script" id=2]
 [ext_resource path="res://Sprite/Tilemap/Tiles_Mix_LAB2.png" type="Texture" id=3]
+[ext_resource path="res://Sprite/Tilemap/Tiles_SET_JUNGLEGROUND2.png" type="Texture" id=4]
 [ext_resource path="res://Scene/Character/Player/PlayerArrow.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://karma future.ttf" type="DynamicFontData" id=7]
@@ -205,25 +206,37 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [sub_resource type="ConvexPolygonShape2D" id=55]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
+[sub_resource type="ConvexPolygonShape2D" id=56]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
 [sub_resource type="ConvexPolygonShape2D" id=57]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=58]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=87]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=88]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=62]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=63]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=64]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=65]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=66]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=67]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=68]
-points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
-
-[sub_resource type="ConvexPolygonShape2D" id=69]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 1, 32, 0 )
 
-[sub_resource type="TileSet" id=70]
+[sub_resource type="TileSet" id=67]
 0/name = "Tile_connectors_LAB.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -512,14 +525,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 1, 32, 0 )
 4/navigation_offset = Vector2( 0, 0 )
 4/shape_offset = Vector2( 0, 0 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 57 )
+4/shape = SubResource( 56 )
 4/shape_one_way = false
 4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 57 ),
+"shape": SubResource( 56 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 4/z_index = 0
@@ -533,14 +546,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 1, 32, 0 )
 5/navigation_offset = Vector2( 0, 0 )
 5/shape_offset = Vector2( 0, 0 )
 5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape = SubResource( 65 )
+5/shape = SubResource( 57 )
 5/shape_one_way = false
 5/shape_one_way_margin = 1.0
 5/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 65 ),
+"shape": SubResource( 57 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 5/z_index = 0
@@ -554,14 +567,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 1, 32, 0 )
 6/navigation_offset = Vector2( 0, 0 )
 6/shape_offset = Vector2( 0, 0 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape = SubResource( 66 )
+6/shape = SubResource( 58 )
 6/shape_one_way = false
 6/shape_one_way_margin = 1.0
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 66 ),
+"shape": SubResource( 58 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 6/z_index = 0
@@ -575,14 +588,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 1, 32, 0 )
 7/navigation_offset = Vector2( 0, 0 )
 7/shape_offset = Vector2( 0, 0 )
 7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape = SubResource( 67 )
+7/shape = SubResource( 64 )
 7/shape_one_way = false
 7/shape_one_way_margin = 1.0
 7/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 67 ),
+"shape": SubResource( 64 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 7/z_index = 0
@@ -596,14 +609,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 1, 32, 0 )
 8/navigation_offset = Vector2( 0, 0 )
 8/shape_offset = Vector2( 0, 0 )
 8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-8/shape = SubResource( 68 )
+8/shape = SubResource( 65 )
 8/shape_one_way = false
 8/shape_one_way_margin = 1.0
 8/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 68 ),
+"shape": SubResource( 65 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 8/z_index = 0
@@ -617,14 +630,14 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 1, 32, 0 )
 9/navigation_offset = Vector2( 0, 0 )
 9/shape_offset = Vector2( 0, 0 )
 9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape = SubResource( 69 )
+9/shape = SubResource( 66 )
 9/shape_one_way = false
 9/shape_one_way_margin = 1.0
 9/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 69 ),
+"shape": SubResource( 66 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 9/z_index = 0
@@ -1157,12 +1170,268 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 1, 32, 0 )
 53/shape_one_way_margin = 0.0
 53/shapes = [  ]
 53/z_index = 0
+54/name = "Tiles_SET_JUNGLEGROUND2.png 54"
+54/texture = ExtResource( 4 )
+54/tex_offset = Vector2( 0, 0 )
+54/modulate = Color( 1, 1, 1, 1 )
+54/region = Rect2( 5, 77, 32, 32 )
+54/tile_mode = 0
+54/occluder_offset = Vector2( 0, 0 )
+54/navigation_offset = Vector2( 0, 0 )
+54/shape_offset = Vector2( 0, 0 )
+54/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+54/shape_one_way = false
+54/shape_one_way_margin = 0.0
+54/shapes = [  ]
+54/z_index = 0
+55/name = "Tiles_SET_JUNGLEGROUND2.png 55"
+55/texture = ExtResource( 4 )
+55/tex_offset = Vector2( 0, 0 )
+55/modulate = Color( 1, 1, 1, 1 )
+55/region = Rect2( 42, 77, 32, 32 )
+55/tile_mode = 0
+55/occluder_offset = Vector2( 0, 0 )
+55/navigation_offset = Vector2( 0, 0 )
+55/shape_offset = Vector2( 0, 0 )
+55/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+55/shape_one_way = false
+55/shape_one_way_margin = 0.0
+55/shapes = [  ]
+55/z_index = 0
+56/name = "Tiles_SET_JUNGLEGROUND2.png 56"
+56/texture = ExtResource( 4 )
+56/tex_offset = Vector2( 0, 0 )
+56/modulate = Color( 1, 1, 1, 1 )
+56/region = Rect2( 79, 77, 32, 32 )
+56/tile_mode = 0
+56/occluder_offset = Vector2( 0, 0 )
+56/navigation_offset = Vector2( 0, 0 )
+56/shape_offset = Vector2( 0, 0 )
+56/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+56/shape_one_way = false
+56/shape_one_way_margin = 0.0
+56/shapes = [  ]
+56/z_index = 0
+57/name = "Tiles_SET_JUNGLEGROUND2.png 57"
+57/texture = ExtResource( 4 )
+57/tex_offset = Vector2( 0, 0 )
+57/modulate = Color( 1, 1, 1, 1 )
+57/region = Rect2( 116, 77, 32, 32 )
+57/tile_mode = 0
+57/occluder_offset = Vector2( 0, 0 )
+57/navigation_offset = Vector2( 0, 0 )
+57/shape_offset = Vector2( 0, 0 )
+57/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+57/shape_one_way = false
+57/shape_one_way_margin = 0.0
+57/shapes = [  ]
+57/z_index = 0
+58/name = "Tiles_SET_JUNGLEGROUND2.png 58"
+58/texture = ExtResource( 4 )
+58/tex_offset = Vector2( 0, 0 )
+58/modulate = Color( 1, 1, 1, 1 )
+58/region = Rect2( 153, 77, 32, 32 )
+58/tile_mode = 0
+58/occluder_offset = Vector2( 0, 0 )
+58/navigation_offset = Vector2( 0, 0 )
+58/shape_offset = Vector2( 0, 0 )
+58/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+58/shape_one_way = false
+58/shape_one_way_margin = 0.0
+58/shapes = [  ]
+58/z_index = 0
+59/name = "Tiles_SET_JUNGLEGROUND2.png 59"
+59/texture = ExtResource( 4 )
+59/tex_offset = Vector2( 0, 0 )
+59/modulate = Color( 1, 1, 1, 1 )
+59/region = Rect2( 5, 5, 32, 32 )
+59/tile_mode = 0
+59/occluder_offset = Vector2( 0, 0 )
+59/navigation_offset = Vector2( 0, 0 )
+59/shape_offset = Vector2( 0, 0 )
+59/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+59/shape_one_way = false
+59/shape_one_way_margin = 0.0
+59/shapes = [  ]
+59/z_index = 0
+60/name = "Tiles_SET_JUNGLEGROUND2.png 60"
+60/texture = ExtResource( 4 )
+60/tex_offset = Vector2( 0, 0 )
+60/modulate = Color( 1, 1, 1, 1 )
+60/region = Rect2( 42, 5, 32, 32 )
+60/tile_mode = 0
+60/occluder_offset = Vector2( 0, 0 )
+60/navigation_offset = Vector2( 0, 0 )
+60/shape_offset = Vector2( 0, 0 )
+60/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+60/shape_one_way = false
+60/shape_one_way_margin = 0.0
+60/shapes = [  ]
+60/z_index = 0
+61/name = "Tiles_SET_JUNGLEGROUND2.png 61"
+61/texture = ExtResource( 4 )
+61/tex_offset = Vector2( 0, 0 )
+61/modulate = Color( 1, 1, 1, 1 )
+61/region = Rect2( 79, 5, 32, 32 )
+61/tile_mode = 0
+61/occluder_offset = Vector2( 0, 0 )
+61/navigation_offset = Vector2( 0, 0 )
+61/shape_offset = Vector2( 0, 0 )
+61/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+61/shape_one_way = false
+61/shape_one_way_margin = 0.0
+61/shapes = [  ]
+61/z_index = 0
+62/name = "Tiles_SET_JUNGLEGROUND2.png 62"
+62/texture = ExtResource( 4 )
+62/tex_offset = Vector2( 0, 0 )
+62/modulate = Color( 1, 1, 1, 1 )
+62/region = Rect2( 116, 5, 32, 32 )
+62/tile_mode = 0
+62/occluder_offset = Vector2( 0, 0 )
+62/navigation_offset = Vector2( 0, 0 )
+62/shape_offset = Vector2( 0, 0 )
+62/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+62/shape = SubResource( 87 )
+62/shape_one_way = false
+62/shape_one_way_margin = 1.0
+62/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 87 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+62/z_index = 0
+63/name = "Tiles_SET_JUNGLEGROUND2.png 63"
+63/texture = ExtResource( 4 )
+63/tex_offset = Vector2( 0, 0 )
+63/modulate = Color( 1, 1, 1, 1 )
+63/region = Rect2( 153, 5, 32, 32 )
+63/tile_mode = 0
+63/occluder_offset = Vector2( 0, 0 )
+63/navigation_offset = Vector2( 0, 0 )
+63/shape_offset = Vector2( 0, 0 )
+63/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+63/shape = SubResource( 88 )
+63/shape_one_way = false
+63/shape_one_way_margin = 1.0
+63/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 88 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+63/z_index = 0
+64/name = "Tiles_SET_JUNGLEGROUND2.png 64"
+64/texture = ExtResource( 4 )
+64/tex_offset = Vector2( 0, 0 )
+64/modulate = Color( 1, 1, 1, 1 )
+64/region = Rect2( 5, 41, 32, 32 )
+64/tile_mode = 0
+64/occluder_offset = Vector2( 0, 0 )
+64/navigation_offset = Vector2( 0, 0 )
+64/shape_offset = Vector2( 0, 0 )
+64/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+64/shape_one_way = false
+64/shape_one_way_margin = 0.0
+64/shapes = [  ]
+64/z_index = 0
+65/name = "Tiles_SET_JUNGLEGROUND2.png 65"
+65/texture = ExtResource( 4 )
+65/tex_offset = Vector2( 0, 0 )
+65/modulate = Color( 1, 1, 1, 1 )
+65/region = Rect2( 42, 41, 32, 32 )
+65/tile_mode = 0
+65/occluder_offset = Vector2( 0, 0 )
+65/navigation_offset = Vector2( 0, 0 )
+65/shape_offset = Vector2( 0, 0 )
+65/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+65/shape_one_way = false
+65/shape_one_way_margin = 0.0
+65/shapes = [  ]
+65/z_index = 0
+66/name = "Tiles_SET_JUNGLEGROUND2.png 66"
+66/texture = ExtResource( 4 )
+66/tex_offset = Vector2( 0, 0 )
+66/modulate = Color( 1, 1, 1, 1 )
+66/region = Rect2( 79, 41, 32, 32 )
+66/tile_mode = 0
+66/occluder_offset = Vector2( 0, 0 )
+66/navigation_offset = Vector2( 0, 0 )
+66/shape_offset = Vector2( 0, 0 )
+66/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+66/shape_one_way = false
+66/shape_one_way_margin = 0.0
+66/shapes = [  ]
+66/z_index = 0
+67/name = "Tiles_SET_JUNGLEGROUND2.png 67"
+67/texture = ExtResource( 4 )
+67/tex_offset = Vector2( 0, 0 )
+67/modulate = Color( 1, 1, 1, 1 )
+67/region = Rect2( 116, 41, 32, 32 )
+67/tile_mode = 0
+67/occluder_offset = Vector2( 0, 0 )
+67/navigation_offset = Vector2( 0, 0 )
+67/shape_offset = Vector2( 0, 0 )
+67/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+67/shape = SubResource( 62 )
+67/shape_one_way = false
+67/shape_one_way_margin = 1.0
+67/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 62 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+67/z_index = 0
+68/name = "Tiles_SET_JUNGLEGROUND2.png 68"
+68/texture = ExtResource( 4 )
+68/tex_offset = Vector2( 0, 0 )
+68/modulate = Color( 1, 1, 1, 1 )
+68/region = Rect2( 153, 41, 32, 32 )
+68/tile_mode = 0
+68/occluder_offset = Vector2( 0, 0 )
+68/navigation_offset = Vector2( 0, 0 )
+68/shape_offset = Vector2( 0, 0 )
+68/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+68/shape = SubResource( 63 )
+68/shape_one_way = false
+68/shape_one_way_margin = 1.0
+68/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 63 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+68/z_index = 0
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=71]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=68]
 
-[sub_resource type="ShaderMaterial" id=72]
+[sub_resource type="ShaderMaterial" id=69]
 
-[sub_resource type="Theme" id=73]
+[sub_resource type="Theme" id=70]
+
+[sub_resource type="DynamicFont" id=71]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=72]
+size = 38
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=73]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=74]
 size = 30
@@ -1170,61 +1439,43 @@ outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=75]
-size = 38
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=76]
-size = 30
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=77]
-size = 30
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 6 )
-
-[sub_resource type="StyleBoxTexture" id=78]
+[sub_resource type="StyleBoxTexture" id=75]
 texture = ExtResource( 33 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="StyleBoxTexture" id=79]
+[sub_resource type="StyleBoxTexture" id=76]
 texture = ExtResource( 34 )
+region_rect = Rect2( 0, 0, 180, 24 )
+
+[sub_resource type="StyleBoxTexture" id=77]
+texture = ExtResource( 34 )
+region_rect = Rect2( 0, 0, 180, 24 )
+
+[sub_resource type="DynamicFont" id=78]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxTexture" id=79]
+texture = ExtResource( 33 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
 [sub_resource type="StyleBoxTexture" id=80]
 texture = ExtResource( 34 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="DynamicFont" id=81]
-size = 30
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 6 )
-
-[sub_resource type="StyleBoxTexture" id=82]
-texture = ExtResource( 33 )
-region_rect = Rect2( 0, 0, 180, 24 )
-
-[sub_resource type="StyleBoxTexture" id=83]
+[sub_resource type="StyleBoxTexture" id=81]
 texture = ExtResource( 34 )
 region_rect = Rect2( 0, 0, 180, 24 )
 
-[sub_resource type="StyleBoxTexture" id=84]
-texture = ExtResource( 34 )
-region_rect = Rect2( 0, 0, 180, 24 )
-
-[sub_resource type="DynamicFont" id=85]
+[sub_resource type="DynamicFont" id=82]
 size = 30
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=86]
+[sub_resource type="DynamicFont" id=83]
 size = 14
 outline_size = 1
 font_data = ExtResource( 7 )
@@ -1241,7 +1492,7 @@ anims/Wipe_Out = SubResource( 2 )
 [node name="TileMap" type="TileMap" parent="." groups=[
 "Wall",
 ]]
-tile_set = SubResource( 70 )
+tile_set = SubResource( 67 )
 cell_size = Vector2( 32, 32 )
 collision_layer = 2
 collision_mask = 5
@@ -1272,8 +1523,11 @@ position = Vector2( 640.028, 360.286 )
 [node name="RemoteTransform2D" parent="YSort/Player" index="0"]
 remote_path = NodePath("../../../Camera2D")
 
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 4
+
 [node name="AnimationTree" parent="YSort/Player" index="4"]
-parameters/playback = SubResource( 71 )
+parameters/playback = SubResource( 68 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1307,13 +1561,13 @@ margin_bottom = 224.0
 custom_constants/separation = 6
 
 [node name="Message" type="Label" parent="CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer"]
-material = SubResource( 72 )
+material = SubResource( 69 )
 margin_right = 388.0
 margin_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource( 73 )
-custom_fonts/font = SubResource( 74 )
+theme = SubResource( 70 )
+custom_fonts/font = SubResource( 71 )
 custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
@@ -1462,7 +1716,7 @@ __meta__ = {
 margin_right = 388.0
 margin_bottom = 34.0
 rect_pivot_offset = Vector2( 97.0978, 46.03 )
-custom_fonts/font = SubResource( 75 )
+custom_fonts/font = SubResource( 72 )
 custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_y = 2
@@ -1554,7 +1808,7 @@ __meta__ = {
 margin_top = 9.0
 margin_right = 275.0
 margin_bottom = 36.0
-custom_fonts/font = SubResource( 76 )
+custom_fonts/font = SubResource( 73 )
 custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_y = 2
@@ -1582,7 +1836,7 @@ custom_constants/separation = 41
 margin_top = 1.0
 margin_right = 54.0
 margin_bottom = 28.0
-custom_fonts/font = SubResource( 77 )
+custom_fonts/font = SubResource( 74 )
 custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
 custom_constants/shadow_offset_y = 2
 text = "BGM"
@@ -1593,9 +1847,9 @@ margin_right = 275.0
 margin_bottom = 30.0
 custom_icons/grabber_highlight = ExtResource( 32 )
 custom_icons/grabber = ExtResource( 32 )
-custom_styles/slider = SubResource( 78 )
-custom_styles/grabber_area_highlight = SubResource( 79 )
-custom_styles/grabber_area = SubResource( 80 )
+custom_styles/slider = SubResource( 75 )
+custom_styles/grabber_area_highlight = SubResource( 76 )
+custom_styles/grabber_area = SubResource( 77 )
 max_value = 1.0
 step = 0.05
 script = ExtResource( 31 )
@@ -1610,7 +1864,7 @@ custom_constants/separation = 41
 margin_top = 1.0
 margin_right = 54.0
 margin_bottom = 28.0
-custom_fonts/font = SubResource( 81 )
+custom_fonts/font = SubResource( 78 )
 custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
 text = "SFX"
 
@@ -1620,9 +1874,9 @@ margin_right = 275.0
 margin_bottom = 30.0
 custom_icons/grabber_highlight = ExtResource( 32 )
 custom_icons/grabber = ExtResource( 32 )
-custom_styles/slider = SubResource( 82 )
-custom_styles/grabber_area_highlight = SubResource( 83 )
-custom_styles/grabber_area = SubResource( 84 )
+custom_styles/slider = SubResource( 79 )
+custom_styles/grabber_area_highlight = SubResource( 80 )
+custom_styles/grabber_area = SubResource( 81 )
 max_value = 1.0
 step = 0.05
 script = ExtResource( 31 )
@@ -1667,7 +1921,7 @@ margin_left = 122.0
 margin_top = 166.0
 margin_right = 518.0
 margin_bottom = 193.0
-custom_fonts/font = SubResource( 85 )
+custom_fonts/font = SubResource( 82 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Click to start Gunning"
 
@@ -1686,7 +1940,7 @@ margin_left = 6.64816
 margin_top = 331.621
 margin_right = 114.648
 margin_bottom = 366.621
-custom_fonts/font = SubResource( 86 )
+custom_fonts/font = SubResource( 83 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level - 1"
 __meta__ = {
