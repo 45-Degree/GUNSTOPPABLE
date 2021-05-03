@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Switch2.png-cbb9b926bbce82af2130689004c7431d.stex"
+path="res://.import/TrapArrow_Trigger.png-bdefceda72b82a9dcecc0a6c67e5c13d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Object/Forest_region/FallingTrap/Switch2.png"
-dest_files=[ "res://.import/Switch2.png-cbb9b926bbce82af2130689004c7431d.stex" ]
+source_file="res://Scene/Object/Forest_region/ArrowTrap/TrapArrow_Trigger.png"
+dest_files=[ "res://.import/TrapArrow_Trigger.png-bdefceda72b82a9dcecc0a6c67e5c13d.stex" ]
 
 [params]
 

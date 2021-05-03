@@ -54,6 +54,10 @@ func _process(delta):
 	if Input.is_action_just_pressed("Pause") and Singleton.Playable == true:
 		get_tree().paused = true
 		pause.show()
+	if Input.is_action_just_pressed("R") and Singleton.Playable == true:
+		Transition.wipeOut()
+		yield(get_tree().create_timer(0.5),"timeout")
+		get_tree().reload_current_scene()
 	if Input.is_action_just_pressed("k") and Singleton.Playable == true:
 		emit_signal("cheat")
 		Complete = true

@@ -1,8 +1,12 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scene/UI/Hurtbox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Forest_region/FallingTrap/FallingTrap.gd" type="Script" id=2]
 [ext_resource path="res://Scene/Object/Forest_region/CampFire/CampfireSprite.png" type="Texture" id=3]
+[ext_resource path="res://Scene/Object/Forest_region/FallingTrap/TreeJungle.png" type="Texture" id=4]
+[ext_resource path="res://Scene/Object/Forest_region/FallingTrap/Switch2.png" type="Texture" id=5]
+[ext_resource path="res://Scene/Object/Forest_region/FallingTrap/RopeTree.png" type="Texture" id=6]
+[ext_resource path="res://Scene/Object/Forest_region/FallingTrap/Trap_Falling.png" type="Texture" id=7]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -37,7 +41,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CircleShape2D" id=6]
+[sub_resource type="CapsuleShape2D" id=17]
+radius = 10.619
+height = 25.231
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 16.1802, 11.9228 )
 
 [sub_resource type="Animation" id=7]
 length = 0.6
@@ -47,8 +56,10 @@ step = 0.2
 length = 0.1
 loop = true
 
-[sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 18.7436, 19.6273 )
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 16.9886, 12.2758 )
+
+[sub_resource type="CircleShape2D" id=18]
 
 [sub_resource type="ParticlesMaterial" id=10]
 flag_disable_z = true
@@ -58,6 +69,30 @@ gravity = Vector3( -98, 0, 0 )
 initial_velocity = 58.9
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 230, 409 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 7 )
+region = Rect2( 230, 0, 230, 409 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 7 )
+region = Rect2( 460, 0, 230, 409 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 7 )
+region = Rect2( 690, 0, 230, 409 )
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": false,
+"name": "Falling",
+"speed": 8.0
+} ]
 
 [node name="FallingTrap" type="StaticBody2D" groups=[
 "Laser",
@@ -75,8 +110,13 @@ frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-shape = SubResource( 6 )
+position = Vector2( -13.2293, 29.44 )
+rotation = 1.5708
+shape = SubResource( 17 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2( 40.3175, 16.379 )
+shape = SubResource( 16 )
 disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -88,9 +128,17 @@ collision_layer = 4
 collision_mask = 24
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2( 0.190668, -0.0020799 )
-shape = SubResource( 11 )
+position = Vector2( 40.2704, 16.4793 )
+shape = SubResource( 9 )
 disabled = true
+
+[node name="TriggerBox" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerBox"]
+position = Vector2( -32.2282, 11.3393 )
+shape = SubResource( 18 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( -0.112572, -1.98876 )
@@ -99,3 +147,28 @@ emitting = false
 lifetime = 2.0
 speed_scale = 1.49
 process_material = SubResource( 10 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="TreeJungle" type="Sprite" parent="Node2D"]
+position = Vector2( 11.4183, -23.3834 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="RopeTree" type="Sprite" parent="Node2D"]
+position = Vector2( 4, -18.5 )
+scale = Vector2( 0.176768, 0.176768 )
+texture = ExtResource( 6 )
+
+[node name="Switch2" type="Sprite" parent="Node2D"]
+position = Vector2( -33.0247, 19.0661 )
+scale = Vector2( 0.176768, 0.176768 )
+texture = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( 40.4543, 4.86951 )
+scale = Vector2( 0.177, 0.177 )
+frames = SubResource( 15 )
+animation = "Falling"
+
+[connection signal="area_entered" from="TriggerBox" to="." method="_on_TriggerBox_area_entered"]

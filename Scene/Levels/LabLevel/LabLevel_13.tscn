@@ -45,13 +45,13 @@ rotator = NodePath("../../YSort/Rotator2")
 position = Vector2( -22.9528, 276.764 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 2
+frame = 0
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
 
 [node name="Start" parent="YSort/Player/LaserBeam" index="0"]
-frame = 0
+frame = 2
 
 [node name="Lab_TableHorizontal" parent="YSort" index="1" instance=ExtResource( 5 )]
 position = Vector2( 527.466, 186.903 )
@@ -76,7 +76,7 @@ position = Vector2( 145.377, 75.7272 )
 position = Vector2( 239.557, 72.3636 )
 
 [node name="Start" parent="YSort/DEchanger3/LaserBeam" index="0"]
-frame = 0
+frame = 2
 
 [node name="Sprite" parent="YSort/DEchanger3/LaserBeam/End" index="1"]
 frame = 2
@@ -124,7 +124,6 @@ position = Vector2( 526.846, 87.2334 )
 position = Vector2( 332.599, 133.483 )
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
-visible = true
 text = "LabLevel - 13"
 
 [editable path="YSort/Player"]
