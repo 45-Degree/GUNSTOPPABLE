@@ -1,8 +1,9 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://Scene/Levels/Office_Level/Level_1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/UI/Camera2D.gd" type="Script" id=2]
 [ext_resource path="res://Scene/UI/Floor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/UI/TerrorKill/TERRORcounter.png" type="Texture" id=4]
 [ext_resource path="res://Scene/Character/Player/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Font/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://karma future.ttf" type="DynamicFontData" id=7]
@@ -92,6 +93,15 @@ tracks/1/keys = {
 }
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=3]
+
+[sub_resource type="DynamicFontData" id=21]
+font_path = "res://Font/karma future.ttf"
+
+[sub_resource type="DynamicFont" id=20]
+size = 60
+outline_size = 3
+outline_color = Color( 1, 0.960784, 0.494118, 1 )
+font_data = SubResource( 21 )
 
 [sub_resource type="ShaderMaterial" id=4]
 
@@ -202,12 +212,36 @@ position = Vector2( -160, 288 )
 remote_path = NodePath("../../../Camera2D")
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 0
+frame = 1
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 3 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+margin_left = 4.24329
+margin_top = 3.76994
+margin_right = 324.243
+margin_bottom = 115.77
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect"]
+margin_left = 171.258
+margin_top = 8.2854
+margin_right = 233.258
+margin_bottom = 81.2854
+custom_fonts/font = SubResource( 20 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "x1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 pause_mode = 2
@@ -598,6 +632,7 @@ margin_top = 166.0
 margin_right = 518.0
 margin_bottom = 193.0
 custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 1, 0.960784, 0.494118, 1 )
 text = "Click to start Gunning"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]

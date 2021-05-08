@@ -51,7 +51,7 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 10.7876, 10.3782 )
 
 [sub_resource type="Animation" id=11]
@@ -86,7 +86,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="ParticlesMaterial" id=14]
+[sub_resource type="ParticlesMaterial" id=13]
 flag_disable_z = true
 direction = Vector3( 0, 0, 0 )
 spread = 28.35
@@ -121,7 +121,7 @@ frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1.65178, 1.76976 )
-shape = SubResource( 15 )
+shape = SubResource( 10 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Blink = SubResource( 11 )
@@ -133,4 +133,4 @@ rotation = -1.5708
 emitting = false
 lifetime = 2.0
 speed_scale = 1.49
-process_material = SubResource( 14 )
+process_material = SubResource( 13 )

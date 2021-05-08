@@ -9,9 +9,6 @@
 [ext_resource path="res://Scene/Object/Office_region/Detector/detector.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scene/Object/Office_region/Star/Star.tscn" type="PackedScene" id=12]
 
-
-
-
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="Level_6" instance=ExtResource( 1 )]
@@ -52,7 +49,10 @@ scale = Vector2( 2.3, 2.3 )
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( -192.96, 95.365 )
 
-[node name="AnimationTree" parent="YSort/Player" index="5"]
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 4
+
+[node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
 
 [node name="TableHorizontal" parent="YSort" index="1" instance=ExtResource( 8 )]

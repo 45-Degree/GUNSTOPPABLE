@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CampfireSprite.png-b6cba8842bbd5a087e9da26e37eae9ee.stex"
+path="res://.import/BrideBurn_sprite.png-573f5fc7cf575154c2e8985513951195.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Object/Forest_region/Bridge/CampfireSprite.png"
-dest_files=[ "res://.import/CampfireSprite.png-b6cba8842bbd5a087e9da26e37eae9ee.stex" ]
+source_file="res://Scene/Object/Forest_region/Bridge/BrideBurn_sprite.png"
+dest_files=[ "res://.import/BrideBurn_sprite.png-573f5fc7cf575154c2e8985513951195.stex" ]
 
 [params]
 

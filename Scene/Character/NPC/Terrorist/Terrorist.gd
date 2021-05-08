@@ -8,8 +8,10 @@ onready var pathFollow
 var velocity = Vector2.ZERO
 var ForceMovement = []
 export var testing = false
+signal Terrorist_Die
 
 func _ready():
+	connect("Terrorist_Die", owner, "_on_Terrorist_Die")
 	$Sprite2.play("Idle")
 	if moving == true:
 		pathFollow = get_parent()
@@ -49,7 +51,7 @@ func AnimationLoop():
 func _on_Hurtbox_area_entered(area):
 	if area.get_parent().is_in_group("Laser") or area.get_parent().is_in_group("Explosion"):
 		alive = false
-		Singleton.emit_signal("Terrorist_Die")
+		emit_signal("Terrorist_Die")
 		$Sprite2.play("Die")
 		$CollisionShape2D.set_deferred("disabled", true)
 		$Hurtbox/CollisionShape2D.set_deferred("disabled", true)

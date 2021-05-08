@@ -47,9 +47,6 @@ node_path = NodePath("../LockDoorH")
 [node name="Player" parent="YSort" index="1"]
 position = Vector2( 278.63, 432.703 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 2
-
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
 

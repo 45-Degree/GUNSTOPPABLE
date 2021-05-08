@@ -13,9 +13,6 @@
 [ext_resource path="res://Scene/Object/Office_region/KeyCard/Keycard.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scene/Object/Office_region/Detector/detector.tscn" type="PackedScene" id=16]
 
-
-
-
 [sub_resource type="Curve2D" id=1]
 bake_interval = 10.0
 _data = {
@@ -113,10 +110,10 @@ scale = Vector2( 1.124, 1 )
 [node name="Player" parent="YSort" index="12"]
 position = Vector2( -152.246, 309.97 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 3
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 4
 
-[node name="AnimationTree" parent="YSort/Player" index="5"]
+[node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 3 )
 
 [node name="LockDoorH" parent="YSort" index="13" instance=ExtResource( 13 )]

@@ -13,9 +13,6 @@
 [ext_resource path="res://Scene/Object/Office_region/Heater/HeaterRight.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/Object/Office_region/Decoration/toilet.tscn" type="PackedScene" id=15]
 
-
-
-
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [node name="Level_8" instance=ExtResource( 1 )]
@@ -39,10 +36,10 @@ tile_data = PoolIntArray( -1048586, 81, 0, -1048585, 81, 0, -1048584, 81, 0, -10
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( -8.80946, 449.27 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 3
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 1
 
-[node name="AnimationTree" parent="YSort/Player" index="5"]
+[node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
 
 [node name="Detector" parent="YSort" index="1" instance=ExtResource( 10 )]

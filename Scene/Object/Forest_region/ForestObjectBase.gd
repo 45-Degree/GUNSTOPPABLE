@@ -11,6 +11,7 @@ export var bridge = false
 export var Bush = false
 export var platform = false
 export var barrel = false
+var burned = false
 export(int, "Left", "Right", "Top", "Bottom") var BulletSpawn
 onready var animatedSprite = $AnimatedSprite
 var sound_clip = preload("res://Sound/SFX/Object/Keycard_3.wav")
@@ -20,9 +21,12 @@ func _ready():
 	animationPlayer.play("Idle")
 
 func _on_Hurtbox_area_entered(area):
-	if bridge and area.get_parent().flaming :
-		modulate.a = 0.5
+	if bridge and area.get_parent().flaming and !burned:
+		burned = true
+		$AnimatedSprite.play("BridgeBurn")
 		$MiddleCollsion.set_deferred("disabled", false)
+		yield($AnimatedSprite,"animation_finished")
+		$AnimatedSprite.play("Aftermath")
 	if Bush and area.get_parent().flaming:
 		$Burn.show()
 		$Burn.play("Burn")

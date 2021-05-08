@@ -50,10 +50,10 @@ scale = Vector2( 2.3, 2.3 )
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( -217.64, 42.1957 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 0
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 2
 
-[node name="AnimationTree" parent="YSort/Player" index="5"]
+[node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
 
 [node name="MeetingTableH" parent="YSort" index="1" instance=ExtResource( 2 )]
@@ -144,11 +144,11 @@ position = Vector2( 263.615, 299.502 )
 [node name="Star3" parent="YSort" index="28" instance=ExtResource( 10 )]
 position = Vector2( 471.316, 6.0296 )
 
-[node name="ColorRect" parent="CanvasLayer" index="4"]
+[node name="ColorRect" parent="CanvasLayer" index="5"]
 margin_left = 1000.73
 margin_right = 1000.73
 
-[node name="LevelLabel" parent="CanvasLayer" index="5"]
+[node name="LevelLabel" parent="CanvasLayer" index="6"]
 text = "Office Level - 4"
 
 [editable path="YSort/Player"]

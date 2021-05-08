@@ -27,12 +27,14 @@ var smooth_zoom = 1
 var target_zoom = 0.5
 const ZOOM_SPEED = 3
 export var Star_Count = 0
+var terrorist = 1
 
 func _input(event):
 		if(event is InputEventMouseButton and event.is_pressed() and !event.is_echo()):
 			emit_signal("mouse_click")
 
 func _ready():
+	terrorist = get_tree().get_nodes_in_group("Terrorist").size()
 	Transition.wipeIn()
 	Singleton.Playable = false
 	$CanvasLayer/Control4.show()
@@ -47,11 +49,15 @@ func _ready():
 	$CanvasLayer/Control4.hide()
 
 func _process(delta):
-	var terrorist = get_tree().get_nodes_in_group("Terrorist").size()
+	$CanvasLayer/TextureRect/Label.text = "X " + str(terrorist)
 	if terrorist == 0 and Hostage_dead == false:
 		get_tree().call_group("Detector", "detector_ON")
 		emit_signal("level_Completed")
 		Complete = true
+	if Input.is_action_just_pressed("R") and Singleton.Playable == true:
+		Transition.wipeOut()
+		yield(get_tree().create_timer(0.5),"timeout")
+		get_tree().reload_current_scene()
 	if Input.is_action_just_pressed("k") and Singleton.Playable == true:
 		emit_signal("cheat")
 		Complete = true
@@ -78,6 +84,9 @@ func _on_Hostage_Die():
 	$CanvasLayer/Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton.hide()
 	message.set_text("You kill a hostage!")
 	control.show()
+	
+func _on_Terrorist_Die():
+	terrorist -= 1
 
 func  _on_Star_Pick():
 	Star_Count += 1
