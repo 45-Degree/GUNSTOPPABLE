@@ -44,9 +44,6 @@ rotator = NodePath("../../YSort/Rotator")
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( 413.864, -231.828 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 4
-
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
 
@@ -233,9 +230,6 @@ position = Vector2( 276.628, 197.053 )
 
 [node name="Star3" parent="YSort" index="59" instance=ExtResource( 15 )]
 position = Vector2( 213.628, -16.9472 )
-
-[node name="Control4" parent="CanvasLayer" index="3"]
-visible = true
 
 [node name="Label" parent="CanvasLayer/Control4/CenterContainer" index="0"]
 visible = false

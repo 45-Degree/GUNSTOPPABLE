@@ -175,7 +175,6 @@ position = Vector2( 302.205, 131.307 )
 position = Vector2( 81.9568, 360.9 )
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
-visible = false
 text = "Level - 3"
 
 [editable path="YSort/Player"]
