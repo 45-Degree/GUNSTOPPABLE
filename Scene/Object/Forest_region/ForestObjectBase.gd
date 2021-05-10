@@ -27,7 +27,6 @@ func _on_Hurtbox_area_entered(area):
 		$MiddleCollsion.set_deferred("disabled", false)
 		yield($AnimatedSprite,"animation_finished")
 		$AnimatedSprite.play("Aftermath")
-		area.queue_free()
 		
 	if Bush and area.get_parent().flaming and !burned:
 		burned = true
@@ -37,7 +36,6 @@ func _on_Hurtbox_area_entered(area):
 		$AnimatedSprite.hide()
 		$CollisionShape2D.set_deferred("disabled", true)
 		$Hurtbox/CollisionShape2D2.set_deferred("disabled", true)
-		area.queue_free()
 	
 	if explodable and area.get_parent().flaming:
 		var explodeInstance = explodeDamage.instance()

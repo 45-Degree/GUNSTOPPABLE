@@ -7,7 +7,3 @@ var unlock = false
 
 signal Hostage_Die
 signal Terrorist_Die
-
-
-func _physics_process(delta):
-	print(SoundManager.get_playing_sounds())

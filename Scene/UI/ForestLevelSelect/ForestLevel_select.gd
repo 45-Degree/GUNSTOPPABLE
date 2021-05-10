@@ -26,7 +26,6 @@ func _physics_process(delta):
 			b.disabled = false
 	if !SoundManager.is_playing("res://Sound/Music/JungleTheme.ogg"):
 		SoundManager.play_bgm("res://Sound/Music/JungleTheme.ogg") 
-	print(SoundManager.get_playing_sounds())
 func _button_pressed(which):
 	Transition.wipeOut()
 	yield(get_tree().create_timer(0.5),"timeout")

@@ -33,6 +33,7 @@ func _input(event):
 			emit_signal("mouse_click")
 
 func _ready():
+	SoundManager.stop("res://Sound/Music/LabTheme.ogg")
 	terrorist = get_tree().get_nodes_in_group("Terrorist").size()
 	Transition.wipeIn()
 	Singleton.Playable = false

@@ -4,9 +4,9 @@ func _ready():
 	SoundManager.stop("res://Sound/Music/JungleTheme.ogg") 
 	SoundManager.stop("res://Sound/Music/LabTheme.ogg") 
 	Transition.wipeIn()
-	if Save.data.has("Region2"):
+	if Save.data.has("Region2") and Save.data["Region2"] == true:
 		$LabRegion.disabled = false
-	if Save.data.has("Region3"):
+	if Save.data.has("Region3") and Save.data["Region3"] == true:
 		$ForestRegion.disabled = false
 
 func _physics_process(delta):
