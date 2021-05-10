@@ -800,14 +800,14 @@ size = 14
 outline_size = 1
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFontData" id=79]
+[sub_resource type="DynamicFontData" id=66]
 font_path = "res://Font/karma future.ttf"
 
-[sub_resource type="DynamicFont" id=80]
+[sub_resource type="DynamicFont" id=67]
 size = 60
 outline_size = 3
 outline_color = Color( 1, 0.960784, 0.494118, 1 )
-font_data = SubResource( 79 )
+font_data = SubResource( 66 )
 
 [node name="LabLevel_Template" type="Node"]
 script = ExtResource( 37 )
@@ -852,16 +852,10 @@ position = Vector2( 640.028, 360.286 )
 remote_path = NodePath("../../../Camera2D")
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 4
+frame = 2
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 50 )
-
-[node name="Start" parent="YSort/Player/LaserBeam" index="0"]
-frame = 1
-
-[node name="Sprite" parent="YSort/Player/LaserBeam/End" index="1"]
-frame = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource( 4 )
@@ -1301,7 +1295,7 @@ margin_left = 171.258
 margin_top = 8.2854
 margin_right = 233.258
 margin_bottom = 81.2854
-custom_fonts/font = SubResource( 80 )
+custom_fonts/font = SubResource( 67 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "x1"
 __meta__ = {

@@ -177,6 +177,7 @@ expand = true
 stretch_mode = 5
 
 [node name="Mouse_cursor" parent="." instance=ExtResource( 3 )]
+
 [connection signal="mouse_exited" from="Control/MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/VBoxContainer/HSlider3" to="Control/MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/VBoxContainer/HSlider3" method="_on_HSlider_mouse_exited"]
 [connection signal="value_changed" from="Control/MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/VBoxContainer/HSlider3" to="Control/MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/VBoxContainer/HSlider3" method="_on_HSlider2_value_changed"]
 [connection signal="mouse_exited" from="Control/MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/VBoxContainer2/HSlider2" to="Control/MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/VBoxContainer2/HSlider2" method="_on_HSlider_mouse_exited"]

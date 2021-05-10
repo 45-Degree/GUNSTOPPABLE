@@ -38,7 +38,7 @@ tile_data = PoolIntArray( -262153, 78, 0, -196617, 78, 0, -131081, 78, 0, -65545
 position = Vector2( -9.90512, 50.3565 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 0
+frame = 2
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
@@ -47,7 +47,7 @@ parameters/playback = SubResource( 1 )
 position = Vector2( 113.322, 338.018 )
 
 [node name="Hostage3" parent="YSort" index="2" instance=ExtResource( 9 )]
-position = Vector2( 110.322, 700.018 )
+position = Vector2( 196.835, 700.018 )
 
 [node name="Hostage5" parent="YSort" index="3" instance=ExtResource( 9 )]
 position = Vector2( 583.564, 314.018 )
@@ -80,7 +80,7 @@ position = Vector2( 247.049, 336.315 )
 position = Vector2( 422.502, 416.381 )
 
 [node name="Terrorist2" parent="YSort" index="13" instance=ExtResource( 8 )]
-position = Vector2( 28.8427, 698.315 )
+position = Vector2( 115.356, 698.315 )
 
 [node name="Terrorist4" parent="YSort" index="14" instance=ExtResource( 8 )]
 position = Vector2( 707.121, 355.315 )
@@ -104,7 +104,7 @@ position = Vector2( 705.715, 572.579 )
 position = Vector2( 752.045, 572.579 )
 
 [node name="HeaterFront" parent="YSort" index="21" instance=ExtResource( 14 )]
-position = Vector2( 70.4867, 692.144 )
+position = Vector2( 157, 692.144 )
 
 [node name="TableHorizontal" parent="YSort" index="22" instance=ExtResource( 12 )]
 position = Vector2( 554.303, 329.483 )
@@ -118,7 +118,7 @@ node_path = NodePath("../TableHorizontal")
 position = Vector2( -33.2882, 708.779 )
 
 [node name="SofaSide2" parent="YSort" index="25" instance=ExtResource( 10 )]
-position = Vector2( 173.712, 708.779 )
+position = Vector2( 49.8947, 708.779 )
 
 [node name="SofaSide3" parent="YSort" index="26" instance=ExtResource( 10 )]
 position = Vector2( 249.712, 708.779 )
@@ -198,27 +198,15 @@ position = Vector2( 252.472, 416.476 )
 [node name="Star3" parent="YSort" index="50" instance=ExtResource( 2 )]
 position = Vector2( 421.426, 325.864 )
 
-[node name="Label" parent="CanvasLayer/Control3/VBoxContainer" index="0"]
-margin_top = 8.0
-margin_bottom = 35.0
-
-[node name="VBoxContainer2" parent="CanvasLayer/Control3/VBoxContainer" index="1"]
-margin_top = 48.0
-margin_bottom = 112.0
-
-[node name="CenterContainer" parent="CanvasLayer/Control3/VBoxContainer" index="2"]
-margin_top = 125.0
-margin_bottom = 175.0
-
-[node name="Control4" parent="CanvasLayer" index="3"]
+[node name="Control4" parent="CanvasLayer" index="4"]
 visible = false
 
-[node name="ColorRect" parent="CanvasLayer" index="4"]
+[node name="ColorRect" parent="CanvasLayer" index="5"]
 visible = false
 margin_left = 918.362
 margin_right = 918.362
 
-[node name="LevelLabel" parent="CanvasLayer" index="5"]
+[node name="LevelLabel" parent="CanvasLayer" index="6"]
 text = "Office Level - 16"
 
 [editable path="YSort/Player"]

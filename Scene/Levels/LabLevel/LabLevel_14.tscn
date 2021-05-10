@@ -140,6 +140,9 @@ Direction = "MovingRight"
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( -17.167, 22.4454 )
 
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 1
+
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
 
@@ -215,7 +218,6 @@ position = Vector2( 470.202, 418.884 )
 position = Vector2( 390.116, 61.3614 )
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
-visible = true
 text = "LabLevel - 14"
 
 [editable path="YSort/Player"]

@@ -82,6 +82,7 @@ radius = 16.6733
 
 [node name="Bush" type="StaticBody2D" groups=[
 "LaserAble",
+"Wall",
 ]]
 collision_layer = 8
 script = ExtResource( 3 )

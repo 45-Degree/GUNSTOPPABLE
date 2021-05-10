@@ -48,6 +48,8 @@ func _ready():
 	$CanvasLayer/Control4.hide()
 
 func _process(delta):
+	if !SoundManager.is_playing("res://Sound/Music/JungleTheme.ogg"):
+		SoundManager.play_bgm("res://Sound/Music/JungleTheme.ogg") 
 	$CanvasLayer/TextureRect/Label.text = "X " + str(terrorist)
 	if terrorist == 0 and Hostage_dead == false:
 		get_tree().call_group("Detector", "detector_ON")

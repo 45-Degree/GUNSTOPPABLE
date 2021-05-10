@@ -4,6 +4,7 @@ export(String, "UP", "DOWN", "LEFT", "RIGHT") var DIRECTION
 export (PackedScene) var Arrow
 var arrowDirection = Vector2.ZERO
 var arrowCount = 0
+var trigger = false
 
 func _ready():
 	$AnimatedSprite.animation = "Idle"
@@ -23,12 +24,14 @@ func _ready():
 func Trigger():
 	if DIRECTION == "DOWN":
 		$AnimatedSprite.play("Firing")
-	var Arrow_Instace = Arrow.instance()
-	Arrow_Instace.position = self.global_position
-	Arrow_Instace.direction = arrowDirection
-	Arrow_Instace.rotation = Arrow_Instace.direction.angle()
-	get_tree().current_scene.add_child(Arrow_Instace)
-	$AnimatedSprite.stop()
+	if !trigger:
+		var Arrow_Instace = Arrow.instance()
+		Arrow_Instace.position = self.global_position
+		Arrow_Instace.direction = arrowDirection
+		Arrow_Instace.rotation = Arrow_Instace.direction.angle()
+		get_tree().current_scene.add_child(Arrow_Instace)
+		$AnimatedSprite.stop()
+		trigger = true
 	if DIRECTION == "DOWN":
 		$AnimatedSprite.animation = "Idle"
 		$AnimatedSprite.frame = 0

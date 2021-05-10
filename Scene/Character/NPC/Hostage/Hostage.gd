@@ -2,7 +2,7 @@ extends StaticBody2D
 
 signal Hostage_Die
 signal Terrorist_Die
-var HostageAnim = 0
+var HostageAnim = 3
 
 func _ready():
 	HostageAnim = int(rand_range(1,4))

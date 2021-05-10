@@ -767,6 +767,7 @@ func preinstatiate_nodes_r(directory : Directory):
 func is_audio_file(file_name : String) -> bool:
 	return	(file_name.get_extension() == "wav" or
 			file_name.get_extension() == "ogg" or
+			file_name.get_extension() == "mp3" or
 			file_name.get_extension() == "opus")
 
 

@@ -48,6 +48,8 @@ func _ready():
 	$CanvasLayer/Control4.hide()
 
 func _process(delta):
+	if !SoundManager.is_playing("res://Sound/Music/OfficeTheme.ogg"):
+		SoundManager.play_bgm("res://Sound/Music/OfficeTheme.ogg")
 	$CanvasLayer/TextureRect/Label.text = "X " + str(terrorist)
 	if terrorist == 0 and Hostage_dead == false:
 		get_tree().call_group("Detector", "detector_ON")
@@ -111,7 +113,7 @@ func  _on_Star_Pick():
 func _on_Passable():
 	if Complete == true:
 		Save.data["Level"+ str(int(get_tree().current_scene.name)+1)] = true
-		if get_tree().current_scene.name == "Level_20":
+		if get_tree().current_scene.name == "Level_15":
 			Save.data["Region2"] = true
 		if !Save.data.has("Star" + str(int(get_tree().current_scene.name))):
 			Save.data["Star"+ str(int(get_tree().current_scene.name))] = Star_Count

@@ -3,6 +3,8 @@ extends Node
 onready var levelpic = $Control/MarginContainer/VBoxContainer/HBoxContainer/TextureRect
 
 func _ready():
+	if !SoundManager.is_playing("res://Sound/Music/OfficeTheme.ogg"):
+		SoundManager.play_bgm("res://Sound/Music/OfficeTheme.ogg")
 	Transition.wipeIn()
 	for b in get_node("Control/MarginContainer/VBoxContainer/HBoxContainer/GridContainer").get_children():
 		b.connect("pressed", self, "_button_pressed",[b])

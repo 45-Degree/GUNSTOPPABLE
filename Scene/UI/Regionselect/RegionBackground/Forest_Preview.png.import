@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Gunstopable.png-78c900c6b3dacc031c2d4227cf3acb52.stex"
+path="res://.import/Forest_Preview.png-cc0e104c02f4a0ac7f67995be35f4ce6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Gunstopable.png"
-dest_files=[ "res://.import/Gunstopable.png-78c900c6b3dacc031c2d4227cf3acb52.stex" ]
+source_file="res://Scene/UI/Regionselect/RegionBackground/Forest_Preview.png"
+dest_files=[ "res://.import/Forest_Preview.png-cc0e104c02f4a0ac7f67995be35f4ce6.stex" ]
 
 [params]
 
