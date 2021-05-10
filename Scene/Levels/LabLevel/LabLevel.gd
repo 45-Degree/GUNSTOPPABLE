@@ -35,8 +35,6 @@ func _input(event):
 
 func _ready():
 	SoundManager.stop("res://Sound/Music/OfficeTheme.ogg")
-	if !SoundManager.is_playing("res://Sound/Music/LabTheme.ogg"):
-		SoundManager.play_bgm("res://Sound/Music/LabTheme.ogg") 
 	terrorist = get_tree().get_nodes_in_group("Terrorist").size()
 	Transition.wipeIn()
 	Singleton.Playable = false
@@ -63,6 +61,11 @@ func _process(delta):
 		Transition.wipeOut()
 		yield(get_tree().create_timer(0.5),"timeout")
 		get_tree().reload_current_scene()
+	if Input.is_action_just_pressed("O") and Singleton.Playable == true:
+		Transition.wipeOut()
+		yield(get_tree().create_timer(0.5),"timeout")
+		if self.name != "LabLevel_20":
+			get_tree().change_scene("res://Scene/Levels/LabLevel/LabLevel_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
 	if Input.is_action_just_pressed("k") and Singleton.Playable == true:
 		emit_signal("cheat")
 		Complete = true

@@ -1383,7 +1383,7 @@ position = Vector2( 640.028, 360.286 )
 remote_path = NodePath("../../../Camera2D")
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 2
+frame = 3
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 23 )
@@ -1761,7 +1761,6 @@ stretch_mode = 5
 
 [node name="Control4" type="Control" parent="CanvasLayer"]
 pause_mode = 2
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {

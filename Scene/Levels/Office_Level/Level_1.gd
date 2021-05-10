@@ -64,6 +64,11 @@ func _process(delta):
 		get_tree().reload_current_scene()
 	if Input.is_action_just_pressed("k") and Singleton.Playable == true:
 		emit_signal("cheat")
+	if Input.is_action_just_pressed("O") and Singleton.Playable == true:
+		Transition.wipeOut()
+		yield(get_tree().create_timer(0.5),"timeout")
+		if self.name != "Level_20":
+			get_tree().change_scene("res://Scene/Levels/Office_Level/Level_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
 		Complete = true
 	if  Hostage_dead == true:
 		camera.limit = false

@@ -63,6 +63,11 @@ func _process(delta):
 		Transition.wipeOut()
 		yield(get_tree().create_timer(0.5),"timeout")
 		get_tree().reload_current_scene()
+	if Input.is_action_just_pressed("O") and Singleton.Playable == true:
+		Transition.wipeOut()
+		yield(get_tree().create_timer(0.5),"timeout")
+		if self.name != "ForestLevel_20":
+			get_tree().change_scene("res://Scene/Levels/ForestLevel/ForestLevel_" +str(int(get_tree().current_scene.name) +1)+ ".tscn")
 	if Input.is_action_just_pressed("k") and Singleton.Playable == true:
 		emit_signal("cheat")
 		Complete = true
