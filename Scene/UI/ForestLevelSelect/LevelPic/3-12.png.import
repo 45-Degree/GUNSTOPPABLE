@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/3-5.png-8568c4bb17f9df2b2869c2a0f4c336ab.stex"
+path="res://.import/3-12.png-0869b1073bc5a1b0eb04a38a11c03ee6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/UI/ForestLevelSelect/LevelPic/3-5.png"
-dest_files=[ "res://.import/3-5.png-8568c4bb17f9df2b2869c2a0f4c336ab.stex" ]
+source_file="res://Scene/UI/ForestLevelSelect/LevelPic/3-12.png"
+dest_files=[ "res://.import/3-12.png-0869b1073bc5a1b0eb04a38a11c03ee6.stex" ]
 
 [params]
 

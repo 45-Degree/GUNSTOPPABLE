@@ -1354,9 +1354,11 @@ position = Vector2( -72.5865, 30.0309 )
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2( 1.22, 1.22 )
 current = true
+zoom = Vector2( 2, 2 )
 limit_smoothed = true
 smoothing_enabled = true
 script = ExtResource( 2 )
+limit = false
 
 [node name="Limits" type="Node" parent="Camera2D"]
 
@@ -1369,12 +1371,13 @@ position = Vector2( 640.028, 360.286 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
+visible = false
 
 [node name="RemoteTransform2D" parent="YSort/Player" index="0"]
 remote_path = NodePath("../../../Camera2D")
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 1
+frame = 2
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 23 )
@@ -1786,6 +1789,7 @@ __meta__ = {
 }
 
 [node name="LevelLabel" type="Label" parent="CanvasLayer"]
+visible = false
 margin_left = 6.64816
 margin_top = 331.621
 margin_right = 114.648
@@ -1798,8 +1802,10 @@ __meta__ = {
 }
 
 [node name="Mouse_cursor" parent="CanvasLayer" instance=ExtResource( 8 )]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+visible = false
 margin_left = 4.24329
 margin_top = 3.76994
 margin_right = 324.243
