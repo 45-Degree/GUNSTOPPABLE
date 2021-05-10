@@ -34,6 +34,9 @@ position = Vector2( 691.005, 339.104 )
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( -100.649, 156.801 )
 
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 3
+
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
 
@@ -131,49 +134,52 @@ scale = Vector2( 2.3, 2.3 )
 [node name="Star" parent="YSort" index="30" instance=ExtResource( 8 )]
 position = Vector2( 586.767, 18.8 )
 
-[node name="Star2" parent="YSort" index="31" instance=ExtResource( 8 )]
+[node name="Star3" parent="YSort" index="31" instance=ExtResource( 8 )]
+position = Vector2( 257.804, 223.276 )
+
+[node name="Star2" parent="YSort" index="32" instance=ExtResource( 8 )]
 position = Vector2( 105.775, 41.5042 )
 
-[node name="Terrorist" parent="YSort" index="32" instance=ExtResource( 10 )]
+[node name="Terrorist" parent="YSort" index="33" instance=ExtResource( 10 )]
 position = Vector2( 500.332, 257.427 )
 
-[node name="Terrorist2" parent="YSort" index="33" instance=ExtResource( 10 )]
+[node name="Terrorist2" parent="YSort" index="34" instance=ExtResource( 10 )]
 position = Vector2( 241.373, 137.291 )
 
-[node name="Terrorist3" parent="YSort" index="34" instance=ExtResource( 10 )]
+[node name="Terrorist3" parent="YSort" index="35" instance=ExtResource( 10 )]
 position = Vector2( 492.323, 37.8459 )
 
-[node name="Hostage" parent="YSort" index="35" instance=ExtResource( 9 )]
+[node name="Hostage" parent="YSort" index="36" instance=ExtResource( 9 )]
 position = Vector2( 536.732, 102.205 )
 
-[node name="Hostage2" parent="YSort" index="36" instance=ExtResource( 9 )]
+[node name="Hostage2" parent="YSort" index="37" instance=ExtResource( 9 )]
 position = Vector2( 359.865, 14.1057 )
 
-[node name="Blocker" parent="YSort" index="37" instance=ExtResource( 11 )]
+[node name="Blocker" parent="YSort" index="38" instance=ExtResource( 11 )]
 position = Vector2( 176.643, 128.643 )
 
-[node name="Blocker2" parent="YSort" index="38" instance=ExtResource( 11 )]
+[node name="Blocker2" parent="YSort" index="39" instance=ExtResource( 11 )]
 position = Vector2( 433.563, 131.822 )
 
-[node name="Blocker3" parent="YSort" index="39" instance=ExtResource( 11 )]
+[node name="Blocker3" parent="YSort" index="40" instance=ExtResource( 11 )]
 position = Vector2( 462.168, 131.822 )
 
-[node name="Blocker4" parent="YSort" index="40" instance=ExtResource( 11 )]
+[node name="Blocker4" parent="YSort" index="41" instance=ExtResource( 11 )]
 position = Vector2( 206.308, 125.995 )
 
-[node name="Blocker5" parent="YSort" index="41" instance=ExtResource( 11 )]
+[node name="Blocker5" parent="YSort" index="42" instance=ExtResource( 11 )]
 position = Vector2( 221.141, 82.5566 )
 rotation = 1.5708
 
-[node name="Blocker7" parent="YSort" index="42" instance=ExtResource( 11 )]
+[node name="Blocker7" parent="YSort" index="43" instance=ExtResource( 11 )]
 position = Vector2( 256.461, 78.9849 )
 rotation = 1.5708
 
-[node name="Blocker8" parent="YSort" index="43" instance=ExtResource( 11 )]
+[node name="Blocker8" parent="YSort" index="44" instance=ExtResource( 11 )]
 position = Vector2( 256.064, 113.114 )
 rotation = 1.5708
 
-[node name="Blocker6" parent="YSort" index="44" instance=ExtResource( 11 )]
+[node name="Blocker6" parent="YSort" index="45" instance=ExtResource( 11 )]
 position = Vector2( 221.67, 110.632 )
 rotation = 1.5708
 
