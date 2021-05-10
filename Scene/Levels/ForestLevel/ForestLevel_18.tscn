@@ -75,7 +75,7 @@ position = Vector2( 482.9, 148.279 )
 node_path = NodePath("../ArrowTrap")
 
 [node name="ArrowTrap" parent="YSort" index="8" instance=ExtResource( 5 )]
-position = Vector2( 460.47, 382.115 )
+position = Vector2( 460.47, 457.115 )
 DIRECTION = "UP"
 
 [node name="Crocodile" parent="YSort" index="9" instance=ExtResource( 11 )]
@@ -106,145 +106,142 @@ position = Vector2( 385.209, 304.397 )
 position = Vector2( 169.193, 207.379 )
 
 [node name="Bush" parent="YSort" index="18" instance=ExtResource( 8 )]
-position = Vector2( 432.674, 381.078 )
+position = Vector2( 444.174, 381.078 )
 
 [node name="Bush4" parent="YSort" index="19" instance=ExtResource( 8 )]
-position = Vector2( 493.219, 381.078 )
+position = Vector2( 482.719, 381.078 )
 
 [node name="Bush5" parent="YSort" index="20" instance=ExtResource( 8 )]
-position = Vector2( 421.759, 265.165 )
+position = Vector2( 441.759, 265.165 )
 
 [node name="Bush6" parent="YSort" index="21" instance=ExtResource( 8 )]
-position = Vector2( 461.244, 265.165 )
+position = Vector2( 480.744, 265.165 )
 
-[node name="Bush7" parent="YSort" index="22" instance=ExtResource( 8 )]
-position = Vector2( 501.052, 265.165 )
-
-[node name="Bush8" parent="YSort" index="23" instance=ExtResource( 8 )]
+[node name="Bush8" parent="YSort" index="22" instance=ExtResource( 8 )]
 position = Vector2( 302.101, 211.193 )
 
-[node name="Bush9" parent="YSort" index="24" instance=ExtResource( 8 )]
+[node name="Bush9" parent="YSort" index="23" instance=ExtResource( 8 )]
 position = Vector2( 302.101, 211.193 )
 
-[node name="Bush11" parent="YSort" index="25" instance=ExtResource( 8 )]
+[node name="Bush11" parent="YSort" index="24" instance=ExtResource( 8 )]
 position = Vector2( 336.578, 210.353 )
 
-[node name="Bush10" parent="YSort" index="26" instance=ExtResource( 8 )]
+[node name="Bush10" parent="YSort" index="25" instance=ExtResource( 8 )]
 position = Vector2( 264.072, 301.169 )
 
-[node name="Vine" parent="YSort" index="27" instance=ExtResource( 2 )]
+[node name="Vine" parent="YSort" index="26" instance=ExtResource( 2 )]
 position = Vector2( 74.3956, 147.122 )
 
-[node name="Vine2" parent="YSort" index="28" instance=ExtResource( 2 )]
+[node name="Vine2" parent="YSort" index="27" instance=ExtResource( 2 )]
 position = Vector2( 74.3956, 116.009 )
 
-[node name="Vine5" parent="YSort" index="29" instance=ExtResource( 2 )]
+[node name="Vine5" parent="YSort" index="28" instance=ExtResource( 2 )]
 position = Vector2( 261.19, 274.271 )
 
-[node name="Vine3" parent="YSort" index="30" instance=ExtResource( 2 )]
+[node name="Vine3" parent="YSort" index="29" instance=ExtResource( 2 )]
 position = Vector2( 74.3956, 86.5773 )
 
-[node name="Vine6" parent="YSort" index="31" instance=ExtResource( 2 )]
+[node name="Vine6" parent="YSort" index="30" instance=ExtResource( 2 )]
 position = Vector2( 262.608, 240.084 )
 
-[node name="Bush2" parent="YSort" index="32" instance=ExtResource( 4 )]
+[node name="Bush2" parent="YSort" index="31" instance=ExtResource( 4 )]
 position = Vector2( 85.5124, 245.089 )
 
-[node name="Bush3" parent="YSort" index="33" instance=ExtResource( 4 )]
+[node name="Bush3" parent="YSort" index="32" instance=ExtResource( 4 )]
 position = Vector2( 303.156, 444.154 )
 
-[node name="RedBarrel" parent="YSort" index="34" instance=ExtResource( 10 )]
+[node name="RedBarrel" parent="YSort" index="33" instance=ExtResource( 10 )]
 position = Vector2( 404.198, 382.863 )
 
-[node name="CampFire" parent="YSort" index="35" instance=ExtResource( 3 )]
+[node name="CampFire" parent="YSort" index="34" instance=ExtResource( 3 )]
 position = Vector2( 378.025, 385.622 )
 
-[node name="Terrorist" parent="YSort" index="36" instance=ExtResource( 13 )]
+[node name="Terrorist" parent="YSort" index="35" instance=ExtResource( 13 )]
 position = Vector2( 337.27, 293.185 )
 
-[node name="Terrorist2" parent="YSort" index="37" instance=ExtResource( 13 )]
+[node name="Terrorist2" parent="YSort" index="36" instance=ExtResource( 13 )]
 position = Vector2( 110.536, 129.705 )
 
-[node name="Terrorist3" parent="YSort" index="38" instance=ExtResource( 13 )]
+[node name="Terrorist3" parent="YSort" index="37" instance=ExtResource( 13 )]
 position = Vector2( 270.898, 76.6963 )
 
-[node name="Hostage" parent="YSort" index="39" instance=ExtResource( 14 )]
+[node name="Hostage" parent="YSort" index="38" instance=ExtResource( 14 )]
 position = Vector2( 107.829, 275.352 )
 
-[node name="Hostage2" parent="YSort" index="40" instance=ExtResource( 14 )]
+[node name="Hostage2" parent="YSort" index="39" instance=ExtResource( 14 )]
 position = Vector2( 334.034, 454.728 )
 
-[node name="Blocker" parent="YSort" index="41" instance=ExtResource( 15 )]
+[node name="Blocker" parent="YSort" index="40" instance=ExtResource( 15 )]
 position = Vector2( 372.817, 220.338 )
 
-[node name="Blocker2" parent="YSort" index="42" instance=ExtResource( 15 )]
+[node name="Blocker2" parent="YSort" index="41" instance=ExtResource( 15 )]
 position = Vector2( 397.511, 220.899 )
 
-[node name="Blocker3" parent="YSort" index="43" instance=ExtResource( 15 )]
+[node name="Blocker3" parent="YSort" index="42" instance=ExtResource( 15 )]
 position = Vector2( 402.562, 54.7745 )
 
-[node name="Blocker4" parent="YSort" index="44" instance=ExtResource( 15 )]
+[node name="Blocker4" parent="YSort" index="43" instance=ExtResource( 15 )]
 position = Vector2( 370.572, 55.3357 )
 
-[node name="Blocker7" parent="YSort" index="45" instance=ExtResource( 15 )]
+[node name="Blocker7" parent="YSort" index="44" instance=ExtResource( 15 )]
 position = Vector2( 295.367, 333.145 )
 rotation = 1.5708
 
-[node name="Blocker8" parent="YSort" index="46" instance=ExtResource( 15 )]
+[node name="Blocker8" parent="YSort" index="45" instance=ExtResource( 15 )]
 position = Vector2( 349.245, 366.819 )
 rotation = 1.5708
 
-[node name="Blocker9" parent="YSort" index="47" instance=ExtResource( 15 )]
+[node name="Blocker9" parent="YSort" index="46" instance=ExtResource( 15 )]
 position = Vector2( 299.857, 366.819 )
 rotation = 1.5708
 
-[node name="Blocker10" parent="YSort" index="48" instance=ExtResource( 15 )]
+[node name="Blocker10" parent="YSort" index="47" instance=ExtResource( 15 )]
 position = Vector2( 100.059, 369.625 )
 rotation = 1.5708
 scale = Vector2( 1, 0.6 )
 
-[node name="Blocker11" parent="YSort" index="49" instance=ExtResource( 15 )]
+[node name="Blocker11" parent="YSort" index="48" instance=ExtResource( 15 )]
 position = Vector2( 116.896, 367.38 )
 rotation = 1.5708
 scale = Vector2( 1, 0.6 )
 
-[node name="Blocker12" parent="YSort" index="50" instance=ExtResource( 15 )]
+[node name="Blocker12" parent="YSort" index="49" instance=ExtResource( 15 )]
 position = Vector2( 118.018, 333.706 )
 rotation = 1.5708
 scale = Vector2( 1, 0.6 )
 
-[node name="Blocker13" parent="YSort" index="51" instance=ExtResource( 15 )]
+[node name="Blocker13" parent="YSort" index="50" instance=ExtResource( 15 )]
 position = Vector2( 104.549, 334.268 )
 rotation = 1.5708
 scale = Vector2( 1, 0.6 )
 
-[node name="Blocker14" parent="YSort" index="52" instance=ExtResource( 15 )]
+[node name="Blocker14" parent="YSort" index="51" instance=ExtResource( 15 )]
 position = Vector2( 100.059, 211.358 )
 rotation = 1.5708
 scale = Vector2( 1, 0.6 )
 
-[node name="Blocker15" parent="YSort" index="53" instance=ExtResource( 15 )]
+[node name="Blocker15" parent="YSort" index="52" instance=ExtResource( 15 )]
 position = Vector2( 222.968, 209.113 )
 rotation = 1.5708
 scale = Vector2( 1, 0.3 )
 
-[node name="Blocker17" parent="YSort" index="54" instance=ExtResource( 15 )]
+[node name="Blocker17" parent="YSort" index="53" instance=ExtResource( 15 )]
 position = Vector2( 237.56, 181.051 )
 scale = Vector2( 1, 0.3 )
 
-[node name="Blocker18" parent="YSort" index="55" instance=ExtResource( 15 )]
+[node name="Blocker18" parent="YSort" index="54" instance=ExtResource( 15 )]
 position = Vector2( 396.389, 339.88 )
 scale = Vector2( 1, 0.3 )
 
-[node name="Blocker16" parent="YSort" index="56" instance=ExtResource( 15 )]
+[node name="Blocker16" parent="YSort" index="55" instance=ExtResource( 15 )]
 position = Vector2( 102.865, 176 )
 rotation = 1.5708
 scale = Vector2( 1, 0.6 )
 
-[node name="Blocker5" parent="YSort" index="57" instance=ExtResource( 15 )]
+[node name="Blocker5" parent="YSort" index="56" instance=ExtResource( 15 )]
 position = Vector2( 238.122, 62.0705 )
 
-[node name="Blocker6" parent="YSort" index="58" instance=ExtResource( 15 )]
+[node name="Blocker6" parent="YSort" index="57" instance=ExtResource( 15 )]
 position = Vector2( 209.499, 62.0705 )
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]

@@ -82,7 +82,7 @@ frame = 2
 frame = 2
 
 [node name="Rotator" parent="YSort" index="8" instance=ExtResource( 3 )]
-position = Vector2( 465.26, 73.0715 )
+position = Vector2( 429.942, 73.0715 )
 LaserSpawn = 2
 
 [node name="Rotator2" parent="YSort" index="9" instance=ExtResource( 3 )]

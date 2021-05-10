@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scene/Levels/Office_Level/Level_Template.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Object/Office_region/Counter/Counter_side.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Character/NPC/Terrorist/Terrorist.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Object/Office_region/Shelf/ShelfFront.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scene/Object/Office_region/Shelf/ShelfSide.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/Character/NPC/Hostage/Hostage.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/Object/Office_region/Heater/HeaterFront.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Object/Office_region/Table/TableHorizontal.tscn" type="PackedScene" id=8]
@@ -13,9 +12,6 @@
 [ext_resource path="res://Scene/Object/Office_region/Detector/detector.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scene/Object/Office_region/Star/Star.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/Object/Office_region/Decoration/toilet.tscn" type="PackedScene" id=13]
-
-
-
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -39,10 +35,10 @@ tile_data = PoolIntArray( -458761, 81, 0, -458760, 81, 0, -458759, 81, 0, -45875
 [node name="Player" parent="YSort" index="0"]
 position = Vector2( -53.1094, -59.9456 )
 
-[node name="AnimatedSprite" parent="YSort/Player" index="2"]
-frame = 7
+[node name="AnimatedSprite" parent="YSort/Player" index="1"]
+frame = 3
 
-[node name="AnimationTree" parent="YSort/Player" index="5"]
+[node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
 
 [node name="Hostage" parent="YSort" index="1" instance=ExtResource( 6 )]
@@ -111,47 +107,41 @@ position = Vector2( 471.433, 278.987 )
 [node name="ShelfFront" parent="YSort" index="22" instance=ExtResource( 4 )]
 position = Vector2( 155.662, 165.548 )
 
-[node name="ShelfSide" parent="YSort" index="23" instance=ExtResource( 5 )]
-position = Vector2( 212.832, 324.18 )
-
-[node name="ShelfSide2" parent="YSort" index="24" instance=ExtResource( 5 )]
-position = Vector2( 287.785, 324.18 )
-
-[node name="CoffeTableH" parent="YSort" index="25" instance=ExtResource( 9 )]
+[node name="CoffeTableH" parent="YSort" index="23" instance=ExtResource( 9 )]
 position = Vector2( 212.964, 180.888 )
 
-[node name="ShelfFront2" parent="YSort" index="26" instance=ExtResource( 4 )]
+[node name="ShelfFront2" parent="YSort" index="24" instance=ExtResource( 4 )]
 position = Vector2( 269.955, 165.548 )
 
-[node name="CoffeTableH2" parent="YSort" index="27" instance=ExtResource( 9 )]
+[node name="CoffeTableH2" parent="YSort" index="25" instance=ExtResource( 9 )]
 position = Vector2( 327.257, 180.888 )
 
-[node name="Detector" parent="YSort" index="28" instance=ExtResource( 11 )]
+[node name="Detector" parent="YSort" index="26" instance=ExtResource( 11 )]
 position = Vector2( 39.8023, 264.055 )
 rotation = 1.5708
 scale = Vector2( 2.3, 2.3 )
 
-[node name="Detector2" parent="YSort" index="29" instance=ExtResource( 11 )]
+[node name="Detector2" parent="YSort" index="27" instance=ExtResource( 11 )]
 position = Vector2( 39.8023, 296.045 )
 rotation = 1.5708
 scale = Vector2( 2.3, 2.3 )
 
-[node name="Star" parent="YSort" index="30" instance=ExtResource( 12 )]
+[node name="Star" parent="YSort" index="28" instance=ExtResource( 12 )]
 position = Vector2( 215.188, 16.1143 )
 
-[node name="Star2" parent="YSort" index="31" instance=ExtResource( 12 )]
+[node name="Star2" parent="YSort" index="29" instance=ExtResource( 12 )]
 position = Vector2( 269.448, 224.583 )
 
-[node name="Star3" parent="YSort" index="32" instance=ExtResource( 12 )]
+[node name="Star3" parent="YSort" index="30" instance=ExtResource( 12 )]
 position = Vector2( 442.177, 299.487 )
 
-[node name="Toilet" parent="YSort" index="33" instance=ExtResource( 13 )]
+[node name="Toilet" parent="YSort" index="31" instance=ExtResource( 13 )]
 position = Vector2( 534.168, 42.6259 )
 
-[node name="LevelLabel" parent="CanvasLayer" index="5"]
+[node name="LevelLabel" parent="CanvasLayer" index="6"]
 text = "Office Level - 19"
 
-[node name="Mouse_cursor" parent="CanvasLayer" index="6"]
+[node name="Mouse_cursor" parent="CanvasLayer" index="7"]
 position = Vector2( 27.7187, -135.597 )
 
 [editable path="YSort/Player"]
