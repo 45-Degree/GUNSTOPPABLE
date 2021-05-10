@@ -146,12 +146,6 @@ frame = 1
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
 
-[node name="Start" parent="YSort/Player/LaserBeam" index="0"]
-frame = 0
-
-[node name="Sprite" parent="YSort/Player/LaserBeam/End" index="1"]
-frame = 0
-
 [node name="Terrorist" parent="YSort" index="1" instance=ExtResource( 3 )]
 position = Vector2( 426.55, 319.246 )
 
@@ -208,13 +202,10 @@ scale = Vector2( 2.3, 2.3 )
 [node name="Star" parent="YSort" index="17" instance=ExtResource( 14 )]
 position = Vector2( 79.1851, 206.137 )
 
-[node name="Star2" parent="YSort" index="18" instance=ExtResource( 14 )]
-position = Vector2( 79.1851, 206.137 )
-
-[node name="Star4" parent="YSort" index="19" instance=ExtResource( 14 )]
+[node name="Star4" parent="YSort" index="18" instance=ExtResource( 14 )]
 position = Vector2( 470.202, 418.884 )
 
-[node name="Star3" parent="YSort" index="20" instance=ExtResource( 14 )]
+[node name="Star3" parent="YSort" index="19" instance=ExtResource( 14 )]
 position = Vector2( 390.116, 61.3614 )
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]

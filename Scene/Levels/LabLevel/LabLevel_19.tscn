@@ -193,13 +193,13 @@ Direction = "MovingLeft"
 position = Vector2( 9.64644, 377.531 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 0
+frame = 5
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
 
-[node name="Start" parent="YSort/Player/LaserBeam" index="0"]
-frame = 0
+[node name="Sprite" parent="YSort/Player/LaserBeam/End" index="1"]
+frame = 2
 
 [node name="Detector" parent="YSort" index="1" instance=ExtResource( 2 )]
 position = Vector2( 15.8612, -240.114 )
@@ -265,22 +265,22 @@ position = Vector2( 260.387, 256.257 )
 position = Vector2( 256.421, 178.189 )
 
 [node name="Lab_TableVertical_right2" parent="YSort" index="20" instance=ExtResource( 3 )]
-position = Vector2( 515.191, 219.638 )
+position = Vector2( 515.191, 238.515 )
 
 [node name="Lab_TableVertical_right6" parent="YSort" index="21" instance=ExtResource( 3 )]
-position = Vector2( 648.541, 225.631 )
+position = Vector2( 648.541, 240.733 )
 
 [node name="Lab_TableVertical_right3" parent="YSort" index="22" instance=ExtResource( 3 )]
 position = Vector2( 170.492, -132.223 )
 
 [node name="Lab_TableVertical_right4" parent="YSort" index="23" instance=ExtResource( 3 )]
-position = Vector2( 544.32, -82.0297 )
+position = Vector2( 544.32, -101.112 )
 
 [node name="Lab_TableVertical_right5" parent="YSort" index="24" instance=ExtResource( 3 )]
 position = Vector2( 359.279, -85.7755 )
 
 [node name="Lab_TableVertical_Left2" parent="YSort" index="25" instance=ExtResource( 4 )]
-position = Vector2( 436.615, 218.05 )
+position = Vector2( 436.615, 240.703 )
 
 [node name="Terrorist2" parent="YSort" index="26" instance=ExtResource( 10 )]
 position = Vector2( 475.204, 181.922 )

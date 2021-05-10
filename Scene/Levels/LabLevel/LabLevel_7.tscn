@@ -32,13 +32,16 @@ position = Vector2( 519.212, 480.158 )
 position = Vector2( 55.1442, 13.137 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 1
+frame = 5
 
 [node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 1 )
 
 [node name="Start" parent="YSort/Player/LaserBeam" index="0"]
 frame = 1
+
+[node name="Sprite" parent="YSort/Player/LaserBeam/End" index="1"]
+frame = 2
 
 [node name="Detector2" parent="YSort" index="1" instance=ExtResource( 5 )]
 position = Vector2( 497.042, 399.924 )
@@ -54,7 +57,7 @@ scale = Vector2( 2.3, 2.3 )
 position = Vector2( 334.765, 301.31 )
 
 [node name="Star2" parent="YSort" index="4" instance=ExtResource( 2 )]
-position = Vector2( 199.791, 70.0605 )
+position = Vector2( 449.4, 128.043 )
 
 [node name="Star3" parent="YSort" index="5" instance=ExtResource( 2 )]
 position = Vector2( 161.092, 416.462 )
@@ -93,6 +96,12 @@ position = Vector2( 149.766, 65.341 )
 
 [node name="Hostage2" parent="YSort" index="16" instance=ExtResource( 8 )]
 position = Vector2( 112.955, 411.743 )
+
+[node name="Control4" parent="CanvasLayer" index="3"]
+visible = true
+
+[node name="ColorRect" parent="CanvasLayer" index="4"]
+visible = true
 
 [node name="LevelLabel" parent="CanvasLayer" index="5"]
 margin_left = 5.64816
