@@ -46,7 +46,7 @@ scale = Vector2( 2.3, 2.3 )
 position = Vector2( -27.3549, 515.607 )
 
 [node name="AnimatedSprite" parent="YSort/Player" index="1"]
-frame = 1
+frame = 4
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
@@ -139,7 +139,7 @@ position = Vector2( 175.521, 296.114 )
 position = Vector2( 10.4256, 105.534 )
 
 [node name="ShelfSide3" parent="YSort" index="30" instance=ExtResource( 8 )]
-position = Vector2( 486.425, 295.934 )
+position = Vector2( 511.623, 295.934 )
 
 [node name="Star" parent="YSort" index="31" instance=ExtResource( 13 )]
 position = Vector2( 421.036, -28.8745 )
@@ -153,14 +153,17 @@ position = Vector2( 11.4859, 59.2263 )
 [node name="Toilet" parent="YSort" index="34" instance=ExtResource( 10 )]
 position = Vector2( 630.242, -28.2094 )
 
-[node name="ColorRect" parent="CanvasLayer" index="4"]
+[node name="Control4" parent="CanvasLayer" index="4"]
+visible = false
+
+[node name="ColorRect" parent="CanvasLayer" index="5"]
 margin_left = 740.063
 margin_right = 740.063
 
-[node name="LevelLabel" parent="CanvasLayer" index="5"]
+[node name="LevelLabel" parent="CanvasLayer" index="6"]
 text = "Office Level - 9"
 
-[node name="Mouse_cursor" parent="CanvasLayer" index="6"]
+[node name="Mouse_cursor" parent="CanvasLayer" index="7"]
 position = Vector2( -110.875, 442.001 )
 
 [editable path="YSort/Player"]
